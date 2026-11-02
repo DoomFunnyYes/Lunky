@@ -24,7 +24,7 @@ local ANIMTABLE_LUNKY = {
     m.marioObj.header.gfx.angle.y = get_global_timer() * 0x3000
     set_mario_animation(m, CHAR_ANIM_TWIRL)
   end,
-  [CHAR_ANIM_TRIPLE_JUMP] = function(m, frame)
+  --[[[CHAR_ANIM_TRIPLE_JUMP] = function(m, frame)
     m.marioObj.header.gfx.angle.x = get_global_timer() * 0x3000
     set_mario_animation(m, CHAR_ANIM_FORWARD_SPINNING)
   end,
@@ -37,7 +37,7 @@ local ANIMTABLE_LUNKY = {
         val04 = 4
     end
     set_mario_anim_with_accel(m, CHAR_ANIM_WALKING, ((val04 / 4.0 * 0x10000)))
-  end,
+  end,]]
 }
 
 local VOICETABLE_LUNKY = {
