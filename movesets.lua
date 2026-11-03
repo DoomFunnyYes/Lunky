@@ -39,7 +39,7 @@ function lunky_update(m)
         m.marioObj.header.gfx.scale.z = 1
     end
     if m.flags & MARIO_METAL_CAP ~= 0 then
-        starHue = starHue + 0.02
+        starHue = starHue + 0.1
         if starHue > 1 then
             starHue = 0
         end
@@ -54,6 +54,7 @@ function lunky_update(m)
             m.marioObj.header.gfx.animInfo.animAccel = 32768 * 15
             m.marioBodyState.handState = MARIO_HAND_OPEN
         end
+        m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
     end
 end
 
