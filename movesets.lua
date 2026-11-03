@@ -9,88 +9,157 @@ SMALL_LUNKY_DOUBLE_JUMP = audio_sample_load("small_lunky_double_jump.ogg")
 SMALL_LUNKY_TRIPLE_JUMP = audio_sample_load("small_lunky_triple_jump.ogg")
 SMALL_LUNKY_LONG_JUMP = audio_sample_load("small_lunky_long_jump.ogg")
 
---[[ACT_LUNKY_ANIM_SCALE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_INVULNERABLE | ACT_FLAG_CUSTOM_ACTION)
-
-
-local function lunky_anim_scale(m)
-    local e = gPlayerSyncTable[m.playerIndex]
-
-    if e.power_anim ~= 0 then
-        m.action = m.action | ACT_FLAG_INVULNERABLE | ACT_FLAG_INTANGIBLE
-    end
-
-    if e.power_anim == 1 or e.power_anim == 2 or e.power_anim == 3 then
-        e.anim_timer = e.anim_timer + 1
-        if e.anim_timer == 1 then
-            vec3f_copy(e.prev_pos, m.pos)
-        end
-        m.vel.x = 0
-        m.vel.z = 0
-        m.vel.y = 0
-        m.forwardVel = 0
-        if e.anim_timer >= 2 then
-            vec3f_copy(m.pos, e.prev_pos)
-        end
-        if e.anim_timer > 25 then
-            m.invincTimer = 50
-        end
-        if e.anim_timer > 30 then
-            vec3f_copy(m.vel, e.prev_speed)
-            m.forwardVel = e.prev_forward_speed
-            e.anim_timer = 0
-            e.power_anim = 0
-        end
-    end
-
-
-    local powerchange = {
-        3,
-        2,
-        3,
-        2,
-        2,
-        3,
-        2,
-        3,
-        3,
-        2,
-        1,
-        2,
-        2,
-        1,
-        2,
-        1,
-        1,
-        1,
-    }
-
-    if e.power_anim == 1 then
-        local modelFunctions = {
-            (m.marioObj.header.gfx.scale.y == 1),
-            (m.marioObj.header.gfx.scale.y == 0.875),
-            (m.marioObj.header.gfx.scale.y == 0.75),
-        }
-
-
-        local idx = e.anim_timer // 2 % 18
-
-    end
-    if e.power_anim == 2 then
-        local modelFunctions = {
-            (m.marioObj.header.gfx.scale.y == 0.75),
-            (m.marioObj.header.gfx.scale.y == 0.875),
-            (m.marioObj.header.gfx.scale.y == 1)
-        }
-
-
-        local idx = e.anim_timer // 2 % 18
-
-    end
+local function find_HSL_hue(color)
+	local R = color.r/255
+	local G = color.g/255
+	local B = color.b/255
+	local cMax = math.max(R, G, B)
+	local cMin = math.min(R, G, B)
+	
+	local tri = cMax - cMin
+	
+	local H = 0
+	if (tri == 0) then
+		return 0
+	elseif (cMax == R) then
+		H = 60 * (((G-B)/tri) % 6)
+	elseif (cMax == G) then
+		H = 60 * (((B-R)/tri) + 2)
+	elseif (cMax == B) then
+		H = 60 * (((R-G)/tri) + 4)
+	end
+	return H 
 end
-hook_event(HOOK_MARIO_UPDATE, lunky_anim_scale)]]
+
+local function find_HSV_hue(color)
+	return find_HSL_hue(color)
+end
+
+local function find_HSL_saturation(color)
+	local cMax = math.max(color.r/255, color.g/255, color.b/255)
+	local cMin = math.min(color.r/255, color.g/255, color.b/255)
+	local tri = cMax - cMin
+	if (tri == 0) then
+		return 0
+	end
+	local lightness = (cMax + cMin)/2
+	return 100*tri/(1-math.abs(2*lightness - 1))
+end
+
+local function find_HSV_saturation(color)
+	local cMax = math.max(color.r/255, color.g/255, color.b/255)
+	if (cMax == 0) then
+		return 0
+	end
+	local cMin = math.min(color.r/255, color.g/255, color.b/255)
+	return 100*(cMax-cMin)/cMax
+end
+
+local function find_HSL_lightness(color)
+	local cMax = math.max(color.r/255, color.g/255, color.b/255)
+	local cMin = math.min(color.r/255, color.g/255, color.b/255)
+	local lightness = (cMax + cMin)/2
+	return lightness
+end
+
+local function find_HSV_value(color)
+	local cMax = math.max(color.r/255, color.g/255, color.b/255)
+	local cMin = math.min(color.r/255, color.g/255, color.b/255)
+	local lightness = (cMax + cMin)/2
+	return cMax
+end
+
+local function HSL_to_RGB(H, saturation, L)
+	local S = saturation/100
+	local C = (1-math.abs(2*L-1))*S
+	local X = C * (1 - math.abs((H/60) % 2 - 1))
+	local m = L - C/2
+	if (H < 60) then
+		return {
+		r = math.floor(255*(m + C)),
+		g = math.floor(255*(m + X)),
+		b = math.floor(255*(m + 0))
+		}
+	elseif (H < 120) then
+		return {
+		r = math.floor(255*(m + X)),
+		g = math.floor(255*(m + C)),
+		b = math.floor(255*(m + 0))
+		}
+	elseif (H < 180) then
+		return {
+		r = math.floor(255*(m + 0)),
+		g = math.floor(255*(m + C)),
+		b = math.floor(255*(m + X))
+		}
+	elseif (H < 240) then
+		return {
+		r = math.floor(255*(m + 0)),
+		g = math.floor(255*(m + X)),
+		b = math.floor(255*(m + C))
+		}
+	elseif (H < 300) then
+		return {
+		r = math.floor(255*(m + X)),
+		g = math.floor(255*(m + 0)),
+		b = math.floor(255*(m + C))
+		}
+	elseif (H < 360) then
+		return {
+		r = math.floor(255*(m + C)),
+		g = math.floor(255*(m + 0)),
+		b = math.floor(255*(m + X))
+		}
+	end
+	return {r = 255, g = 255, b = 255}
+end
+
+local function HSV_to_RGB(H, saturation, V)
+	local S = saturation/100
+	local C = V * S
+	local X = C * (1 - math.abs((H/60) % 2 - 1))
+	local m = V - C
+	if (H < 60) then
+		return {
+		r = math.floor(255*(m + C)),
+		g = math.floor(255*(m + X)),
+		b = math.floor(255*(m + 0))
+		}
+	elseif (H < 120) then
+		return {
+		r = math.floor(255*(m + X)),
+		g = math.floor(255*(m + C)),
+		b = math.floor(255*(m + 0))
+		}
+	elseif (H < 180) then
+		return {
+		r = math.floor(255*(m + 0)),
+		g = math.floor(255*(m + C)),
+		b = math.floor(255*(m + X))
+		}
+	elseif (H < 240) then
+		return {
+		r = math.floor(255*(m + 0)),
+		g = math.floor(255*(m + X)),
+		b = math.floor(255*(m + C))
+		}
+	elseif (H < 300) then
+		return {
+		r = math.floor(255*(m + X)),
+		g = math.floor(255*(m + 0)),
+		b = math.floor(255*(m + C))
+		}
+	elseif (H < 360) then
+		return {
+		r = math.floor(255*(m + C)),
+		g = math.floor(255*(m + 0)),
+		b = math.floor(255*(m + X))
+		}
+	end
+	return {r = 255, g = 255, b = 255}
+end
 
 function lunky_update(m)
-    local e = gExtraStates[m.playerIndex]
     if m.health <= (0x500) then
         m.marioObj.header.gfx.scale.y = 0.75
         m.marioObj.header.gfx.scale.x = 1
@@ -99,63 +168,6 @@ function lunky_update(m)
         m.marioObj.header.gfx.scale.y = 1
         m.marioObj.header.gfx.scale.x = 1
         m.marioObj.header.gfx.scale.z = 1
-    end
-    if m.flags & MARIO_METAL_CAP == 0 then
-        return nil
-    else
-        if m.capTimer < 2 and m.capTimer > 0 then
-
-            if m.action == ACT_WALKING then
-                m.marioObj.header.gfx.animInfo.animID = -1
-            end
-            network_player_reset_override_palette(np)
-        else
-            if m.flags & MARIO_METAL_CAP ~= 0 then
-                local rate = 85
-                local max = 255 - rate
-                local min = 0 + rate
-                if e.playerR == 255 and m.playerG ~= 255 then
-                    if m.playerB >= min then
-                        m.playerB = m.playerB - rate
-                    elseif m.playerG <= max then
-                        m.playerG = m.playerG + rate
-                    end
-                elseif m.playerG == 255 and e.playerB ~= 255 then
-                    if e.playerR >= min then
-                        e.playerR = e.playerR - rate
-                    elseif m.playerB <= max then
-                        m.playerB = m.playerB + rate
-                    end
-                elseif m.playerB == 255 and e.playerR ~= 255 then
-                    if m.playerG >= min then
-                        m.playerG = m.playerG - rate
-                    elseif e.playerR <= max then
-                        e.playerR = e.playerR + rate
-                    end
-                end
-                network_player_set_override_palette_color(np, EMBLEM,   {r = e.playerR, g = m.playerG, b = m.playerB})
-                network_player_set_override_palette_color(np, CAP,      {r = e.playerR, g = m.playerG, b = m.playerB})
-                network_player_set_override_palette_color(np, HAIR,     {r = e.playerR, g = m.playerG, b = m.playerB})
-                network_player_set_override_palette_color(np, SKIN,     {r = e.playerR, g = m.playerG, b = m.playerB})
-                network_player_set_override_palette_color(np, SHIRT,    {r = e.playerR, g = m.playerG, b = m.playerB})
-                network_player_set_override_palette_color(np, GLOVES,   {r = e.playerR, g = m.playerG, b = m.playerB})
-                network_player_set_override_palette_color(np, PANTS,    {r = e.playerR, g = m.playerG, b = m.playerB})
-                network_player_set_override_palette_color(np, SHOES,    {r = e.playerR, g = m.playerG, b = m.playerB})
-
-                --m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
-
-                if m.action == ACT_WALKING then
-                    m.marioBodyState.torsoAngle.x = 0
-                    m.marioBodyState.handState = MARIO_HAND_OPEN
-                end
-
-                m.peakHeight = m.pos.y
-
-                if (m.action == ACT_WALKING) and m.forwardVel < 60 and m.forwardVel > 0 then
-                    m.forwardVel = m.forwardVel * 1.15
-                end
-            end
-        end
     end
 end
 

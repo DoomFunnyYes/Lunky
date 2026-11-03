@@ -141,6 +141,8 @@ local function on_character_select_load()
     )
 
 local HEALTH_METER_LUNKY = {
+  djui_hud_set_resolution(RESOLUTION_N64),
+  djui_hud_set_font(FONT_HUD),
 	label = {
 		left = get_texture_info("lunky_health_left"),
 		right = get_texture_info("lunky_health_right"),
@@ -156,9 +158,6 @@ local HEALTH_METER_LUNKY = {
 		[8] = get_texture_info("lunky_health_flower"),
 	}
 }
-
-  djui_hud_set_resolution(RESOLUTION_N64)
-  djui_hud_set_font(FONT_HUD)
 
     _G.charSelect.character_add_animations(E_MODEL_LUNKY, ANIMTABLE_LUNKY)
     _G.charSelect.character_add_animations(E_MODEL_LUNKY_FLESH, ANIMTABLE_LUNKY)
