@@ -159,6 +159,8 @@ local function HSV_to_RGB(H, saturation, V)
 	return {r = 255, g = 255, b = 255}
 end
 
+local starHue = 0
+
 function lunky_update(m)
     if m.health <= (0x500) then
         m.marioObj.header.gfx.scale.y = 0.75
@@ -168,6 +170,23 @@ function lunky_update(m)
         m.marioObj.header.gfx.scale.y = 1
         m.marioObj.header.gfx.scale.x = 1
         m.marioObj.header.gfx.scale.z = 1
+    end
+    if m.flags & MARIO_METAL_CAP ~= 0 then
+        starHue = starHue + 48
+        if starHue > 255 then
+            starHue = 0
+        end
+        network_player_set_override_palette_color(gNetworkPlayers[0], CAP, HSV_to_RGB(starHue, 255, 255))
+
+        if m.action == ACT_WALKING and m.forwardVel < 60 and m.forwardVel > 0 then
+            m.forwardVel = m.forwardVel * 1.15
+        end
+        if m.action == ACT_WALKING then
+            m.marioBodyState.torsoAngle.x = 0
+            smlua_anim_util_set_animation(m.marioObj, "lunky_star_running")
+            m.marioObj.header.gfx.animInfo.animAccel = 32768 * 15
+            m.marioBodyState.handState = MARIO_HAND_OPEN
+        end
     end
 end
 

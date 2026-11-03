@@ -1,6 +1,9 @@
 -- name: [CS] Lunky
 -- description: CS version of all my playermodels.
 
+LUNKY_INVINCIBILITY = audio_stream_load("lunky_invincibility.ogg")
+audio_stream_set_looping(LUNKY_INVINCIBILITY, true)
+
 local TEXT_MOD_NAME = "[CS] Lunky"
 
 -- Stops mod from loading if Character Select isn't on, Does not need to be touched
@@ -27,6 +30,18 @@ local ANIMTABLE_LUNKY = {
     m.marioObj.header.gfx.angle.y = get_global_timer() * 0x3000
     set_mario_animation(m, CHAR_ANIM_TWIRL)
   end,
+  [CHAR_ANIM_START_GROUND_POUND] = function(m, frame)
+    m.marioObj.header.gfx.angle.y = get_global_timer() * 0x3000
+    set_mario_animation(m, CHAR_ANIM_TWIRL)
+  end,
+  [CHAR_ANIM_TRIPLE_JUMP_GROUND_POUND] = function(m, frame)
+    m.marioObj.header.gfx.angle.y = get_global_timer() * 0x3000
+    set_mario_animation(m, CHAR_ANIM_TWIRL)
+  end,
+  [CHAR_ANIM_GROUND_POUND] = function(m, frame)
+    m.marioObj.header.gfx.angle.y = get_global_timer() * 0x3000
+    set_mario_animation(m, CHAR_ANIM_TWIRL)
+  end,
   --[[[CHAR_ANIM_TRIPLE_JUMP] = function(m, frame)
     m.marioObj.header.gfx.angle.x = get_global_timer() * 0x3000
     set_mario_animation(m, CHAR_ANIM_FORWARD_SPINNING)
@@ -35,13 +50,7 @@ local ANIMTABLE_LUNKY = {
     set_mario_anim_with_accel(m, CHAR_ANIM_SLOW_LONGJUMP, 0x10000)
   end,]]
     [CHAR_ANIM_RUNNING] = function(m, frame)
-    if m.flags & MARIO_METAL_CAP == 0 then
-      m.marioObj.header.gfx.animInfo.animAccel = 32768 * 15
-      return "lunky_running"
-    else
-      m.marioObj.header.gfx.animInfo.animAccel = 32768 * 15
-      return "lunky_star_running"
-    end
+    return "lunky_running"
   end,
 }
 
@@ -176,6 +185,8 @@ local HEALTH_METER_LUNKY = {
     _G.charSelect.character_hook_moveset(CT_LUNKY, HOOK_BEFORE_SET_MARIO_ACTION, lunky_before_set_action)
     _G.charSelect.character_hook_moveset(CT_LUNKY, HOOK_MARIO_UPDATE, lunky_update)
     _G.charSelect.character_hook_moveset(CT_LUNKY, HOOK_ON_SET_MARIO_ACTION, lunky_on_set_action)
+
+    _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_METAL_CAP, LUNKY_INVINCIBILITY)
 
     CSloaded = true
 
