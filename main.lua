@@ -31,24 +31,26 @@ local ANIMTABLE_LUNKY = {
     set_mario_animation(m, CHAR_ANIM_TWIRL)
   end,
   [CHAR_ANIM_START_GROUND_POUND] = function(m, frame)
-    m.marioObj.header.gfx.angle.y = get_global_timer() * 0x3000
+    m.marioObj.header.gfx.angle.y = get_global_timer() * 0x5000
     set_mario_animation(m, CHAR_ANIM_TWIRL)
   end,
   [CHAR_ANIM_TRIPLE_JUMP_GROUND_POUND] = function(m, frame)
-    m.marioObj.header.gfx.angle.y = get_global_timer() * 0x3000
+    m.marioObj.header.gfx.angle.y = get_global_timer() * 0x5000
     set_mario_animation(m, CHAR_ANIM_TWIRL)
   end,
   [CHAR_ANIM_GROUND_POUND] = function(m, frame)
-    m.marioObj.header.gfx.angle.y = get_global_timer() * 0x3000
+    m.marioObj.header.gfx.angle.y = get_global_timer() * 0x5000
     set_mario_animation(m, CHAR_ANIM_TWIRL)
   end,
-  --[[[CHAR_ANIM_TRIPLE_JUMP] = function(m, frame)
+  --[[
+  [CHAR_ANIM_TRIPLE_JUMP] = function(m, frame)
     m.marioObj.header.gfx.angle.x = get_global_timer() * 0x3000
     set_mario_animation(m, CHAR_ANIM_FORWARD_SPINNING)
   end,
-    [CHAR_ANIM_FAST_LONGJUMP] = function(m, frame)
+  [CHAR_ANIM_FAST_LONGJUMP] = function(m, frame)
     set_mario_anim_with_accel(m, CHAR_ANIM_SLOW_LONGJUMP, 0x10000)
-  end,]]
+  end,
+  ]]
     [CHAR_ANIM_RUNNING] = function(m, frame)
     return "lunky_running"
   end,
