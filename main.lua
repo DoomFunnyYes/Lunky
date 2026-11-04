@@ -179,7 +179,9 @@ local HEALTH_METER_LUNKY = {
 
     _G.charSelect.character_add_health_meter(CT_LUNKY, HEALTH_METER_LUNKY)
 
-    _G.charSelect.credit_add(TEXT_MOD_NAME, "saulis2cool4u", "Model!")
+    _G.charSelect.credit_add(TEXT_MOD_NAME, "saulis2cool4u", "Awesome Models!")
+    _G.charSelect.credit_add(TEXT_MOD_NAME, "SwagSkeleton95", "Finalized Star Power code!")
+    _G.charSelect.credit_add(TEXT_MOD_NAME, "JerThePear", "A metric TON of advice!")
 
 ----
     _G.charSelect.character_hook_moveset(CT_LUNKY, HOOK_BEFORE_SET_MARIO_ACTION, lunky_before_set_action)

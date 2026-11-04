@@ -87,5 +87,8 @@ function lunky_on_set_action(m)
             audio_sample_play(LUNKY_LONG_JUMP, m.pos, 1)
         end
     end
+    if m.action == ACT_SPECIAL_TRIPLE_JUMP and m.pos.y == m.floorHeight and m.vel.y < 0 then
+        set_mario_action(m, ACT_FREEFALL_LAND, 0)
+    end
 end
 
