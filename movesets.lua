@@ -43,8 +43,8 @@ function lunky_update(m)
         if starHue > 1 then
             starHue = 0
         end
-        network_player_set_override_palette_color(gNetworkPlayers[0], CAP, HSV_to_RGB(starHue, 1, 1))
-        network_player_set_override_palette_color(gNetworkPlayers[0], PANTS, HSV_to_RGB(starHue, 1, 1))
+        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], CAP, HSV_to_RGB(starHue, 1, 1))
+        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS, HSV_to_RGB(starHue, 1, 1))
 
         if m.action == ACT_WALKING and m.forwardVel < 60 and m.forwardVel > 0 then
             m.forwardVel = m.forwardVel * 1.15
