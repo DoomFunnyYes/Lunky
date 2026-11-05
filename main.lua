@@ -2,8 +2,8 @@
 -- description: CS version of all my playermodels.
 
 LUNKY_INVINCIBILITY = audio_stream_load("lunky_invincibility.ogg")
-audio_stream_set_looping(LUNKY_INVINCIBILITY, true)
 audio_stream_set_loop_points(LUNKY_INVINCIBILITY, 191418, 9214047)
+audio_stream_set_looping(LUNKY_INVINCIBILITY, true)
 
 local TEXT_MOD_NAME = "[CS] Lunky"
 
