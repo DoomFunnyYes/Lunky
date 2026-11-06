@@ -42,8 +42,61 @@ for i = 0, (MAX_PLAYERS - 1) do
 
     e.forca = 0
     e.timer = 0
+    e.rotAngle = 0
+    e.saved_pos = {}
+    e.saved_pos.x = 0
+    e.saved_pos.y = 0
+    e.saved_pos.z = 0
+    e.saved_transition_timer = 0
 
 end
+
+ACT_WALL_STICK = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
+
+function act_wall_stick(m)
+    if (m.input & INPUT_A_PRESSED) ~= 0 then
+        local rc = set_mario_action(m, ACT_WALL_KICK_AIR, 0)
+        m.vel.y = 52.0
+
+        if m.forwardVel < 30.0 then
+            m.forwardVel = 30.0
+        end
+        m.wallKickTimer = 0
+        return rc
+    end
+
+    -- attempt to stick to the wall a bit. if it's 0, sometimes you'll get kicked off of slightly sloped walls
+    mario_set_forward_vel(m, -1.0)
+
+    set_mario_animation(m, MARIO_ANIM_START_WALLKICK)
+    m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
+
+    if perform_air_step(m, 0) == AIR_STEP_LANDED then
+        mario_set_forward_vel(m, 0.0)
+        if check_fall_damage_or_get_stuck(m, ACT_HARD_BACKWARD_GROUND_KB) == 0 then
+            return set_mario_action(m, ACT_FREEFALL_LAND, 0)
+        end
+    end
+
+    m.actionTimer = m.actionTimer + 1
+    if m.wall == nil and m.actionTimer > 2 then
+        mario_set_forward_vel(m, 0.0)
+        return set_mario_action(m, ACT_FREEFALL, 0)
+    end
+
+    -- gravity
+    if m.controller.stickMag == 64 then
+        m.vel.y = m.vel.y + 2
+        m.particleFlags = m.particleFlags | PARTICLE_DUST
+        play_sound(SOUND_MOVING_TERRAIN_SLIDE + m.terrainSoundAddend, m.marioObj.header.gfx.cameraToObject)
+    else
+        m.vel.y = 0
+    end
+
+    return 0
+end
+
+hook_mario_action(ACT_WALL_STICK, act_wall_stick)
 
 ACT_LUNKY_CYCLONE = allocate_mario_action(ACT_FLAG_MOVING | ACT_FLAG_ATTACKING)
 
@@ -118,21 +171,36 @@ hook_mario_action(ACT_LUNKY_CYCLONE, act_lunky_cyclone, INT_KICK)
 ACT_LUNKY_MISSILE_FULL =         allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
 
 function act_lunky_missile_full(m)
+    local arg = m.actionArg
     local e = gStateExtras[m.playerIndex]
 
-    m.vel.y = 25 - m.actionTimer * 2
+    if arg == 2 then
+        if m.actionTimer < 10 then -- for the first ten frames
+            m.pos.y = m.pos.y + 75
+        end
+    else
+        m.vel.y = 25 - m.actionTimer * 2
+    end
 
 	m.particleFlags = m.particleFlags | PARTICLE_DUST | PARTICLE_FIRE
 
 	if m.actionTimer == 1 then
-	    mario_set_forward_vel(m, 36 + e.forca)
+        if arg == 2 then
+            return m.pos.y == (m.pos.y + 36 + e.forca)
+        else
+            mario_set_forward_vel(m, 36 + e.forca)
+        end
 		LUNKY_MISSILE_MAXIMUM = audio_sample_load("lunky_missile_maximum.ogg");
 		audio_sample_play(LUNKY_MISSILE_MAXIMUM, gMarioStates[0].pos, 0.32);
 		set_camera_shake_from_point(SHAKE_POS_MEDIUM, m.pos.x, m.pos.y, m.pos.z)
 	    m.squishTimer = 1.33
 		m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
 	else
-	    mario_set_forward_vel(m, m.forwardVel - m.actionTimer / 32)
+        if arg == 2 then
+            return m.pos.y == (m.pos.y - m.actonTimer / 32)
+        else
+	        mario_set_forward_vel(m, m.forwardVel - m.actionTimer / 32)
+        end
 	end
 
     if m.actionTimer > 64 then
@@ -162,23 +230,39 @@ hook_mario_action(ACT_LUNKY_MISSILE_FULL, act_lunky_missile_full, INT_KICK)
 ACT_LUNKY_MISSILE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
 
 function act_lunky_missile(m)
+    local arg = m.actionArg
     local e = gStateExtras[m.playerIndex]
 
-    m.vel.y = 25 - m.actionTimer * 2
+    if arg == 2 then
+        if m.actionTimer < 10 then -- for the first ten frames
+            m.pos.y = m.pos.y + 75
+        end
+    else
+        m.vel.y = 25 - m.actionTimer * 2
+    end
 
 	m.particleFlags = m.particleFlags | PARTICLE_DUST
 
 	if m.actionTimer == 1 then
-	    mario_set_forward_vel(m, 36 + e.forca)
+        if arg == 2 then
+            return m.pos.y == (m.pos.y + 36 + e.forca)
+        else
+            mario_set_forward_vel(m, 36 + e.forca)
+        end
         if e.forca < 20 then
 		    audio_sample_play(LUNKY_MISSILE_WEAK, gMarioStates[0].pos, 0.32);
         elseif e.forca < 30 then
             audio_sample_play(LUNKY_MISSILE_MEDIUM, gMarioStates[0].pos, 0.32);
-        elseif e.forca > 30 then
+        elseif e.forca > 29 then
             audio_sample_play(LUNKY_MISSILE_STRONG, gMarioStates[0].pos, 0.32);
         end
 	else
-	    mario_set_forward_vel(m, m.forwardVel - m.actionTimer / 32)
+
+        if arg == 2 then
+            return m.pos.y == (m.pos.y - m.actonTimer / 32)
+        else
+	        mario_set_forward_vel(m, m.forwardVel - m.actionTimer / 32)
+        end
 	end
 
     if m.actionTimer > 64 then
@@ -210,11 +294,11 @@ ACT_LUNKY_MISSILE_CHARGE = allocate_mario_action(ACT_FLAG_STATIONARY)
 function act_lunky_missile_charge(m)
     local e = gStateExtras[m.playerIndex]
 
-	m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
+	m.particleFlags = m.particleFlags | PARTICLE_FIRE
+    m.particleFlags = m.particleFlags | PARTICLE_WAVE_TRAIL
 
 	if m.actionTimer % 7 == 0 and m.actionTimer < 42 then
-	    m.particleFlags = m.particleFlags | PARTICLE_HORIZONTAL_STAR
-          m.vel.y = 0
+	    m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
           e.timer = 0
 	end
     if m.actionTimer % 100 == 0 and m.actionTimer < 36 then
@@ -234,8 +318,6 @@ function act_lunky_missile_charge(m)
 		    mario_set_forward_vel(m, 2)
 		end
 
-		m.vel.y = m.vel.y / 2 - e.timer / 5
-
 		if e.forca < 72 then
 		    e.forca = e.forca + 1
 		end
@@ -244,19 +326,22 @@ function act_lunky_missile_charge(m)
     if (m.controller.buttonDown & A_BUTTON) == 0 then
 	    if m.actionTimer < 42 then
             audio_sample_stop(LUNKY_MISSILE_CHARGE)
-	        set_mario_action(m, ACT_LUNKY_MISSILE, 0)
+            djui_chat_message_create("forca is "..tostring(e.forca))
+            djui_chat_message_create("vel.Y is "..tostring(m.vel.y))
+	        set_mario_action(m, ACT_LUNKY_MISSILE, m.actionArg)
 		elseif m.actionTimer >= 42 then
             audio_sample_stop(LUNKY_MISSILE_CHARGE)
-		    set_mario_action(m, ACT_LUNKY_MISSILE_FULL, 0)
+            djui_chat_message_create("forca is "..tostring(e.forca))
+            djui_chat_message_create("vel.Y is "..tostring(m.vel.y))
+		    set_mario_action(m, ACT_LUNKY_MISSILE_FULL, m.actionArg)
 		end
 	end
 	if m.actionTimer > 52 then
 		set_mario_action(m, ACT_SOFT_FORWARD_GROUND_KB, 0)
 	end
 
-	local stepResult = perform_air_step(m, 0)
-    if stepResult == AIR_STEP_LANDED then
-    elseif stepResult == AIR_STEP_HIT_WALL then
+	local stepResult = perform_ground_step(m)
+    if stepResult == GROUND_STEP_HIT_WALL then
         set_mario_action(m, ACT_AIR_HIT_WALL, 0)
     end
 
@@ -271,6 +356,8 @@ function act_lunky_missile_charge(m)
 end
 
 hook_mario_action(ACT_LUNKY_MISSILE_CHARGE, act_lunky_missile_charge)
+
+ACT_WALL_SLIDE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
 
 function convert_s16(num)
     local min = -32768

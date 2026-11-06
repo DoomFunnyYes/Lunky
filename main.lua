@@ -235,8 +235,15 @@ function lunky_before_set_action(m, inc, arg) --m is the mariostate input, inc i
     if (inc == ACT_PUNCHING and arg == 9) or (inc == ACT_SLIDE_KICK) then
       return ACT_LUNKY_CYCLONE
     end
-    if (inc == ACT_BACKFLIP) or (inc == ACT_LONG_JUMP) then
-      return ACT_LUNKY_MISSILE_CHARGE
+    if (inc == ACT_LONG_JUMP) then
+      return set_mario_action(m, ACT_LUNKY_MISSILE_CHARGE, 1)
+    end
+    if (inc == ACT_BACKFLIP) then
+      return set_mario_action(m, ACT_LUNKY_MISSILE_CHARGE, 2)
+    end
+    if (inc  == ACT_SOFT_BONK) then
+        m.faceAngle.y = m.faceAngle.y + 0x8000
+        return ACT_WALL_STICK
     end
 end
 
