@@ -38,7 +38,6 @@ function act_lunky_cyclone(m)
 	-- Argument variables
 
     smlua_anim_util_set_animation(m.marioObj, "evilswag_moveset_anim_tornado")
-    m.marioObj.header.gfx.animInfo.animAccel = 32768 * 3
 
 	-- Animation
     if m.actionTimer == 0 then
@@ -46,21 +45,21 @@ function act_lunky_cyclone(m)
         if m.input & INPUT_NONZERO_ANALOG ~= 0 then
             m.forwardVel = 5
         end
-    elseif m.actionTimer < 17.5 then
+    elseif m.actionTimer < 35 then
         m.faceAngle.y = approach_s16_symmetric(m.faceAngle.y, m.intendedYaw, 0x200)
 
-        if m.actionTimer <= 10 then
+        if m.actionTimer <= 20 then
             if (m.actionTimer % 3) == 0 then
                 play_sound(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject)
             end
-        elseif m.actionTimer == 13.5 then
+        elseif m.actionTimer == 27 then
             play_sound_with_freq_scale(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject, 0.8)
         end
     end
 
-    if m.actionTimer < 15 then
+    if m.actionTimer < 30 then
         m.marioBodyState.eyeState = MARIO_EYES_CLOSED
-    elseif m.actionTimer < 20 then
+    elseif m.actionTimer < 40 then
         m.marioBodyState.eyeState = MARIO_EYES_OPEN
     end
 
@@ -81,7 +80,7 @@ function act_lunky_cyclone(m)
 		return set_mario_action(m, ACT_BEGIN_SLIDING, 0);
 	end
 
-    if m.actionTimer < 10 then
+    if m.actionTimer < 20 then
         if m.actionTimer > -1 then
             m.particleFlags = m.particleFlags | PARTICLE_DUST
             m.vel.y = 18 - (m.actionTimer * (m.forwardVel/25))
@@ -92,7 +91,7 @@ function act_lunky_cyclone(m)
 
 	m.actionTimer = m.actionTimer + 1
 
-    if m.actionTimer > 20 then
+    if m.actionTimer > 40 then
         set_mario_action(m, ACT_FREEFALL_LAND_STOP, 1)
     end
 
