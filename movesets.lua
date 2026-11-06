@@ -8,6 +8,10 @@ SMALL_LUNKY_JUMP = audio_sample_load("small_lunky_jump.ogg")
 SMALL_LUNKY_DOUBLE_JUMP = audio_sample_load("small_lunky_double_jump.ogg")
 SMALL_LUNKY_TRIPLE_JUMP = audio_sample_load("small_lunky_triple_jump.ogg")
 SMALL_LUNKY_LONG_JUMP = audio_sample_load("small_lunky_long_jump.ogg")
+LUNKY_MISSILE_WEAK = audio_sample_load("lunky_missile_weak.ogg")
+LUNKY_MISSILE_MEDIUM = audio_sample_load("lunky_missile_medium.ogg")
+LUNKY_MISSILE_STRONG = audio_sample_load("lunky_missile_strong.ogg")
+LUNKY_MISSILE_CHARGE = audio_sample_load("lunky_green_missile_charge.ogg")
 
 function limit_angle(a)
 	return (a + 0x8000) % 0x10000 - 0x8000
@@ -28,6 +32,17 @@ local function HSV_to_RGB(h, s, v)
     elseif i == 4 then r, g, b = t, p, v
     else r, g, b = v, p, q end
     return {r = math.floor(r * 255 + 0.5), g = math.floor(g * 255 + 0.5), b = math.floor(b * 255 + 0.5)}
+end
+
+gStateExtras = {}
+for i = 0, (MAX_PLAYERS - 1) do
+    gStateExtras[i] = {}
+    local m = gMarioStates[i]
+    local e = gStateExtras[i]
+
+    e.forca = 0
+    e.timer = 0
+
 end
 
 ACT_LUNKY_CYCLONE = allocate_mario_action(ACT_FLAG_MOVING | ACT_FLAG_ATTACKING)
@@ -100,6 +115,174 @@ end
 
 hook_mario_action(ACT_LUNKY_CYCLONE, act_lunky_cyclone, INT_KICK)
 
+ACT_LUNKY_MISSILE_FULL =         allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
+
+function act_lunky_missile_full(m)
+    local e = gStateExtras[m.playerIndex]
+
+    m.vel.y = 25 - m.actionTimer * 2
+
+	m.particleFlags = m.particleFlags | PARTICLE_DUST | PARTICLE_FIRE
+
+	if m.actionTimer == 1 then
+	    mario_set_forward_vel(m, 36 + e.forca)
+		LUNKY_MISSILE_MAXIMUM = audio_sample_load("lunky_missile_maximum.ogg");
+		audio_sample_play(LUNKY_MISSILE_MAXIMUM, gMarioStates[0].pos, 0.32);
+		set_camera_shake_from_point(SHAKE_POS_MEDIUM, m.pos.x, m.pos.y, m.pos.z)
+	    m.squishTimer = 1.33
+		m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
+	else
+	    mario_set_forward_vel(m, m.forwardVel - m.actionTimer / 32)
+	end
+
+    if m.actionTimer > 64 then
+        set_mario_action(m, ACT_FREEFALL, 0)
+	end
+
+	if m.forwardVel < 0 then
+	    mario_set_forward_vel(m, 0)
+	end
+
+    local stepResult = perform_air_step(m, 0)
+    if stepResult == AIR_STEP_LANDED then
+	    set_mario_action(m, ACT_FORWARD_GROUND_KB, 0)
+    elseif stepResult == AIR_STEP_HIT_WALL then
+        set_mario_action(m, ACT_HARD_BACKWARD_AIR_KB, 0)
+    end
+
+    set_mario_animation(m, MARIO_ANIM_FLUTTERKICK)
+    set_anim_to_frame(m, 7)
+
+    m.actionTimer = m.actionTimer + 1
+    return 0
+end
+
+hook_mario_action(ACT_LUNKY_MISSILE_FULL, act_lunky_missile_full, INT_KICK)
+
+ACT_LUNKY_MISSILE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
+
+function act_lunky_missile(m)
+    local e = gStateExtras[m.playerIndex]
+
+    m.vel.y = 25 - m.actionTimer * 2
+
+	m.particleFlags = m.particleFlags | PARTICLE_DUST
+
+	if m.actionTimer == 1 then
+	    mario_set_forward_vel(m, 36 + e.forca)
+        if e.forca < 20 then
+		    audio_sample_play(LUNKY_MISSILE_WEAK, gMarioStates[0].pos, 0.32);
+        elseif e.forca < 30 then
+            audio_sample_play(LUNKY_MISSILE_MEDIUM, gMarioStates[0].pos, 0.32);
+        elseif e.forca > 30 then
+            audio_sample_play(LUNKY_MISSILE_STRONG, gMarioStates[0].pos, 0.32);
+        end
+	else
+	    mario_set_forward_vel(m, m.forwardVel - m.actionTimer / 32)
+	end
+
+    if m.actionTimer > 64 then
+        set_mario_action(m, ACT_FREEFALL, 0)
+	end
+
+	if m.forwardVel < 0 then
+	    mario_set_forward_vel(m, 0)
+	end
+
+    local stepResult = perform_air_step(m, 0)
+    if stepResult == AIR_STEP_LANDED then
+	    set_mario_action(m, ACT_FORWARD_GROUND_KB, 0)
+    elseif stepResult == AIR_STEP_HIT_WALL then
+        set_mario_action(m, ACT_HARD_BACKWARD_AIR_KB, 0)
+    end
+
+    set_mario_animation(m, MARIO_ANIM_FLUTTERKICK)
+    set_anim_to_frame(m, 7)
+
+    m.actionTimer = m.actionTimer + 1
+    return 0
+end
+
+hook_mario_action(ACT_LUNKY_MISSILE, act_lunky_missile, INT_KICK)
+
+ACT_LUNKY_MISSILE_CHARGE = allocate_mario_action(ACT_FLAG_STATIONARY)
+
+function act_lunky_missile_charge(m)
+    local e = gStateExtras[m.playerIndex]
+
+	m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
+
+	if m.actionTimer % 7 == 0 and m.actionTimer < 42 then
+	    m.particleFlags = m.particleFlags | PARTICLE_HORIZONTAL_STAR
+          m.vel.y = 0
+          e.timer = 0
+	end
+    if m.actionTimer % 100 == 0 and m.actionTimer < 36 then
+        audio_sample_play(LUNKY_MISSILE_CHARGE, gMarioStates[0].pos, 0.32)
+    elseif m.actionTimer >= 53 then
+        audio_sample_stop(LUNKY_MISSILE_CHARGE)
+    end
+
+	if m.actionTimer == 0 then
+	    m.actionTimer = 1
+		e.forca = 0
+            e.timer = 0
+	else
+	    if m.forwardVel > 2 then
+	        mario_set_forward_vel(m, m.forwardVel - 0.05 * (m.actionTimer / 2))
+		else
+		    mario_set_forward_vel(m, 2)
+		end
+
+		m.vel.y = m.vel.y / 2 - e.timer / 5
+
+		if e.forca < 72 then
+		    e.forca = e.forca + 1
+		end
+	end
+
+    if (m.controller.buttonDown & A_BUTTON) == 0 then
+	    if m.actionTimer < 42 then
+            audio_sample_stop(LUNKY_MISSILE_CHARGE)
+	        set_mario_action(m, ACT_LUNKY_MISSILE, 0)
+		elseif m.actionTimer >= 42 then
+            audio_sample_stop(LUNKY_MISSILE_CHARGE)
+		    set_mario_action(m, ACT_LUNKY_MISSILE_FULL, 0)
+		end
+	end
+	if m.actionTimer > 52 then
+		set_mario_action(m, ACT_SOFT_FORWARD_GROUND_KB, 0)
+	end
+
+	local stepResult = perform_air_step(m, 0)
+    if stepResult == AIR_STEP_LANDED then
+    elseif stepResult == AIR_STEP_HIT_WALL then
+        set_mario_action(m, ACT_AIR_HIT_WALL, 0)
+    end
+
+	set_mario_animation(m, MARIO_ANIM_START_CROUCHING)
+	set_anim_to_frame(m, 2)
+
+    m.faceAngle.y = m.intendedYaw - approach_s32(convert_s16(m.intendedYaw - m.faceAngle.y), 0, 0x400, 0x400)
+
+    m.actionTimer = m.actionTimer + 1
+    e.timer = e.timer + 1
+	return 0
+end
+
+hook_mario_action(ACT_LUNKY_MISSILE_CHARGE, act_lunky_missile_charge)
+
+function convert_s16(num)
+    local min = -32768
+    local max = 32767
+    while (num < min) do
+        num = max + (num - min)
+    end
+    while (num > max) do
+        num = min + (num - max)
+    end
+    return num
+end
 
 local starHue = 0
 

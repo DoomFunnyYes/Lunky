@@ -235,6 +235,9 @@ function lunky_before_set_action(m, inc, arg) --m is the mariostate input, inc i
     if (inc == ACT_PUNCHING and arg == 9) or (inc == ACT_SLIDE_KICK) then
       return ACT_LUNKY_CYCLONE
     end
+    if (inc == ACT_BACKFLIP) or (inc == ACT_LONG_JUMP) then
+      return ACT_LUNKY_MISSILE_CHARGE
+    end
 end
 
 hook_event(HOOK_ON_MODS_LOADED, on_character_select_load)
