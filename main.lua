@@ -39,14 +39,23 @@ local ANIMTABLE_LUNKY = {
   [CHAR_ANIM_START_GROUND_POUND] = function(m, frame)
     m.marioObj.header.gfx.angle.y = get_global_timer() * 0x5000
     set_mario_animation(m, CHAR_ANIM_TWIRL)
+    if (m.actionTimer % 3) == 0 then
+      play_sound(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject)
+    end
   end,
   [CHAR_ANIM_TRIPLE_JUMP_GROUND_POUND] = function(m, frame)
     m.marioObj.header.gfx.angle.y = get_global_timer() * 0x5000
     set_mario_animation(m, CHAR_ANIM_TWIRL)
+    if (m.actionTimer % 3) == 0 then
+      play_sound(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject)
+    end
   end,
   [CHAR_ANIM_GROUND_POUND] = function(m, frame)
     m.marioObj.header.gfx.angle.y = get_global_timer() * 0x5000
     set_mario_animation(m, CHAR_ANIM_TWIRL)
+    if (m.actionTimer % 3) == 0 then
+      play_sound(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject)
+    end
   end,
   --[[
   [CHAR_ANIM_TRIPLE_JUMP] = function(m, frame)
