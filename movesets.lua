@@ -52,7 +52,7 @@ function act_lunky_cyclone(m)
 
 	-- Argument variables
 
-    smlua_anim_util_set_animation(m.marioObj, "evilswag_moveset_anim_tornado")
+    smlua_anim_util_set_animation(m.marioObj, "lunky_cyclone")
 
 	-- Animation
     if m.actionTimer == 0 then
