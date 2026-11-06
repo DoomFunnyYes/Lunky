@@ -108,12 +108,7 @@ function act_lunky_cyclone(m)
     smlua_anim_util_set_animation(m.marioObj, "lunky_cyclone")
 
 	-- Animation
-    if m.actionTimer == 0 then
-        m.faceAngle.y = m.intendedYaw
-        if m.input & INPUT_NONZERO_ANALOG ~= 0 then
-            m.forwardVel = 5
-        end
-    elseif m.actionTimer < 35 then
+    if m.actionTimer < 35 then
         m.faceAngle.y = approach_s16_symmetric(m.faceAngle.y, m.intendedYaw, 0x200)
 
         if m.actionTimer <= 20 then
@@ -131,14 +126,16 @@ function act_lunky_cyclone(m)
         m.marioBodyState.eyeState = MARIO_EYES_OPEN
     end
 
-    if (m.input & INPUT_NONZERO_ANALOG) ~= 0 then
-        mario_set_forward_vel(m, math.abs(m.forwardVel))
-    end
+    if (m.input & INPUT_NONZERO_ANALOG) ~= 0 and m.actionTimer < 27 then -- movement
+        mario_set_forward_vel(m, m.controller.stickMag)
+    else
+		m.forwardVel = m.forwardVel * 0.5
+	end
 	
 	local stepResult = perform_ground_step(m)
 
 	apply_slope_accel(m)
-	m.faceAngle.y = m.intendedYaw - approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 0x250, 0x250)
+	m.faceAngle.y = m.intendedYaw -- approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 0x250, 0x250)
 	
 	if stepResult == GROUND_STEP_HIT_WALL then
 		if m.wall ~= nil and m.wall.object ~= nil and (m.wall.object.oInteractType == INTERACT_DOOR or m.wall.object.oInteractType == INTERACT_WARP_DOOR) then return end
@@ -174,19 +171,15 @@ function act_lunky_missile_full(m)
     local arg = m.actionArg
     local e = gStateExtras[m.playerIndex]
 
-    if arg == 2 then
-        if m.actionTimer < 10 then -- for the first ten frames
-            m.pos.y = m.pos.y + 75
-        end
-    else
+	m.particleFlags = m.particleFlags | PARTICLE_DUST | PARTICLE_FIRE
+	
+	if arg == 1 then
         m.vel.y = 25 - m.actionTimer * 2
     end
 
-	m.particleFlags = m.particleFlags | PARTICLE_DUST | PARTICLE_FIRE
-
 	if m.actionTimer == 1 then
         if arg == 2 then
-            return m.pos.y == (m.pos.y + 36 + e.forca)
+            m.vel.y = (m.vel.y + 48 + e.forca)
         else
             mario_set_forward_vel(m, 36 + e.forca)
         end
@@ -197,7 +190,7 @@ function act_lunky_missile_full(m)
 		m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
 	else
         if arg == 2 then
-            return m.pos.y == (m.pos.y - m.actonTimer / 32)
+            m.vel.y = (m.vel.y - m.actionTimer / 32)
         else
 	        mario_set_forward_vel(m, m.forwardVel - m.actionTimer / 32)
         end
@@ -233,19 +226,15 @@ function act_lunky_missile(m)
     local arg = m.actionArg
     local e = gStateExtras[m.playerIndex]
 
-    if arg == 2 then
-        if m.actionTimer < 10 then -- for the first ten frames
-            m.pos.y = m.pos.y + 75
-        end
-    else
+	m.particleFlags = m.particleFlags | PARTICLE_DUST
+	
+	if arg == 1 then
         m.vel.y = 25 - m.actionTimer * 2
     end
 
-	m.particleFlags = m.particleFlags | PARTICLE_DUST
-
 	if m.actionTimer == 1 then
         if arg == 2 then
-            return m.pos.y == (m.pos.y + 36 + e.forca)
+            m.vel.y = (m.vel.y + 48 + e.forca)
         else
             mario_set_forward_vel(m, 36 + e.forca)
         end
@@ -257,9 +246,8 @@ function act_lunky_missile(m)
             audio_sample_play(LUNKY_MISSILE_STRONG, gMarioStates[0].pos, 0.32);
         end
 	else
-
         if arg == 2 then
-            return m.pos.y == (m.pos.y - m.actonTimer / 32)
+            m.vel.y = (m.vel.y - m.actionTimer / 32)
         else
 	        mario_set_forward_vel(m, m.forwardVel - m.actionTimer / 32)
         end
@@ -326,13 +314,9 @@ function act_lunky_missile_charge(m)
     if (m.controller.buttonDown & A_BUTTON) == 0 then
 	    if m.actionTimer < 42 then
             audio_sample_stop(LUNKY_MISSILE_CHARGE)
-            djui_chat_message_create("forca is "..tostring(e.forca))
-            djui_chat_message_create("vel.Y is "..tostring(m.vel.y))
 	        set_mario_action(m, ACT_LUNKY_MISSILE, m.actionArg)
 		elseif m.actionTimer >= 42 then
             audio_sample_stop(LUNKY_MISSILE_CHARGE)
-            djui_chat_message_create("forca is "..tostring(e.forca))
-            djui_chat_message_create("vel.Y is "..tostring(m.vel.y))
 		    set_mario_action(m, ACT_LUNKY_MISSILE_FULL, m.actionArg)
 		end
 	end
