@@ -11,7 +11,10 @@ SMALL_LUNKY_LONG_JUMP = audio_sample_load("small_lunky_long_jump.ogg")
 LUNKY_MISSILE_WEAK = audio_sample_load("lunky_missile_weak.ogg")
 LUNKY_MISSILE_MEDIUM = audio_sample_load("lunky_missile_medium.ogg")
 LUNKY_MISSILE_STRONG = audio_sample_load("lunky_missile_strong.ogg")
+LUNKY_MISSILE_MAXIMUM = audio_sample_load("lunky_missile_maximum.ogg")
 LUNKY_MISSILE_CHARGE = audio_sample_load("lunky_green_missile_charge.ogg")
+LUNKY_CYCLONE = audio_sample_load("lunky_cyclone.ogg")
+LUNKY_CYCLONE_END = audio_sample_load("lunky_cyclone_end.ogg")
 
 function limit_angle(a)
 	return (a + 0x8000) % 0x10000 - 0x8000
@@ -106,18 +109,17 @@ function act_lunky_cyclone(m)
 	-- Argument variables
 
     smlua_anim_util_set_animation(m.marioObj, "lunky_cyclone")
+    if m.actionTimer == 1 then
+        audio_sample_play(LUNKY_CYCLONE, gMarioStates[0].pos, 0.32);
+    end
+
+    if m.actionTimer == 20 then
+        audio_sample_play(LUNKY_CYCLONE_END, gMarioStates[0].pos, 0.32);
+    end
 
 	-- Animation
     if m.actionTimer < 35 then
         m.faceAngle.y = approach_s16_symmetric(m.faceAngle.y, m.intendedYaw, 0x200)
-
-        if m.actionTimer <= 20 then
-            if (m.actionTimer % 3) == 0 then
-                play_sound(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject)
-            end
-        elseif m.actionTimer == 27 then
-            play_sound_with_freq_scale(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject, 0.8)
-        end
     end
 
     if m.actionTimer < 30 then
@@ -183,7 +185,6 @@ function act_lunky_missile_full(m)
         else
             mario_set_forward_vel(m, 36 + e.forca)
         end
-		LUNKY_MISSILE_MAXIMUM = audio_sample_load("lunky_missile_maximum.ogg");
 		audio_sample_play(LUNKY_MISSILE_MAXIMUM, gMarioStates[0].pos, 0.32);
 		set_camera_shake_from_point(SHAKE_POS_MEDIUM, m.pos.x, m.pos.y, m.pos.z)
 	    m.squishTimer = 1.33
@@ -211,8 +212,17 @@ function act_lunky_missile_full(m)
         set_mario_action(m, ACT_HARD_BACKWARD_AIR_KB, 0)
     end
 
-    set_mario_animation(m, MARIO_ANIM_FLUTTERKICK)
-    set_anim_to_frame(m, 7)
+    if arg == 2 then
+        set_mario_animation(m, MARIO_ANIM_TRIPLE_JUMP)
+        set_anim_to_frame(m, 1)
+    else
+        set_mario_animation(m, MARIO_ANIM_FLUTTERKICK)
+        set_anim_to_frame(m, 7)
+    end
+
+    if arg == 2 and (m.controller.buttonPressed & Z_TRIG ~= 0) then
+        set_mario_action(m, ACT_GROUND_POUND, 1)
+    end
 
     m.actionTimer = m.actionTimer + 1
     return 0
@@ -268,8 +278,17 @@ function act_lunky_missile(m)
         set_mario_action(m, ACT_HARD_BACKWARD_AIR_KB, 0)
     end
 
-    set_mario_animation(m, MARIO_ANIM_FLUTTERKICK)
-    set_anim_to_frame(m, 7)
+    if arg == 2 then
+        set_mario_animation(m, MARIO_ANIM_TRIPLE_JUMP)
+        set_anim_to_frame(m, 1)
+    else
+        set_mario_animation(m, MARIO_ANIM_FLUTTERKICK)
+        set_anim_to_frame(m, 7)
+    end
+
+    if arg == 2 and (m.controller.buttonPressed & Z_TRIG ~= 0) then
+        set_mario_action(m, ACT_GROUND_POUND, 1)
+    end
 
     m.actionTimer = m.actionTimer + 1
     return 0
