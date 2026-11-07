@@ -213,7 +213,8 @@ function checkbox_starman_theme()
     end
 end
 
-      _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_METAL_CAP, LUNKY_INVINCIBILITY)
+      _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_METAL_CAP, LUNKY_INVINCIBILITY_SNES)
+      _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_POWERUP, LUNKY_INVINCIBILITY_SNES)
 
 hook_mod_menu_checkbox("Toggle Starman Theme", true, checkbox_starman_theme)
 
@@ -236,7 +237,11 @@ function lunky_before_set_action(m, inc, arg) --m is the mariostate input, inc i
       return ACT_LUNKY_CYCLONE
     end
     if (inc == ACT_LONG_JUMP) then
-      return set_mario_action(m, ACT_LUNKY_MISSILE_CHARGE, 1)
+      if m.flags & MARIO_METAL_CAP == 0 then
+        return set_mario_action(m, ACT_LUNKY_MISSILE_CHARGE, 1)
+      else
+        return set_mario_action(m, ACT_LUNKY_MISSILE_FULL, 1)
+      end
     end
     if (inc == ACT_BACKFLIP) then
       return set_mario_action(m, ACT_LUNKY_MISSILE_CHARGE, 2)

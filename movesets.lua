@@ -192,6 +192,10 @@ function act_lunky_missile_full(m)
 	else
         if arg == 2 then
             m.vel.y = (m.vel.y - m.actionTimer / 32)
+            if m.flags & MARIO_METAL_CAP ~= 0 and m.actionTimer == 19 then
+                set_mario_action(m, ACT_FLYING, 0)
+                mario_set_forward_vel(m, 36 + e.forca)
+            end
         else
 	        mario_set_forward_vel(m, m.forwardVel - m.actionTimer / 32)
         end
@@ -404,6 +408,12 @@ function lunky_update(m)
             m.marioBodyState.handState = MARIO_HAND_OPEN
         end
         m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
+    end
+    if m.flags & MARIO_METAL_CAP ~= 0 then
+        m.flags = m.flags | MARIO_WING_CAP
+    end
+    if m.flags & MARIO_WING_CAP ~= 0 then
+        m.flags = m.flags | MARIO_METAL_CAP
     end
 end
 
