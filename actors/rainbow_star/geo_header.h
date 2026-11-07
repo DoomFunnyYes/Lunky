@@ -1,0 +1,15 @@
+extern const GeoLayout rainbow_star_geo_opt_1[];
+extern const GeoLayout rainbow_star_geo_opt_2[];
+extern const GeoLayout rainbow_star_geo_opt_3[];
+extern const GeoLayout rainbow_star_geo[];
+extern Lights1 rainbow_star_Starman_lights;
+extern u8 rainbow_star_HighLight_i8[];
+extern Vtx rainbow_star_Metal_Cap_DL_mesh_layer_1_vtx_0[12];
+extern Gfx rainbow_star_Metal_Cap_DL_mesh_layer_1_tri_0[];
+extern Gfx mat_rainbow_star_Starman2[];
+extern Gfx mat_revert_rainbow_star_Starman2[];
+extern Gfx mat_rainbow_star_Starman[];
+extern Gfx mat_revert_rainbow_star_Starman[];
+extern Gfx rainbow_star_Metal_Cap_DL_mesh_layer_1_with_layer_1_revert[];
+extern Gfx rainbow_star_Metal_Cap_DL_mesh_layer_1_opt_2_with_layer_1_revert[];
+extern Gfx rainbow_star_Metal_Cap_DL_mesh_layer_1_with_layer_5_revert[];

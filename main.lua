@@ -21,6 +21,9 @@ end
 local E_MODEL_LUNKY =      smlua_model_util_get_id("lunky_geo")      -- Located in "actors"
 local E_MODEL_LUNKY_FLESH =      smlua_model_util_get_id("lunky_flesh_geo")
 
+local E_MODEL_RAINBOW_STAR =      smlua_model_util_get_id("rainbow_star_geo")
+
+
 local TEX_LUNKY_LIFE_ICON = get_texture_info("lunky_icon")
 
 local ANIMTABLE_LUNKY = {
@@ -133,6 +136,12 @@ local PALETTE_LUNKY_FLESH = {
 	  [EMBLEM] = "008c1b"
 }
 
+CAPTABLE_LUNKY = {
+    normal = E_MODEL_LUIGIS_CAP,
+    wing = E_MODEL_RAINBOW_STAR,
+    metal = E_MODEL_RAINBOW_STAR,
+    metalWing = E_MODEL_RAINBOW_STAR,
+}
 
 local CSloaded = false
 local function on_character_select_load()
@@ -193,6 +202,9 @@ local HEALTH_METER_LUNKY = {
     _G.charSelect.credit_add(TEXT_MOD_NAME, "saulis2cool4u", "Awesome Models!")
     _G.charSelect.credit_add(TEXT_MOD_NAME, "SwagSkeleton95", "Finalized Star Power code!")
     _G.charSelect.credit_add(TEXT_MOD_NAME, "JerThePear", "A metric TON of advice!")
+	
+	_G.charSelect.character_add_caps(E_MODEL_LUNKY,CAPTABLE_LUNKY)
+	_G.charSelect.character_add_caps(E_MODEL_LUNKY_FLESH,CAPTABLE_LUNKY)
 
 ----
     _G.charSelect.character_hook_moveset(CT_LUNKY, HOOK_BEFORE_SET_MARIO_ACTION, lunky_before_set_action)

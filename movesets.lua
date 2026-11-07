@@ -391,6 +391,12 @@ hook_event(HOOK_UPDATE, function()
     if starHue > 1 then
 		starHue = 0
     end
+	local starColor = HSV_to_RGB(starHue, 1, 1)
+	
+	local dl = gfx_get_from_name("mat_rainbow_star_Starman2")
+	local gfx = gfx_get_command(dl, 6)
+	gfx_set_command(gfx, "gsDPSetEnvColor(%i, %i, %i, 255)",
+	starColor.r, starColor.g, starColor.b)
 end)
 
 function lunky_update(m)
