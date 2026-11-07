@@ -386,6 +386,13 @@ end
 
 local starHue = 0
 
+hook_event(HOOK_UPDATE, function()
+	starHue = starHue + 0.07
+    if starHue > 1 then
+		starHue = 0
+    end
+end)
+
 function lunky_update(m)
     if m.health <= (0x500) then
         m.marioObj.header.gfx.scale.y = 0.75
@@ -396,11 +403,10 @@ function lunky_update(m)
         m.marioObj.header.gfx.scale.x = 1
         m.marioObj.header.gfx.scale.z = 1
     end
+	
     if (m.flags & MARIO_METAL_CAP ~= 0) or (m.flags & MARIO_WING_CAP ~= 0) then
-        starHue = starHue + 0.07
-        if starHue > 1 then
-            starHue = 0
-        end
+		m.flags = m.flags | MARIO_WING_CAP | MARIO_METAL_CAP -- Enable both wing and metal, even if you have just one of them
+        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM, HSV_to_RGB(starHue, 1, 1))
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], CAP, HSV_to_RGB(starHue, 1, 1))
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS, HSV_to_RGB(starHue, 1, 1))
 
@@ -414,13 +420,7 @@ function lunky_update(m)
             m.marioBodyState.handState = MARIO_HAND_OPEN
         end
         m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
-    end
-    if m.flags & MARIO_METAL_CAP ~= 0 then
-        m.flags = m.flags | MARIO_WING_CAP
-    end
-    if m.flags & MARIO_WING_CAP ~= 0 then
-        m.flags = m.flags | MARIO_METAL_CAP
-    end
+	end
     if m.action == ACT_SPECIAL_TRIPLE_JUMP and m.pos.y == m.floorHeight then
         set_mario_action(m, ACT_FREEFALL_LAND, 0)
     end
