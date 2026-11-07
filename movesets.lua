@@ -150,6 +150,7 @@ function act_lunky_cyclone(m)
     if m.actionTimer < 20 then
         if m.actionTimer > -1 then
             m.particleFlags = m.particleFlags | PARTICLE_DUST
+            m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
             m.vel.y = 18 - (m.actionTimer * (m.forwardVel/25))
         end
     else
@@ -194,6 +195,7 @@ function act_lunky_missile_full(m)
             m.vel.y = (m.vel.y - m.actionTimer / 32)
             if m.flags & MARIO_METAL_CAP ~= 0 and m.actionTimer == 19 then
                 set_mario_action(m, ACT_FLYING, 0)
+                m.faceAngle.x = 0x5000
                 mario_set_forward_vel(m, 36 + e.forca)
             end
         else
@@ -262,6 +264,11 @@ function act_lunky_missile(m)
 	else
         if arg == 2 then
             m.vel.y = (m.vel.y - m.actionTimer / 32)
+            if m.flags & MARIO_METAL_CAP ~= 0 and m.actionTimer == 19 then
+                set_mario_action(m, ACT_FLYING, 0)
+                m.faceAngle.x = 0x5000
+                mario_set_forward_vel(m, 36 + e.forca)
+            end
         else
 	        mario_set_forward_vel(m, m.forwardVel - m.actionTimer / 32)
         end
@@ -305,7 +312,6 @@ ACT_LUNKY_MISSILE_CHARGE = allocate_mario_action(ACT_FLAG_STATIONARY)
 function act_lunky_missile_charge(m)
     local e = gStateExtras[m.playerIndex]
 
-	m.particleFlags = m.particleFlags | PARTICLE_FIRE
     m.particleFlags = m.particleFlags | PARTICLE_WAVE_TRAIL
 
 	if m.actionTimer % 7 == 0 and m.actionTimer < 42 then
@@ -390,7 +396,7 @@ function lunky_update(m)
         m.marioObj.header.gfx.scale.x = 1
         m.marioObj.header.gfx.scale.z = 1
     end
-    if m.flags & MARIO_METAL_CAP ~= 0 then
+    if (m.flags & MARIO_METAL_CAP ~= 0) or (m.flags & MARIO_WING_CAP ~= 0) then
         starHue = starHue + 0.07
         if starHue > 1 then
             starHue = 0
@@ -414,6 +420,9 @@ function lunky_update(m)
     end
     if m.flags & MARIO_WING_CAP ~= 0 then
         m.flags = m.flags | MARIO_METAL_CAP
+    end
+    if m.action == ACT_SPECIAL_TRIPLE_JUMP and m.pos.y == m.floorHeight then
+        set_mario_action(m, ACT_FREEFALL_LAND, 0)
     end
 end
 
@@ -445,9 +454,6 @@ function lunky_on_set_action(m)
         else
             audio_sample_play(LUNKY_LONG_JUMP, m.pos, 1)
         end
-    end
-    if m.action == ACT_SPECIAL_TRIPLE_JUMP and m.pos.y == m.floorHeight and m.vel.y < 0 then
-        set_mario_action(m, ACT_FREEFALL_LAND, 0)
     end
 end
 

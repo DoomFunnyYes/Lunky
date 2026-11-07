@@ -57,15 +57,9 @@ local ANIMTABLE_LUNKY = {
       play_sound(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject)
     end
   end,
-  --[[
-  [CHAR_ANIM_TRIPLE_JUMP] = function(m, frame)
-    m.marioObj.header.gfx.angle.x = get_global_timer() * 0x3000
-    set_mario_animation(m, CHAR_ANIM_FORWARD_SPINNING)
-  end,
   [CHAR_ANIM_FAST_LONGJUMP] = function(m, frame)
     set_mario_anim_with_accel(m, CHAR_ANIM_SLOW_LONGJUMP, 0x10000)
   end,
-  ]]
     [CHAR_ANIM_RUNNING] = function(m, frame)
     return "lunky_running"
   end,
@@ -213,8 +207,8 @@ function checkbox_starman_theme()
     end
 end
 
-      _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_METAL_CAP, LUNKY_INVINCIBILITY_SNES)
-      _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_POWERUP, LUNKY_INVINCIBILITY_SNES)
+      _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_METAL_CAP, LUNKY_INVINCIBILITY)
+      _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_POWERUP, LUNKY_INVINCIBILITY)
 
 hook_mod_menu_checkbox("Toggle Starman Theme", true, checkbox_starman_theme)
 
@@ -225,9 +219,8 @@ hook_mod_menu_checkbox("Toggle Starman Theme", true, checkbox_starman_theme)
 _G.charSelect.config_character_sounds()
 
 function lunky_before_set_action(m, inc, arg) --m is the mariostate input, inc is the incoming action, arg is the action's actionArg
-    if (inc == ACT_JUMP) then -- Should be self explanatory
+    if (inc == ACT_JUMP) or (inc == ACT_DOUBLE_JUMP) or (inc == ACT_TRIPLE_JUMP) then -- Should be self explanatory
         if m.flags & MARIO_METAL_CAP == 0 then
-            return ACT_JUMP
         else
             m.vel.y = 70
             return ACT_SPECIAL_TRIPLE_JUMP
@@ -237,11 +230,7 @@ function lunky_before_set_action(m, inc, arg) --m is the mariostate input, inc i
       return ACT_LUNKY_CYCLONE
     end
     if (inc == ACT_LONG_JUMP) then
-      if m.flags & MARIO_METAL_CAP == 0 then
-        return set_mario_action(m, ACT_LUNKY_MISSILE_CHARGE, 1)
-      else
-        return set_mario_action(m, ACT_LUNKY_MISSILE_FULL, 1)
-      end
+      return set_mario_action(m, ACT_LUNKY_MISSILE_CHARGE, 1)
     end
     if (inc == ACT_BACKFLIP) then
       return set_mario_action(m, ACT_LUNKY_MISSILE_CHARGE, 2)
