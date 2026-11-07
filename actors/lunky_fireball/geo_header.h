@@ -1,0 +1,12 @@
+extern const GeoLayout lunky_fireball_geo[];
+extern u8 lunky_fireball_fireball_alpha_rgba16[];
+extern Vtx lunky_fireball_Fireball_mesh_layer_1_vtx_0[26];
+extern Gfx lunky_fireball_Fireball_mesh_layer_1_tri_0[];
+extern Vtx lunky_fireball_Fireball_mesh_layer_5_vtx_0[30];
+extern Gfx lunky_fireball_Fireball_mesh_layer_5_tri_0[];
+extern Gfx mat_lunky_fireball_Fireball_Inside[];
+extern Gfx mat_revert_lunky_fireball_Fireball_Inside[];
+extern Gfx mat_lunky_fireball_Green_Ball_Outside[];
+extern Gfx mat_revert_lunky_fireball_Green_Ball_Outside[];
+extern Gfx lunky_fireball_Fireball_mesh_layer_1_with_revert[];
+extern Gfx lunky_fireball_Fireball_mesh_layer_5_with_revert[];
