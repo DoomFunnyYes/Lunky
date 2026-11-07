@@ -1,7 +1,8 @@
 const GeoLayout rainbow_star_geo_opt_1[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, rainbow_star_Metal_Cap_DL_mesh_layer_1_with_layer_5_revert),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, rainbow_star_Metal_Cap_DL_mesh_layer_1),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, rainbow_star_Metal_Cap_DL_mesh_layer_5_with_revert),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
@@ -9,13 +10,15 @@ const GeoLayout rainbow_star_geo_opt_2[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_DISPLAY_LIST(LAYER_OPAQUE, rainbow_star_Metal_Cap_DL_mesh_layer_1_opt_2_with_layer_1_revert),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, rainbow_star_Metal_Cap_DL_mesh_layer_5_opt_2_with_revert),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
 const GeoLayout rainbow_star_geo_opt_3[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, rainbow_star_Metal_Cap_DL_mesh_layer_1_opt_2_with_layer_1_revert),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, rainbow_star_Metal_Cap_DL_mesh_layer_1_opt_2),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, rainbow_star_Metal_Cap_DL_mesh_layer_5_opt_2_with_revert),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
@@ -32,6 +35,7 @@ const GeoLayout rainbow_star_geo[] = {
 					GEO_NODE_START(),
 					GEO_OPEN_NODE(),
 						GEO_DISPLAY_LIST(LAYER_OPAQUE, rainbow_star_Metal_Cap_DL_mesh_layer_1_with_layer_1_revert),
+						GEO_DISPLAY_LIST(LAYER_TRANSPARENT, rainbow_star_Metal_Cap_DL_mesh_layer_5_with_revert),
 					GEO_CLOSE_NODE(),
 					GEO_BRANCH(1, rainbow_star_geo_opt_1),
 					GEO_BRANCH(1, rainbow_star_geo_opt_2),
