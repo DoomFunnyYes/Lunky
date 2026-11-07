@@ -73,6 +73,7 @@ function act_wall_stick(m)
 
     set_mario_animation(m, MARIO_ANIM_START_WALLKICK)
     m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
+    m.marioBodyState.handState = MARIO_HAND_OPEN
 
     if perform_air_step(m, 0) == AIR_STEP_LANDED then
         mario_set_forward_vel(m, 0.0)
@@ -313,8 +314,14 @@ ACT_LUNKY_MISSILE_CHARGE = allocate_mario_action(ACT_FLAG_STATIONARY)
 
 function act_lunky_missile_charge(m)
     local e = gStateExtras[m.playerIndex]
+    local mBody = m.marioBodyState
 
     m.particleFlags = m.particleFlags | PARTICLE_WAVE_TRAIL
+
+    --[[if m.actionArg == 2 then
+        mBody.headAngle.x = approach_f32(mBody.headAngle.x, clamp(angle, deg_to_hex(min), deg_to_hex(max)), deg_to_hex(12), deg_to_hex(12))
+    else
+    end]]
 
 	if m.actionTimer % 7 == 0 and m.actionTimer < 42 then
 	    m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
@@ -361,6 +368,16 @@ function act_lunky_missile_charge(m)
     end
 
 	smlua_anim_util_set_animation(m.marioObj, "lunky_missile_charge")
+    if m.actionArg ~= 2 then
+        m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
+    else
+        m.marioBodyState.eyeState = MARIO_EYES_LOOK_UP
+    end
+    if m.actionTimer < 5 then
+        m.marioBodyState.handState = MARIO_HAND_OPEN
+    else
+    end
+
 
     m.faceAngle.y = m.intendedYaw - approach_s32(convert_s16(m.intendedYaw - m.faceAngle.y), 0, 0x400, 0x400)
 
