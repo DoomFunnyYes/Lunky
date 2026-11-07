@@ -1,5 +1,5 @@
-SHRINKING_SOUND = audio_sample_load("lunky_hurt.ogg")
-GROWING_SOUND = audio_sample_load("lunky_grow.ogg")
+LUNKY_SHRINKING_SOUND = audio_sample_load("lunky_hurt.ogg")
+LUNKY_GROWING_SOUND = audio_sample_load("lunky_grow.ogg")
 LUNKY_JUMP = audio_sample_load("lunky_jump.ogg")
 LUNKY_DOUBLE_JUMP = audio_sample_load("lunky_double_jump.ogg")
 LUNKY_TRIPLE_JUMP = audio_sample_load("lunky_triple_jump.ogg")
@@ -152,8 +152,7 @@ function act_lunky_cyclone(m)
 
     if m.actionTimer < 20 then
         if m.actionTimer > -1 then
-            m.particleFlags = m.particleFlags | PARTICLE_DUST
-            m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
+            m.particleFlags = m.particleFlags | PARTICLE_DUST | PARTICLE_MIST_CIRCLE
             m.vel.y = 18 - (m.actionTimer * (m.forwardVel/25))
         end
     else
@@ -173,6 +172,7 @@ hook_mario_action(ACT_LUNKY_CYCLONE, act_lunky_cyclone, INT_KICK)
 
 ACT_LUNKY_MISSILE_FULL =         allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
 
+---@param m MarioState
 function act_lunky_missile_full(m)
     local arg = m.actionArg
     local e = gStateExtras[m.playerIndex]
@@ -189,7 +189,7 @@ function act_lunky_missile_full(m)
         else
             mario_set_forward_vel(m, 36 + e.forca)
         end
-		audio_sample_play(LUNKY_MISSILE_MAXIMUM, gMarioStates[0].pos, 0.32);
+		audio_sample_play(LUNKY_MISSILE_MAXIMUM, m.pos, 0.32);
 		set_camera_shake_from_point(SHAKE_POS_MEDIUM, m.pos.x, m.pos.y, m.pos.z)
 	    m.squishTimer = 1.33
 		m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
@@ -222,8 +222,11 @@ function act_lunky_missile_full(m)
     end
 
     if arg == 2 then
-        set_mario_animation(m, MARIO_ANIM_TRIPLE_JUMP)
-        set_anim_to_frame(m, 1)
+        set_mario_animation(m, MARIO_ANIM_FLUTTERKICK)
+        m.marioObj.header.gfx.angle.x = -0x3000 - math.clamp(m.vel.y/50, -1, 0)*0x9000
+        m.marioObj.header.gfx.pos.x = m.pos.x - sins(m.faceAngle.y)*(m.marioObj.header.gfx.angle.x/0x4000)*50
+        m.marioObj.header.gfx.pos.z = m.pos.z - coss(m.faceAngle.y)*(m.marioObj.header.gfx.angle.x/0x4000)*50
+        set_anim_to_frame(m, 7)
     else
         set_mario_animation(m, MARIO_ANIM_FLUTTERKICK)
         set_anim_to_frame(m, 7)
@@ -258,11 +261,11 @@ function act_lunky_missile(m)
             mario_set_forward_vel(m, 36 + e.forca)
         end
         if e.forca < 20 then
-		    audio_sample_play(LUNKY_MISSILE_WEAK, gMarioStates[0].pos, 0.32);
+		    audio_sample_play(LUNKY_MISSILE_WEAK, m.pos, 0.32);
         elseif e.forca < 30 then
-            audio_sample_play(LUNKY_MISSILE_MEDIUM, gMarioStates[0].pos, 0.32);
+            audio_sample_play(LUNKY_MISSILE_MEDIUM, m.pos, 0.32);
         elseif e.forca > 29 then
-            audio_sample_play(LUNKY_MISSILE_STRONG, gMarioStates[0].pos, 0.32);
+            audio_sample_play(LUNKY_MISSILE_STRONG, m.pos, 0.32);
         end
 	else
         if arg == 2 then
@@ -284,7 +287,7 @@ function act_lunky_missile(m)
 	if m.forwardVel < 0 then
 	    mario_set_forward_vel(m, 0)
 	end
-
+    
     local stepResult = perform_air_step(m, 0)
     if stepResult == AIR_STEP_LANDED then
 	    set_mario_action(m, ACT_FORWARD_GROUND_KB, 0)
@@ -293,8 +296,11 @@ function act_lunky_missile(m)
     end
 
     if arg == 2 then
-        set_mario_animation(m, MARIO_ANIM_TRIPLE_JUMP)
-        set_anim_to_frame(m, 1)
+        set_mario_animation(m, MARIO_ANIM_FLUTTERKICK)
+        m.marioObj.header.gfx.angle.x = -0x3000 - math.clamp(m.vel.y/50, -1, 0)*0x9000
+        m.marioObj.header.gfx.pos.x = m.pos.x - sins(m.faceAngle.y)*(m.marioObj.header.gfx.angle.x/0x4000)*50
+        m.marioObj.header.gfx.pos.z = m.pos.z - coss(m.faceAngle.y)*(m.marioObj.header.gfx.angle.x/0x4000)*50
+        set_anim_to_frame(m, 7)
     else
         set_mario_animation(m, MARIO_ANIM_FLUTTERKICK)
         set_anim_to_frame(m, 7)
@@ -317,11 +323,6 @@ function act_lunky_missile_charge(m)
     local mBody = m.marioBodyState
 
     m.particleFlags = m.particleFlags | PARTICLE_WAVE_TRAIL
-
-    --[[if m.actionArg == 2 then
-        mBody.headAngle.x = approach_f32(mBody.headAngle.x, clamp(angle, deg_to_hex(min), deg_to_hex(max)), deg_to_hex(12), deg_to_hex(12))
-    else
-    end]]
 
 	if m.actionTimer % 7 == 0 and m.actionTimer < 42 then
 	    m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
@@ -417,6 +418,10 @@ hook_event(HOOK_UPDATE, function()
 	starColor.r, starColor.g, starColor.b)
 end)
 
+local prevCapColor = {r = 0, g = 0, b = 0}
+local prevPantsColor = {r = 0, g = 0, b = 0}
+local prevEmblemColor = {r = 0, g = 0, b = 0}
+
 function lunky_update(m)
     if m.health <= (0x500) then
         m.marioObj.header.gfx.scale.y = 0.75
@@ -444,6 +449,17 @@ function lunky_update(m)
             m.marioBodyState.handState = MARIO_HAND_OPEN
         end
         m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
+
+        if m.capTimer < 3 then
+            network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM, prevEmblemColor)
+            network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], CAP, prevCapColor)
+            network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS, prevPantsColor)
+        end
+
+    else
+        prevCapColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], CAP)
+        prevPantsColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS)
+        prevEmblemColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM)
 	end
     if m.action == ACT_SPECIAL_TRIPLE_JUMP and m.pos.y == m.floorHeight then
         set_mario_action(m, ACT_FREEFALL_LAND, 0)

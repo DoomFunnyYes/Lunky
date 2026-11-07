@@ -232,8 +232,7 @@ _G.charSelect.config_character_sounds()
 
 function lunky_before_set_action(m, inc, arg) --m is the mariostate input, inc is the incoming action, arg is the action's actionArg
     if (inc == ACT_JUMP) or (inc == ACT_DOUBLE_JUMP) or (inc == ACT_TRIPLE_JUMP) then -- Should be self explanatory
-        if m.flags & MARIO_METAL_CAP == 0 then
-        else
+        if m.flags & MARIO_METAL_CAP ~= 0 then
             m.vel.y = 70
             return ACT_SPECIAL_TRIPLE_JUMP
         end
