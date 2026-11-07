@@ -122,10 +122,12 @@ function act_lunky_cyclone(m)
         m.faceAngle.y = approach_s16_symmetric(m.faceAngle.y, m.intendedYaw, 0x200)
     end
 
-    if m.actionTimer < 30 then
+    if m.actionTimer < 15 then
         m.marioBodyState.eyeState = MARIO_EYES_CLOSED
-    elseif m.actionTimer < 40 then
-        m.marioBodyState.eyeState = MARIO_EYES_OPEN
+    elseif m.actionTimer < 17 then
+        m.marioBodyState.eyeState = MARIO_EYES_BLINK
+    elseif m.actionTimer < 20 then
+        m.marioBodyState.eyeState = MARIO_EYES_LOOK_UP
     end
 
     if (m.input & INPUT_NONZERO_ANALOG) ~= 0 and m.actionTimer < 27 then -- movement
@@ -358,8 +360,7 @@ function act_lunky_missile_charge(m)
         set_mario_action(m, ACT_AIR_HIT_WALL, 0)
     end
 
-	set_mario_animation(m, MARIO_ANIM_START_CROUCHING)
-	set_anim_to_frame(m, 2)
+	smlua_anim_util_set_animation(m.marioObj, "lunky_missile_charge")
 
     m.faceAngle.y = m.intendedYaw - approach_s32(convert_s16(m.intendedYaw - m.faceAngle.y), 0, 0x400, 0x400)
 
