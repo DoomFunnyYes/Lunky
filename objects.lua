@@ -6,6 +6,8 @@ local SOUND_LUNKY_FIREBALL_SHOOT    = audio_sample_load("lunky_attack.ogg")
 local SOUND_LUNKY_FIREBALL_HIT      = audio_sample_load("lunky_ground_pound.ogg")
 
 local lunkyFireballLifetime = 100
+local greenFlameScale = 2 -- how big green flame is initially
+local greenFlameDurr = 10 -- how long it takes green flame to shrink
 
 local function pause_check()
     local m = gMarioStates[0]
@@ -26,8 +28,8 @@ local function bhv_greenFlame_loop(o)
 	if o.oTimer % 2 == 0 then
 		o.oAnimState = o.oAnimState + 1
 	end
-    obj_scale(o, (10 - o.oTimer)/10)
-    if o.oTimer > 10 then
+    obj_scale(o, ((greenFlameDurr - o.oTimer)/greenFlameDurr)*greenFlameScale)
+    if o.oTimer > greenFlameDurr then
         obj_mark_for_deletion(o)
         return
     end
