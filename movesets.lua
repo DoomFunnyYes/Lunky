@@ -233,6 +233,9 @@ function act_lunky_missile_full(m)
     end
 
     if arg == 2 and (m.controller.buttonPressed & Z_TRIG ~= 0) then
+        m.marioObj.header.gfx.angle.x = 0x0000
+        m.marioObj.header.gfx.pos.x = m.pos.x
+        m.marioObj.header.gfx.pos.z = m.pos.z
         set_mario_action(m, ACT_GROUND_POUND, 1)
     end
 
@@ -307,6 +310,9 @@ function act_lunky_missile(m)
     end
 
     if arg == 2 and (m.controller.buttonPressed & Z_TRIG ~= 0) then
+        m.marioObj.header.gfx.angle.x = 0x0000
+        m.marioObj.header.gfx.pos.x = m.pos.x
+        m.marioObj.header.gfx.pos.z = m.pos.z
         set_mario_action(m, ACT_GROUND_POUND, 1)
     end
 

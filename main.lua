@@ -118,11 +118,21 @@ local VOICETABLE_LUNKY = {
 local PALETTE_LUNKY = {
     [PANTS]  = "008c1b",
     [SHIRT]  = "0e2770",
-    [GLOVES] = "ffffff",
+    [GLOVES] = "e6e6ff",
     [SHOES]  = "522910",
     [HAIR]   = "6c1800",
     [SKIN]   = "ffaa72",
     [CAP]    = "008c1b",
+	  [EMBLEM] = "008c1b"
+}
+local PALETTE_LUNKY2 = {
+    [PANTS]  = "e1ffe1",
+    [SHIRT]  = "008c1b",
+    [GLOVES] = "e6e6ff",
+    [SHOES]  = "522910",
+    [HAIR]   = "6c1800",
+    [SKIN]   = "ffaa72",
+    [CAP]    = "e1ffe1",
 	  [EMBLEM] = "008c1b"
 }
 local PALETTE_LUNKY_FLESH = {
@@ -133,6 +143,16 @@ local PALETTE_LUNKY_FLESH = {
     [HAIR]   = "6c1800",
     [SKIN]   = "ffaa72",
     [CAP]    = "008c1b",
+	  [EMBLEM] = "008c1b"
+}
+local PALETTE_LUNKY_FLESH2 = {
+    [PANTS]  = "e1ffe1",
+    [SHIRT]  = "008c1b",
+    [GLOVES] = "ffaa72",
+    [SHOES]  = "522910",
+    [HAIR]   = "6c1800",
+    [SKIN]   = "ffaa72",
+    [CAP]    = "e1ffe1",
 	  [EMBLEM] = "008c1b"
 }
 
@@ -196,9 +216,12 @@ local HEALTH_METER_LUNKY = {
 
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY, 'LUNKY')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH, 'LUNKY WITH NO PROTECTION')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY2, 'LUNKY-A-FLAME')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH2, 'WILDFIRE LUNKY')
 
     _G.charSelect.character_add_health_meter(CT_LUNKY, HEALTH_METER_LUNKY)
 
+    _G.charSelect.credit_add(TEXT_MOD_NAME, "SwagSkeleton95", "Awesome Models!")
     _G.charSelect.credit_add(TEXT_MOD_NAME, "saulis2cool4u", "Awesome Models!")
     _G.charSelect.credit_add(TEXT_MOD_NAME, "SwagSkeleton95", "Finalized Star Power code!")
     _G.charSelect.credit_add(TEXT_MOD_NAME, "JerThePear", "A metric TON of advice!")
