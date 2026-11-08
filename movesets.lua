@@ -203,6 +203,10 @@ function act_lunky_missile_full(m)
             end
         else
 	        mario_set_forward_vel(m, m.forwardVel - m.actionTimer / 32)
+            if m.flags & MARIO_METAL_CAP ~= 0 and m.actionTimer == 19 and m.input & INPUT_A_DOWN then
+                set_mario_action(m, ACT_FLYING, 0)
+                mario_set_forward_vel(m, 72 + e.forca)
+            end
         end
 	end
 
@@ -219,6 +223,7 @@ function act_lunky_missile_full(m)
         if (m.flags & MARIO_METAL_CAP ~= 0) or (m.flags & MARIO_WING_CAP ~= 0) then
             set_mario_action(m, ACT_DIVE_SLIDE, 0)
         else
+            play_character_sound(m, CHAR_SOUND_SNORING2)
 	        set_mario_action(m, ACT_FORWARD_GROUND_KB, 0)
         end
     elseif stepResult == AIR_STEP_HIT_WALL then
@@ -383,6 +388,9 @@ function act_lunky_missile_charge(m)
     end
 
 	smlua_anim_util_set_animation(m.marioObj, "lunky_missile_charge")
+    if m.actionTimer >= 16 then
+    m.marioObj.header.gfx.animInfo.animAccel = 2 + ((m.actionTimer / 8) * 32768)
+    end
     if m.actionArg ~= 2 then
         m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
     else
@@ -438,7 +446,6 @@ local prevEmblemColor = {r = 0, g = 0, b = 0}
 
 function lunky_update(m)
 
-
     if m.health <= (0x500) then
         m.marioObj.header.gfx.scale.y = 0.75
         m.marioObj.header.gfx.scale.x = 1
@@ -449,6 +456,12 @@ function lunky_update(m)
         m.marioObj.header.gfx.scale.z = 1
     end
 	
+
+    --Trying to make it so when you use the moveset, the jump voice clips aren't heard, so that Small Lunky can work. Otherwise, if moveset's off, you can hear jump noises. Useful elsewhere too.
+    if m.action == ACT_JUMP | m.action == ACT_DOUBLE_JUMP | m.action == ACT_TRIPLE_JUMP | m.action == ACT_LONG_JUMP then
+        play_character_sound(m, CHAR_SOUND_SNORING2)
+    end
+
     if (m.flags & MARIO_METAL_CAP ~= 0) or (m.flags & MARIO_WING_CAP ~= 0) then
 		m.flags = m.flags | MARIO_WING_CAP | MARIO_METAL_CAP -- Enable both wing and metal, even if you have just one of them
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM, HSV_to_RGB(starHue, 1, 1))
@@ -524,3 +537,10 @@ function lunky_on_set_action(m)
     end
 end
 
+local function lunky_interact(m, o, type)
+    if type == INTERACT_CAP then
+        play_character_sound(m, CHAR_SOUND_SNORING2)
+    end
+end
+
+hook_event(HOOK_ON_INTERACT, lunky_interact)

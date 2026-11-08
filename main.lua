@@ -72,27 +72,27 @@ local ANIMTABLE_LUNKY = {
 
 local VOICETABLE_LUNKY = {
     [CHAR_SOUND_ATTACKED] = 'lunky_real_hurt.ogg',
-    [CHAR_SOUND_COUGHING1] = 'lunky_silence.ogg',
-    [CHAR_SOUND_COUGHING2] = 'lunky_silence.ogg',
-    [CHAR_SOUND_COUGHING3] = 'lunky_silence.ogg',
-    [CHAR_SOUND_DOH] = 'lunky_silence.ogg',
-    [CHAR_SOUND_DROWNING] = 'lunky_silence.ogg',
+    [CHAR_SOUND_COUGHING1] = 'lunky_cough1.ogg',
+    [CHAR_SOUND_COUGHING2] = 'lunky_cough2.ogg',
+    [CHAR_SOUND_COUGHING3] = 'lunky_cough3.ogg',
+    [CHAR_SOUND_DOH] = 'lunky_bonk.ogg',
+    [CHAR_SOUND_DROWNING] = 'lunky_drown.ogg',
     [CHAR_SOUND_DYING] = 'lunky_silence.ogg',
-    [CHAR_SOUND_EEUH] = 'lunky_silence.ogg',
+    [CHAR_SOUND_EEUH] = 'lunky_trampoline.ogg',
     [CHAR_SOUND_GAME_OVER] = 'lunky_silence.ogg',
     [CHAR_SOUND_GROUND_POUND_WAH] = 'lunky_ground_pound.ogg',
-    [CHAR_SOUND_HAHA] = 'lunky_silence.ogg',
-    [CHAR_SOUND_HAHA_2] = 'lunky_silence.ogg',
+    [CHAR_SOUND_HAHA] = 'lunky_misc.ogg',
+    [CHAR_SOUND_HAHA_2] = 'lunky_misc.ogg',
     [CHAR_SOUND_HELLO] = 'lunky_silence.ogg',
-    [CHAR_SOUND_HERE_WE_GO] = 'lunky_silence.ogg',
+    [CHAR_SOUND_HERE_WE_GO] = 'lunky_victory.ogg',
     [CHAR_SOUND_HOOHOO] = 'lunky_silence.ogg',
     [CHAR_SOUND_HRMM] = 'lunky_silence.ogg',
-    [CHAR_SOUND_IMA_TIRED] = 'lunky_silence.ogg',
+    [CHAR_SOUND_IMA_TIRED] = 'lunky_letsago.ogg',
     [CHAR_SOUND_LETS_A_GO] = 'lunky_letsago.ogg',
     [CHAR_SOUND_MAMA_MIA] = 'lunky_mamamia.ogg',
     [CHAR_SOUND_OKEY_DOKEY] = 'lunky_okiedokie.ogg',
     [CHAR_SOUND_ON_FIRE] = 'lunky_silence.ogg',
-    [CHAR_SOUND_OOOF] = 'lunky_silence.ogg',
+    [CHAR_SOUND_OOOF] = 'lunky_bonk.ogg',
     [CHAR_SOUND_OOOF2] = 'lunky_silence.ogg',
     [CHAR_SOUND_PANTING] = 'lunky_silence.ogg',
     [CHAR_SOUND_PANTING_COLD] = 'lunky_silence.ogg',
@@ -102,19 +102,19 @@ local VOICETABLE_LUNKY = {
     [CHAR_SOUND_PUNCH_YAH] = 'lunky_attack.ogg',
     [CHAR_SOUND_SNORING1] = 'lunky_silence.ogg',
     [CHAR_SOUND_SNORING2] = 'lunky_silence.ogg',
-    [CHAR_SOUND_SNORING3] = 'lunky_silence.ogg',
+    [CHAR_SOUND_SNORING3] = 'lunky_sleeping.ogg',
     [CHAR_SOUND_SO_LONGA_BOWSER] = 'lunky_silence.ogg',
-    [CHAR_SOUND_TWIRL_BOUNCE] = 'lunky_silence.ogg',
-    [CHAR_SOUND_UH] = 'lunky_silence.ogg',
-    [CHAR_SOUND_UH2] = 'lunky_silence.ogg',
+    [CHAR_SOUND_TWIRL_BOUNCE] = 'lunky_trampoline.ogg',
+    [CHAR_SOUND_UH] = 'lunky_bonk.ogg',
+    [CHAR_SOUND_UH2] = 'small_lunky_jump.ogg',
     [CHAR_SOUND_UH2_2] = 'lunky_silence.ogg',
-    [CHAR_SOUND_WAAAOOOW] = 'lunky_silence.ogg',
-    [CHAR_SOUND_WAH2] = 'lunky_kick.ogg',
-    [CHAR_SOUND_WHOA] = 'lunky_silence.ogg',
+    [CHAR_SOUND_WAAAOOOW] = 'lunky_fall.ogg',
+    [CHAR_SOUND_WAH2] = 'lunky_throw.ogg',
+    [CHAR_SOUND_WHOA] = 'lunky_throw.ogg',
     [CHAR_SOUND_YAHOO] = 'lunky_silence.ogg',
     [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = 'lunky_silence.ogg',
     [CHAR_SOUND_YAH_WAH_HOO] = 'lunky_silence.ogg',
-    [CHAR_SOUND_YAWNING] = 'lunky_silence.ogg',
+    [CHAR_SOUND_YAWNING] = 'lunky_okiedokie.ogg',
 }
 
 local PALETTE_LUNKY = {
@@ -157,6 +157,17 @@ local PALETTE_LUNKY4 = {
     [CAP]    = { r = 0xef, g = 0x2b, b = 0xea },
     [EMBLEM] = { r = 0xef, g = 0x2b, b = 0xea },
 }
+local PALETTE_LUNKY5 = {
+    [PANTS]  = "ff6b00",
+    [SHIRT]  = "008c1b",
+    [GLOVES] = "e6e6ff",
+    [SHOES]  = "522910",
+    [HAIR]   = "6c1800",
+    [SKIN]   = "ffaa72",
+    [CAP]    = "ff6b00",
+	  [EMBLEM] = "ff6b00"
+}
+
 local PALETTE_LUNKY_FLESH = {
     [PANTS]  = "008c1b",
     [SHIRT]  = "0e2770",
@@ -196,6 +207,16 @@ local PALETTE_LUNKY_FLESH4 = {
     [SKIN]   = { r = 0xc8, g = 0x6b, b = 0x9d },
     [CAP]    = { r = 0xef, g = 0x2b, b = 0xea },
     [EMBLEM] = { r = 0xef, g = 0x2b, b = 0xea },
+}
+local PALETTE_LUNKY_FLESH5 = {
+    [PANTS]  = "ff6b00",
+    [SHIRT]  = "008c1b",
+    [GLOVES] = "ffaa72",
+    [SHOES]  = "522910",
+    [HAIR]   = "6c1800",
+    [SKIN]   = "ffaa72",
+    [CAP]    = "ff6b00",
+	  [EMBLEM] = "ff6b00"
 }
 
 CAPTABLE_LUNKY = {
@@ -294,6 +315,8 @@ local HEALTH_METER_LUNKY = {
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH3, 'LUNKY MISSION BRIEFED')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY4, 'LOVEY LUNKY')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH4, 'LUNK OF LOVE')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY5, 'LUNK SCARED SILLY')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH5, 'FRIGHT FA-LUNK')
 
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY, 'LUNKY')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH, 'LUNKY WITH NO PROTECTION')
@@ -303,6 +326,8 @@ local HEALTH_METER_LUNKY = {
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH3, 'LUNKY MISSION BRIEFED')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY4, 'LOVEY LUNKY')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH4, 'LUNK OF LOVE')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY5, 'LUNK SCARED SILLY')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH5, 'FRIGHT FA-LUNK')
 
     _G.charSelect.character_add_health_meter(CT_LUNKY, HEALTH_METER_LUNKY)
 
