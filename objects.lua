@@ -63,9 +63,9 @@ end
 local function bhv_projectile_loop_lunk(o)
     local puType = o.oBehParams
 
-    if o.oTimer == 1 then
+    --[[if o.oTimer == 1 then
         audio_sample_play(SOUND_LUNKY_FIREBALL_SHOOT, {x = o.oPosX, y = o.oPosY, z = o.oPosZ}, pause_check())
-    end
+    end]]
     obj_set_model_extended(o, E_MODEL_LUNKY_FIREBALL)
 
     local step = object_step_without_floor_orient()

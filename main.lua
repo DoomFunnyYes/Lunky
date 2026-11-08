@@ -135,6 +135,26 @@ local PALETTE_LUNKY2 = {
     [CAP]    = "e1ffe1",
 	  [EMBLEM] = "008c1b"
 }
+local PALETTE_LUNKY3 = {
+    [PANTS]  = "0e2770",
+    [SHIRT]  = "d89e1b",
+    [GLOVES] = "e6e6ff",
+    [SHOES]  = "522910",
+    [HAIR]   = "6c1800",
+    [SKIN]   = "ffaa72",
+    [CAP]    = "0e2770",
+	  [EMBLEM] = "000000"
+}
+local PALETTE_LUNKY4 = {
+    [PANTS]  = { r = 0xff, g = 0x44, b = 0xff },
+    [SHIRT]  = { r = 0x93, g = 0x00, b = 0x90 },
+    [GLOVES] = { r = 0xff, g = 0x99, b = 0xff },
+    [SHOES]  = { r = 0xaa, g = 0x2c, b = 0x66 },
+    [HAIR]   = { r = 0xf3, g = 0x65, b = 0xda },
+    [SKIN]   = { r = 0xc8, g = 0x6b, b = 0x9d },
+    [CAP]    = { r = 0xef, g = 0x2b, b = 0xea },
+    [EMBLEM] = { r = 0xef, g = 0x2b, b = 0xea },
+}
 local PALETTE_LUNKY_FLESH = {
     [PANTS]  = "008c1b",
     [SHIRT]  = "0e2770",
@@ -154,6 +174,26 @@ local PALETTE_LUNKY_FLESH2 = {
     [SKIN]   = "ffaa72",
     [CAP]    = "e1ffe1",
 	  [EMBLEM] = "008c1b"
+}
+local PALETTE_LUNKY_FLESH3 = {
+    [PANTS]  = "0e2770",
+    [SHIRT]  = "d89e1b",
+    [GLOVES] = "ffaa72",
+    [SHOES]  = "522910",
+    [HAIR]   = "6c1800",
+    [SKIN]   = "ffaa72",
+    [CAP]    = "0e2770",
+	  [EMBLEM] = "000000"
+}
+local PALETTE_LUNKY_FLESH4 = {
+    [PANTS]  = { r = 0xff, g = 0x44, b = 0xff },
+    [SHIRT]  = { r = 0x93, g = 0x00, b = 0x90 },
+    [GLOVES] = { r = 0xc8, g = 0x6b, b = 0x9d },
+    [SHOES]  = { r = 0xaa, g = 0x2c, b = 0x66 },
+    [HAIR]   = { r = 0xf3, g = 0x65, b = 0xda },
+    [SKIN]   = { r = 0xc8, g = 0x6b, b = 0x9d },
+    [CAP]    = { r = 0xef, g = 0x2b, b = 0xea },
+    [EMBLEM] = { r = 0xef, g = 0x2b, b = 0xea },
 }
 
 CAPTABLE_LUNKY = {
@@ -216,8 +256,12 @@ local HEALTH_METER_LUNKY = {
 
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY, 'LUNKY')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH, 'LUNKY WITH NO PROTECTION')
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY2, 'LUNKY-A-FLAME')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY2, 'LUNKY ENKINDLED')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH2, 'WILDFIRE LUNKY')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY3, 'LUNKY ON MISSION')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH3, 'LUNKY MISSION BRIEFED')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY4, 'LOVEY LUNKY')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH4, 'LUNK OF LOVE')
 
     _G.charSelect.character_add_health_meter(CT_LUNKY, HEALTH_METER_LUNKY)
 
