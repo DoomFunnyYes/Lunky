@@ -464,6 +464,9 @@ function lunky_update(m)
     if m.action == ACT_SPECIAL_TRIPLE_JUMP and m.pos.y == m.floorHeight then
         set_mario_action(m, ACT_FREEFALL_LAND, 0)
     end
+    if (m.action == ACT_PUNCHING or m.action == ACT_MOVE_PUNCHING) and m.actionArg == 6 then
+		m.actionArg = 0
+	end
 end
 
 function lunky_on_set_action(m)

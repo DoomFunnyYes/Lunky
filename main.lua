@@ -220,7 +220,7 @@ function checkbox_starman_theme()
 end
 
       _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_METAL_CAP, LUNKY_INVINCIBILITY)
-      _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_POWERUP, LUNKY_INVINCIBILITY)
+      _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_POWERUP, LUNKY_INVINCIBILITY_SNES)
 
 hook_mod_menu_checkbox("Toggle Starman Theme", true, checkbox_starman_theme)
 
