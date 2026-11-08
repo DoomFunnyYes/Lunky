@@ -474,7 +474,7 @@ function lunky_update(m)
 		m.actionArg = 0
 	end
 
-    if (m.marioObj.header.gfx.animInfo.animID == MARIO_ANIM_FIRST_PUNCH or m.marioObj.header.gfx.animInfo.animID == MARIO_ANIM_SECOND_PUNCH) and m.marioObj.header.gfx.animInfo.animFrame == -1 then
+    if (m.marioObj.header.gfx.animInfo.animID == MARIO_ANIM_FIRST_PUNCH or m.marioObj.header.gfx.animInfo.animID == MARIO_ANIM_SECOND_PUNCH) and m.marioObj.header.gfx.animInfo.animFrame == -1 and m.playerIndex == 0 then
         spawn_sync_object(id_bhvLunkyGreenball, E_MODEL_NONE, m.pos.x, m.pos.y + 50, m.pos.z, function(proj)
             proj.oMoveAngleYaw = m.faceAngle.y
         end)
