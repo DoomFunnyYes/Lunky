@@ -3,7 +3,7 @@ local E_MODEL_LUNKY_FIREBALL = smlua_model_util_get_id("lunky_fireball_geo")
 
 local SOUND_LUNKY_FIREBALL_SHOOT    = audio_sample_load("lunky_attack.ogg")
 --local SOUND_LUNKY_FIREBALL_FAIL     = audio_sample_load("")
-local SOUND_LUNKY_FIREBALL_HIT      = audio_sample_load("lunky_ground_pound.ogg")
+local SOUND_LUNKY_FIREBALL_HIT      = audio_sample_load("lunky_fireball_death.ogg")
 
 local lunkyFireballLifetime = 100
 local greenFlameScale = 2 -- how big green flame is initially
@@ -38,7 +38,7 @@ end
 id_bhvGreenFlame = hook_behavior(nil, OBJ_LIST_UNIMPORTANT, false, bhv_greenFlame_init, bhv_greenFlame_loop, 'bhvGreenFlame')
 
 ---@param o Object
-local function bhv_projectile_init_lunk(o)
+local function bhv_projectile_init(o)
     local hitboxSize = 300
     o.oFlags = OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE
     o.activeFlags = o.activeFlags | ACTIVE_FLAG_UNK9
@@ -62,7 +62,7 @@ local function bhv_projectile_init_lunk(o)
     cur_obj_become_tangible()
 end
 
-local function bhv_projectile_loop_lunk(o)
+local function bhv_projectile_loop(o)
     local puType = o.oBehParams
 
     --[[if o.oTimer == 1 then
@@ -115,19 +115,22 @@ local function bhv_projectile_loop_lunk(o)
     if o.oTimer >= lunkyFireballLifetime then
         o.oAction = -1
     end
+    local e = gStateExtras[o.globalPlayerIndex]
     if o.oAction == -1 then
         spawn_mist_particles_with_sound(SOUND_OBJ_DEFAULT_DEATH)
         --spawn_mist_particles()
         --audio_sample_play(SOUND_LUNKY_FIREBALL_FAIL, {x = o.oPosX, y = o.oPosY, z = o.oPosZ}, pause_check())
+        e.fireballs = e.fireballs - 1
         obj_mark_for_deletion(o)
         return
     elseif o.oAction == 1 then
         spawn_mist_particles()
         audio_sample_play(SOUND_LUNKY_FIREBALL_HIT, {x = o.oPosX, y = o.oPosY, z = o.oPosZ}, pause_check()*2)
+        e.fireballs = e.fireballs - 1
         obj_mark_for_deletion(o)
     end
 end
-id_bhvLunkyGreenball = hook_behavior(nil, OBJ_LIST_GENACTOR, true, bhv_projectile_init_lunk, bhv_projectile_loop_lunk, "bhvLunkyGreenball")
+id_bhvLunkyGreenball = hook_behavior(nil, OBJ_LIST_GENACTOR, true, bhv_projectile_init, bhv_projectile_loop, "bhvLunkyGreenball")
 
 -- Uncomment this to take a look at the models
 --[[

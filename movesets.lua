@@ -51,6 +51,7 @@ for i = 0, (MAX_PLAYERS - 1) do
     e.saved_pos.y = 0
     e.saved_pos.z = 0
     e.saved_transition_timer = 0
+    e.fireballs = 0
 
 end
 
@@ -446,14 +447,18 @@ local prevEmblemColor = {r = 0, g = 0, b = 0}
 
 function lunky_update(m)
 
-    if m.health <= (0x500) then
-        m.marioObj.header.gfx.scale.y = 0.75
-        m.marioObj.header.gfx.scale.x = 1
-        m.marioObj.header.gfx.scale.z = 1
-    else
-        m.marioObj.header.gfx.scale.y = 1
-        m.marioObj.header.gfx.scale.x = 1
-        m.marioObj.header.gfx.scale.z = 1
+    local e = gStateExtras[m.playerIndex]
+
+    if charSelect.character_get_current_number(m.playerIndex) == CT_LUNKY then
+        if m.health <= (0x500) then
+            m.marioObj.header.gfx.scale.y = 0.75
+            m.marioObj.header.gfx.scale.x = 1
+            m.marioObj.header.gfx.scale.z = 1
+        else
+            m.marioObj.header.gfx.scale.y = 1
+            m.marioObj.header.gfx.scale.x = 1
+            m.marioObj.header.gfx.scale.z = 1
+        end
     end
 	
 
@@ -499,11 +504,16 @@ function lunky_update(m)
 		m.actionArg = 0
 	end
 
-    if (m.marioObj.header.gfx.animInfo.animID == MARIO_ANIM_FIRST_PUNCH or m.marioObj.header.gfx.animInfo.animID == MARIO_ANIM_SECOND_PUNCH) and m.marioObj.header.gfx.animInfo.animFrame == -1 and m.playerIndex == 0 then
-        spawn_sync_object(id_bhvLunkyGreenball, E_MODEL_NONE, m.pos.x, m.pos.y + 50, m.pos.z, function(proj)
+    if (m.marioObj.header.gfx.animInfo.animID == MARIO_ANIM_FIRST_PUNCH or m.marioObj.header.gfx.animInfo.animID == MARIO_ANIM_SECOND_PUNCH)
+    and m.marioObj.header.gfx.animInfo.animFrame == -1 and m.playerIndex == 0 and e.fireballs <= 3 then
+        spawn_sync_object(id_bhvLunkyGreenball, E_MODEL_NONE, m.pos.x, m.pos.y + 50, m.pos.z, 
+        function(proj)
+            proj.globalPlayerIndex = m.marioObj.globalPlayerIndex
             proj.oMoveAngleYaw = m.faceAngle.y
         end)
+        e.fireballs = e.fireballs + 1
     end
+
 end
 
 function lunky_on_set_action(m)
