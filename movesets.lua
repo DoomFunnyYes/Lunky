@@ -216,7 +216,11 @@ function act_lunky_missile_full(m)
 
     local stepResult = perform_air_step(m, 0)
     if stepResult == AIR_STEP_LANDED then
-	    set_mario_action(m, ACT_FORWARD_GROUND_KB, 0)
+        if (m.flags & MARIO_METAL_CAP ~= 0) or (m.flags & MARIO_WING_CAP ~= 0) then
+            set_mario_action(m, ACT_DIVE_SLIDE, 0)
+        else
+	        set_mario_action(m, ACT_FORWARD_GROUND_KB, 0)
+        end
     elseif stepResult == AIR_STEP_HIT_WALL then
         set_mario_action(m, ACT_HARD_BACKWARD_AIR_KB, 0)
     end
@@ -293,7 +297,11 @@ function act_lunky_missile(m)
     
     local stepResult = perform_air_step(m, 0)
     if stepResult == AIR_STEP_LANDED then
-	    set_mario_action(m, ACT_FORWARD_GROUND_KB, 0)
+        if (m.flags & MARIO_METAL_CAP ~= 0) or (m.flags & MARIO_WING_CAP ~= 0) then
+            set_mario_action(m, ACT_DIVE_SLIDE, 0)
+        else
+	        set_mario_action(m, ACT_FORWARD_GROUND_KB, 0)
+        end
     elseif stepResult == AIR_STEP_HIT_WALL then
         set_mario_action(m, ACT_HARD_BACKWARD_AIR_KB, 0)
     end
@@ -429,6 +437,8 @@ local prevPantsColor = {r = 0, g = 0, b = 0}
 local prevEmblemColor = {r = 0, g = 0, b = 0}
 
 function lunky_update(m)
+
+
     if m.health <= (0x500) then
         m.marioObj.header.gfx.scale.y = 0.75
         m.marioObj.header.gfx.scale.x = 1
@@ -444,6 +454,8 @@ function lunky_update(m)
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM, HSV_to_RGB(starHue, 1, 1))
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], CAP, HSV_to_RGB(starHue, 1, 1))
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS, HSV_to_RGB(starHue, 1, 1))
+
+        m.peakHeight = m.pos.y
 
         if m.action == ACT_WALKING and m.forwardVel < 60 and m.forwardVel > 0 then
             m.forwardVel = m.forwardVel * 1.15

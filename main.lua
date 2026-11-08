@@ -20,6 +20,8 @@ end
 
 local E_MODEL_LUNKY =      smlua_model_util_get_id("lunky_geo")      -- Located in "actors"
 local E_MODEL_LUNKY_FLESH =      smlua_model_util_get_id("lunky_flesh_geo")
+local E_MODEL_LUNKY_CLASSIC =      smlua_model_util_get_id("boomie_luigi")
+local E_MODEL_LUNKY_FLESH_CLASSIC =      smlua_model_util_get_id("boomie_luigi_two")
 
 local E_MODEL_RAINBOW_STAR =      smlua_model_util_get_id("rainbow_star_geo")
 
@@ -95,7 +97,7 @@ local VOICETABLE_LUNKY = {
     [CHAR_SOUND_PANTING] = 'lunky_silence.ogg',
     [CHAR_SOUND_PANTING_COLD] = 'lunky_silence.ogg',
     [CHAR_SOUND_PRESS_START_TO_PLAY] = 'lunky_silence.ogg',
-    [CHAR_SOUND_PUNCH_HOO] = 'lunky_attack.ogg',
+    [CHAR_SOUND_PUNCH_HOO] = 'lunky_kick.ogg',
     [CHAR_SOUND_PUNCH_WAH] = 'lunky_attack.ogg',
     [CHAR_SOUND_PUNCH_YAH] = 'lunky_attack.ogg',
     [CHAR_SOUND_SNORING1] = 'lunky_silence.ogg',
@@ -107,7 +109,7 @@ local VOICETABLE_LUNKY = {
     [CHAR_SOUND_UH2] = 'lunky_silence.ogg',
     [CHAR_SOUND_UH2_2] = 'lunky_silence.ogg',
     [CHAR_SOUND_WAAAOOOW] = 'lunky_silence.ogg',
-    [CHAR_SOUND_WAH2] = 'lunky_silence.ogg',
+    [CHAR_SOUND_WAH2] = 'lunky_kick.ogg',
     [CHAR_SOUND_WHOA] = 'lunky_silence.ogg',
     [CHAR_SOUND_YAHOO] = 'lunky_silence.ogg',
     [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = 'lunky_silence.ogg',
@@ -229,6 +231,30 @@ local function on_character_select_load()
 	1.0
     )
 
+    CT_LUNKY_CLASSIC = _G.charSelect.character_add_costume(
+    CT_LUNKY,
+        "Lunky Classic!", -- Character Name
+        "This is Lunky! Full of joy!.", -- Description
+        "Boomer?", -- Credits
+        "ffffff",           -- Menu Color
+        E_MODEL_LUNKY_CLASSIC,       -- Character Model
+        CT_LUIGI,           -- Override Character
+        TEX_LUNKY_LIFE_ICON, -- Life Icon
+	1.0
+    )
+
+    CT_LUNKY_FLESH_CLASSIC = _G.charSelect.character_add_costume(
+    CT_LUNKY,
+        "Lunky Classic (NP)", -- Character Name
+        "This is Lunky! Full of joy!.", -- Description
+        "Boomer?", -- Credits
+        "ffffff",           -- Menu Color
+        E_MODEL_LUNKY_FLESH_CLASSIC,       -- Character Model
+        CT_LUIGI,           -- Override Character
+        TEX_LUNKY_LIFE_ICON, -- Life Icon
+	1.0
+    )
+
 local HEALTH_METER_LUNKY = {
   djui_hud_set_resolution(RESOLUTION_N64),
   djui_hud_set_font(FONT_HUD),
@@ -254,6 +280,12 @@ local HEALTH_METER_LUNKY = {
     _G.charSelect.character_add_voice(E_MODEL_LUNKY, VOICETABLE_LUNKY)
     _G.charSelect.character_add_voice(E_MODEL_LUNKY_FLESH, VOICETABLE_LUNKY)
 
+    _G.charSelect.character_add_animations(E_MODEL_LUNKY_CLASSIC, ANIMTABLE_LUNKY)
+    _G.charSelect.character_add_animations(E_MODEL_LUNKY_FLESH_CLASSIC, ANIMTABLE_LUNKY)
+
+    _G.charSelect.character_add_voice(E_MODEL_LUNKY_CLASSIC, VOICETABLE_LUNKY)
+    _G.charSelect.character_add_voice(E_MODEL_LUNKY_FLESH_CLASSIC, VOICETABLE_LUNKY)
+
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY, 'LUNKY')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH, 'LUNKY WITH NO PROTECTION')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY2, 'LUNKY ENKINDLED')
@@ -262,6 +294,15 @@ local HEALTH_METER_LUNKY = {
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH3, 'LUNKY MISSION BRIEFED')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY4, 'LOVEY LUNKY')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH4, 'LUNK OF LOVE')
+
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY, 'LUNKY')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH, 'LUNKY WITH NO PROTECTION')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY2, 'LUNKY ENKINDLED')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH2, 'WILDFIRE LUNKY')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY3, 'LUNKY ON MISSION')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH3, 'LUNKY MISSION BRIEFED')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY4, 'LOVEY LUNKY')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH4, 'LUNK OF LOVE')
 
     _G.charSelect.character_add_health_meter(CT_LUNKY, HEALTH_METER_LUNKY)
 
