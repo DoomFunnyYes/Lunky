@@ -274,9 +274,8 @@ CAPTABLE_LUNKY = {
     metalWing = E_MODEL_RAINBOW_STAR,
 }
 
-local CSloaded = false
-local function on_character_select_load()
-    -- Adds the custom character to the Character Select Menu
+if _G.charSelectExists then
+      -- Adds the custom character to the Character Select Menu
     CT_LUNKY = _G.charSelect.character_add(
         "Lunky", -- Character Name
         "This is Lunky! Full of joy!.", -- Description
@@ -323,6 +322,7 @@ local function on_character_select_load()
         TEX_LUNKY_LIFE_ICON, -- Life Icon
 	1.0
     )
+end
 
 local HEALTH_METER_LUNKY = {
   djui_hud_set_resolution(RESOLUTION_N64),
@@ -343,6 +343,8 @@ local HEALTH_METER_LUNKY = {
 	}
 }
 
+local CSloaded = false
+local function on_character_select_load()
     _G.charSelect.character_add_animations(E_MODEL_LUNKY, ANIMTABLE_LUNKY)
     _G.charSelect.character_add_animations(E_MODEL_LUNKY_FLESH, ANIMTABLE_LUNKY)
 

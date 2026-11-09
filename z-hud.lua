@@ -14,6 +14,4 @@ function lunky_health_hud()
     djui_hud_render_texture(TEX_LUNKY_HEALTH_FOREGROUND, x, y, 1, 1)
 end
 
-hook_event(HOOK_ON_HUD_RENDER_BEHIND, function()
-    lunky_health_hud()
-end)
+_G.charSelect.character_hook_moveset(CT_LUNKY, HOOK_ON_HUD_RENDER_BEHIND, lunky_health_hud)
