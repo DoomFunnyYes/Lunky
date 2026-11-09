@@ -144,7 +144,7 @@ function act_lunky_cyclone(m)
 	end
 
     if m.actionTimer < 20 then
-        if m.actionTimer > -1 then
+        if m.actionTimer % 4 == 1 then
             m.particleFlags = m.particleFlags | PARTICLE_DUST | PARTICLE_MIST_CIRCLE
             m.vel.y = 18 - (m.actionTimer * (m.forwardVel/25))
         end
@@ -459,7 +459,7 @@ function lunky_update(m)
         play_character_sound(m, CHAR_SOUND_SNORING2)
     end
 
-    if (m.flags & MARIO_METAL_CAP ~= 0) or (m.flags & MARIO_WING_CAP ~= 0) then
+    if (m.flags & MARIO_METAL_CAP ~= 0) or (m.flags & MARIO_WING_CAP ~= 0) or m.action == ACT_JUMBO_STAR_CUTSCENE then
 		m.flags = m.flags | MARIO_WING_CAP | MARIO_METAL_CAP -- Enable both wing and metal, even if you have just one of them
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM, HSV_to_RGB(starHue, 1, 1))
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], CAP, HSV_to_RGB(starHue, 1, 1))
