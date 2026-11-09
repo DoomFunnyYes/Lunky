@@ -10,6 +10,9 @@ audio_stream_set_looping(LUNKY_INVINCIBILITY, true)
 LUNKY_INVINCIBILITY_SNES = audio_stream_load("lunky_invincibility_snes.ogg")
 audio_stream_set_looping(LUNKY_INVINCIBILITY_SNES, true)
 
+LUNKY_COIN = audio_sample_load("lunky_coin.ogg")
+LUNKY_RED_COIN = audio_sample_load("lunky_coin_red.ogg")
+
 LUNKY_CREDITS = audio_stream_load("lunky_credits.ogg")
 
 local TEXT_MOD_NAME = "[CS] Lunky"
@@ -400,6 +403,9 @@ end
       _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_METAL_CAP, LUNKY_INVINCIBILITY_SNES)
       _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_POWERUP, LUNKY_INVINCIBILITY)
       _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_CUTSCENE_CREDITS, LUNKY_CREDITS)
+
+      _G.charSelect.character_add_sound_replacement(CT_LUNKY, SOUND_GENERAL_COIN, LUNKY_COIN)
+      _G.charSelect.character_add_sound_replacement(CT_LUNKY, SOUND_GENERAL_RED_COIN, LUNKY_RED_COIN)
 
 hook_mod_menu_checkbox("Toggle Starman Theme", true, checkbox_starman_theme)
 
