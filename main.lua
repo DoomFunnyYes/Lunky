@@ -70,6 +70,17 @@ local ANIMTABLE_LUNKY = {
   end,
 }
 
+local LUNKY_SOUND_VICTORY = audio_sample_load("lunky_victory.ogg")
+local LUNKY_SOUND_BURP = audio_sample_load("lunky_burp.ogg")
+LUNKY_JUMP = audio_sample_load("lunky_jump.ogg")
+LUNKY_DOUBLE_JUMP = audio_sample_load("lunky_double_jump.ogg")
+LUNKY_TRIPLE_JUMP = audio_sample_load("lunky_triple_jump.ogg")
+LUNKY_LONG_JUMP = audio_sample_load("lunky_long_jump.ogg")
+SMALL_LUNKY_JUMP = audio_sample_load("small_lunky_jump.ogg")
+SMALL_LUNKY_DOUBLE_JUMP = audio_sample_load("small_lunky_double_jump.ogg")
+SMALL_LUNKY_TRIPLE_JUMP = audio_sample_load("small_lunky_triple_jump.ogg")
+SMALL_LUNKY_LONG_JUMP = audio_sample_load("small_lunky_long_jump.ogg")
+
 local VOICETABLE_LUNKY = {
     [CHAR_SOUND_ATTACKED] = 'lunky_real_hurt.ogg',
     [CHAR_SOUND_COUGHING1] = 'lunky_cough1.ogg',
@@ -84,8 +95,22 @@ local VOICETABLE_LUNKY = {
     [CHAR_SOUND_HAHA] = 'lunky_misc.ogg',
     [CHAR_SOUND_HAHA_2] = 'lunky_misc.ogg',
     [CHAR_SOUND_HELLO] = 'lunky_silence.ogg',
-    [CHAR_SOUND_HERE_WE_GO] = 'lunky_victory.ogg',
-    [CHAR_SOUND_HOOHOO] = 'lunky_silence.ogg',
+    
+    [CHAR_SOUND_HERE_WE_GO] = function(m)
+      if m.action == ACT_STAR_DANCE_EXIT or m.action == ACT_STAR_DANCE_NO_EXIT then
+        return LUNKY_SOUND_VICTORY
+      else
+        return LUNKY_SOUND_BURP
+      end
+    end,
+
+    [CHAR_SOUND_HOOHOO] =  function(m)
+      if m.health <= (0x500) then
+          return SMALL_LUNKY_DOUBLE_JUMP
+      else
+          return LUNKY_DOUBLE_JUMP
+      end
+    end,
     [CHAR_SOUND_HRMM] = 'lunky_silence.ogg',
     [CHAR_SOUND_IMA_TIRED] = 'lunky_letsago.ogg',
     [CHAR_SOUND_LETS_A_GO] = 'lunky_letsago.ogg',
@@ -111,9 +136,27 @@ local VOICETABLE_LUNKY = {
     [CHAR_SOUND_WAAAOOOW] = 'lunky_fall.ogg',
     [CHAR_SOUND_WAH2] = 'lunky_throw.ogg',
     [CHAR_SOUND_WHOA] = 'lunky_throw.ogg',
-    [CHAR_SOUND_YAHOO] = 'lunky_silence.ogg',
-    [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = 'lunky_silence.ogg',
-    [CHAR_SOUND_YAH_WAH_HOO] = 'lunky_silence.ogg',
+    [CHAR_SOUND_YAHOO] =  function(m)
+      if m.health <= (0x500) then
+          return SMALL_LUNKY_LONG_JUMP
+      else
+          return LUNKY_LONG_JUMP
+      end
+    end,
+    [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = function(m)
+      if m.health <= (0x500) then
+          return SMALL_LUNKY_TRIPLE_JUMP
+      else
+          return LUNKY_TRIPLE_JUMP
+      end
+    end,
+    [CHAR_SOUND_YAH_WAH_HOO] = function(m)
+      if m.health <= (0x500) then
+          return SMALL_LUNKY_JUMP
+      else
+          return LUNKY_JUMP
+      end
+    end,
     [CHAR_SOUND_YAWNING] = 'lunky_okiedokie.ogg',
 }
 

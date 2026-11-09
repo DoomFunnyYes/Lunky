@@ -1,13 +1,5 @@
 LUNKY_SHRINKING_SOUND = audio_sample_load("lunky_hurt.ogg")
 LUNKY_GROWING_SOUND = audio_sample_load("lunky_grow.ogg")
-LUNKY_JUMP = audio_sample_load("lunky_jump.ogg")
-LUNKY_DOUBLE_JUMP = audio_sample_load("lunky_double_jump.ogg")
-LUNKY_TRIPLE_JUMP = audio_sample_load("lunky_triple_jump.ogg")
-LUNKY_LONG_JUMP = audio_sample_load("lunky_long_jump.ogg")
-SMALL_LUNKY_JUMP = audio_sample_load("small_lunky_jump.ogg")
-SMALL_LUNKY_DOUBLE_JUMP = audio_sample_load("small_lunky_double_jump.ogg")
-SMALL_LUNKY_TRIPLE_JUMP = audio_sample_load("small_lunky_triple_jump.ogg")
-SMALL_LUNKY_LONG_JUMP = audio_sample_load("small_lunky_long_jump.ogg")
 LUNKY_MISSILE_WEAK = audio_sample_load("lunky_missile_weak.ogg")
 LUNKY_MISSILE_MEDIUM = audio_sample_load("lunky_missile_medium.ogg")
 LUNKY_MISSILE_STRONG = audio_sample_load("lunky_missile_strong.ogg")
@@ -514,37 +506,6 @@ function lunky_update(m)
         e.fireballs = e.fireballs + 1
     end
 
-end
-
-function lunky_on_set_action(m)
-    if (m.action == ACT_JUMP or m.action == ACT_SIDE_FLIP or m.action == ACT_BACKFLIP or m.action == ACT_WALL_KICK_AIR or m.action == ACT_STEEP_JUMP or m.action == ACT_WATER_JUMP) then -- Should be self explanatory
-        if m.health <= (0x500) then
-            audio_sample_play(SMALL_LUNKY_JUMP, m.pos, 1)
-        else
-            audio_sample_play(LUNKY_JUMP, m.pos, 1)
-        end
-    end
-    if (m.action == ACT_DOUBLE_JUMP) then -- Should be self explanatory
-        if m.health <= (0x500) then
-            audio_sample_play(SMALL_LUNKY_DOUBLE_JUMP, m.pos, 1)
-        else
-            audio_sample_play(LUNKY_DOUBLE_JUMP, m.pos, 1)
-        end
-    end
-    if (m.action == ACT_TRIPLE_JUMP or m.action == ACT_SPECIAL_TRIPLE_JUMP) then -- Should be self explanatory
-        if m.health <= (0x500) then
-            audio_sample_play(SMALL_LUNKY_TRIPLE_JUMP, m.pos, 1)
-        else
-            audio_sample_play(LUNKY_TRIPLE_JUMP, m.pos, 1)
-        end
-    end
-    if (m.action == ACT_LONG_JUMP) then -- Should be self explanatory
-        if m.health <= (0x500) then
-            audio_sample_play(SMALL_LUNKY_LONG_JUMP, m.pos, 1)
-        else
-            audio_sample_play(LUNKY_LONG_JUMP, m.pos, 1)
-        end
-    end
 end
 
 local function lunky_interact(m, o, type)

@@ -8,8 +8,8 @@ function lunky_health_hud()
     local scWidth = djui_hud_get_screen_width()
     local m = gMarioStates[0]
     local health = math.ceil((m.health - 256)/256)
-    local x = 0
-    local y = 0
+    local x = 4
+    local y = 4
     djui_hud_render_texture(TEX_LUNKY_HEALTH_BACKGROUND, x, y, 1, 1)
     djui_hud_render_texture(TEX_LUNKY_HEALTH_FOREGROUND, x, y, 1, 1)
 end
