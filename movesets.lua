@@ -51,14 +51,13 @@ ACT_WALL_STICK = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_F
 
 function act_wall_stick(m)
     if (m.input & INPUT_A_PRESSED) ~= 0 then
-        local rc = set_mario_action(m, ACT_WALL_KICK_AIR, 0)
         m.vel.y = 52.0
 
         if m.forwardVel < 30.0 then
             m.forwardVel = 30.0
         end
         m.wallKickTimer = 0
-        return rc
+        return set_mario_action(m, ACT_WALL_KICK_AIR, 0)
     end
 
     -- attempt to stick to the wall a bit. if it's 0, sometimes you'll get kicked off of slightly sloped walls
@@ -124,16 +123,17 @@ function act_lunky_cyclone(m)
         m.marioBodyState.eyeState = MARIO_EYES_LOOK_UP
     end
 
-    if (m.input & INPUT_NONZERO_ANALOG) ~= 0 and m.actionTimer < 27 then -- movement
-        mario_set_forward_vel(m, m.controller.stickMag)
+    if (m.input & INPUT_NONZERO_ANALOG) ~= 0 and m.actionTimer < 25 then -- movement
+        m.forwardVel = approach_f32(m.forwardVel, m.controller.stickMag * 0.75, 2.3, 2.3)
     else
-		m.forwardVel = m.forwardVel * 0.5
+		m.forwardVel = approach_f32(m.forwardVel, 0, 7, 7)
 	end
 	
 	local stepResult = perform_ground_step(m)
 
+    m.faceAngle.y = approach_s16_asymptotic(m.faceAngle.y, m.intendedYaw, 8) -- approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 0x250, 0x250)
+
 	apply_slope_accel(m)
-	m.faceAngle.y = m.intendedYaw -- approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 0x250, 0x250)
 	
 	if stepResult == GROUND_STEP_HIT_WALL then
 		if m.wall ~= nil and m.wall.object ~= nil and (m.wall.object.oInteractType == INTERACT_DOOR or m.wall.object.oInteractType == INTERACT_WARP_DOOR) then return end
@@ -144,7 +144,7 @@ function act_lunky_cyclone(m)
 	end
 
     if m.actionTimer < 20 then
-        if m.actionTimer % 4 == 1 then
+        if m.actionTimer % 2 == 1 then
             m.particleFlags = m.particleFlags | PARTICLE_DUST | PARTICLE_MIST_CIRCLE
             m.vel.y = 18 - (m.actionTimer * (m.forwardVel/25))
         end
@@ -189,21 +189,21 @@ function act_lunky_missile_full(m)
 	else
         if arg == 2 then
             m.vel.y = (m.vel.y - m.actionTimer / 32)
-            if m.flags & MARIO_METAL_CAP ~= 0 and m.actionTimer == 19 then
+            if m.flags & MARIO_WING_CAP ~= 0 and m.actionTimer == 19 then
                 set_mario_action(m, ACT_FLYING, 0)
                 m.faceAngle.x = 0x5000
                 mario_set_forward_vel(m, 36 + e.forca)
             end
         else
 	        mario_set_forward_vel(m, m.forwardVel - m.actionTimer / 32)
-            if m.flags & MARIO_METAL_CAP ~= 0 and m.actionTimer == 19 and m.input & INPUT_A_DOWN then
+            if m.flags & MARIO_WING_CAP ~= 0 and m.actionTimer == 19 and m.input & INPUT_A_DOWN then
                 set_mario_action(m, ACT_FLYING, 0)
                 mario_set_forward_vel(m, 72 + e.forca)
             end
         end
 	end
 
-    if m.actionTimer > 64 then
+    if m.actionTimer > 28 then
         set_mario_action(m, ACT_FREEFALL, 0)
 	end
 
@@ -220,7 +220,11 @@ function act_lunky_missile_full(m)
 	        set_mario_action(m, ACT_FORWARD_GROUND_KB, 0)
         end
     elseif stepResult == AIR_STEP_HIT_WALL then
-        set_mario_action(m, ACT_HARD_BACKWARD_AIR_KB, 0)
+        if m.forwardVel > 42 then --idk if this is even possible on full missile
+            set_mario_action(m, ACT_HARD_BACKWARD_AIR_KB, 0)
+        else
+            set_mario_action(m, ACT_BACKWARD_AIR_KB, 0)
+        end
     end
 
     if arg == 2 then
@@ -285,7 +289,7 @@ function act_lunky_missile(m)
         end
 	end
 
-    if m.actionTimer > 64 then
+    if m.actionTimer > 32 then
         set_mario_action(m, ACT_FREEFALL, 0)
 	end
 
@@ -301,7 +305,11 @@ function act_lunky_missile(m)
 	        set_mario_action(m, ACT_FORWARD_GROUND_KB, 0)
         end
     elseif stepResult == AIR_STEP_HIT_WALL then
-        set_mario_action(m, ACT_HARD_BACKWARD_AIR_KB, 0)
+        if m.forwardVel > 42 then
+            set_mario_action(m, ACT_HARD_BACKWARD_AIR_KB, 0)
+        else
+            set_mario_action(m, ACT_BACKWARD_AIR_KB, 0)
+        end
     end
 
     if arg == 2 then
@@ -351,10 +359,10 @@ function act_lunky_missile_charge(m)
 		e.forca = 0
             e.timer = 0
 	else
-	    if m.forwardVel > 2 then
-	        mario_set_forward_vel(m, m.forwardVel - 0.05 * (m.actionTimer / 2))
+	    if m.forwardVel > 1 then
+	        mario_set_forward_vel(m, m.forwardVel - 0.1 * (m.actionTimer / 2))
 		else
-		    mario_set_forward_vel(m, 2)
+		    mario_set_forward_vel(m, 1)
 		end
 
 		if e.forca < 72 then
@@ -459,7 +467,7 @@ function lunky_update(m)
         play_character_sound(m, CHAR_SOUND_SNORING2)
     end
 
-    if (m.flags & MARIO_METAL_CAP ~= 0) or (m.flags & MARIO_WING_CAP ~= 0) or m.action == ACT_JUMBO_STAR_CUTSCENE then
+    if (m.flags & MARIO_METAL_CAP ~= 0) or (m.flags & MARIO_WING_CAP ~= 0) then
 		m.flags = m.flags | MARIO_WING_CAP | MARIO_METAL_CAP -- Enable both wing and metal, even if you have just one of them
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM, HSV_to_RGB(starHue, 1, 1))
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], CAP, HSV_to_RGB(starHue, 1, 1))
