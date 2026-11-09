@@ -10,6 +10,8 @@ audio_stream_set_looping(LUNKY_INVINCIBILITY, true)
 LUNKY_INVINCIBILITY_SNES = audio_stream_load("lunky_invincibility_snes.ogg")
 audio_stream_set_looping(LUNKY_INVINCIBILITY_SNES, true)
 
+LUNKY_CREDITS = audio_stream_load("lunky_credits.ogg")
+
 local TEXT_MOD_NAME = "[CS] Lunky"
 
 -- Stops mod from loading if Character Select isn't on, Does not need to be touched
@@ -397,6 +399,7 @@ end
 
       _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_METAL_CAP, LUNKY_INVINCIBILITY_SNES)
       _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_POWERUP, LUNKY_INVINCIBILITY)
+      _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_CUTSCENE_CREDITS, LUNKY_CREDITS)
 
 hook_mod_menu_checkbox("Toggle Starman Theme", true, checkbox_starman_theme)
 
