@@ -11,6 +11,8 @@ LUNKY_INVINCIBILITY_SNES = audio_stream_load("lunky_invincibility_snes.ogg")
 audio_stream_set_looping(LUNKY_INVINCIBILITY_SNES, true)
 
 LUNKY_COIN = audio_sample_load("lunky_coin.ogg")
+LUNKY_COIN_DROP = audio_sample_load("lunky_coin_drop.ogg")
+LUNKY_COINBURST = audio_sample_load("lunky_coinburst.ogg")
 LUNKY_RED_COIN = audio_sample_load("lunky_coin_red.ogg")
 LUNKY_ONE_UP = audio_sample_load("lunky_one_up.ogg")
 
@@ -412,6 +414,10 @@ end
 
       _G.charSelect.character_add_sound_replacement(CT_LUNKY, SOUND_GENERAL_COIN, LUNKY_COIN)
       _G.charSelect.character_add_sound_replacement(CT_LUNKY, SOUND_GENERAL_COIN_WATER, LUNKY_COIN)
+      _G.charSelect.character_add_sound_replacement(CT_LUNKY, SOUND_GENERAL_COIN_DROP, LUNKY_COIN_DROP)
+      _G.charSelect.character_add_sound_replacement(CT_LUNKY, SOUND_GENERAL_COIN_SPURT, LUNKY_COINBURST)
+      _G.charSelect.character_add_sound_replacement(CT_LUNKY, SOUND_GENERAL_COIN_SPURT_2, LUNKY_COINBURST)
+      _G.charSelect.character_add_sound_replacement(CT_LUNKY, SOUND_GENERAL_COIN_SPURT_EU, LUNKY_COINBURST)
       _G.charSelect.character_add_sound_replacement(CT_LUNKY, SOUND_GENERAL_RED_COIN, LUNKY_RED_COIN)
       _G.charSelect.character_add_sound_replacement(CT_LUNKY, SOUND_GENERAL_COLLECT_1UP, LUNKY_ONE_UP)
 
