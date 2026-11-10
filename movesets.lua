@@ -12,7 +12,7 @@ function limit_angle(a)
 	return (a + 0x8000) % 0x10000 - 0x8000
 end
 
-local function HSV_to_RGB(h, s, v)
+function HSV_to_RGB(h, s, v)
     local i = math.floor(h * 6)
     local f = h * 6 - i
     local p = v * (1 - s)
@@ -426,20 +426,21 @@ function convert_s16(num)
     return num
 end
 
-local starHue = 0
+starHue = 0
+starColor = {}
 
 hook_event(HOOK_UPDATE, function()
-	starHue = starHue + 0.07
-    if starHue > 1 then
-		starHue = 0
+    starHue = starHue + 0.07
+    if starHue > 1 then 
+        starHue = 0
     end
-	local starColor = HSV_to_RGB(starHue, 1, 1)
-	
+    starColor = HSV_to_RGB(starHue, 0.75,1)
 	local dl = gfx_get_from_name("mat_rainbow_star_Starman2")
 	local gfx = gfx_get_command(dl, 6)
 	gfx_set_command(gfx, "gsDPSetEnvColor(%i, %i, %i, 255)",
 	starColor.r, starColor.g, starColor.b)
-end)
+end
+)
 
 local prevCapColor = {r = 0, g = 0, b = 0}
 local prevPantsColor = {r = 0, g = 0, b = 0}
