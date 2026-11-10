@@ -17,14 +17,18 @@ function lunky_health_hud()
     local health = math.ceil((m.health - 256)/256)
     local tileY = 0
     local tileY2 = 0
+    local tileY3 = 0
     local lives = (hud_get_value(HUD_DISPLAY_LIVES)) - 1
     local stars = (hud_get_value(HUD_DISPLAY_STARS))
     local coins = (hud_get_value(HUD_DISPLAY_COINS))
     if health < 8 then
         tileY = 8
     end
-    if stars < 120 then
+    if lives < 99 then
         tileY2 = 8
+    end
+    if stars < 120 then
+        tileY3 = 8
     end
     local powerUp = 0
     local x = 9
@@ -65,7 +69,7 @@ function lunky_health_hud()
     for i = 1, #stars do
         local number = tonumber(stars:sub(i,i))
         if number == nil then return end
-        djui_hud_render_texture_tile(TEX_LUNKY_NUMBERS, x2 + 13 + ((i-1) * (8)), y + 11, 1, 1, number*8, tileY2, 8, 8) -- you'll have to change the values up a little
+        djui_hud_render_texture_tile(TEX_LUNKY_NUMBERS, x2 + 13 + ((i-1) * (8)), y + 11, 1, 1, number*8, tileY3, 8, 8) -- you'll have to change the values up a little
     end
 
     djui_hud_render_texture(TEX_LUNKY_STAR_FOREGROUND, x2, y, 1, 1)
@@ -76,7 +80,7 @@ function lunky_health_hud()
     for i = 1, #coins do
         local number = tonumber(coins:sub(i,i))
         if number == nil then return end
-        djui_hud_render_texture_tile(TEX_LUNKY_NUMBERS, x2 + 23 + ((i-1) * (8)), y + 36, 1, 1, number*8, tileY2, 8, 8) -- you'll have to change the values up a little
+        djui_hud_render_texture_tile(TEX_LUNKY_NUMBERS, x2 + 23 + ((i-1) * (8)), y + 36, 1, 1, number*8, 8, 8, 8) -- you'll have to change the values up a little
     end
 
     djui_hud_render_texture(TEX_LUNKY_GENERAL_FOREGROUND, x2, y + 25, 1, 1)
