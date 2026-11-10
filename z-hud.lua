@@ -1,6 +1,8 @@
 TEX_LUNKY_HEALTH_FOREGROUND = get_texture_info("lunky_health_foreground")
 TEX_LUNKY_HEALTH_BACKGROUND = get_texture_info("lunky_health_background")
-TEX_LUNKY_LIVES_FOREGROUND = get_texture_info("lunky_lives_foreground")
+TEX_LUNKY_LIVES_FOREGROUND1 = get_texture_info("lunky_lives_foreground1")
+TEX_LUNKY_LIVES_FOREGROUND2 = get_texture_info("lunky_lives_foreground2")
+TEX_LUNKY_LIVES_FOREGROUND3 = get_texture_info("lunky_lives_foreground3")
 TEX_LUNKY_LIVES_BACKGROUND = get_texture_info("lunky_lives_background")
 TEX_LUNKY_GENERAL_FOREGROUND = get_texture_info("lunky_general_foreground")
 TEX_LUNKY_STAR_FOREGROUND = get_texture_info("lunky_star_foreground")
@@ -25,7 +27,7 @@ function lunky_health_hud()
     if health < 8 then
         tileY = 8
     end
-    if lives < 99 then
+    if lives < 100 then
         tileY2 = 8
     end
     if stars < 120 then
@@ -56,18 +58,21 @@ function lunky_health_hud()
     djui_hud_render_texture(TEX_LUNKY_HEALTH_FOREGROUND, x, y, 1, 1)
     djui_hud_render_texture(TEX_LUNKY_LIVES_BACKGROUND, x, y + 25, 1, 1)
 
-    if lives < 100 then
-        lives = tostring(lives)
-        for i = 1, #lives do
-            local number = tonumber(lives:sub(i,i))
-            if number == nil then return end
-            djui_hud_render_texture_tile(TEX_LUNKY_NUMBERS, x + 25 + ((i-1) * (8)), y + 36, 1, 1, number*8, tileY2, 8, 8) -- you'll have to change the values up a little
-        end
+    if lives < 10 then
+        djui_hud_render_texture(TEX_LUNKY_LIVES_FOREGROUND1, x, y + 25, 1, 1)
+    elseif lives < 100 then
+        djui_hud_render_texture(TEX_LUNKY_LIVES_FOREGROUND2, x, y + 25, 1, 1)
     else
-        djui_hud_render_texture_tile(TEX_LUNKY_CROWN, x + 25, y + 36, 0.5, 1, 0, 0, 16, 8) -- you'll have to change the values up a little
+        djui_hud_render_texture(TEX_LUNKY_LIVES_FOREGROUND3, x, y + 25, 1, 1)
     end
 
-    djui_hud_render_texture(TEX_LUNKY_LIVES_FOREGROUND, x, y + 25, 1, 1)
+    lives = tostring(lives)
+    for i = 1, #lives do
+        local number = tonumber(lives:sub(i,i))
+        if number == nil then return end
+        djui_hud_render_texture_tile(TEX_LUNKY_NUMBERS, x + 25 + ((i-1) * (8)), y + 36, 1, 1, number*8, tileY2, 8, 8) -- you'll have to change the values up a little
+    end
+
     djui_hud_render_texture(TEX_LUNKY_STAR_BACKGROUND, x2, y, 1, 1)
 
     stars = tostring(stars)
