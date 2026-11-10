@@ -33,6 +33,7 @@ local E_MODEL_RAINBOW_STAR =      smlua_model_util_get_id("rainbow_star_geo")
 
 
 local TEX_LUNKY_LIFE_ICON = get_texture_info("lunky_icon")
+local TEX_LUNKY_GRAFFITI =     get_texture_info("lunky_graffiti")
 
 local ANIMTABLE_LUNKY = {
   [CHAR_ANIM_SINGLE_JUMP] = function(m, frame)
@@ -389,6 +390,8 @@ local function on_character_select_load()
 	
 	_G.charSelect.character_add_caps(E_MODEL_LUNKY,CAPTABLE_LUNKY)
 	_G.charSelect.character_add_caps(E_MODEL_LUNKY_FLESH,CAPTABLE_LUNKY)
+
+  _G.charSelect.character_add_graffiti(CT_LUNKY, TEX_LUNKY_GRAFFITI)
 
 ----
     _G.charSelect.character_hook_moveset(CT_LUNKY, HOOK_BEFORE_SET_MARIO_ACTION, lunky_before_set_action)
