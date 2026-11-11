@@ -531,6 +531,14 @@ function lunky_update(m)
         play_character_sound(m, CHAR_SOUND_SNORING2)
     end
 
+
+    -- I just wanna say this and its counterpart after the Rainbow Star code are the worst way to handle this probably and I think someone should look at a much cleaner
+    -- and SMARTER way to do this.
+    if e.fireform ~= 0 then
+        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS, fireLunkyWhite)
+        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], CAP, fireLunkyWhite)
+    end
+
     if (m.flags & MARIO_METAL_CAP ~= 0) or (m.flags & MARIO_WING_CAP ~= 0) then
 		m.flags = m.flags | MARIO_WING_CAP | MARIO_METAL_CAP -- Enable both wing and metal, even if you have just one of them
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM, HSV_to_RGB(starHue, 1, 1))
@@ -567,23 +575,17 @@ function lunky_update(m)
         set_mario_action(m, ACT_FREEFALL_LAND, 0)
     end
 
+
+    -- I just wanna say this and its counterpart before the Rainbow Star code are the worst way to handle this probably and I think someone should look at a much cleaner
+    -- and SMARTER way to do this.
     if e.fireform ~= 0 then
-        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS, fireLunkyWhite)
-        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], CAP, fireLunkyWhite)
-        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM, prevCapColor)
-        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], SHIRT, prevCapColor)
-    else
-        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM, prevEmblemColor)
-        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], CAP, prevCapColor)
-        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS, prevPantsColor)
-        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], SHIRT, prevShirtColor)
+        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], SHIRT, prevEmblemColor)
     end
 
-    if (m.controller.buttonPressed & X_BUTTON) ~= 0 then
+    if (m.controller.buttonPressed & X_BUTTON) ~= 0 and e.fireform ~= 1 then
         e.fireform = 1
         audio_sample_play(LUNKY_GROWING_SOUND, gMarioStates[0].pos, 1)
         set_mario_action(m, ACT_TRIPLE_JUMP_LAND_STOP, 0)
-
     end
 end
 

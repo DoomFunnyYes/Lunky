@@ -15,6 +15,7 @@ function lunky_health_hud()
     djui_hud_set_resolution(RESOLUTION_N64)
     local scWidth = djui_hud_get_screen_width()
     local m = gMarioStates[0]
+    local e = gStateExtras[m.playerIndex]
     local health = math.ceil((m.health - 256)/256)
     local tileY = 0
     local tileY2 = 0
@@ -38,6 +39,12 @@ function lunky_health_hud()
     local y = 9
     local x2 = scWidth - 72
 
+    if e.fireform ~= 0 then
+        prevPowerUp = 16
+    else
+        prevPowerUp = 0
+    end
+
     djui_hud_render_texture(TEX_LUNKY_HEALTH_BACKGROUND, x, y, 1, 1)
 
     if m.flags & MARIO_METAL_CAP ~= 0 then
@@ -45,7 +52,7 @@ function lunky_health_hud()
         djui_hud_set_color((starColor.r), starColor.g, starColor.b, 255) -- fourth input is alpha
         --render the tile here
     else
-        powerUp = 0
+        powerUp = prevPowerUp
     end
 
     if health > 4 then
