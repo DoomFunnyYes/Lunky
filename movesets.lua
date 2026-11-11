@@ -578,14 +578,6 @@ hook_event(HOOK_UPDATE, function()
 end
 )
 
-local hurtTimer = 0
-local healthTimer = 0
-
-local prevCapColor = {r = 0, g = 0, b = 0}
-local prevPantsColor = {r = 0, g = 0, b = 0}
-local prevEmblemColor = {r = 0, g = 0, b = 0}
-local prevShirtColor = {r = 0, g = 0, b = 0}
-
 function lunky_update(m)
 
     local e = gStateExtras[m.playerIndex]
@@ -652,17 +644,8 @@ function lunky_update(m)
         m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
 
         if m.capTimer < 3 then
-            network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM, prevEmblemColor)
-            network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], CAP, prevCapColor)
-            network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS, prevPantsColor)
-            network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], SHIRT, prevShirtColor)
+            network_player_reset_override_palette(gNetworkPlayers[m.playerIndex])
         end
-
-    else
-        prevCapColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], CAP)
-        prevPantsColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS)
-        prevEmblemColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM)
-        prevShirtColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], SHIRT)
 	end
     if m.action == ACT_SPECIAL_TRIPLE_JUMP and m.pos.y == m.floorHeight then
         set_mario_action(m, ACT_FREEFALL_LAND, 0)
