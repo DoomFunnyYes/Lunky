@@ -453,12 +453,8 @@ function lunky_before_set_action(m, inc, arg) --m is the mariostate input, inc i
         m.faceAngle.y = m.faceAngle.y + 0x8000
         return ACT_WALL_STICK
     end
-    if (inc == ACT_PUNCHING and arg ~= 9) or (inc == ACT_MOVE_PUNCHING) and (e.fireform ~= 0) then
+    if ((inc == ACT_PUNCHING and arg ~= 9) or (inc == ACT_MOVE_PUNCHING)) and (e.fireform ~= 0) then
       return set_mario_action(m, ACT_LUNKY_PROJECTILE_SHOOT, 0)
-    elseif (inc == ACT_MOVE_PUNCHING) and (e.fireform == 0) then
-      return nil
-    elseif (inc == ACT_PUNCHING and arg ~= 9) and (e.fireform == 0) then
-      return nil
     end
 end
 

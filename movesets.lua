@@ -503,6 +503,9 @@ hook_event(HOOK_UPDATE, function()
 end
 )
 
+local hurtTimer = 0
+local healthTimer = 0
+
 local prevCapColor = {r = 0, g = 0, b = 0}
 local prevPantsColor = {r = 0, g = 0, b = 0}
 local prevEmblemColor = {r = 0, g = 0, b = 0}
@@ -516,8 +519,25 @@ function lunky_update(m)
 
     if m.health <= (0x500) then
         e.smalllunky = 1
+        hurtTimer = hurtTimer + 1
+        if hurtTimer < 2 then
+            audio_sample_play(LUNKY_SHRINKING_SOUND, gMarioStates[0].pos, 1)
+        end
     else
         e.smalllunky = 0
+        healthTimer = healthTimer + 1
+        if healthTimer < 2 then
+            audio_sample_play(LUNKY_GROWING_SOUND, gMarioStates[0].pos, 1)
+        end
+    end
+
+    if m.hurtCounter > 0 and e.fireform ~= 0 then
+        e.fireform = 0
+        hurtTimer = hurtTimer + 1
+        if hurtTimer < 2 then
+            audio_sample_play(LUNKY_SHRINKING_SOUND, gMarioStates[0].pos, 1)
+        end
+    else
     end
 
     if e.smalllunky ~= 0 then
@@ -595,10 +615,6 @@ function lunky_update(m)
             audio_sample_play(LUNKY_GROWING_SOUND, gMarioStates[0].pos, 1)
             set_mario_action(m, ACT_TRIPLE_JUMP_LAND_STOP, 0)
         end
-    end
-
-    if type == INTERACT_DAMAGE then
-        e.fireform = 0
     end
 
 end
