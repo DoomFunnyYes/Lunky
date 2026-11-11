@@ -1,3 +1,4 @@
+LUNKY_FIREBALL = audio_sample_load("lunky_attack.ogg")
 LUNKY_SHRINKING_SOUND = audio_sample_load("lunky_hurt.ogg")
 LUNKY_GROWING_SOUND = audio_sample_load("lunky_grow.ogg")
 LUNKY_MISSILE_WEAK = audio_sample_load("lunky_missile_weak.ogg")
@@ -44,8 +45,67 @@ for i = 0, (MAX_PLAYERS - 1) do
     e.saved_pos.z = 0
     e.saved_transition_timer = 0
     e.fireballs = 0
+    e.fireform = 0
 
 end
+
+ACT_LUNKY_PROJECTILE_SHOOT = allocate_mario_action(ACT_FLAG_ATTACKING | ACT_FLAG_MOVING)
+
+function act_lunky_projectile_shoot(m)
+    
+    local e = gStateExtras[m.playerIndex]
+    local s = gPlayerSyncTable[m.playerIndex]
+
+    local handPos = gVec3fZero{}
+    set_character_animation(m, CHAR_ANIM_FIRST_PUNCH)
+
+    if m.actionArg == 0 then
+        m.vel.x = 0
+        m.vel.z = 0
+        m.forwardVel = 0
+        perform_ground_step(m)
+        if m.actionTimer >= 20 then
+            return set_mario_action(m, ACT_IDLE, 0)
+        elseif m.actionTimer >= 14 and m.input & INPUT_B_PRESSED ~= 0 then
+            m.actionState = 0
+        end
+    elseif m.actionArg > 0 then
+        local stepResult = common_air_action_step(m, ACT_FREEFALL_LAND, MARIO_ANIM_RUNNING_UNUSED, AIR_STEP_NONE)
+        if m.actionTimer >= 16 and m.input & INPUT_B_PRESSED ~= 0 then
+            m.actionArg = 2
+            m.actionState = 0
+        end
+    end
+
+    if m.actionState == 0 then
+        m.actionTimer = -1
+        m.actionState = 1
+    end
+    if m.actionTimer == 0 then
+        audio_sample_play(LUNKY_FIREBALL, gMarioStates[0].pos, 1)
+        set_anim_to_frame(m, 0)
+        if m.actionArg > 0 then
+            m.vel.y = 23
+        end
+        if m.actionArg ~= 2 then
+            m.faceAngle.y = m.intendedYaw
+        else
+            m.forwardVel = m.forwardVel * 0.5
+        end
+    elseif m.actionTimer == 4 and m.playerIndex == 0 and e.fireballs <= 3 then
+        spawn_sync_object(id_bhvLunkyGreenball, E_MODEL_NONE, m.pos.x, m.pos.y + 50, m.pos.z, 
+        function(proj)
+            proj.globalPlayerIndex = m.marioObj.globalPlayerIndex
+            proj.oMoveAngleYaw = m.faceAngle.y
+        end)
+        e.fireballs = e.fireballs + 1
+    end
+
+    m.actionTimer = m.actionTimer + 1
+    return 0
+end
+
+hook_mario_action(ACT_LUNKY_PROJECTILE_SHOOT, act_lunky_projectile_shoot, INT_PUNCH)
 
 ACT_WALL_STICK = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
 
@@ -445,10 +505,13 @@ end
 local prevCapColor = {r = 0, g = 0, b = 0}
 local prevPantsColor = {r = 0, g = 0, b = 0}
 local prevEmblemColor = {r = 0, g = 0, b = 0}
+local prevShirtColor = {r = 0, g = 0, b = 0}
 
 function lunky_update(m)
 
     local e = gStateExtras[m.playerIndex]
+    
+    local fireLunkyWhite = {r = 225, g = 255, b = 225}
 
     if charSelect.character_get_current_number(m.playerIndex) == CT_LUNKY then
         if m.health <= (0x500) then
@@ -491,35 +554,49 @@ function lunky_update(m)
             network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM, prevEmblemColor)
             network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], CAP, prevCapColor)
             network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS, prevPantsColor)
+            network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], SHIRT, prevShirtColor)
         end
 
     else
         prevCapColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], CAP)
         prevPantsColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS)
         prevEmblemColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM)
+        prevShirtColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], SHIRT)
 	end
     if m.action == ACT_SPECIAL_TRIPLE_JUMP and m.pos.y == m.floorHeight then
         set_mario_action(m, ACT_FREEFALL_LAND, 0)
     end
-    if (m.action == ACT_PUNCHING or m.action == ACT_MOVE_PUNCHING) and m.actionArg == 6 then
-		m.actionArg = 0
-	end
 
-    if (m.marioObj.header.gfx.animInfo.animID == MARIO_ANIM_FIRST_PUNCH or m.marioObj.header.gfx.animInfo.animID == MARIO_ANIM_SECOND_PUNCH)
-    and m.marioObj.header.gfx.animInfo.animFrame == -1 and m.playerIndex == 0 and e.fireballs <= 3 then
-        spawn_sync_object(id_bhvLunkyGreenball, E_MODEL_NONE, m.pos.x, m.pos.y + 50, m.pos.z, 
-        function(proj)
-            proj.globalPlayerIndex = m.marioObj.globalPlayerIndex
-            proj.oMoveAngleYaw = m.faceAngle.y
-        end)
-        e.fireballs = e.fireballs + 1
+    if e.fireform ~= 0 then
+        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS, fireLunkyWhite)
+        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], CAP, fireLunkyWhite)
+        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM, prevCapColor)
+        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], SHIRT, prevCapColor)
+    else
+        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM, prevEmblemColor)
+        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], CAP, prevCapColor)
+        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS, prevPantsColor)
+        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], SHIRT, prevShirtColor)
     end
 
+    if (m.controller.buttonPressed & X_BUTTON) ~= 0 then
+        e.fireform = 1
+        audio_sample_play(LUNKY_GROWING_SOUND, gMarioStates[0].pos, 1)
+        set_mario_action(m, ACT_TRIPLE_JUMP_LAND_STOP, 0)
+
+    end
 end
 
 local function lunky_interact(m, o, type)
+    
+    local e = gStateExtras[m.playerIndex]
+
     if type == INTERACT_CAP then
         play_character_sound(m, CHAR_SOUND_SNORING2)
+    end
+
+    if type == INTERACT_DAMAGE then
+        e.fireform = 0
     end
 end
 
