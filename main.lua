@@ -36,6 +36,7 @@ local E_MODEL_RAINBOW_STAR =      smlua_model_util_get_id("rainbow_star_geo")
 
 local TEX_LUNKY_LIFE_ICON = get_texture_info("lunky_icon")
 local TEX_LUNKY_GRAFFITI =     get_texture_info("lunky_graffiti")
+local TEX_LUNKY_ONE_UP = get_texture_info("lunky_one_up")
 
 local ANIMTABLE_LUNKY = {
   [CHAR_ANIM_SINGLE_JUMP] = function(m, frame)
@@ -430,6 +431,9 @@ hook_mod_menu_checkbox("Toggle Starman Theme", true, checkbox_starman_theme)
 _G.charSelect.config_character_sounds()
 
 function lunky_before_set_action(m, inc, arg) --m is the mariostate input, inc is the incoming action, arg is the action's actionArg
+
+  local e = gStateExtras[m.playerIndex]
+
     if (inc == ACT_JUMP) or (inc == ACT_DOUBLE_JUMP) or (inc == ACT_TRIPLE_JUMP) then -- Should be self explanatory
         if m.flags & MARIO_METAL_CAP ~= 0 then
             m.vel.y = 70
