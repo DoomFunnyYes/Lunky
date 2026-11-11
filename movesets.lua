@@ -46,6 +46,7 @@ for i = 0, (MAX_PLAYERS - 1) do
     e.saved_transition_timer = 0
     e.fireballs = 0
     e.fireform = 0
+    e.smalllunky = 0
 
 end
 
@@ -513,16 +514,20 @@ function lunky_update(m)
     
     local fireLunkyWhite = {r = 225, g = 255, b = 225}
 
-    if charSelect.character_get_current_number(m.playerIndex) == CT_LUNKY then
-        if m.health <= (0x500) then
-            m.marioObj.header.gfx.scale.y = 0.75
-            m.marioObj.header.gfx.scale.x = 1
-            m.marioObj.header.gfx.scale.z = 1
-        else
-            m.marioObj.header.gfx.scale.y = 1
-            m.marioObj.header.gfx.scale.x = 1
-            m.marioObj.header.gfx.scale.z = 1
-        end
+    if m.health <= (0x500) then
+        e.smalllunky = 1
+    else
+        e.smalllunky = 0
+    end
+
+    if e.smalllunky ~= 0 then
+        m.marioObj.header.gfx.scale.y = 0.75
+        m.marioObj.header.gfx.scale.x = 1
+        m.marioObj.header.gfx.scale.z = 1
+    else
+        m.marioObj.header.gfx.scale.y = 1
+        m.marioObj.header.gfx.scale.x = 1
+        m.marioObj.header.gfx.scale.z = 1
     end
 	
 
@@ -582,11 +587,20 @@ function lunky_update(m)
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], SHIRT, prevEmblemColor)
     end
 
-    if (m.controller.buttonPressed & X_BUTTON) ~= 0 and e.fireform ~= 1 then
-        e.fireform = 1
-        audio_sample_play(LUNKY_GROWING_SOUND, gMarioStates[0].pos, 1)
-        set_mario_action(m, ACT_TRIPLE_JUMP_LAND_STOP, 0)
+    if (m.controller.buttonDown & X_BUTTON) ~= 0 and e.fireform ~= 1 then
+        m.actionTimer = 0
+        m.actionTimer = m.actionTimer + 1
+        if m.actionTimer < 42 then
+            e.fireform = 1
+            audio_sample_play(LUNKY_GROWING_SOUND, gMarioStates[0].pos, 1)
+            set_mario_action(m, ACT_TRIPLE_JUMP_LAND_STOP, 0)
+        end
     end
+
+    if type == INTERACT_DAMAGE then
+        e.fireform = 0
+    end
+
 end
 
 local function lunky_interact(m, o, type)
@@ -595,10 +609,6 @@ local function lunky_interact(m, o, type)
 
     if type == INTERACT_CAP then
         play_character_sound(m, CHAR_SOUND_SNORING2)
-    end
-
-    if type == INTERACT_DAMAGE then
-        e.fireform = 0
     end
 end
 
