@@ -10,118 +10,99 @@ TEX_LUNKY_NUMBERS = get_texture_info("lunky_hud_numbers")
 TEX_LUNKY_CROWN = get_texture_info("lunky_hud_crown")
 TEX_LUNKY_POWERUPS = get_texture_info("lunky_powerups")
 
+local function render_number(num, x, y, full) -- 'full' is the maximum amount. If the number is equal to or higher, it will be orange.
+	local text = tostring(num)
+	local col = 0
+	if num < full then col = 8 end
+	for i = 1, #text do
+		local number = tonumber(text:sub(i,i))
+		if number == nil then return end
+		djui_hud_render_texture_tile(TEX_LUNKY_NUMBERS, x + ((i-1) * (8)), y, 1, 1, number*8, col, 8, 8)
+	end
+end
+
+local function render_box(num, x, y, sizeX, sizeY)
+	if num < 10 then
+		djui_hud_render_texture(TEX_LUNKY_LIVES_FOREGROUND1, x, y, sizeX, sizeY)
+	elseif num < 100 then
+		djui_hud_render_texture(TEX_LUNKY_LIVES_FOREGROUND2, x, y, sizeX, sizeY)
+	else
+		djui_hud_render_texture(TEX_LUNKY_LIVES_FOREGROUND3, x, y, sizeX, sizeY)
+	end
+end
+
 function lunky_health_hud()
     hud_hide()
     djui_hud_set_resolution(RESOLUTION_N64)
     local scWidth = djui_hud_get_screen_width()
     local m = gMarioStates[0]
     local health = math.ceil((m.health - 256)/256)
-    local tileY = 0
-    local tileY2 = 0
-    local tileY3 = 0
     local lives = (hud_get_value(HUD_DISPLAY_LIVES))
     local stars = (hud_get_value(HUD_DISPLAY_STARS))
     local coins = (hud_get_value(HUD_DISPLAY_COINS))
-    if health < 8 then
-        tileY = 8
-    end
-    if lives < 100 then
-        tileY2 = 8
-    end
-    if stars < 120 then
-        tileY3 = 8
-    end
-    local valueShift = 0
-    local valueShift2 = 0
+    local valueShift = {0,0}
     local powerUp = 0
     local x = 9
     local y = 9
     local x2 = scWidth - 72
-
-    djui_hud_render_texture(TEX_LUNKY_HEALTH_BACKGROUND, x, y, 1, 1)
-
-    if m.flags & MARIO_METAL_CAP ~= 0 then
-        powerUp = 32
-        djui_hud_set_color((starColor.r), starColor.g, starColor.b, 255) -- fourth input is alpha
-        --render the tile here
-    else
-        powerUp = 0
-    end
-
-    if health > 4 then
-        djui_hud_render_texture_tile(TEX_LUNKY_POWERUPS, x + 4, y + 4, 1, 1, powerUp, 0, 16, 16)
-    end
-    
-    djui_hud_set_color(255,255,255,255) -- reset the color afterwards
-    djui_hud_render_texture_tile(TEX_LUNKY_NUMBERS, x + 38, y + 11, 1, 1, (health*8), tileY, 8, 8)
-    djui_hud_render_texture_tile(TEX_LUNKY_NUMBERS, x + 58, y + 11, 1, 1, (8*8), tileY, 8, 8)
-    djui_hud_render_texture(TEX_LUNKY_HEALTH_FOREGROUND, x, y, 1, 1)
-    djui_hud_render_texture(TEX_LUNKY_LIVES_BACKGROUND, x, y + 25, 1, 1)
-
-    if lives < 10 then
-        djui_hud_render_texture(TEX_LUNKY_LIVES_FOREGROUND1, x, y + 25, 1, 1)
-    elseif lives < 100 then
-        djui_hud_render_texture(TEX_LUNKY_LIVES_FOREGROUND2, x, y + 25, 1, 1)
-    else
-        djui_hud_render_texture(TEX_LUNKY_LIVES_FOREGROUND3, x, y + 25, 1, 1)
-    end
-
-    if coins < 10 then
-        valueShift = 31
+	
+	-- Shift the position of the numbers based on values, 'cuz it looks nicer
+	
+	if coins < 10 then
+        valueShift[1] = 31
     elseif coins < 100 then
-        valueShift = 23
+        valueShift[1] = 23
     else
-        valueShift = 14
+        valueShift[1] = 14
     end
 
     if stars < 10 then
-        valueShift2 = 31
+        valueShift[2] = 31
     elseif stars < 100 then
-        valueShift2 = 23
+        valueShift[2] = 23
     else
-        valueShift2 = 14
+        valueShift[2] = 14
     end
+	
+	-- HEALTH AND LIVES
+	if hud_get_value(HUD_DISPLAY_FLAGS) & HUD_DISPLAY_FLAG_CAMERA_AND_POWER ~= 0 then
+		djui_hud_render_texture(TEX_LUNKY_HEALTH_BACKGROUND, x, y, 1, 1)
 
-    lives = tostring(lives)
-    for i = 1, #lives do
-        local number = tonumber(lives:sub(i,i))
-        if number == nil then return end
-        djui_hud_render_texture_tile(TEX_LUNKY_NUMBERS, x + 25 + ((i-1) * (8)), y + 36, 1, 1, number*8, tileY2, 8, 8) -- you'll have to change the values up a little
-    end
+		if m.flags & MARIO_METAL_CAP ~= 0 then
+			powerUp = 32
+			djui_hud_set_color((starColor.r), starColor.g, starColor.b, 255) -- fourth input is alpha
+			--render the tile here
+		else
+			powerUp = 0
+		end
 
-    djui_hud_render_texture(TEX_LUNKY_STAR_BACKGROUND, x2, y, 1, 1)
-
-    if stars < 10 then
-        djui_hud_render_texture(TEX_LUNKY_LIVES_FOREGROUND1, x2 + 64, y, -1, 1)
-    elseif stars < 100 then
-        djui_hud_render_texture(TEX_LUNKY_LIVES_FOREGROUND2, x2 + 64, y, -1, 1)
-    else
-        djui_hud_render_texture(TEX_LUNKY_LIVES_FOREGROUND3, x2 + 64, y, -1, 1)
-    end
-
-    stars = tostring(stars)
-        for i = 1, #stars do
-            local number = tonumber(stars:sub(i,i))
-            if number == nil then return end
-            djui_hud_render_texture_tile(TEX_LUNKY_NUMBERS, x2 + valueShift2 + ((i-1) * (8)), y + 11, 1, 1, number*8, tileY3, 8, 8) -- you'll have to change the values up a little
-        end
-
-    djui_hud_render_texture(TEX_LUNKY_COIN_BACKGROUND, x2, y + 25, 1, 1)
-
-    if coins < 10 then
-        djui_hud_render_texture(TEX_LUNKY_LIVES_FOREGROUND1, x2 + 64, y + 25, -1, 1)
-    elseif coins < 100 then
-        djui_hud_render_texture(TEX_LUNKY_LIVES_FOREGROUND2, x2 + 64, y + 25, -1, 1)
-    else
-        djui_hud_render_texture(TEX_LUNKY_LIVES_FOREGROUND3, x2 + 64, y + 25, -1, 1)
-    end
-
-    coins = tostring(coins)
-    for i = 1, #coins do
-        local number = tonumber(coins:sub(i,i))
-        if number == nil then return end
-        djui_hud_render_texture_tile(TEX_LUNKY_NUMBERS, x2 + valueShift + ((i-1) * (8)), y + 36, 1, 1, number*8, 8, 8, 8) -- you'll have to change the values up a little
-    end
+		if health > 4 then
+			djui_hud_render_texture_tile(TEX_LUNKY_POWERUPS, x + 4, y + 4, 1, 1, powerUp, 0, 16, 16)
+		end
+		
+		djui_hud_set_color(255,255,255,255) -- reset the color afterwards
+		render_number(health, x + 38, y + 11, 8) -- Health
+		render_number(8, x + 58, y + 11, 16-health) -- Full health (8)
+		djui_hud_render_texture(TEX_LUNKY_HEALTH_FOREGROUND, x, y, 1, 1)
+		
+		djui_hud_render_texture(TEX_LUNKY_LIVES_BACKGROUND, x, y + 25, 1, 1)
+		render_box(lives, x, y + 25, 1, 1)
+		render_number(lives, x + 25, y +36, 99)
+	end
+	
+	-- STARS
+	if hud_get_value(HUD_DISPLAY_FLAGS) & HUD_DISPLAY_FLAG_STAR_COUNT ~= 0 then
+		djui_hud_render_texture(TEX_LUNKY_STAR_BACKGROUND, x2, y, 1, 1)
+		render_box(stars, x2 + 64, y, -1, 1)
+		render_number(stars, x2 + valueShift[2], y + 11, 120)
+	end
+	
+	-- COINS
+	if hud_get_value(HUD_DISPLAY_FLAGS) & HUD_DISPLAY_FLAG_COIN_COUNT ~= 0 then
+		djui_hud_render_texture(TEX_LUNKY_COIN_BACKGROUND, x2, y + 25, 1, 1)
+		render_box(coins, x2 + 64, y + 25, -1, 1)
+		render_number(coins, x2 + valueShift[1], y + 36, 999)
+	end
 end
 
 _G.charSelect.character_hook_moveset(CT_LUNKY, HOOK_ON_HUD_RENDER_BEHIND, lunky_health_hud)
