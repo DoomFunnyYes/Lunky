@@ -463,7 +463,6 @@ function act_lunky_missile_charge(m)
     else
     end
 
-
     m.faceAngle.y = m.intendedYaw - approach_s32(convert_s16(m.intendedYaw - m.faceAngle.y), 0, 0x400, 0x400)
 
     m.actionTimer = m.actionTimer + 1
@@ -472,6 +471,57 @@ function act_lunky_missile_charge(m)
 end
 
 hook_mario_action(ACT_LUNKY_MISSILE_CHARGE, act_lunky_missile_charge)
+
+ACT_FIRE_LUNKY_CHARGE = allocate_mario_action(ACT_FLAG_STATIONARY)
+
+function act_fire_lunky_charge(m)
+    local e = gStateExtras[m.playerIndex]
+    if m.actionState == 0 then
+        audio_sample_play(LUNKY_MISSILE_CHARGE, gMarioStates[0].pos, 0.32)
+        m.actionState = 1
+    end
+
+    m.particleFlags = m.particleFlags | PARTICLE_WAVE_TRAIL
+
+	if m.actionTimer % 7 == 0 and m.actionTimer < 42 then
+	    m.particleFlags = m.particleFlags | PARTICLE_FIRE
+	end
+
+    if m.actionTimer >= 42 and e.fireform ~= 1 then
+        audio_sample_stop(LUNKY_MISSILE_CHARGE)
+	    set_mario_action(m, ACT_FIRE_LUNKY_TRANSFORM, m.actionArg)
+    elseif ((m.controller.buttonDown & X_BUTTON) == 0) then
+        audio_sample_stop(LUNKY_MISSILE_CHARGE)
+        set_mario_action(m, ACT_FREEFALL_LAND, 0)
+	end
+
+	smlua_anim_util_set_animation(m.marioObj, "lunky_missile_charge")
+    if m.actionTimer >= 16 then
+        m.marioObj.header.gfx.animInfo.animAccel = 2 * 32768
+    end
+
+    m.actionTimer = m.actionTimer + 1
+
+	return 0
+end
+
+hook_mario_action(ACT_FIRE_LUNKY_CHARGE, act_fire_lunky_charge)
+
+ACT_FIRE_LUNKY_TRANSFORM = allocate_mario_action(ACT_FLAG_STATIONARY)
+
+function act_fire_lunky_transform(m)
+
+    local e = gStateExtras[m.playerIndex]
+
+    e.fireform = 1
+    audio_sample_play(LUNKY_GROWING_SOUND, gMarioStates[0].pos, 1)
+    m.particleFlags = m.particleFlags | PARTICLE_FIRE
+    set_mario_action(m, ACT_TRIPLE_JUMP_LAND_STOP, 0)
+    
+    return 0
+end
+
+hook_mario_action(ACT_FIRE_LUNKY_TRANSFORM, act_fire_lunky_transform)
 
 ACT_WALL_SLIDE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
 
@@ -519,16 +569,8 @@ function lunky_update(m)
 
     if m.health <= (0x500) then
         e.smalllunky = 1
-        hurtTimer = hurtTimer + 1
-        if hurtTimer < 2 then
-            audio_sample_play(LUNKY_SHRINKING_SOUND, gMarioStates[0].pos, 1)
-        end
     else
         e.smalllunky = 0
-        healthTimer = healthTimer + 1
-        if healthTimer < 2 then
-            audio_sample_play(LUNKY_GROWING_SOUND, gMarioStates[0].pos, 1)
-        end
     end
 
     if m.hurtCounter > 0 and e.fireform ~= 0 then
@@ -600,22 +642,21 @@ function lunky_update(m)
         set_mario_action(m, ACT_FREEFALL_LAND, 0)
     end
 
-
     -- I just wanna say this and its counterpart before the Rainbow Star code are the worst way to handle this probably and I think someone should look at a much cleaner
     -- and SMARTER way to do this.
     if e.fireform ~= 0 then
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], SHIRT, prevEmblemColor)
     end
 
-    if (m.controller.buttonDown & X_BUTTON) ~= 0 and e.fireform ~= 1 then
-        m.actionTimer = 0
-        m.actionTimer = m.actionTimer + 1
-        if m.actionTimer < 42 then
-            e.fireform = 1
-            audio_sample_play(LUNKY_GROWING_SOUND, gMarioStates[0].pos, 1)
-            set_mario_action(m, ACT_TRIPLE_JUMP_LAND_STOP, 0)
-        end
-    end
+    if ((m.controller.buttonDown & X_BUTTON) ~= 0 and e.fireform ~= 1) and (m.action ~= ACT_FIRE_LUNKY_CHARGE and m.action ~= ACT_FIRE_LUNKY_TRANSFORM) then
+	    set_mario_action(m, ACT_FIRE_LUNKY_CHARGE, 0)
+        djui_chat_message_create("AUGHHHHHHH")
+	end
+end
+
+function lunky_on_set_action(m)
+
+    local e = gStateExtras[m.playerIndex]
 
 end
 

@@ -69,16 +69,12 @@ function lunky_health_hud()
 	if hud_get_value(HUD_DISPLAY_FLAGS) & HUD_DISPLAY_FLAG_CAMERA_AND_POWER ~= 0 then
 		djui_hud_render_texture(TEX_LUNKY_HEALTH_BACKGROUND, x, y, 1, 1)
 
-		if e.fireform ~= 0 then
-			prevPowerUp = 16
-		else
-			prevPowerUp = 0
-		end
-
 		if m.flags & MARIO_METAL_CAP ~= 0 then
 			powerUp = 32
 			djui_hud_set_color((starColor.r), starColor.g, starColor.b, 255) -- fourth input is alpha
 			--render the tile here
+		elseif e.fireform ~= 0 then
+			powerUp = 16
 		else
 			powerUp = 0
 		end

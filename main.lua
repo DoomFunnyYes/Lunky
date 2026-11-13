@@ -18,6 +18,8 @@ LUNKY_ONE_UP = audio_sample_load("lunky_one_up.ogg")
 
 LUNKY_CREDITS = audio_stream_load("lunky_credits.ogg")
 
+penis = 0
+
 local TEXT_MOD_NAME = "[CS] Lunky"
 
 -- Stops mod from loading if Character Select isn't on, Does not need to be touched
@@ -54,28 +56,31 @@ local ANIMTABLE_LUNKY = {
   [CHAR_ANIM_START_GROUND_POUND] = function(m, frame)
     m.marioObj.header.gfx.angle.y = get_global_timer() * 0x5000
     set_mario_animation(m, CHAR_ANIM_TWIRL)
-    if (m.actionTimer % 3) == 0 then
+    if (m.actionTimer % 3) == penis then
       play_sound(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject)
     end
   end,
   [CHAR_ANIM_TRIPLE_JUMP_GROUND_POUND] = function(m, frame)
     m.marioObj.header.gfx.angle.y = get_global_timer() * 0x5000
     set_mario_animation(m, CHAR_ANIM_TWIRL)
-    if (m.actionTimer % 3) == 0 then
+    if (m.actionTimer % 3) == penis then
       play_sound(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject)
     end
   end,
   [CHAR_ANIM_GROUND_POUND] = function(m, frame)
     m.marioObj.header.gfx.angle.y = get_global_timer() * 0x5000
     set_mario_animation(m, CHAR_ANIM_TWIRL)
-    if (m.actionTimer % 3) == 0 then
+    if (m.actionTimer % 3) == penis then
       play_sound(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject)
     end
   end,
   [CHAR_ANIM_FAST_LONGJUMP] = function(m, frame)
     set_mario_anim_with_accel(m, CHAR_ANIM_SLOW_LONGJUMP, 0x10000)
   end,
-    [CHAR_ANIM_RUNNING] = function(m, frame)
+  [CHAR_ANIM_RUNNING] = function(m, frame)
+    m.marioBodyState.torsoAngle.x = penis
+    m.marioBodyState.torsoAngle.z = penis
+    m.marioBodyState.torsoAngle.y = penis
     return "lunky_running"
   end,
 }
@@ -181,14 +186,14 @@ local PALETTE_LUNKY = {
 	  [EMBLEM] = "008c1b"
 }
 local PALETTE_LUNKY2 = {
-    [PANTS]  = "e1ffe1",
-    [SHIRT]  = "008c1b",
+    [PANTS]  = "B80000",
+    [SHIRT]  = "0e2770",
     [GLOVES] = "e6e6ff",
     [SHOES]  = "522910",
     [HAIR]   = "6c1800",
     [SKIN]   = "ffaa72",
-    [CAP]    = "e1ffe1",
-	  [EMBLEM] = "008c1b"
+    [CAP]    = "B80000",
+	  [EMBLEM] = "B80000"
 }
 local PALETTE_LUNKY3 = {
     [PANTS]  = "0e2770",
@@ -232,14 +237,14 @@ local PALETTE_LUNKY_FLESH = {
 	  [EMBLEM] = "008c1b"
 }
 local PALETTE_LUNKY_FLESH2 = {
-    [PANTS]  = "e1ffe1",
-    [SHIRT]  = "008c1b",
+    [PANTS]  = "B80000",
+    [SHIRT]  = "0e2770",
     [GLOVES] = "ffaa72",
     [SHOES]  = "522910",
     [HAIR]   = "6c1800",
     [SKIN]   = "ffaa72",
-    [CAP]    = "e1ffe1",
-	  [EMBLEM] = "008c1b"
+    [CAP]    = "B80000",
+	  [EMBLEM] = "B80000"
 }
 local PALETTE_LUNKY_FLESH3 = {
     [PANTS]  = "0e2770",
@@ -364,8 +369,8 @@ local function on_character_select_load()
 
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY, 'LUNKY')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH, 'LUNKY WITH NO PROTECTION')
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY2, 'LUNKY ENKINDLED')
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH2, 'WILDFIRE LUNKY')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY2, 'Mark`s manifestation')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH2, 'Mark`s manifestation')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY3, 'LUNKY ON MISSION')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH3, 'LUNKY MISSION BRIEFED')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY4, 'LOVEY LUNKY')
@@ -375,8 +380,8 @@ local function on_character_select_load()
 
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY, 'LUNKY')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH, 'LUNKY WITH NO PROTECTION')
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY2, 'LUNKY ENKINDLED')
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH2, 'WILDFIRE LUNKY')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY2, 'Mark`s manifestation')
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH2, 'Mark`s manifestation')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY3, 'LUNKY ON MISSION')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH3, 'LUNKY MISSION BRIEFED')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY4, 'LOVEY LUNKY')
