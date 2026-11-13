@@ -265,7 +265,7 @@ function act_lunky_missile_full(m)
         end
 	end
 
-    if m.actionTimer > 28 then
+    if m.actionTimer > 58 then
         set_mario_action(m, ACT_FREEFALL, 0)
 	end
 
@@ -351,7 +351,7 @@ function act_lunky_missile(m)
         end
 	end
 
-    if m.actionTimer > 32 then
+    if m.actionTimer > 58 then
         set_mario_action(m, ACT_FREEFALL, 0)
 	end
 
