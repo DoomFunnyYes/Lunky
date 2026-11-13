@@ -95,6 +95,7 @@ SMALL_LUNKY_JUMP = audio_sample_load("small_lunky_jump.ogg")
 SMALL_LUNKY_DOUBLE_JUMP = audio_sample_load("small_lunky_double_jump.ogg")
 SMALL_LUNKY_TRIPLE_JUMP = audio_sample_load("small_lunky_triple_jump.ogg")
 SMALL_LUNKY_LONG_JUMP = audio_sample_load("small_lunky_long_jump.ogg")
+LUNKY_NOW = audio_sample_load("lunky_haha2.ogg")
 CHAR_SOUND_TRANSFORM_SCREAM = CHAR_SOUND_MAX + 1
 CHAR_SOUND_TRANSFORM_START = CHAR_SOUND_TRANSFORM_SCREAM + 1
 CHAR_SOUND_TRANSFORM_CANCEL = CHAR_SOUND_TRANSFORM_START + 1
@@ -140,7 +141,7 @@ local VOICETABLE_LUNKY = {
     [CHAR_SOUND_PANTING] = 'lunky_silence.ogg',
     [CHAR_SOUND_PANTING_COLD] = 'lunky_silence.ogg',
     [CHAR_SOUND_PRESS_START_TO_PLAY] = 'lunky_silence.ogg',
-    [CHAR_SOUND_PUNCH_HOO] = 'lunky_kick.ogg',
+    [CHAR_SOUND_PUNCH_HOO] = 'lunky_attack.ogg',
     [CHAR_SOUND_PUNCH_WAH] = 'lunky_attack.ogg',
     [CHAR_SOUND_PUNCH_YAH] = 'lunky_attack.ogg',
     [CHAR_SOUND_SNORING1] = 'lunky_silence.ogg',
@@ -174,6 +175,92 @@ local VOICETABLE_LUNKY = {
       else
           return LUNKY_JUMP
       end
+    end,
+    [CHAR_SOUND_YAWNING] = 'lunky_okiedokie.ogg',
+    [CHAR_SOUND_TRANSFORM_SCREAM] = 'lunky_transform.ogg',
+    [CHAR_SOUND_TRANSFORM_START] = 'lunky_transform_start.ogg',
+    [CHAR_SOUND_TRANSFORM_CANCEL] = 'lunky_transform_cancel.ogg',
+}
+
+local VOICETABLE_LUNKY2 = {
+    [CHAR_SOUND_ATTACKED] = 'lunky_real_hurt.ogg',
+    [CHAR_SOUND_COUGHING1] = 'lunky_cough1.ogg',
+    [CHAR_SOUND_COUGHING2] = 'lunky_cough2.ogg',
+    [CHAR_SOUND_COUGHING3] = 'lunky_cough3.ogg',
+    [CHAR_SOUND_DOH] = 'lunky_bonk.ogg',
+    [CHAR_SOUND_DROWNING] = 'lunky_drown.ogg',
+    [CHAR_SOUND_DYING] = 'lunky_silence.ogg',
+    [CHAR_SOUND_EEUH] = 'lunky_trampoline.ogg',
+    [CHAR_SOUND_GAME_OVER] = 'lunky_silence.ogg',
+    [CHAR_SOUND_GROUND_POUND_WAH] = 'lunky_ground_pound.ogg',
+    [CHAR_SOUND_HAHA] = 'lunky_misc.ogg',
+    [CHAR_SOUND_HAHA_2] = 'lunky_misc.ogg',
+    [CHAR_SOUND_HELLO] = 'lunky_silence.ogg',
+    
+    [CHAR_SOUND_HERE_WE_GO] = function(m)
+      if m.action == ACT_STAR_DANCE_EXIT or m.action == ACT_STAR_DANCE_NO_EXIT then
+        return LUNKY_SOUND_VICTORY
+      else
+        return LUNKY_SOUND_BURP
+      end
+    end,
+
+    [CHAR_SOUND_HOOHOO] =  function(m)
+      if m.health <= (0x500) then
+          return SMALL_LUNKY_DOUBLE_JUMP
+      else
+          return LUNKY_DOUBLE_JUMP
+      end
+    end,
+    [CHAR_SOUND_HRMM] = 'lunky_silence.ogg',
+    [CHAR_SOUND_IMA_TIRED] = 'lunky_letsago.ogg',
+    [CHAR_SOUND_LETS_A_GO] = 'lunky_letsago.ogg',
+    [CHAR_SOUND_MAMA_MIA] = 'lunky_mamamia.ogg',
+    [CHAR_SOUND_OKEY_DOKEY] = 'lunky_okiedokie.ogg',
+    [CHAR_SOUND_ON_FIRE] = 'lunky_silence.ogg',
+    [CHAR_SOUND_OOOF] = 'lunky_bonk.ogg',
+    [CHAR_SOUND_OOOF2] = 'lunky_silence.ogg',
+    [CHAR_SOUND_PANTING] = 'lunky_silence.ogg',
+    [CHAR_SOUND_PANTING_COLD] = 'lunky_silence.ogg',
+    [CHAR_SOUND_PRESS_START_TO_PLAY] = 'lunky_silence.ogg',
+    [CHAR_SOUND_PUNCH_HOO] = 'lunky_punch_3.ogg',
+    [CHAR_SOUND_PUNCH_WAH] = 'lunky_punch_2.ogg',
+    [CHAR_SOUND_PUNCH_YAH] = 'lunky_punch_1.ogg',
+    [CHAR_SOUND_SNORING1] = 'lunky_silence.ogg',
+    [CHAR_SOUND_SNORING2] = 'lunky_silence.ogg',
+    [CHAR_SOUND_SNORING3] = 'lunky_sleeping.ogg',
+    [CHAR_SOUND_SO_LONGA_BOWSER] = 'lunky_silence.ogg',
+    [CHAR_SOUND_TWIRL_BOUNCE] = 'lunky_trampoline.ogg',
+    [CHAR_SOUND_UH] = 'lunky_bonk.ogg',
+    [CHAR_SOUND_UH2] = 'small_lunky_jump.ogg',
+    [CHAR_SOUND_UH2_2] = 'lunky_silence.ogg',
+    [CHAR_SOUND_WAAAOOOW] = 'lunky_fall.ogg',
+    [CHAR_SOUND_WAH2] = 'lunky_throw.ogg',
+    [CHAR_SOUND_WHOA] = 'lunky_throw.ogg',
+    [CHAR_SOUND_YAHOO] =  function(m)
+      if m.health <= (0x500) then
+          return SMALL_LUNKY_LONG_JUMP
+      else
+          return LUNKY_LONG_JUMP
+      end
+    end,
+    [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = function(m)
+      if m.health <= (0x500) then
+          return SMALL_LUNKY_TRIPLE_JUMP
+      else
+          return LUNKY_TRIPLE_JUMP
+      end
+    end,
+    [CHAR_SOUND_YAH_WAH_HOO] = function(m)
+    if m.action ~= ACT_SIDE_FLIP then
+        if m.health <= (0x500) then
+            return SMALL_LUNKY_JUMP
+        else
+            return LUNKY_JUMP
+        end
+    else
+      return LUNKY_NOW
+    end
     end,
     [CHAR_SOUND_YAWNING] = 'lunky_okiedokie.ogg',
     [CHAR_SOUND_TRANSFORM_SCREAM] = 'lunky_transform.ogg',
@@ -365,13 +452,13 @@ local function on_character_select_load()
     _G.charSelect.character_add_animations(E_MODEL_LUNKY_FLESH, ANIMTABLE_LUNKY)
 
     _G.charSelect.character_add_voice(E_MODEL_LUNKY, VOICETABLE_LUNKY)
-    _G.charSelect.character_add_voice(E_MODEL_LUNKY_FLESH, VOICETABLE_LUNKY)
+    _G.charSelect.character_add_voice(E_MODEL_LUNKY_FLESH, VOICETABLE_LUNKY2)
 
     _G.charSelect.character_add_animations(E_MODEL_LUNKY_CLASSIC, ANIMTABLE_LUNKY)
     _G.charSelect.character_add_animations(E_MODEL_LUNKY_FLESH_CLASSIC, ANIMTABLE_LUNKY)
 
     _G.charSelect.character_add_voice(E_MODEL_LUNKY_CLASSIC, VOICETABLE_LUNKY)
-    _G.charSelect.character_add_voice(E_MODEL_LUNKY_FLESH_CLASSIC, VOICETABLE_LUNKY)
+    _G.charSelect.character_add_voice(E_MODEL_LUNKY_FLESH_CLASSIC, VOICETABLE_LUNKY2)
 
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY, 'LUNKY')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH, 'LUNKY WITH NO PROTECTION')

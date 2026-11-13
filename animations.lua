@@ -1,4 +1,4 @@
-
+-- Animation from Character Animations/Character Movesets, I believe by Yuyake and/or Steven
 smlua_anim_util_register_animation("luigi_float",
     0,
     0,
@@ -347,6 +347,7 @@ smlua_anim_util_register_animation("luigi_float",
     }
 )
 
+-- Animation from Sonic of Extra Characters+. Presumably a Yuyake animation.
 smlua_anim_util_register_animation('lunky_running',0, 0, 0, 0, 59, { 
 	0x0000, 0x0000, 0x0001, 0x0001, 0x0002, 0x0003, 0x0003, 0x0004, 0x0005, 
 	0x0006, 0x0006, 0x0007, 0x0009, 0x000A, 0x000B, 0x000C, 0x000D, 0x000D, 
@@ -692,6 +693,7 @@ smlua_anim_util_register_animation('lunky_running',0, 0, 0, 0, 59, {
 
 })
 
+-- This is the unused animation for running while in the Super Star mode for Jer's Power Ups.
 smlua_anim_util_register_animation('lunky_star_running', 0, 0, 0, 0, 71, { 
 	0x0000, 0x00B4, 0x00B3, 0x00B2, 0x00B1, 0x00AF, 0x00AE, 0x00AD, 0x00AC, 
 	0x00AD, 0x00AD, 0x00AF, 0x00B0, 0x00B2, 0x00B4, 0x00B7, 0x00B9, 0x00BC, 
@@ -990,6 +992,7 @@ smlua_anim_util_register_animation('lunky_star_running', 0, 0, 0, 0, 71, {
 	0x0872, 0x0048, 0x08B9, 0x0047, 0x0901, 0x0048, 0x0948, 0x0048, 0x0990, 
 });
 
+-- The ground pound tornado animation from Jer's Evilswag Moveset mod.
 smlua_anim_util_register_animation('lunky_cyclone', 1, 0, 0, 0, 45, { 
 	0x0000, 0x00BD, 0x00BD, 0x00BD, 0x00BD, 0x00BD, 0x00BD, 0x00BD, 0x00BD, 
 	0x00BD, 0x00BD, 0x00BD, 0x00BD, 0x00BD, 0x00BD, 0x00BD, 0x00BD, 0x00BD, 
@@ -1333,6 +1336,7 @@ smlua_anim_util_register_animation('lunky_frontflip', 0, 0, 0, 0, 9, {
 
 });
 
+-- The animation for charging the Green Missile created simultaneously for this mod, and, more importantly, Jer's Fumbler mod.
 smlua_anim_util_register_animation('lunky_missile_charge',1, 0, 0, 0, 60, { 
 	0x0000, 0x00B8, 0x00C0, 0x00C8, 0x00C1, 0x00B3, 0x00A8, 0x009A, 0x0090, 
 	0x008C, 0x008A, 0x008A, 0x008B, 0x008D, 0x0090, 0x0093, 0x0094, 0x0095, 

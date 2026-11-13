@@ -51,6 +51,18 @@ for i = 0, (MAX_PLAYERS - 1) do
 
 end
 
+ACT_LUNKY_ROLLOUT = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
+
+function act_lunky_rollout(m)
+    if m.action == ACT_GROUND_POUND and m.input & INPUT_B_PRESSED ~= 0 then
+        m.vel.y = 25
+        m.forwardVel = 20
+        --m.faceAngle.y = m.intendedYaw
+        play_sound(SOUND_GENERAL_SWISH_WATER, m.marioObj.header.gfx.cameraToObject)
+        set_mario_action(m, ACT_DIVE, 0)
+    end
+end
+
 ACT_LUNKY_PROJECTILE_SHOOT = allocate_mario_action(ACT_FLAG_ATTACKING | ACT_FLAG_MOVING)
 
 function act_lunky_projectile_shoot(m)
@@ -265,7 +277,7 @@ function act_lunky_missile_full(m)
         end
 	end
 
-    if m.actionTimer > 58 then
+    if m.actionTimer > 39 then
         set_mario_action(m, ACT_FREEFALL, 0)
 	end
 
@@ -351,7 +363,7 @@ function act_lunky_missile(m)
         end
 	end
 
-    if m.actionTimer > 58 then
+    if m.actionTimer > 39 then
         set_mario_action(m, ACT_FREEFALL, 0)
 	end
 
@@ -498,7 +510,7 @@ function act_fire_lunky_charge(m)
         audio_sample_stop(LUNKY_TRANSFORMATION_CHARGE)
         play_character_sound(m, CHAR_SOUND_TRANSFORM_START)
 	    set_mario_action(m, ACT_FIRE_LUNKY_TRANSFORM, m.actionArg)
-    elseif ((m.controller.buttonDown & X_BUTTON) == 0) then
+    elseif m.actionTimer >= 24 and ((m.controller.buttonDown & X_BUTTON) == 0) then
         audio_sample_stop(LUNKY_TRANSFORMATION_CHARGE)
         set_mario_action(m, ACT_FREEFALL_LAND, 0)
         play_character_sound(m, CHAR_SOUND_TRANSFORM_CANCEL)
@@ -618,6 +630,7 @@ function lunky_update(m)
 
     if (m.flags & MARIO_METAL_CAP ~= 0) or (m.flags & MARIO_WING_CAP ~= 0) then
 		m.flags = m.flags | MARIO_WING_CAP | MARIO_METAL_CAP -- Enable both wing and metal, even if you have just one of them
+        --network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], METAL, HSV_to_RGB(starHue, 1, 1))
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM, HSV_to_RGB(starHue, 1, 1))
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], CAP, HSV_to_RGB(starHue, 1, 1))
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS, HSV_to_RGB(starHue, 1, 1))
@@ -661,6 +674,14 @@ function lunky_update(m)
     if ((m.controller.buttonDown & X_BUTTON) ~= 0 and e.fireform ~= 1) and (m.action ~= ACT_FIRE_LUNKY_CHARGE and m.action ~= ACT_FIRE_LUNKY_TRANSFORM) and m.pos.y == m.floorHeight then
 	    set_mario_action(m, ACT_FIRE_LUNKY_CHARGE, 0)
 	end
+
+    if m.action == ACT_GROUND_POUND and m.input & INPUT_B_PRESSED ~= 0 then
+        m.vel.y = 25
+        m.forwardVel = 20
+        --m.faceAngle.y = m.intendedYaw
+        play_sound(SOUND_GENERAL_SWISH_WATER, m.marioObj.header.gfx.cameraToObject)
+        set_mario_action(m, ACT_DIVE, 0)
+    end
 end
 
 function lunky_on_set_action(m)
