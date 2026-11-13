@@ -650,7 +650,6 @@ function lunky_update(m)
 
     if ((m.controller.buttonDown & X_BUTTON) ~= 0 and e.fireform ~= 1) and (m.action ~= ACT_FIRE_LUNKY_CHARGE and m.action ~= ACT_FIRE_LUNKY_TRANSFORM) then
 	    set_mario_action(m, ACT_FIRE_LUNKY_CHARGE, 0)
-        djui_chat_message_create("AUGHHHHHHH")
 	end
 end
 
