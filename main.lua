@@ -95,6 +95,9 @@ SMALL_LUNKY_JUMP = audio_sample_load("small_lunky_jump.ogg")
 SMALL_LUNKY_DOUBLE_JUMP = audio_sample_load("small_lunky_double_jump.ogg")
 SMALL_LUNKY_TRIPLE_JUMP = audio_sample_load("small_lunky_triple_jump.ogg")
 SMALL_LUNKY_LONG_JUMP = audio_sample_load("small_lunky_long_jump.ogg")
+CHAR_SOUND_TRANSFORM_SCREAM = CHAR_SOUND_MAX + 1
+CHAR_SOUND_TRANSFORM_START = CHAR_SOUND_TRANSFORM_SCREAM + 1
+CHAR_SOUND_TRANSFORM_CANCEL = CHAR_SOUND_TRANSFORM_START + 1
 
 local VOICETABLE_LUNKY = {
     [CHAR_SOUND_ATTACKED] = 'lunky_real_hurt.ogg',
@@ -173,6 +176,9 @@ local VOICETABLE_LUNKY = {
       end
     end,
     [CHAR_SOUND_YAWNING] = 'lunky_okiedokie.ogg',
+    [CHAR_SOUND_TRANSFORM_SCREAM] = 'lunky_transform.ogg',
+    [CHAR_SOUND_TRANSFORM_START] = 'lunky_transform_start.ogg',
+    [CHAR_SOUND_TRANSFORM_CANCEL] = 'lunky_transform_cancel.ogg',
 }
 
 local PALETTE_LUNKY = {

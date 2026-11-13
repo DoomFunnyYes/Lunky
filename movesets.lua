@@ -8,6 +8,7 @@ LUNKY_MISSILE_MAXIMUM = audio_sample_load("lunky_missile_maximum.ogg")
 LUNKY_MISSILE_CHARGE = audio_sample_load("lunky_green_missile_charge.ogg")
 LUNKY_CYCLONE = audio_sample_load("lunky_cyclone.ogg")
 LUNKY_CYCLONE_END = audio_sample_load("lunky_cyclone_end.ogg")
+LUNKY_TRANSFORMATION_CHARGE = audio_sample_load("lunky_transform_holding.ogg")
 
 function limit_angle(a)
 	return (a + 0x8000) % 0x10000 - 0x8000
@@ -475,30 +476,37 @@ hook_mario_action(ACT_LUNKY_MISSILE_CHARGE, act_lunky_missile_charge)
 ACT_FIRE_LUNKY_CHARGE = allocate_mario_action(ACT_FLAG_STATIONARY)
 
 function act_fire_lunky_charge(m)
+    
     local e = gStateExtras[m.playerIndex]
     if m.actionState == 0 then
-        audio_sample_play(LUNKY_MISSILE_CHARGE, gMarioStates[0].pos, 0.32)
+        --audio_sample_play(LUNKY_MISSILE_CHARGE, gMarioStates[0].pos, 0.32)
         m.actionState = 1
+        play_character_sound(m, CHAR_SOUND_TRANSFORM_START)
     end
 
     m.particleFlags = m.particleFlags | PARTICLE_WAVE_TRAIL
 
-	if m.actionTimer % 7 == 0 and m.actionTimer < 42 then
+	if m.actionTimer % 85 == 0 then
+        audio_sample_play(LUNKY_TRANSFORMATION_CHARGE, gMarioStates[0].pos, 0.32)
+	end
+
+    if m.actionTimer % 2 == 0 then
 	    m.particleFlags = m.particleFlags | PARTICLE_FIRE
 	end
 
-    if m.actionTimer >= 42 and e.fireform ~= 1 then
-        audio_sample_stop(LUNKY_MISSILE_CHARGE)
+    if m.actionTimer >= 94 and e.fireform ~= 1 then
+        audio_sample_stop(LUNKY_TRANSFORMATION_CHARGE)
+        play_character_sound(m, CHAR_SOUND_TRANSFORM_START)
 	    set_mario_action(m, ACT_FIRE_LUNKY_TRANSFORM, m.actionArg)
     elseif ((m.controller.buttonDown & X_BUTTON) == 0) then
-        audio_sample_stop(LUNKY_MISSILE_CHARGE)
+        audio_sample_stop(LUNKY_TRANSFORMATION_CHARGE)
         set_mario_action(m, ACT_FREEFALL_LAND, 0)
+        play_character_sound(m, CHAR_SOUND_TRANSFORM_CANCEL)
 	end
 
 	smlua_anim_util_set_animation(m.marioObj, "lunky_missile_charge")
-    if m.actionTimer >= 16 then
-        m.marioObj.header.gfx.animInfo.animAccel = 2 * 32768
-    end
+
+    m.faceAngle.y = m.intendedYaw - approach_s32(convert_s16(m.intendedYaw - m.faceAngle.y), 0, 0x400, 0x400)
 
     m.actionTimer = m.actionTimer + 1
 
@@ -506,6 +514,8 @@ function act_fire_lunky_charge(m)
 end
 
 hook_mario_action(ACT_FIRE_LUNKY_CHARGE, act_fire_lunky_charge)
+
+timer = 0
 
 ACT_FIRE_LUNKY_TRANSFORM = allocate_mario_action(ACT_FLAG_STATIONARY)
 
@@ -517,7 +527,7 @@ function act_fire_lunky_transform(m)
     audio_sample_play(LUNKY_GROWING_SOUND, gMarioStates[0].pos, 1)
     m.particleFlags = m.particleFlags | PARTICLE_FIRE
     set_mario_action(m, ACT_TRIPLE_JUMP_LAND_STOP, 0)
-    
+
     return 0
 end
 
@@ -648,7 +658,7 @@ function lunky_update(m)
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], SHIRT, prevEmblemColor)
     end
 
-    if ((m.controller.buttonDown & X_BUTTON) ~= 0 and e.fireform ~= 1) and (m.action ~= ACT_FIRE_LUNKY_CHARGE and m.action ~= ACT_FIRE_LUNKY_TRANSFORM) then
+    if ((m.controller.buttonDown & X_BUTTON) ~= 0 and e.fireform ~= 1) and (m.action ~= ACT_FIRE_LUNKY_CHARGE and m.action ~= ACT_FIRE_LUNKY_TRANSFORM) and m.pos.y == m.floorHeight then
 	    set_mario_action(m, ACT_FIRE_LUNKY_CHARGE, 0)
 	end
 end
