@@ -494,6 +494,7 @@ function act_fire_lunky_charge(m)
         --audio_sample_play(LUNKY_MISSILE_CHARGE, gMarioStates[0].pos, 0.32)
         m.actionState = 1
         play_character_sound(m, CHAR_SOUND_TRANSFORM_START)
+        queue_rumble_data_mario(m, 0, 60)
     end
 
     m.particleFlags = m.particleFlags | PARTICLE_WAVE_TRAIL
@@ -504,11 +505,13 @@ function act_fire_lunky_charge(m)
 
     if m.actionTimer % 2 == 0 then
 	    m.particleFlags = m.particleFlags | PARTICLE_FIRE
+        queue_rumble_data_mario(m, 5, 0)
 	end
 
     if m.actionTimer >= 94 and e.fireform ~= 1 then
         audio_sample_stop(LUNKY_TRANSFORMATION_CHARGE)
         play_character_sound(m, CHAR_SOUND_TRANSFORM_START)
+        queue_rumble_data_mario(m, 0, 60)
 	    set_mario_action(m, ACT_FIRE_LUNKY_TRANSFORM, m.actionArg)
     elseif m.actionTimer >= 24 and ((m.controller.buttonDown & X_BUTTON) == 0) then
         audio_sample_stop(LUNKY_TRANSFORMATION_CHARGE)
