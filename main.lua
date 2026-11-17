@@ -27,9 +27,7 @@ if not _G.charSelectExists then
 end
 
 local E_MODEL_LUNKY =      smlua_model_util_get_id("lunky_geo")      -- Located in "actors"
-local E_MODEL_LUNKY_FLESH =      smlua_model_util_get_id("lunky_flesh_geo")
 local E_MODEL_LUNKY_CLASSIC =      smlua_model_util_get_id("boomie_luigi")
-local E_MODEL_LUNKY_FLESH_CLASSIC =      smlua_model_util_get_id("boomie_luigi_two")
 
 local E_MODEL_RAINBOW_STAR =      smlua_model_util_get_id("rainbow_star_geo")
 
@@ -93,7 +91,6 @@ SMALL_LUNKY_JUMP = audio_sample_load("small_lunky_jump.ogg")
 SMALL_LUNKY_DOUBLE_JUMP = audio_sample_load("small_lunky_double_jump.ogg")
 SMALL_LUNKY_TRIPLE_JUMP = audio_sample_load("small_lunky_triple_jump.ogg")
 SMALL_LUNKY_LONG_JUMP = audio_sample_load("small_lunky_long_jump.ogg")
-LUNKY_NOW = audio_sample_load("lunky_haha2.ogg")
 CHAR_SOUND_TRANSFORM_SCREAM = CHAR_SOUND_MAX + 1
 CHAR_SOUND_TRANSFORM_START = CHAR_SOUND_TRANSFORM_SCREAM + 1
 CHAR_SOUND_TRANSFORM_CANCEL = CHAR_SOUND_TRANSFORM_START + 1
@@ -173,92 +170,6 @@ local VOICETABLE_LUNKY = {
       else
           return LUNKY_JUMP
       end
-    end,
-    [CHAR_SOUND_YAWNING] = 'lunky_okiedokie.ogg',
-    [CHAR_SOUND_TRANSFORM_SCREAM] = 'lunky_transform.ogg',
-    [CHAR_SOUND_TRANSFORM_START] = 'lunky_transform_start.ogg',
-    [CHAR_SOUND_TRANSFORM_CANCEL] = 'lunky_transform_cancel.ogg',
-}
-
-local VOICETABLE_LUNKY2 = {
-    [CHAR_SOUND_ATTACKED] = 'lunky_real_hurt.ogg',
-    [CHAR_SOUND_COUGHING1] = 'lunky_cough1.ogg',
-    [CHAR_SOUND_COUGHING2] = 'lunky_cough2.ogg',
-    [CHAR_SOUND_COUGHING3] = 'lunky_cough3.ogg',
-    [CHAR_SOUND_DOH] = 'lunky_bonk.ogg',
-    [CHAR_SOUND_DROWNING] = 'lunky_drown.ogg',
-    [CHAR_SOUND_DYING] = 'lunky_silence.ogg',
-    [CHAR_SOUND_EEUH] = 'lunky_trampoline.ogg',
-    [CHAR_SOUND_GAME_OVER] = 'lunky_silence.ogg',
-    [CHAR_SOUND_GROUND_POUND_WAH] = 'lunky_ground_pound.ogg',
-    [CHAR_SOUND_HAHA] = 'lunky_misc.ogg',
-    [CHAR_SOUND_HAHA_2] = 'lunky_misc.ogg',
-    [CHAR_SOUND_HELLO] = 'lunky_silence.ogg',
-    
-    [CHAR_SOUND_HERE_WE_GO] = function(m)
-      if m.action == ACT_STAR_DANCE_EXIT or m.action == ACT_STAR_DANCE_NO_EXIT then
-        return LUNKY_SOUND_VICTORY
-      else
-        return LUNKY_SOUND_BURP
-      end
-    end,
-
-    [CHAR_SOUND_HOOHOO] =  function(m)
-      if m.health <= (0x500) then
-          return SMALL_LUNKY_DOUBLE_JUMP
-      else
-          return LUNKY_DOUBLE_JUMP
-      end
-    end,
-    [CHAR_SOUND_HRMM] = 'lunky_silence.ogg',
-    [CHAR_SOUND_IMA_TIRED] = 'lunky_letsago.ogg',
-    [CHAR_SOUND_LETS_A_GO] = 'lunky_letsago.ogg',
-    [CHAR_SOUND_MAMA_MIA] = 'lunky_mamamia.ogg',
-    [CHAR_SOUND_OKEY_DOKEY] = 'lunky_okiedokie.ogg',
-    [CHAR_SOUND_ON_FIRE] = 'lunky_silence.ogg',
-    [CHAR_SOUND_OOOF] = 'lunky_bonk.ogg',
-    [CHAR_SOUND_OOOF2] = 'lunky_silence.ogg',
-    [CHAR_SOUND_PANTING] = 'lunky_silence.ogg',
-    [CHAR_SOUND_PANTING_COLD] = 'lunky_silence.ogg',
-    [CHAR_SOUND_PRESS_START_TO_PLAY] = 'lunky_silence.ogg',
-    [CHAR_SOUND_PUNCH_HOO] = 'lunky_punch_3.ogg',
-    [CHAR_SOUND_PUNCH_WAH] = 'lunky_punch_2.ogg',
-    [CHAR_SOUND_PUNCH_YAH] = 'lunky_punch_1.ogg',
-    [CHAR_SOUND_SNORING1] = 'lunky_silence.ogg',
-    [CHAR_SOUND_SNORING2] = 'lunky_silence.ogg',
-    [CHAR_SOUND_SNORING3] = 'lunky_sleeping.ogg',
-    [CHAR_SOUND_SO_LONGA_BOWSER] = 'lunky_silence.ogg',
-    [CHAR_SOUND_TWIRL_BOUNCE] = 'lunky_trampoline.ogg',
-    [CHAR_SOUND_UH] = 'lunky_bonk.ogg',
-    [CHAR_SOUND_UH2] = 'small_lunky_jump.ogg',
-    [CHAR_SOUND_UH2_2] = 'lunky_silence.ogg',
-    [CHAR_SOUND_WAAAOOOW] = 'lunky_fall.ogg',
-    [CHAR_SOUND_WAH2] = 'lunky_throw.ogg',
-    [CHAR_SOUND_WHOA] = 'lunky_throw.ogg',
-    [CHAR_SOUND_YAHOO] =  function(m)
-      if m.health <= (0x500) then
-          return SMALL_LUNKY_LONG_JUMP
-      else
-          return LUNKY_LONG_JUMP
-      end
-    end,
-    [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = function(m)
-      if m.health <= (0x500) then
-          return SMALL_LUNKY_TRIPLE_JUMP
-      else
-          return LUNKY_TRIPLE_JUMP
-      end
-    end,
-    [CHAR_SOUND_YAH_WAH_HOO] = function(m)
-    if m.action ~= ACT_SIDE_FLIP then
-        if m.health <= (0x500) then
-            return SMALL_LUNKY_JUMP
-        else
-            return LUNKY_JUMP
-        end
-    else
-      return LUNKY_NOW
-    end
     end,
     [CHAR_SOUND_YAWNING] = 'lunky_okiedokie.ogg',
     [CHAR_SOUND_TRANSFORM_SCREAM] = 'lunky_transform.ogg',
@@ -388,18 +299,6 @@ if _G.charSelectExists then
 	1.0
     )
 
-    CT_LUNKY_FLESH = _G.charSelect.character_add_costume(
-    CT_LUNKY,
-        "Lunky With No Protection", -- Character Name
-        "This is Lunky! Full of joy!.", -- Description
-        "Boomer?", -- Credits
-        "ffffff",           -- Menu Color
-        E_MODEL_LUNKY_FLESH,       -- Character Model
-        CT_LUIGI,           -- Override Character
-        TEX_LUNKY_LIFE_ICON, -- Life Icon
-	1.0
-    )
-
     CT_LUNKY_CLASSIC = _G.charSelect.character_add_costume(
     CT_LUNKY,
         "Lunky Classic!", -- Character Name
@@ -407,18 +306,6 @@ if _G.charSelectExists then
         "Boomer?", -- Credits
         "ffffff",           -- Menu Color
         E_MODEL_LUNKY_CLASSIC,       -- Character Model
-        CT_LUIGI,           -- Override Character
-        TEX_LUNKY_LIFE_ICON, -- Life Icon
-	1.0
-    )
-
-    CT_LUNKY_FLESH_CLASSIC = _G.charSelect.character_add_costume(
-    CT_LUNKY,
-        "Lunky Classic (NP)", -- Character Name
-        "This is Lunky! Full of joy!.", -- Description
-        "Boomer?", -- Credits
-        "ffffff",           -- Menu Color
-        E_MODEL_LUNKY_FLESH_CLASSIC,       -- Character Model
         CT_LUIGI,           -- Override Character
         TEX_LUNKY_LIFE_ICON, -- Life Icon
 	1.0
@@ -447,38 +334,24 @@ local HEALTH_METER_LUNKY = {
 local CSloaded = false
 local function on_character_select_load()
     _G.charSelect.character_add_animations(E_MODEL_LUNKY, ANIMTABLE_LUNKY)
-    _G.charSelect.character_add_animations(E_MODEL_LUNKY_FLESH, ANIMTABLE_LUNKY)
 
     _G.charSelect.character_add_voice(E_MODEL_LUNKY, VOICETABLE_LUNKY)
-    _G.charSelect.character_add_voice(E_MODEL_LUNKY_FLESH, VOICETABLE_LUNKY2)
 
     _G.charSelect.character_add_animations(E_MODEL_LUNKY_CLASSIC, ANIMTABLE_LUNKY)
-    _G.charSelect.character_add_animations(E_MODEL_LUNKY_FLESH_CLASSIC, ANIMTABLE_LUNKY)
 
     _G.charSelect.character_add_voice(E_MODEL_LUNKY_CLASSIC, VOICETABLE_LUNKY)
-    _G.charSelect.character_add_voice(E_MODEL_LUNKY_FLESH_CLASSIC, VOICETABLE_LUNKY2)
 
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY, 'LUNKY')
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH, 'LUNKY WITH NO PROTECTION')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY2, 'Mark`s manifestation')
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH2, 'Mark`s manifestation')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY3, 'LUNKY ON MISSION')
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH3, 'LUNKY MISSION BRIEFED')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY4, 'LOVEY LUNKY')
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH4, 'LUNK OF LOVE')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY, PALETTE_LUNKY5, 'LUNK SCARED SILLY')
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH, PALETTE_LUNKY_FLESH5, 'FRIGHT FA-LUNK')
 
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY, 'LUNKY')
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH, 'LUNKY WITH NO PROTECTION')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY2, 'Mark`s manifestation')
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH2, 'Mark`s manifestation')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY3, 'LUNKY ON MISSION')
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH3, 'LUNKY MISSION BRIEFED')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY4, 'LOVEY LUNKY')
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH4, 'LUNK OF LOVE')
     _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_CLASSIC, PALETTE_LUNKY5, 'LUNK SCARED SILLY')
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUNKY_FLESH_CLASSIC, PALETTE_LUNKY_FLESH5, 'FRIGHT FA-LUNK')
 
     _G.charSelect.character_add_health_meter(CT_LUNKY, HEALTH_METER_LUNKY)
 
@@ -488,7 +361,6 @@ local function on_character_select_load()
     _G.charSelect.credit_add(TEXT_MOD_NAME, "JerThePear", "A metric TON of advice!")
 	
 	_G.charSelect.character_add_caps(E_MODEL_LUNKY,CAPTABLE_LUNKY)
-	_G.charSelect.character_add_caps(E_MODEL_LUNKY_FLESH,CAPTABLE_LUNKY)
 
   _G.charSelect.character_add_graffiti(CT_LUNKY, TEX_LUNKY_GRAFFITI)
 
@@ -541,6 +413,9 @@ function lunky_before_set_action(m, inc, arg) --m is the mariostate input, inc i
     end
     if ((inc == ACT_PUNCHING and arg ~= 9) or (inc == ACT_MOVE_PUNCHING)) and (e.fireform ~= 0) then
       return set_mario_action(m, ACT_LUNKY_PROJECTILE_SHOOT, 0)
+    end
+    if m.prevAction == ACT_FLAMING_ASCENT and m.action == ACT_GROUND_POUND and m.input & INPUT_A_PRESSED ~= 0 then
+      return ACT_GROUND_POUND
     end
 end
 
