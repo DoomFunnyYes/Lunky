@@ -1,8 +1,6 @@
 -- name: [CS] Lunky
 -- description: CS version of all my playermodels.
 
-TOGGLE_STARMAN_THEME = mod_storage_load_bool("starman_theme")
-
 LUNKY_INVINCIBILITY = audio_stream_load("lunky_invincibility.ogg")
 audio_stream_set_loop_points(LUNKY_INVINCIBILITY, 94050, 6109156)
 audio_stream_set_looping(LUNKY_INVINCIBILITY, true)
@@ -499,14 +497,6 @@ local function on_character_select_load()
     _G.charSelect.character_hook_moveset(CT_LUNKY, HOOK_MARIO_UPDATE, lunky_update)
     _G.charSelect.character_hook_moveset(CT_LUNKY, HOOK_ON_SET_MARIO_ACTION, lunky_on_set_action)
 
-function checkbox_starman_theme()
-    if TOGGLE_STARMAN_THEME == true then
-      _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_METAL_CAP, LUNKY_INVINCIBILITY_SNES)
-    else
-      _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_METAL_CAP, LUNKY_INVINCIBILITY)
-    end
-end
-
       _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_METAL_CAP, LUNKY_INVINCIBILITY_SNES)
       _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_POWERUP, LUNKY_INVINCIBILITY)
       _G.charSelect.character_add_sequence_replacement(CT_LUNKY, SEQ_EVENT_CUTSCENE_CREDITS, LUNKY_CREDITS)
@@ -519,8 +509,6 @@ end
       _G.charSelect.character_add_sound_replacement(CT_LUNKY, SOUND_GENERAL_COIN_SPURT_EU, LUNKY_COINBURST)
       _G.charSelect.character_add_sound_replacement(CT_LUNKY, SOUND_GENERAL_RED_COIN, LUNKY_RED_COIN)
       _G.charSelect.character_add_sound_replacement(CT_LUNKY, SOUND_GENERAL_COLLECT_1UP, LUNKY_ONE_UP)
-
-hook_mod_menu_checkbox("Toggle Starman Theme", true, checkbox_starman_theme)
 
     CSloaded = true
 

@@ -37,7 +37,7 @@ function lunky_health_hud()
     local scWidth = djui_hud_get_screen_width()
     local m = gMarioStates[0]
 	local e = gStateExtras[m.playerIndex]
-    local health = math.ceil((m.health - 256)/256)
+    local health = math.ceil((m.health - 256)/256 + (e.fireform))
     local lives = (hud_get_value(HUD_DISPLAY_LIVES))
     local stars = (hud_get_value(HUD_DISPLAY_STARS))
     local coins = (hud_get_value(HUD_DISPLAY_COINS))

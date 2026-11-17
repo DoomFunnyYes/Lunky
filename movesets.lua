@@ -80,7 +80,7 @@ function act_lunky_projectile_shoot(m)
         perform_ground_step(m)
         if m.actionTimer >= 20 then
             return set_mario_action(m, ACT_IDLE, 0)
-        elseif m.actionTimer >= 14 and m.input & INPUT_B_PRESSED ~= 0 then
+        elseif m.actionTimer >= 7 and m.input & INPUT_B_PRESSED ~= 0 then
             m.actionState = 0
         end
     elseif m.actionArg > 0 then
@@ -167,6 +167,75 @@ function act_wall_stick(m)
 end
 
 hook_mario_action(ACT_WALL_STICK, act_wall_stick)
+
+ACT_FLAMING_ASCENT = allocate_mario_action(ACT_FLAG_MOVING | ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
+
+function act_flaming_ascent(m)
+    smlua_anim_util_set_animation(m.marioObj, "lunky_running")
+
+    if m.actionTimer == 0 then
+        m.faceAngle.y = m.intendedYaw
+        if m.input & INPUT_NONZERO_ANALOG ~= 0 then
+            m.forwardVel = 5
+        end
+    if m.actionTimer == 1 then
+                m.pos.y = m.pos.y + 10
+    end
+    elseif m.actionTimer < 35 then
+        m.faceAngle.y = approach_s16_symmetric(m.faceAngle.y, m.intendedYaw, 0x200)
+
+        if m.actionTimer <= 20 then
+            if (m.actionTimer % 3) == 0 then
+                play_sound(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject)
+            end
+            m.marioBodyState.handState = MARIO_HAND_OPEN
+        elseif m.actionTimer == 27 then
+            play_sound_with_freq_scale(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject, 0.8)
+        end
+
+        if m.actionTimer < 20 then
+            if m.actionTimer > -1 then
+                m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
+                m.vel.y = 18 - (m.actionTimer * (m.forwardVel/25))
+            end
+        else
+            m.vel.y = m.vel.y + 3
+        end
+    end
+
+    if m.actionTimer < 30 then
+        m.marioBodyState.eyeState = MARIO_EYES_CLOSED
+    elseif m.actionTimer < 40 then
+        m.marioBodyState.eyeState = MARIO_EYES_LOOK_UP
+    end
+
+    if (m.input & INPUT_NONZERO_ANALOG) ~= 0 then
+        mario_set_forward_vel(m, math.abs(m.forwardVel))
+    end
+
+    stepResult = perform_air_step(m, 0)
+
+    if (stepResult == AIR_STEP_LANDED) then
+        set_mario_action(m, ACT_TRIPLE_JUMP_LAND, 0)
+    end
+
+    if (stepResult == AIR_STEP_HIT_WALL) then
+        set_mario_action(m, ACT_WALL_STICK, 0)
+    end
+
+    m.actionTimer = m.actionTimer + 1
+
+    if m.controller.buttonPressed & Z_TRIG ~= 0 then
+        m.marioObj.header.gfx.angle.x = 0x0000
+        m.marioObj.header.gfx.pos.x = m.pos.x
+        m.marioObj.header.gfx.pos.z = m.pos.z
+        set_mario_action(m, ACT_GROUND_POUND, 1)
+    end
+
+    return 0
+end
+
+hook_mario_action(ACT_FLAMING_ASCENT, act_flaming_ascent)
 
 ACT_LUNKY_CYCLONE = allocate_mario_action(ACT_FLAG_MOVING | ACT_FLAG_ATTACKING)
 
@@ -287,12 +356,8 @@ function act_lunky_missile_full(m)
 
     local stepResult = perform_air_step(m, 0)
     if stepResult == AIR_STEP_LANDED then
-        if (m.flags & MARIO_METAL_CAP ~= 0) or (m.flags & MARIO_WING_CAP ~= 0) then
-            set_mario_action(m, ACT_DIVE_SLIDE, 0)
-        else
-            play_character_sound(m, CHAR_SOUND_SNORING2)
-	        set_mario_action(m, ACT_FORWARD_GROUND_KB, 0)
-        end
+        play_character_sound(m, CHAR_SOUND_SNORING2)
+        set_mario_action(m, ACT_DIVE_SLIDE, 0)
     elseif stepResult == AIR_STEP_HIT_WALL then
         if m.forwardVel > 42 then --idk if this is even possible on full missile
             set_mario_action(m, ACT_HARD_BACKWARD_AIR_KB, 0)
@@ -312,7 +377,7 @@ function act_lunky_missile_full(m)
         set_anim_to_frame(m, 7)
     end
 
-    if arg == 2 and (m.controller.buttonPressed & Z_TRIG ~= 0) then
+    if m.controller.buttonPressed & Z_TRIG ~= 0 then
         m.marioObj.header.gfx.angle.x = 0x0000
         m.marioObj.header.gfx.pos.x = m.pos.x
         m.marioObj.header.gfx.pos.z = m.pos.z
@@ -373,11 +438,8 @@ function act_lunky_missile(m)
     
     local stepResult = perform_air_step(m, 0)
     if stepResult == AIR_STEP_LANDED then
-        if (m.flags & MARIO_METAL_CAP ~= 0) or (m.flags & MARIO_WING_CAP ~= 0) then
-            set_mario_action(m, ACT_DIVE_SLIDE, 0)
-        else
-	        set_mario_action(m, ACT_FORWARD_GROUND_KB, 0)
-        end
+        play_character_sound(m, CHAR_SOUND_SNORING2)
+        set_mario_action(m, ACT_DIVE_SLIDE, 0)
     elseif stepResult == AIR_STEP_HIT_WALL then
         if m.forwardVel > 42 then
             set_mario_action(m, ACT_HARD_BACKWARD_AIR_KB, 0)
@@ -397,7 +459,7 @@ function act_lunky_missile(m)
         set_anim_to_frame(m, 7)
     end
 
-    if arg == 2 and (m.controller.buttonPressed & Z_TRIG ~= 0) then
+    if m.controller.buttonPressed & Z_TRIG ~= 0 then
         m.marioObj.header.gfx.angle.x = 0x0000
         m.marioObj.header.gfx.pos.x = m.pos.x
         m.marioObj.header.gfx.pos.z = m.pos.z
@@ -584,12 +646,6 @@ end
 )
 
 local hurtTimer = 0
-local healthTimer = 0
-
-local prevCapColor = {r = 0, g = 0, b = 0}
-local prevPantsColor = {r = 0, g = 0, b = 0}
-local prevEmblemColor = {r = 0, g = 0, b = 0}
-local prevShirtColor = {r = 0, g = 0, b = 0}
 
 function lunky_update(m)
 
@@ -600,9 +656,7 @@ function lunky_update(m)
     if m.hurtCounter > 0 and e.fireform ~= 0 then
         e.fireform = 0
         hurtTimer = hurtTimer + 1
-        if hurtTimer < 2 then
-            audio_sample_play(LUNKY_SHRINKING_SOUND, gMarioStates[0].pos, 1)
-        end
+        m.health = m.health + (512 * 1)
     end
 	
 
@@ -636,10 +690,7 @@ function lunky_update(m)
         end
         m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
     else
-        prevCapColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], CAP)
-        prevPantsColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS)
         prevEmblemColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM)
-        prevShirtColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], SHIRT)
 	end
     if m.action == ACT_SPECIAL_TRIPLE_JUMP and m.pos.y == m.floorHeight then
         set_mario_action(m, ACT_FREEFALL_LAND, 0)
@@ -651,7 +702,7 @@ function lunky_update(m)
         network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], SHIRT, prevEmblemColor)
     end
 
-    if ((m.controller.buttonDown & X_BUTTON) ~= 0 and e.fireform ~= 1) and (m.action ~= ACT_FIRE_LUNKY_CHARGE and m.action ~= ACT_FIRE_LUNKY_TRANSFORM) and m.pos.y == m.floorHeight then
+    if ((m.controller.buttonDown & X_BUTTON) ~= 0 and e.fireform ~= 1) and (m.action ~= ACT_FIRE_LUNKY_CHARGE and m.action ~= ACT_FIRE_LUNKY_TRANSFORM and (m.action == ACT_IDLE or m.action == ACT_BRAKING_STOP)) and m.pos.y == m.floorHeight then
 	    set_mario_action(m, ACT_FIRE_LUNKY_CHARGE, 0)
 	end
 
@@ -661,6 +712,10 @@ function lunky_update(m)
         --m.faceAngle.y = m.intendedYaw
         play_sound(SOUND_GENERAL_SWISH_WATER, m.marioObj.header.gfx.cameraToObject)
         set_mario_action(m, ACT_DIVE, 0)
+    end
+
+    if m.action == ACT_GROUND_POUND and m.input & INPUT_A_PRESSED ~= 0 then
+        set_mario_action(m, ACT_FLAMING_ASCENT, 0)
     end
 end
 
@@ -686,7 +741,7 @@ function geo_switch_lunkySmall(node)
 	local m = geo_get_mario_state()
 	local e = gStateExtras[m.playerIndex]
 	
-	if m.health <= (0x500) then
+	if m.health <= (0x500) and e.fireform ~= 1 then
         e.smallLunky = math.min(23, e.smallLunky + 1) -- Flicker for 50 frames
 		if e.smallLunky == 1 then
 			audio_sample_play(LUNKY_SHRINKING_SOUND, m.pos, 1)
