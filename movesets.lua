@@ -47,7 +47,7 @@ for i = 0, (MAX_PLAYERS - 1) do
     e.saved_transition_timer = 0
     e.fireballs = 0
     e.fireform = 0
-    e.smalllunky = 0
+    e.smallLunky = 0
 
 end
 
@@ -575,6 +575,11 @@ hook_event(HOOK_UPDATE, function()
 	local gfx = gfx_get_command(dl, 6)
 	gfx_set_command(gfx, "gsDPSetEnvColor(%i, %i, %i, 255)",
 	starColor.r, starColor.g, starColor.b)
+	
+	dl = gfx_get_from_name("mat_lunky_Starman")
+	gfx = gfx_get_command(dl, 8)
+	gfx_set_command(gfx, "gsDPSetEnvColor(%i, %i, %i, 255)",
+	starColor.r, starColor.g, starColor.b)
 end
 )
 
@@ -592,29 +597,12 @@ function lunky_update(m)
     
     local fireLunkyWhite = {r = 225, g = 255, b = 225}
 
-    if m.health <= (0x500) then
-        e.smalllunky = 1
-    else
-        e.smalllunky = 0
-    end
-
     if m.hurtCounter > 0 and e.fireform ~= 0 then
         e.fireform = 0
         hurtTimer = hurtTimer + 1
         if hurtTimer < 2 then
             audio_sample_play(LUNKY_SHRINKING_SOUND, gMarioStates[0].pos, 1)
         end
-    else
-    end
-
-    if e.smalllunky ~= 0 then
-        m.marioObj.header.gfx.scale.y = 0.75
-        m.marioObj.header.gfx.scale.x = 1
-        m.marioObj.header.gfx.scale.z = 1
-    else
-        m.marioObj.header.gfx.scale.y = 1
-        m.marioObj.header.gfx.scale.x = 1
-        m.marioObj.header.gfx.scale.z = 1
     end
 	
 
@@ -634,9 +622,6 @@ function lunky_update(m)
     if (m.flags & MARIO_METAL_CAP ~= 0) or (m.flags & MARIO_WING_CAP ~= 0) then
 		m.flags = m.flags | MARIO_WING_CAP | MARIO_METAL_CAP -- Enable both wing and metal, even if you have just one of them
         --network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], METAL, HSV_to_RGB(starHue, 1, 1))
-        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM, HSV_to_RGB(starHue, 1, 1))
-        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], CAP, HSV_to_RGB(starHue, 1, 1))
-        network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS, HSV_to_RGB(starHue, 1, 1))
 
         m.peakHeight = m.pos.y
 
@@ -650,14 +635,6 @@ function lunky_update(m)
             m.marioBodyState.handState = MARIO_HAND_OPEN
         end
         m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
-
-        if m.capTimer < 3 then
-            network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], EMBLEM, prevEmblemColor)
-            network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], CAP, prevCapColor)
-            network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS, prevPantsColor)
-            network_player_set_override_palette_color(gNetworkPlayers[m.playerIndex], SHIRT, prevShirtColor)
-        end
-
     else
         prevCapColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], CAP)
         prevPantsColor = network_player_get_override_palette_color(gNetworkPlayers[m.playerIndex], PANTS)
@@ -703,3 +680,27 @@ local function lunky_interact(m, o, type)
 end
 
 hook_event(HOOK_ON_INTERACT, lunky_interact)
+
+function geo_switch_lunkySmall(node)
+	local asSwitchNode = cast_graph_node(node)
+	local m = geo_get_mario_state()
+	local e = gStateExtras[m.playerIndex]
+	
+	if m.health <= (0x500) then
+        e.smallLunky = math.min(23, e.smallLunky + 1) -- Flicker for 50 frames
+		if e.smallLunky == 1 then
+			audio_sample_play(LUNKY_SHRINKING_SOUND, m.pos, 1)
+		end
+    else
+        e.smallLunky = math.max(0,	e.smallLunky - 1)
+		if e.smallLunky == 22 then
+			audio_sample_play(LUNKY_GROWING_SOUND, m.pos, 1)
+		end
+    end
+	
+	if e.smallLunky % 4 > 1 then -- if Small Lunky is an odd number
+		asSwitchNode.selectedCase = 1
+	else
+		asSwitchNode.selectedCase = 0
+	end
+end
