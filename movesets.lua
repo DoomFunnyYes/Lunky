@@ -171,7 +171,9 @@ hook_mario_action(ACT_WALL_STICK, act_wall_stick)
 ACT_FLAMING_ASCENT = allocate_mario_action(ACT_FLAG_MOVING | ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
 
 function act_flaming_ascent(m)
-    smlua_anim_util_set_animation(m.marioObj, "lunky_running")
+    smlua_anim_util_set_animation(m.marioObj, "Temp Ascent Animation")
+    m.marioObj.header.gfx.animInfo.animAccel = 32768 * 2
+    m.marioBodyState.handState = MARIO_HAND_OPEN
 
     if m.actionTimer == 0 then
         m.faceAngle.y = m.intendedYaw
@@ -188,14 +190,13 @@ function act_flaming_ascent(m)
             if (m.actionTimer % 3) == 0 then
                 play_sound(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject)
             end
-            m.marioBodyState.handState = MARIO_HAND_OPEN
         elseif m.actionTimer == 27 then
             play_sound_with_freq_scale(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject, 0.8)
         end
 
         if m.actionTimer < 20 then
             if m.actionTimer > -1 then
-                m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
+                m.particleFlags = m.particleFlags | PARTICLE_FIRE
                 m.vel.y = 18 - (m.actionTimer * (m.forwardVel/25))
             end
         else
@@ -203,11 +204,10 @@ function act_flaming_ascent(m)
         end
     end
 
-    if m.actionTimer < 30 then
-        m.marioBodyState.eyeState = MARIO_EYES_CLOSED
-    elseif m.actionTimer < 40 then
-        m.marioBodyState.eyeState = MARIO_EYES_LOOK_UP
-    end
+    --[[if m.actionTimer < 40 then
+        set_anim_to_frame(m, 54)
+        m.marioObj.header.gfx.animInfo.animAccel = 32768 * -3
+    end]]
 
     if (m.input & INPUT_NONZERO_ANALOG) ~= 0 then
         mario_set_forward_vel(m, math.abs(m.forwardVel))

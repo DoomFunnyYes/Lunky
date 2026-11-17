@@ -27,7 +27,7 @@ if not _G.charSelectExists then
 end
 
 local E_MODEL_LUNKY =      smlua_model_util_get_id("lunky_geo")      -- Located in "actors"
-local E_MODEL_LUNKY_CLASSIC =      smlua_model_util_get_id("boomie_luigi")
+local E_MODEL_LUNKY_CLASSIC =      smlua_model_util_get_id("boomie_luigi_geo")
 
 local E_MODEL_RAINBOW_STAR =      smlua_model_util_get_id("rainbow_star_geo")
 
@@ -228,57 +228,6 @@ local PALETTE_LUNKY5 = {
 	  [EMBLEM] = "ff6b00"
 }
 
-local PALETTE_LUNKY_FLESH = {
-    [PANTS]  = "008c1b",
-    [SHIRT]  = "0e2770",
-    [GLOVES] = "ffffff",
-    [SHOES]  = "522910",
-    [HAIR]   = "6c1800",
-    [SKIN]   = "ffaa72",
-    [CAP]    = "008c1b",
-	  [EMBLEM] = "008c1b"
-}
-local PALETTE_LUNKY_FLESH2 = {
-    [PANTS]  = "B80000",
-    [SHIRT]  = "0e2770",
-    [GLOVES] = "ffaa72",
-    [SHOES]  = "522910",
-    [HAIR]   = "6c1800",
-    [SKIN]   = "ffaa72",
-    [CAP]    = "B80000",
-	  [EMBLEM] = "B80000"
-}
-local PALETTE_LUNKY_FLESH3 = {
-    [PANTS]  = "0e2770",
-    [SHIRT]  = "d89e1b",
-    [GLOVES] = "ffaa72",
-    [SHOES]  = "522910",
-    [HAIR]   = "6c1800",
-    [SKIN]   = "ffaa72",
-    [CAP]    = "0e2770",
-	  [EMBLEM] = "000000"
-}
-local PALETTE_LUNKY_FLESH4 = {
-    [PANTS]  = { r = 0xff, g = 0x44, b = 0xff },
-    [SHIRT]  = { r = 0x93, g = 0x00, b = 0x90 },
-    [GLOVES] = { r = 0xc8, g = 0x6b, b = 0x9d },
-    [SHOES]  = { r = 0xaa, g = 0x2c, b = 0x66 },
-    [HAIR]   = { r = 0xf3, g = 0x65, b = 0xda },
-    [SKIN]   = { r = 0xc8, g = 0x6b, b = 0x9d },
-    [CAP]    = { r = 0xef, g = 0x2b, b = 0xea },
-    [EMBLEM] = { r = 0xef, g = 0x2b, b = 0xea },
-}
-local PALETTE_LUNKY_FLESH5 = {
-    [PANTS]  = "ff6b00",
-    [SHIRT]  = "008c1b",
-    [GLOVES] = "ffaa72",
-    [SHOES]  = "522910",
-    [HAIR]   = "6c1800",
-    [SKIN]   = "ffaa72",
-    [CAP]    = "ff6b00",
-	  [EMBLEM] = "ff6b00"
-}
-
 CAPTABLE_LUNKY = {
     normal = E_MODEL_LUIGIS_CAP,
     wing = E_MODEL_RAINBOW_STAR,
@@ -415,7 +364,7 @@ function lunky_before_set_action(m, inc, arg) --m is the mariostate input, inc i
       return set_mario_action(m, ACT_LUNKY_PROJECTILE_SHOOT, 0)
     end
     if m.prevAction == ACT_FLAMING_ASCENT and m.action == ACT_GROUND_POUND and m.input & INPUT_A_PRESSED ~= 0 then
-      return ACT_GROUND_POUND
+      return ACT_DIVE
     end
 end
 

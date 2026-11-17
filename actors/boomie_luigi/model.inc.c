@@ -1,132 +1,136 @@
-Lights1 lunkclassic_body_v3_lights = gdSPDefLights1(
+Lights1 boomie_luigi_body_v3_lights = gdSPDefLights1(
 	0x0, 0x43, 0x8,
 	0x0, 0x8C, 0x1B, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_metal_v3_001_lights = gdSPDefLights1(
+Lights1 boomie_luigi_metal_v3_001_lights = gdSPDefLights1(
 	0x7F, 0x0, 0x0,
 	0xFF, 0x0, 0x2, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_shirt_v3_lights = gdSPDefLights1(
+Lights1 boomie_luigi_shirt_v3_lights = gdSPDefLights1(
 	0x3, 0xE, 0x34,
 	0xE, 0x27, 0x70, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_face_0___eye_open_v3_001_lights = gdSPDefLights1(
+Lights1 boomie_luigi_face_0___eye_open_v3_001_lights = gdSPDefLights1(
 	0x7F, 0x53, 0x35,
 	0xFF, 0xAA, 0x72, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_mustache_v3_001_lights = gdSPDefLights1(
+Lights1 boomie_luigi_mustache_v3_001_lights = gdSPDefLights1(
 	0x7F, 0x53, 0x35,
 	0xFF, 0xAA, 0x72, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_hair_v3_001_lights = gdSPDefLights1(
+Lights1 boomie_luigi_hair_v3_001_lights = gdSPDefLights1(
 	0x32, 0x6, 0x0,
 	0x6C, 0x18, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_sideburns_v3_001_lights = gdSPDefLights1(
+Lights1 boomie_luigi_sideburns_v3_001_lights = gdSPDefLights1(
 	0x7F, 0x53, 0x35,
 	0xFF, 0xAA, 0x72, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_cap_v3_lights = gdSPDefLights1(
+Lights1 boomie_luigi_cap_v3_lights = gdSPDefLights1(
 	0x0, 0x43, 0x8,
 	0x0, 0x8C, 0x1B, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_face_1___eye_half_v3_001_lights = gdSPDefLights1(
+Lights1 boomie_luigi_face_1___eye_half_v3_001_lights = gdSPDefLights1(
 	0x7F, 0x53, 0x35,
 	0xFF, 0xAA, 0x72, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_face_2___eye_closed_v3_001_lights = gdSPDefLights1(
+Lights1 boomie_luigi_face_2___eye_closed_v3_001_lights = gdSPDefLights1(
 	0x7F, 0x53, 0x35,
 	0xFF, 0xAA, 0x72, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_face_7___eye_X_v3_001_lights = gdSPDefLights1(
+Lights1 boomie_luigi_face_7___eye_X_v3_001_lights = gdSPDefLights1(
 	0x7F, 0x53, 0x35,
 	0xFF, 0xAA, 0x72, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_gloves_v3_001_lights = gdSPDefLights1(
+Lights1 boomie_luigi_gloves_v3_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_cap_inside_lights = gdSPDefLights1(
+Lights1 boomie_luigi_cap_inside_lights = gdSPDefLights1(
 	0x3C, 0x0, 0x0,
 	0x7F, 0x0, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Wing_Tip_lights = gdSPDefLights1(
+Lights1 boomie_luigi_Wing_Tip_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Wing_Base_lights = gdSPDefLights1(
+Lights1 boomie_luigi_Wing_Base_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_shoes_v3_001_lights = gdSPDefLights1(
+Lights1 boomie_luigi_shoes_v3_001_lights = gdSPDefLights1(
 	0x24, 0xF, 0x4,
 	0x52, 0x29, 0x10, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Pants__PANTS__lights = gdSPDefLights1(
+Lights1 boomie_luigi_Pants__PANTS__lights = gdSPDefLights1(
 	0x0, 0x43, 0x8,
 	0x0, 0x8C, 0x1B, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Shirt__SHIRT__lights = gdSPDefLights1(
+Lights1 boomie_luigi_Shirt__SHIRT__lights = gdSPDefLights1(
 	0x3, 0xE, 0x34,
 	0xE, 0x27, 0x70, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Buttons__PANTS__lights = gdSPDefLights1(
+Lights1 boomie_luigi_Buttons__PANTS__lights = gdSPDefLights1(
 	0x0, 0x43, 0x8,
 	0x0, 0x8C, 0x1B, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Hair__HAIR__lights = gdSPDefLights1(
-	0x32, 0x6, 0x0,
-	0x6C, 0x18, 0x0, 0x28, 0x28, 0x28);
-
-Lights1 lunkclassic_Skin__SKIN__lights = gdSPDefLights1(
+Lights1 boomie_luigi_Skin__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x53, 0x35,
 	0xFF, 0xAA, 0x72, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Open_Eyes__SKIN__lights = gdSPDefLights1(
+Lights1 boomie_luigi_Open_Eyes__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x52, 0x33,
 	0xFE, 0xA9, 0x6D, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Mustache_Vanilla__SKIN__lights = gdSPDefLights1(
+Lights1 boomie_luigi_Mustache_Vanilla__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x52, 0x33,
 	0xFE, 0xA9, 0x6D, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Half_Closed_Eyes__SKIN__lights = gdSPDefLights1(
+Lights1 boomie_luigi_Cap__CAP__lights = gdSPDefLights1(
+	0x0, 0x43, 0x8,
+	0x0, 0x8C, 0x1B, 0x28, 0x28, 0x28);
+
+Lights1 boomie_luigi_Hair__HAIR__lights = gdSPDefLights1(
+	0x32, 0x6, 0x0,
+	0x6C, 0x18, 0x0, 0x28, 0x28, 0x28);
+
+Lights1 boomie_luigi_Half_Closed_Eyes__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x52, 0x33,
 	0xFE, 0xA9, 0x6D, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Closed_Eyes__SKIN__lights = gdSPDefLights1(
+Lights1 boomie_luigi_Closed_Eyes__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x52, 0x33,
 	0xFE, 0xA9, 0x6D, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Left_Eyes__SKIN__lights = gdSPDefLights1(
+Lights1 boomie_luigi_Left_Eyes__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x5F, 0x39,
 	0xFE, 0xC1, 0x79, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Right_Eyes__SKIN__lights = gdSPDefLights1(
+Lights1 boomie_luigi_Right_Eyes__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x5F, 0x39,
 	0xFE, 0xC1, 0x79, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Up_Eyes__SKIN__lights = gdSPDefLights1(
+Lights1 boomie_luigi_Up_Eyes__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x5F, 0x39,
 	0xFE, 0xC1, 0x79, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Down_Eyes__SKIN__lights = gdSPDefLights1(
+Lights1 boomie_luigi_Down_Eyes__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x5F, 0x39,
 	0xFE, 0xC1, 0x79, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Dead_Eyes__SKIN__lights = gdSPDefLights1(
+Lights1 boomie_luigi_Dead_Eyes__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x5F, 0x39,
 	0xFE, 0xC1, 0x79, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Gloves__GLOVES__lights = gdSPDefLights1(
+Lights1 boomie_luigi_Gloves__GLOVES__lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 lunkclassic_Shoes__SHOES__lights = gdSPDefLights1(
+Lights1 boomie_luigi_Shoes__SHOES__lights = gdSPDefLights1(
 	0x24, 0xF, 0x4,
 	0x52, 0x29, 0x10, 0x28, 0x28, 0x28);
 
-Texture lunkclassic_mario_button_rgba16[] = {
+Texture boomie_luigi_mario_button_rgba16[] = {
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
@@ -386,7 +390,7 @@ Texture lunkclassic_mario_button_rgba16[] = {
 	
 };
 
-Texture lunkclassic_metal_rgba16[] = {
+Texture boomie_luigi_metal_rgba16[] = {
 	0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 
 	0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 
 	0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 
@@ -902,7 +906,7 @@ Texture lunkclassic_metal_rgba16[] = {
 	
 };
 
-Texture lunkclassic_mario_face_1_rgba16[] = {
+Texture boomie_luigi_mario_face_1_rgba16[] = {
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
@@ -1162,7 +1166,7 @@ Texture lunkclassic_mario_face_1_rgba16[] = {
 	
 };
 
-Texture lunkclassic_luigimutache_ia8[] = {
+Texture boomie_luigi_luigimutache_ia8[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -1294,7 +1298,7 @@ Texture lunkclassic_luigimutache_ia8[] = {
 	
 };
 
-Texture lunkclassic_luigisideubnr_ci8[] = {
+Texture boomie_luigi_luigisideubnr_ci8[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -1426,7 +1430,7 @@ Texture lunkclassic_luigisideubnr_ci8[] = {
 	
 };
 
-Texture lunkclassic_luigisideubnr_pal_rgba16[] = {
+Texture boomie_luigi_luigisideubnr_pal_rgba16[] = {
 	0x00, 0x00, 0x88, 0x40, 0x80, 0x40, 0x88, 0x41, 
 	0x80, 0x41, 0x90, 0x40, 0x60, 0x00, 0x78, 0x41, 
 	0x90, 0x41, 0x60, 0x01, 0x68, 0x41, 0x68, 0x40, 
@@ -1438,7 +1442,7 @@ Texture lunkclassic_luigisideubnr_pal_rgba16[] = {
 	0x28, 0x01, 0x28, 0x00, 
 };
 
-Texture lunkclassic_coopemblem_ia8[] = {
+Texture boomie_luigi_coopemblem_ia8[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -1570,7 +1574,7 @@ Texture lunkclassic_coopemblem_ia8[] = {
 	
 };
 
-Texture lunkclassic_mario_face_2_rgba16[] = {
+Texture boomie_luigi_mario_face_2_rgba16[] = {
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
@@ -1830,7 +1834,7 @@ Texture lunkclassic_mario_face_2_rgba16[] = {
 	
 };
 
-Texture lunkclassic_mario_face_3_rgba16[] = {
+Texture boomie_luigi_mario_face_3_rgba16[] = {
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
@@ -2090,7 +2094,7 @@ Texture lunkclassic_mario_face_3_rgba16[] = {
 	
 };
 
-Texture lunkclassic_mario_face_4_rgba16[] = {
+Texture boomie_luigi_mario_face_4_rgba16[] = {
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
@@ -2350,7 +2354,7 @@ Texture lunkclassic_mario_face_4_rgba16[] = {
 	
 };
 
-Texture lunkclassic_mario_overalls_button_rgba16_rgba16[] = {
+Texture boomie_luigi_mario_overalls_button_rgba16_rgba16[] = {
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
@@ -2610,7 +2614,7 @@ Texture lunkclassic_mario_overalls_button_rgba16_rgba16[] = {
 	
 };
 
-Texture lunkclassic_lil_saul_ia8[] = {
+Texture boomie_luigi_lil_saul_ia8[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -2742,7 +2746,7 @@ Texture lunkclassic_lil_saul_ia8[] = {
 	
 };
 
-Texture lunkclassic_luigimutache_ia8_copy[] = {
+Texture boomie_luigi_luigimutache_ia8_copy[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -2874,7 +2878,7 @@ Texture lunkclassic_luigimutache_ia8_copy[] = {
 	
 };
 
-Texture lunkclassic_luigisideburn_ci8[] = {
+Texture boomie_luigi_luigisideburn_ci8[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 
@@ -3006,7 +3010,7 @@ Texture lunkclassic_luigisideburn_ci8[] = {
 	
 };
 
-Texture lunkclassic_luigisideburn_pal_rgba16[] = {
+Texture boomie_luigi_luigisideburn_pal_rgba16[] = {
 	0x00, 0x00, 0x48, 0x01, 0x78, 0x41, 0x78, 0x01, 
 	0x68, 0x01, 0x60, 0x01, 0x58, 0x01, 0x50, 0x01, 
 	0x40, 0x01, 0x30, 0x01, 0x60, 0x41, 0x68, 0x41, 
@@ -3017,7 +3021,139 @@ Texture lunkclassic_luigisideburn_pal_rgba16[] = {
 	0x10, 0x01, 0x30, 0x00, 
 };
 
-Texture lunkclassic_mario_eyes_closed_rgba16_rgba16[] = {
+Texture boomie_luigi_garbanzo_ia8[] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0xf0, 0xf0, 0xf0, 0xf0, 0xf0, 
+	0xf0, 0xf0, 0xf0, 0xf0, 0xf0, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0xf0, 0xf0, 0xf0, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xf0, 0xf0, 0xf0, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf0, 
+	0xf0, 0xc0, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xf0, 0xf0, 
+	0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf0, 0xf0, 
+	0xff, 0xff, 0xff, 0xff, 0xf0, 0xf0, 0xf0, 0xf0, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xf0, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf0, 0xff, 
+	0xff, 0xff, 0xf0, 0xf0, 0xf0, 0x00, 0x00, 0xf0, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xf0, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0xf0, 0xf0, 0xff, 
+	0xff, 0xfe, 0xf0, 0x00, 0x00, 0x00, 0x00, 0xf0, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0xf0, 0xf0, 0xff, 0xff, 
+	0xff, 0xfb, 0xf0, 0x00, 0x00, 0x00, 0xf0, 0xf0, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xf0, 0xf0, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0xf0, 0xff, 0xff, 0xff, 
+	0xff, 0xf0, 0xf0, 0x00, 0x00, 0x00, 0xf0, 0xfb, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xf0, 0xf0, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0xf0, 0xf0, 0xff, 0xff, 0xff, 
+	0xff, 0xf0, 0x00, 0x00, 0x00, 0x00, 0xf0, 0xfe, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xf0, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0xf0, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xf0, 0x00, 0x00, 0x00, 0x00, 0xf0, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xf0, 0xf0, 0x00, 0x00, 
+	0x00, 0x00, 0xf0, 0xf0, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xf0, 0x00, 0x00, 0x00, 0x00, 0xf0, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xf0, 0x00, 0x00, 
+	0x00, 0x00, 0xf0, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xf0, 0x00, 0x00, 0x00, 0x00, 0xf0, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xf0, 0x00, 0x00, 
+	0x00, 0x00, 0xf0, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xf0, 0xf0, 0x00, 0x00, 0x00, 0xf0, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xf0, 0x00, 0x00, 
+	0x00, 0x00, 0xf0, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xfb, 0xf0, 0x00, 0x00, 0x00, 0xf0, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xf0, 0x00, 0x00, 
+	0x00, 0x00, 0xf0, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xf0, 0x00, 0x00, 0x00, 0xf0, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xf0, 0x00, 0x00, 
+	0x00, 0x00, 0xf0, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xf0, 0x00, 0x00, 0x00, 0xf0, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xfb, 0xfe, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xf0, 0x00, 0x00, 
+	0x00, 0x00, 0xf0, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xf0, 0x00, 0x00, 0x00, 0xf0, 0xff, 
+	0xfe, 0xfb, 0xf6, 0xf0, 0xf0, 0xf0, 0xf0, 0xfe, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xf0, 0x00, 0x00, 
+	0x00, 0x00, 0xf0, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xf0, 0x00, 0x00, 0x00, 0xf0, 0xf0, 
+	0xf0, 0xf0, 0xf0, 0xf0, 0x00, 0x00, 0xf0, 0xfb, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xf0, 0x00, 0x00, 
+	0x00, 0x00, 0xf0, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xf0, 0xf0, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf0, 0xf6, 
+	0xff, 0xff, 0xff, 0xff, 0xf0, 0xf0, 0x00, 0x00, 
+	0x00, 0x00, 0xf0, 0xf0, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xfb, 0xf0, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf0, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xf0, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0xf0, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xf6, 0xf0, 0xf0, 0xf0, 0xf0, 0xf0, 
+	0xf0, 0xf0, 0x00, 0x00, 0x00, 0x00, 0xf0, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xf0, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0xf0, 0xf0, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xf0, 0xf0, 0xf0, 0xf0, 0xf0, 0xf0, 0xff, 
+	0xff, 0xff, 0xff, 0xf0, 0xf0, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0xf0, 0xf0, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xf0, 0xf0, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0xf0, 0xf0, 0xf0, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xf0, 0xf0, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf0, 
+	0xf0, 0xf0, 0xf0, 0xf0, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xf0, 0xf0, 0xf0, 0xf0, 0xf0, 
+	0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0xf0, 0xf0, 0xf0, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0xf0, 0xf0, 0xf0, 0xf0, 0xf0, 
+	0xf0, 0xf0, 0xf0, 0xf0, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0xf0, 0xf0, 0xf0, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0xf0, 0xff, 0xf0, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0xf0, 0xff, 0xf0, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0xf0, 0xf0, 0xf0, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0xf0, 0xf0, 0xf0, 0x00, 0x00, 
+	
+};
+
+Texture boomie_luigi_mario_eyes_closed_rgba16_rgba16[] = {
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
@@ -3277,7 +3413,7 @@ Texture lunkclassic_mario_eyes_closed_rgba16_rgba16[] = {
 	
 };
 
-Texture lunkclassic_mario_eyes_left_unused_rgba16_rgba16[] = {
+Texture boomie_luigi_mario_eyes_left_unused_rgba16_rgba16[] = {
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
@@ -3537,7 +3673,7 @@ Texture lunkclassic_mario_eyes_left_unused_rgba16_rgba16[] = {
 	
 };
 
-Texture lunkclassic_mario_eyes_right_unused_rgba16_rgba16[] = {
+Texture boomie_luigi_mario_eyes_right_unused_rgba16_rgba16[] = {
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
@@ -3797,7 +3933,7 @@ Texture lunkclassic_mario_eyes_right_unused_rgba16_rgba16[] = {
 	
 };
 
-Texture lunkclassic_mario_eyes_up_unused_rgba16_rgba16[] = {
+Texture boomie_luigi_mario_eyes_up_unused_rgba16_rgba16[] = {
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
@@ -4057,7 +4193,7 @@ Texture lunkclassic_mario_eyes_up_unused_rgba16_rgba16[] = {
 	
 };
 
-Texture lunkclassic_mario_eyes_down_unused_rgba16_rgba16[] = {
+Texture boomie_luigi_mario_eyes_down_unused_rgba16_rgba16[] = {
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
@@ -4317,7 +4453,7 @@ Texture lunkclassic_mario_eyes_down_unused_rgba16_rgba16[] = {
 	
 };
 
-Texture lunkclassic_mario_eyes_dead_rgba16_rgba16[] = {
+Texture boomie_luigi_mario_eyes_dead_rgba16_rgba16[] = {
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
@@ -4577,7 +4713,7 @@ Texture lunkclassic_mario_eyes_dead_rgba16_rgba16[] = {
 	
 };
 
-Vtx lunkclassic_000_offset_mesh_layer_1_vtx_0[38] = {
+Vtx boomie_luigi_000_offset_mesh_layer_1_vtx_0[38] = {
 	{{{80, 11, 0}, 0, {-16, -16}, {0x7F, 0x06, 0x00, 0xFF}}},
 	{{{61, -49, -29}, 0, {-16, -16}, {0x5E, 0xB0, 0xE2, 0xFF}}},
 	{{{50, -6, -75}, 0, {-16, -16}, {0x4B, 0xEF, 0x9B, 0xFF}}},
@@ -4618,8 +4754,8 @@ Vtx lunkclassic_000_offset_mesh_layer_1_vtx_0[38] = {
 	{{{-31, 36, 32}, 0, {-16, -16}, {0x8C, 0x2D, 0x1A, 0xFF}}},
 };
 
-Gfx lunkclassic_000_offset_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_000_offset_mesh_layer_1_vtx_0 + 0, 38, 0),
+Gfx boomie_luigi_000_offset_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_000_offset_mesh_layer_1_vtx_0 + 0, 38, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(3, 0, 4, 0, 5, 4, 0, 0),
 	gsSP2Triangles(0, 6, 5, 0, 6, 0, 7, 0),
@@ -4659,7 +4795,7 @@ Gfx lunkclassic_000_offset_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_offset_001_mesh_layer_1_vtx_0[85] = {
+Vtx boomie_luigi_000_offset_001_mesh_layer_1_vtx_0[85] = {
 	{{{8, 72, -32}, 0, {759, 1093}, {0x15, 0x77, 0xD9, 0xFF}}},
 	{{{28, 68, -23}, 0, {974, 600}, {0x25, 0x78, 0xEF, 0xFF}}},
 	{{{47, 61, -28}, 0, {834, 82}, {0x3D, 0x6D, 0xE7, 0xFF}}},
@@ -4747,8 +4883,8 @@ Vtx lunkclassic_000_offset_001_mesh_layer_1_vtx_0[85] = {
 	{{{-34, -47, -48}, 0, {-16, -16}, {0xC9, 0x9E, 0xC5, 0xFF}}},
 };
 
-Gfx lunkclassic_000_offset_001_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_000_offset_001_mesh_layer_1_vtx_0 + 0, 64, 0),
+Gfx boomie_luigi_000_offset_001_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_000_offset_001_mesh_layer_1_vtx_0 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(4, 3, 2, 0, 5, 4, 2, 0),
 	gsSP2Triangles(2, 6, 5, 0, 7, 8, 9, 0),
@@ -4783,7 +4919,7 @@ Gfx lunkclassic_000_offset_001_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(60, 59, 26, 0, 61, 59, 60, 0),
 	gsSP2Triangles(37, 61, 60, 0, 37, 62, 61, 0),
 	gsSP2Triangles(62, 37, 38, 0, 38, 63, 62, 0),
-	gsSPVertex(lunkclassic_000_offset_001_mesh_layer_1_vtx_0 + 64, 21, 0),
+	gsSPVertex(boomie_luigi_000_offset_001_mesh_layer_1_vtx_0 + 64, 21, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
 	gsSP2Triangles(0, 3, 4, 0, 3, 5, 4, 0),
 	gsSP2Triangles(5, 6, 4, 0, 6, 5, 7, 0),
@@ -4800,7 +4936,7 @@ Gfx lunkclassic_000_offset_001_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_offset_001_mesh_layer_1_vtx_1[27] = {
+Vtx boomie_luigi_000_offset_001_mesh_layer_1_vtx_1[27] = {
 	{{{47, 61, -28}, 0, {-16, -16}, {0x3D, 0x6D, 0xE7, 0xFF}}},
 	{{{47, 61, 29}, 0, {-16, -16}, {0x3D, 0x6D, 0x19, 0xFF}}},
 	{{{82, 31, 22}, 0, {-16, -16}, {0x60, 0x50, 0x18, 0xFF}}},
@@ -4830,8 +4966,8 @@ Vtx lunkclassic_000_offset_001_mesh_layer_1_vtx_1[27] = {
 	{{{20, -50, -54}, 0, {-16, -16}, {0x08, 0x98, 0xB8, 0xFF}}},
 };
 
-Gfx lunkclassic_000_offset_001_mesh_layer_1_tri_1[] = {
-	gsSPVertex(lunkclassic_000_offset_001_mesh_layer_1_vtx_1 + 0, 27, 0),
+Gfx boomie_luigi_000_offset_001_mesh_layer_1_tri_1[] = {
+	gsSPVertex(boomie_luigi_000_offset_001_mesh_layer_1_vtx_1 + 0, 27, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 3, 2, 0, 4, 5, 3, 0),
 	gsSP2Triangles(5, 4, 6, 0, 5, 6, 7, 0),
@@ -4848,7 +4984,7 @@ Gfx lunkclassic_000_offset_001_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_displaylist_mesh_layer_1_vtx_0[63] = {
+Vtx boomie_luigi_000_displaylist_mesh_layer_1_vtx_0[63] = {
 	{{{89, 73, 57}, 0, {-16, -16}, {0x04, 0x5B, 0x58, 0xFF}}},
 	{{{85, 46, 71}, 0, {-16, -16}, {0xFF, 0x2F, 0x76, 0xFF}}},
 	{{{143, 42, 71}, 0, {-16, -16}, {0x07, 0x43, 0x6C, 0xFF}}},
@@ -4914,8 +5050,8 @@ Vtx lunkclassic_000_displaylist_mesh_layer_1_vtx_0[63] = {
 	{{{88, -36, -68}, 0, {-16, -16}, {0xCE, 0xC7, 0x9A, 0xFF}}},
 };
 
-Gfx lunkclassic_000_displaylist_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_000_displaylist_mesh_layer_1_vtx_0 + 0, 63, 0),
+Gfx boomie_luigi_000_displaylist_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_000_displaylist_mesh_layer_1_vtx_0 + 0, 63, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 5, 6, 0, 7, 5, 4, 0),
 	gsSP2Triangles(4, 8, 7, 0, 8, 4, 9, 0),
@@ -4958,7 +5094,7 @@ Gfx lunkclassic_000_displaylist_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_displaylist_mesh_layer_1_vtx_1[24] = {
+Vtx boomie_luigi_000_displaylist_mesh_layer_1_vtx_1[24] = {
 	{{{70, 89, 30}, 0, {376, 384}, {0x09, 0x20, 0x7A, 0xFF}}},
 	{{{89, 73, 57}, 0, {799, 23}, {0x04, 0x5B, 0x58, 0xFF}}},
 	{{{92, 88, 21}, 0, {258, 155}, {0x47, 0x31, 0x5D, 0xFF}}},
@@ -4985,8 +5121,8 @@ Vtx lunkclassic_000_displaylist_mesh_layer_1_vtx_1[24] = {
 	{{{36, 89, 0}, 0, {46, -4}, {0x92, 0x3F, 0xFF, 0xFF}}},
 };
 
-Gfx lunkclassic_000_displaylist_mesh_layer_1_tri_1[] = {
-	gsSPVertex(lunkclassic_000_displaylist_mesh_layer_1_vtx_1 + 0, 24, 0),
+Gfx boomie_luigi_000_displaylist_mesh_layer_1_tri_1[] = {
+	gsSPVertex(boomie_luigi_000_displaylist_mesh_layer_1_vtx_1 + 0, 24, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(0, 4, 3, 0, 5, 3, 4, 0),
 	gsSP2Triangles(5, 4, 6, 0, 7, 3, 5, 0),
@@ -5000,7 +5136,7 @@ Gfx lunkclassic_000_displaylist_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_displaylist_mesh_layer_1_vtx_2[19] = {
+Vtx boomie_luigi_000_displaylist_mesh_layer_1_vtx_2[19] = {
 	{{{61, -73, 42}, 0, {-16, -16}, {0x0C, 0x93, 0x40, 0xFF}}},
 	{{{88, -36, 69}, 0, {-16, -16}, {0xCD, 0xC7, 0x66, 0xFF}}},
 	{{{53, -24, 62}, 0, {-16, -16}, {0xD0, 0xD5, 0x6D, 0xFF}}},
@@ -5022,8 +5158,8 @@ Vtx lunkclassic_000_displaylist_mesh_layer_1_vtx_2[19] = {
 	{{{13, -84, 55}, 0, {-16, -16}, {0xE1, 0x95, 0x3D, 0xFF}}},
 };
 
-Gfx lunkclassic_000_displaylist_mesh_layer_1_tri_2[] = {
-	gsSPVertex(lunkclassic_000_displaylist_mesh_layer_1_vtx_2 + 0, 19, 0),
+Gfx boomie_luigi_000_displaylist_mesh_layer_1_tri_2[] = {
+	gsSPVertex(boomie_luigi_000_displaylist_mesh_layer_1_vtx_2 + 0, 19, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(2, 4, 3, 0, 4, 2, 5, 0),
 	gsSP2Triangles(5, 6, 4, 0, 6, 5, 7, 0),
@@ -5041,7 +5177,7 @@ Gfx lunkclassic_000_displaylist_mesh_layer_1_tri_2[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_displaylist_mesh_layer_1_vtx_3[12] = {
+Vtx boomie_luigi_000_displaylist_mesh_layer_1_vtx_3[12] = {
 	{{{85, 46, 71}, 0, {-320, 765}, {0xFF, 0x2F, 0x76, 0xFF}}},
 	{{{38, 39, 71}, 0, {-224, 1342}, {0xCB, 0x1B, 0x70, 0xFF}}},
 	{{{54, 9, 81}, 0, {660, 1059}, {0xC8, 0x08, 0x72, 0xFF}}},
@@ -5056,8 +5192,8 @@ Vtx lunkclassic_000_displaylist_mesh_layer_1_vtx_3[12] = {
 	{{{38, 39, -70}, 0, {-225, 1342}, {0xCB, 0x1B, 0x90, 0xFF}}},
 };
 
-Gfx lunkclassic_000_displaylist_mesh_layer_1_tri_3[] = {
-	gsSPVertex(lunkclassic_000_displaylist_mesh_layer_1_vtx_3 + 0, 12, 0),
+Gfx boomie_luigi_000_displaylist_mesh_layer_1_tri_3[] = {
+	gsSPVertex(boomie_luigi_000_displaylist_mesh_layer_1_vtx_3 + 0, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(4, 0, 3, 0, 5, 4, 3, 0),
 	gsSP2Triangles(6, 7, 8, 0, 7, 9, 8, 0),
@@ -5065,7 +5201,7 @@ Gfx lunkclassic_000_displaylist_mesh_layer_1_tri_3[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_displaylist_mesh_layer_1_vtx_4[44] = {
+Vtx boomie_luigi_000_displaylist_mesh_layer_1_vtx_4[44] = {
 	{{{189, 81, 24}, 0, {745, 838}, {0x46, 0x5A, 0x39, 0xFF}}},
 	{{{143, 42, 71}, 0, {1234, 1271}, {0x07, 0x43, 0x6C, 0xFF}}},
 	{{{238, 56, 58}, 0, {1100, 134}, {0x4A, 0x3C, 0x55, 0xFF}}},
@@ -5112,8 +5248,8 @@ Vtx lunkclassic_000_displaylist_mesh_layer_1_vtx_4[44] = {
 	{{{119, -105, 39}, 0, {-16, -16}, {0x29, 0x90, 0x2C, 0xFF}}},
 };
 
-Gfx lunkclassic_000_displaylist_mesh_layer_1_tri_4[] = {
-	gsSPVertex(lunkclassic_000_displaylist_mesh_layer_1_vtx_4 + 0, 44, 0),
+Gfx boomie_luigi_000_displaylist_mesh_layer_1_tri_4[] = {
+	gsSPVertex(boomie_luigi_000_displaylist_mesh_layer_1_vtx_4 + 0, 44, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
 	gsSP2Triangles(3, 4, 0, 0, 3, 5, 4, 0),
 	gsSP2Triangles(5, 6, 4, 0, 7, 8, 9, 0),
@@ -5141,7 +5277,7 @@ Gfx lunkclassic_000_displaylist_mesh_layer_1_tri_4[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_vtx_0[52] = {
+Vtx boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_vtx_0[52] = {
 	{{{149, 42, 71}, 0, {-16, -16}, {0xF3, 0x3D, 0x6F, 0xFF}}},
 	{{{194, 70, 69}, 0, {-16, -16}, {0x1D, 0x54, 0x5B, 0xFF}}},
 	{{{148, 63, 54}, 0, {-16, -16}, {0xD9, 0x5B, 0x50, 0xFF}}},
@@ -5196,8 +5332,8 @@ Vtx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_vtx_0[52] = {
 	{{{19, -84, -54}, 0, {-16, -16}, {0xE1, 0x95, 0xC3, 0xFF}}},
 };
 
-Gfx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_vtx_0 + 0, 52, 0),
+Gfx boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_vtx_0 + 0, 52, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 5, 3, 4, 0),
 	gsSP2Triangles(6, 5, 4, 0, 7, 5, 6, 0),
@@ -5244,7 +5380,7 @@ Gfx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_vtx_1[64] = {
+Vtx boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_vtx_1[64] = {
 	{{{95, 73, 57}, 0, {-16, -16}, {0x04, 0x5B, 0x58, 0xFF}}},
 	{{{91, 46, 71}, 0, {-16, -16}, {0xFF, 0x2F, 0x76, 0xFF}}},
 	{{{149, 42, 71}, 0, {-16, -16}, {0xF3, 0x3D, 0x6F, 0xFF}}},
@@ -5311,8 +5447,8 @@ Vtx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_vtx_1[64] = {
 	{{{63, 150, 0}, 0, {-16, -16}, {0xD5, 0x77, 0x00, 0xFF}}},
 };
 
-Gfx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_1[] = {
-	gsSPVertex(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_vtx_1 + 0, 64, 0),
+Gfx boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_1[] = {
+	gsSPVertex(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_vtx_1 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 5, 6, 0, 7, 5, 4, 0),
 	gsSP2Triangles(4, 8, 7, 0, 8, 4, 9, 0),
@@ -5355,7 +5491,7 @@ Gfx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_vtx_2[12] = {
+Vtx boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_vtx_2[12] = {
 	{{{122, -2, 86}, 0, {911, 231}, {0xFC, 0x22, 0x7A, 0xFF}}},
 	{{{149, 42, 71}, 0, {-256, -14}, {0xF3, 0x3D, 0x6F, 0xFF}}},
 	{{{92, -7, 84}, 0, {1060, 641}, {0x12, 0x69, 0x45, 0xFF}}},
@@ -5370,8 +5506,8 @@ Vtx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_vtx_2[12] = {
 	{{{44, 39, -70}, 0, {-227, 1363}, {0xCB, 0x1B, 0x90, 0xFF}}},
 };
 
-Gfx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_2[] = {
-	gsSPVertex(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_vtx_2 + 0, 12, 0),
+Gfx boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_2[] = {
+	gsSPVertex(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_vtx_2 + 0, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(2, 3, 4, 0, 3, 5, 4, 0),
 	gsSP2Triangles(6, 7, 8, 0, 7, 9, 8, 0),
@@ -5379,7 +5515,7 @@ Gfx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_2[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_vtx_3[24] = {
+Vtx boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_vtx_3[24] = {
 	{{{76, 89, 30}, 0, {377, 405}, {0x09, 0x20, 0x7A, 0xFF}}},
 	{{{95, 73, 57}, 0, {799, 45}, {0x04, 0x5B, 0x58, 0xFF}}},
 	{{{98, 88, 21}, 0, {258, 174}, {0x47, 0x31, 0x5D, 0xFF}}},
@@ -5406,8 +5542,8 @@ Vtx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_vtx_3[24] = {
 	{{{42, 89, 0}, 0, {46, -4}, {0x92, 0x3F, 0xFF, 0xFF}}},
 };
 
-Gfx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_3[] = {
-	gsSPVertex(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_vtx_3 + 0, 24, 0),
+Gfx boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_3[] = {
+	gsSPVertex(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_vtx_3 + 0, 24, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(0, 4, 3, 0, 5, 3, 4, 0),
 	gsSP2Triangles(5, 4, 6, 0, 7, 3, 5, 0),
@@ -5421,7 +5557,7 @@ Gfx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_3[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_offset_003_mesh_layer_1_vtx_0[20] = {
+Vtx boomie_luigi_000_offset_003_mesh_layer_1_vtx_0[20] = {
 	{{{6, -12, -37}, 0, {-16, -16}, {0xDC, 0xE1, 0x8A, 0xFF}}},
 	{{{-8, -8, -24}, 0, {-16, -16}, {0x93, 0xF0, 0xC1, 0xFF}}},
 	{{{-8, 14, -15}, 0, {-16, -16}, {0x94, 0x39, 0xDD, 0xFF}}},
@@ -5444,8 +5580,8 @@ Vtx lunkclassic_000_offset_003_mesh_layer_1_vtx_0[20] = {
 	{{{78, 10, 7}, 0, {-16, -16}, {0x6E, 0x30, 0x29, 0xFF}}},
 };
 
-Gfx lunkclassic_000_offset_003_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_000_offset_003_mesh_layer_1_vtx_0 + 0, 20, 0),
+Gfx boomie_luigi_000_offset_003_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_000_offset_003_mesh_layer_1_vtx_0 + 0, 20, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 0, 5, 4, 0),
 	gsSP2Triangles(0, 6, 5, 0, 0, 2, 6, 0),
@@ -5467,7 +5603,7 @@ Gfx lunkclassic_000_offset_003_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_offset_004_mesh_layer_1_vtx_0[16] = {
+Vtx boomie_luigi_000_offset_004_mesh_layer_1_vtx_0[16] = {
 	{{{-2, 17, -19}, 0, {-16, -16}, {0xE1, 0x67, 0xBD, 0xFF}}},
 	{{{-14, 10, -13}, 0, {-16, -16}, {0x99, 0x41, 0xDB, 0xFF}}},
 	{{{-14, 9, 8}, 0, {-16, -16}, {0x99, 0x3B, 0x2D, 0xFF}}},
@@ -5486,8 +5622,8 @@ Vtx lunkclassic_000_offset_004_mesh_layer_1_vtx_0[16] = {
 	{{{56, -16, 19}, 0, {-16, -16}, {0x3C, 0xD8, 0x68, 0xFF}}},
 };
 
-Gfx lunkclassic_000_offset_004_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_000_offset_004_mesh_layer_1_vtx_0 + 0, 16, 0),
+Gfx boomie_luigi_000_offset_004_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_000_offset_004_mesh_layer_1_vtx_0 + 0, 16, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 0, 5, 4, 0),
 	gsSP2Triangles(0, 6, 5, 0, 0, 2, 6, 0),
@@ -5505,7 +5641,7 @@ Gfx lunkclassic_000_offset_004_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_displaylist_003_mesh_layer_1_vtx_0[30] = {
+Vtx boomie_luigi_000_displaylist_003_mesh_layer_1_vtx_0[30] = {
 	{{{17, -33, -36}, 0, {-16, -16}, {0xA3, 0xB3, 0xD9, 0xFF}}},
 	{{{-14, -12, -5}, 0, {-16, -16}, {0x8D, 0xCA, 0x04, 0xFF}}},
 	{{{-10, 24, -35}, 0, {-16, -16}, {0x8A, 0xEA, 0xD6, 0xFF}}},
@@ -5538,8 +5674,8 @@ Vtx lunkclassic_000_displaylist_003_mesh_layer_1_vtx_0[30] = {
 	{{{90, 16, -42}, 0, {-16, -16}, {0x43, 0x32, 0xA0, 0xFF}}},
 };
 
-Gfx lunkclassic_000_displaylist_003_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_000_displaylist_003_mesh_layer_1_vtx_0 + 0, 30, 0),
+Gfx boomie_luigi_000_displaylist_003_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_000_displaylist_003_mesh_layer_1_vtx_0 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 1, 3, 0, 5, 1, 4, 0),
 	gsSP2Triangles(2, 1, 5, 0, 6, 7, 8, 0),
@@ -5566,7 +5702,7 @@ Gfx lunkclassic_000_displaylist_003_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_002_switch_option_right_hand_open_mesh_layer_1_vtx_0[39] = {
+Vtx boomie_luigi_002_switch_option_right_hand_open_mesh_layer_1_vtx_0[39] = {
 	{{{2, 3, 26}, 0, {-16, -16}, {0x4A, 0x34, 0x59, 0xFF}}},
 	{{{20, -46, 12}, 0, {-16, -16}, {0x75, 0xDD, 0x23, 0xFF}}},
 	{{{26, -32, 6}, 0, {-16, -16}, {0x37, 0xA8, 0x49, 0xFF}}},
@@ -5608,8 +5744,8 @@ Vtx lunkclassic_002_switch_option_right_hand_open_mesh_layer_1_vtx_0[39] = {
 	{{{13, -39, -31}, 0, {-16, -16}, {0xB5, 0xA4, 0xD4, 0xFF}}},
 };
 
-Gfx lunkclassic_002_switch_option_right_hand_open_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_002_switch_option_right_hand_open_mesh_layer_1_vtx_0 + 0, 39, 0),
+Gfx boomie_luigi_002_switch_option_right_hand_open_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_002_switch_option_right_hand_open_mesh_layer_1_vtx_0 + 0, 39, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 1, 3, 0),
 	gsSP2Triangles(3, 4, 2, 0, 4, 3, 5, 0),
 	gsSP2Triangles(5, 6, 4, 0, 7, 6, 5, 0),
@@ -5645,7 +5781,7 @@ Gfx lunkclassic_002_switch_option_right_hand_open_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_offset_006_mesh_layer_1_vtx_0[20] = {
+Vtx boomie_luigi_000_offset_006_mesh_layer_1_vtx_0[20] = {
 	{{{68, 14, 24}, 0, {-16, -16}, {0x30, 0x5C, 0x49, 0xFF}}},
 	{{{77, 8, 19}, 0, {-16, -16}, {0x6C, 0x35, 0x28, 0xFF}}},
 	{{{77, 9, -2}, 0, {-16, -16}, {0x6D, 0x37, 0xDC, 0xFF}}},
@@ -5668,8 +5804,8 @@ Vtx lunkclassic_000_offset_006_mesh_layer_1_vtx_0[20] = {
 	{{{-9, -12, 27}, 0, {-16, -16}, {0x94, 0xEC, 0x40, 0xFF}}},
 };
 
-Gfx lunkclassic_000_offset_006_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_000_offset_006_mesh_layer_1_vtx_0 + 0, 20, 0),
+Gfx boomie_luigi_000_offset_006_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_000_offset_006_mesh_layer_1_vtx_0 + 0, 20, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(0, 6, 5, 0, 0, 7, 6, 0),
@@ -5691,7 +5827,7 @@ Gfx lunkclassic_000_offset_006_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_offset_007_mesh_layer_1_vtx_0[16] = {
+Vtx boomie_luigi_000_offset_007_mesh_layer_1_vtx_0[16] = {
 	{{{-2, -17, 34}, 0, {-16, -16}, {0xDE, 0xD6, 0x73, 0xFF}}},
 	{{{-14, -13, 25}, 0, {-16, -16}, {0x95, 0xEB, 0x42, 0xFF}}},
 	{{{-3, -35, 6}, 0, {-16, -16}, {0xDB, 0x87, 0xF9, 0xFF}}},
@@ -5710,8 +5846,8 @@ Vtx lunkclassic_000_offset_007_mesh_layer_1_vtx_0[16] = {
 	{{{58, 12, -5}, 0, {-16, -16}, {0x3F, 0x5D, 0xC4, 0xFF}}},
 };
 
-Gfx lunkclassic_000_offset_007_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_000_offset_007_mesh_layer_1_vtx_0 + 0, 16, 0),
+Gfx boomie_luigi_000_offset_007_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_000_offset_007_mesh_layer_1_vtx_0 + 0, 16, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 5, 4, 0, 0),
 	gsSP2Triangles(6, 5, 0, 0, 6, 0, 2, 0),
@@ -5729,7 +5865,7 @@ Gfx lunkclassic_000_offset_007_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_displaylist_004_mesh_layer_1_vtx_0[30] = {
+Vtx boomie_luigi_000_displaylist_004_mesh_layer_1_vtx_0[30] = {
 	{{{-14, 24, 38}, 0, {-16, -16}, {0x28, 0x53, 0x58, 0xFF}}},
 	{{{13, -33, 38}, 0, {-16, -16}, {0x52, 0xE5, 0x5D, 0xFF}}},
 	{{{23, -22, 33}, 0, {-16, -16}, {0x0F, 0xBE, 0x6C, 0xFF}}},
@@ -5762,8 +5898,8 @@ Vtx lunkclassic_000_displaylist_004_mesh_layer_1_vtx_0[30] = {
 	{{{-14, 24, 38}, 0, {-16, -16}, {0x88, 0xE9, 0x21, 0xFF}}},
 };
 
-Gfx lunkclassic_000_displaylist_004_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_000_displaylist_004_mesh_layer_1_vtx_0 + 0, 30, 0),
+Gfx boomie_luigi_000_displaylist_004_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_000_displaylist_004_mesh_layer_1_vtx_0 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(1, 4, 3, 0, 3, 4, 5, 0),
 	gsSP2Triangles(5, 6, 3, 0, 7, 6, 5, 0),
@@ -5790,7 +5926,7 @@ Gfx lunkclassic_000_displaylist_004_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_002_switch_option_left_hand_open_mesh_layer_1_vtx_0[39] = {
+Vtx boomie_luigi_002_switch_option_left_hand_open_mesh_layer_1_vtx_0[39] = {
 	{{{7, 1, -26}, 0, {-16, -16}, {0x4C, 0x2A, 0xA4, 0xFF}}},
 	{{{-9, 41, 5}, 0, {-16, -16}, {0x32, 0x74, 0xF3, 0xFF}}},
 	{{{3, 36, 6}, 0, {-16, -16}, {0xD7, 0x74, 0xE1, 0xFF}}},
@@ -5832,8 +5968,8 @@ Vtx lunkclassic_002_switch_option_left_hand_open_mesh_layer_1_vtx_0[39] = {
 	{{{0, -4, -15}, 0, {-16, -16}, {0x91, 0xDE, 0xCC, 0xFF}}},
 };
 
-Gfx lunkclassic_002_switch_option_left_hand_open_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_002_switch_option_left_hand_open_mesh_layer_1_vtx_0 + 0, 39, 0),
+Gfx boomie_luigi_002_switch_option_left_hand_open_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_002_switch_option_left_hand_open_mesh_layer_1_vtx_0 + 0, 39, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 1, 3, 0),
 	gsSP2Triangles(3, 4, 2, 0, 5, 4, 3, 0),
 	gsSP2Triangles(3, 6, 5, 0, 7, 5, 6, 0),
@@ -5869,7 +6005,7 @@ Gfx lunkclassic_002_switch_option_left_hand_open_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_004_switch_option_left_hand_peace_mesh_layer_1_vtx_0[60] = {
+Vtx boomie_luigi_004_switch_option_left_hand_peace_mesh_layer_1_vtx_0[60] = {
 	{{{166, -13, -17}, 0, {-16, -16}, {0x7A, 0x09, 0x22, 0xFF}}},
 	{{{162, 14, -11}, 0, {-16, -16}, {0x7A, 0x0B, 0x22, 0xFF}}},
 	{{{153, 7, 24}, 0, {-16, -16}, {0x49, 0xF3, 0x67, 0xFF}}},
@@ -5932,8 +6068,8 @@ Vtx lunkclassic_004_switch_option_left_hand_peace_mesh_layer_1_vtx_0[60] = {
 	{{{162, 14, -11}, 0, {-16, -16}, {0x0B, 0x7D, 0x13, 0xFF}}},
 };
 
-Gfx lunkclassic_004_switch_option_left_hand_peace_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_004_switch_option_left_hand_peace_mesh_layer_1_vtx_0 + 0, 60, 0),
+Gfx boomie_luigi_004_switch_option_left_hand_peace_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_004_switch_option_left_hand_peace_mesh_layer_1_vtx_0 + 0, 60, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 3, 2, 0, 4, 2, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 5, 7, 6, 0),
@@ -5974,7 +6110,7 @@ Gfx lunkclassic_004_switch_option_left_hand_peace_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_vtx_0[36] = {
+Vtx boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1_vtx_0[36] = {
 	{{{131, 47, -1}, 0, {1088, 212}, {0xE4, 0x5C, 0xAE, 0xFF}}},
 	{{{107, -19, -33}, 0, {458, 16}, {0xCE, 0x0E, 0x8C, 0xFF}}},
 	{{{78, 11, 40}, 0, {756, 802}, {0xD2, 0x40, 0x9D, 0xFF}}},
@@ -6013,8 +6149,8 @@ Vtx lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_vtx_0[36] = {
 	{{{45, 49, 53}, 0, {-16, -16}, {0xC9, 0xEC, 0x71, 0xFF}}},
 };
 
-Gfx lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_vtx_0 + 0, 36, 0),
+Gfx boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1_vtx_0 + 0, 36, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(1, 4, 3, 0, 5, 6, 7, 0),
 	gsSP2Triangles(8, 6, 5, 0, 8, 5, 9, 0),
@@ -6040,7 +6176,7 @@ Gfx lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_vtx_1[10] = {
+Vtx boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1_vtx_1[10] = {
 	{{{65, -53, 55}, 0, {-16, -16}, {0xBB, 0x08, 0x6A, 0xFF}}},
 	{{{106, -124, 90}, 0, {-16, -16}, {0x98, 0xBB, 0x17, 0xFF}}},
 	{{{137, -137, 134}, 0, {-16, -16}, {0xA3, 0xC7, 0x41, 0xFF}}},
@@ -6053,8 +6189,8 @@ Vtx lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_vtx_1[10] = {
 	{{{228, 1, 228}, 0, {-16, -16}, {0xFC, 0x21, 0x7A, 0xFF}}},
 };
 
-Gfx lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_tri_1[] = {
-	gsSPVertex(lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_vtx_1 + 0, 10, 0),
+Gfx boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1_tri_1[] = {
+	gsSPVertex(boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1_vtx_1 + 0, 10, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(4, 3, 2, 0, 5, 4, 2, 0),
 	gsSP2Triangles(6, 5, 2, 0, 6, 2, 7, 0),
@@ -6062,7 +6198,7 @@ Gfx lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_vtx_2[30] = {
+Vtx boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1_vtx_2[30] = {
 	{{{4, -3, -32}, 0, {-16, -16}, {0x49, 0x1F, 0x9D, 0xFF}}},
 	{{{-19, 47, -4}, 0, {-16, -16}, {0x2E, 0x74, 0xE9, 0xFF}}},
 	{{{-2, 41, 0}, 0, {-16, -16}, {0xDD, 0x73, 0xD7, 0xFF}}},
@@ -6095,8 +6231,8 @@ Vtx lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_vtx_2[30] = {
 	{{{4, -3, -32}, 0, {-16, -16}, {0x99, 0xD5, 0xC4, 0xFF}}},
 };
 
-Gfx lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_tri_2[] = {
-	gsSPVertex(lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_vtx_2 + 0, 30, 0),
+Gfx boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1_tri_2[] = {
+	gsSPVertex(boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1_vtx_2 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 1, 3, 0),
 	gsSP2Triangles(3, 4, 2, 0, 5, 4, 3, 0),
 	gsSP2Triangles(3, 6, 5, 0, 7, 5, 6, 0),
@@ -6123,7 +6259,7 @@ Gfx lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_tri_2[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_vtx_0[36] = {
+Vtx boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1_vtx_0[36] = {
 	{{{131, 47, -1}, 0, {1088, 212}, {0xE4, 0x5C, 0xAE, 0xFF}}},
 	{{{107, -19, -33}, 0, {458, 16}, {0xCE, 0x0E, 0x8C, 0xFF}}},
 	{{{78, 11, 40}, 0, {756, 802}, {0xD2, 0x40, 0x9D, 0xFF}}},
@@ -6162,8 +6298,8 @@ Vtx lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_vtx_0[36] = {
 	{{{45, 49, 53}, 0, {-16, -16}, {0xC9, 0xEC, 0x71, 0xFF}}},
 };
 
-Gfx lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_vtx_0 + 0, 36, 0),
+Gfx boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1_vtx_0 + 0, 36, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(1, 4, 3, 0, 5, 6, 7, 0),
 	gsSP2Triangles(8, 6, 5, 0, 8, 5, 9, 0),
@@ -6189,7 +6325,7 @@ Gfx lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_vtx_1[10] = {
+Vtx boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1_vtx_1[10] = {
 	{{{65, -53, 55}, 0, {-16, -16}, {0xBB, 0x08, 0x6A, 0xFF}}},
 	{{{106, -124, 90}, 0, {-16, -16}, {0x98, 0xBB, 0x17, 0xFF}}},
 	{{{137, -137, 134}, 0, {-16, -16}, {0xA3, 0xC7, 0x41, 0xFF}}},
@@ -6202,8 +6338,8 @@ Vtx lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_vtx_1[10] = {
 	{{{228, 1, 228}, 0, {-16, -16}, {0xFC, 0x21, 0x7A, 0xFF}}},
 };
 
-Gfx lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_1[] = {
-	gsSPVertex(lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_vtx_1 + 0, 10, 0),
+Gfx boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_1[] = {
+	gsSPVertex(boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1_vtx_1 + 0, 10, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(4, 3, 2, 0, 5, 4, 2, 0),
 	gsSP2Triangles(6, 5, 2, 0, 6, 2, 7, 0),
@@ -6211,7 +6347,7 @@ Gfx lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_vtx_2[30] = {
+Vtx boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1_vtx_2[30] = {
 	{{{4, -3, -32}, 0, {-16, -16}, {0x49, 0x1F, 0x9D, 0xFF}}},
 	{{{-19, 47, -4}, 0, {-16, -16}, {0x2E, 0x74, 0xE9, 0xFF}}},
 	{{{-2, 41, 0}, 0, {-16, -16}, {0xDD, 0x73, 0xD7, 0xFF}}},
@@ -6244,8 +6380,8 @@ Vtx lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_vtx_2[30] = {
 	{{{4, -3, -32}, 0, {-16, -16}, {0x99, 0xD5, 0xC4, 0xFF}}},
 };
 
-Gfx lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_2[] = {
-	gsSPVertex(lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_vtx_2 + 0, 30, 0),
+Gfx boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_2[] = {
+	gsSPVertex(boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1_vtx_2 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 1, 3, 0),
 	gsSP2Triangles(3, 4, 2, 0, 5, 4, 3, 0),
 	gsSP2Triangles(3, 6, 5, 0, 7, 5, 6, 0),
@@ -6272,7 +6408,7 @@ Gfx lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_2[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_vtx_0[8] = {
+Vtx boomie_luigi_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_vtx_0[8] = {
 	{{{178, -177, 128}, 0, {-16, 1008}, {0xA8, 0xB3, 0xCF, 0xFF}}},
 	{{{319, -248, -14}, 0, {-16, -16}, {0xA8, 0xB3, 0xCF, 0xFF}}},
 	{{{349, -325, 53}, 0, {1008, -16}, {0xA8, 0xB3, 0xCF, 0xFF}}},
@@ -6283,14 +6419,14 @@ Vtx lunkclassic_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_vtx_0[8]
 	{{{258, 156, 218}, 0, {1008, 1008}, {0xBD, 0x65, 0xD8, 0xFF}}},
 };
 
-Gfx lunkclassic_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_vtx_0 + 0, 8, 0),
+Gfx boomie_luigi_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_vtx_0 + 0, 8, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_vtx_1[8] = {
+Vtx boomie_luigi_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_vtx_1[8] = {
 	{{{368, 146, 7}, 0, {1008, -16}, {0xBD, 0x65, 0xD9, 0xFF}}},
 	{{{166, 37, 68}, 0, {-16, 1008}, {0xBE, 0x65, 0xD9, 0xFF}}},
 	{{{212, 96, 143}, 0, {1008, 1008}, {0xBD, 0x65, 0xD9, 0xFF}}},
@@ -6301,14 +6437,14 @@ Vtx lunkclassic_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_vtx_1[8]
 	{{{290, -171, -81}, 0, {-16, -16}, {0xA8, 0xB3, 0xCE, 0xFF}}},
 };
 
-Gfx lunkclassic_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_tri_1[] = {
-	gsSPVertex(lunkclassic_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_vtx_1 + 0, 8, 0),
+Gfx boomie_luigi_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_tri_1[] = {
+	gsSPVertex(boomie_luigi_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_vtx_1 + 0, 8, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 5, 6, 0, 5, 7, 6, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_offset_009_mesh_layer_1_vtx_0[17] = {
+Vtx boomie_luigi_000_offset_009_mesh_layer_1_vtx_0[17] = {
 	{{{-5, 32, 27}, 0, {-16, -16}, {0xA1, 0x41, 0x36, 0xFF}}},
 	{{{-15, 1, 7}, 0, {-16, -16}, {0x81, 0xF5, 0xFE, 0xFF}}},
 	{{{-1, -9, 41}, 0, {-16, -16}, {0xAA, 0xE1, 0x58, 0xFF}}},
@@ -6328,8 +6464,8 @@ Vtx lunkclassic_000_offset_009_mesh_layer_1_vtx_0[17] = {
 	{{{126, 9, 8}, 0, {-16, -16}, {0x7F, 0x09, 0x01, 0xFF}}},
 };
 
-Gfx lunkclassic_000_offset_009_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_000_offset_009_mesh_layer_1_vtx_0 + 0, 17, 0),
+Gfx boomie_luigi_000_offset_009_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_000_offset_009_mesh_layer_1_vtx_0 + 0, 17, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 6, 0, 0, 2, 6, 0),
@@ -6348,7 +6484,7 @@ Gfx lunkclassic_000_offset_009_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_offset_010_mesh_layer_1_vtx_0[12] = {
+Vtx boomie_luigi_000_offset_010_mesh_layer_1_vtx_0[12] = {
 	{{{8, 39, 29}, 0, {-16, -16}, {0xC9, 0x5D, 0x42, 0xFF}}},
 	{{{75, -8, 47}, 0, {-16, -16}, {0x38, 0xDB, 0x6C, 0xFF}}},
 	{{{78, 39, 32}, 0, {-16, -16}, {0x40, 0x57, 0x44, 0xFF}}},
@@ -6363,8 +6499,8 @@ Vtx lunkclassic_000_offset_010_mesh_layer_1_vtx_0[12] = {
 	{{{76, -8, -29}, 0, {-16, -16}, {0x3A, 0xDB, 0x95, 0xFF}}},
 };
 
-Gfx lunkclassic_000_offset_010_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_000_offset_010_mesh_layer_1_vtx_0 + 0, 12, 0),
+Gfx boomie_luigi_000_offset_010_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_000_offset_010_mesh_layer_1_vtx_0 + 0, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 5, 4, 0, 0),
 	gsSP2Triangles(6, 5, 0, 0, 0, 2, 6, 0),
@@ -6378,7 +6514,7 @@ Gfx lunkclassic_000_offset_010_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_offset_011_mesh_layer_1_vtx_0[23] = {
+Vtx boomie_luigi_000_offset_011_mesh_layer_1_vtx_0[23] = {
 	{{{-5, 52, 50}, 0, {-16, -16}, {0x2D, 0x77, 0xFE, 0xFF}}},
 	{{{-30, 60, -7}, 0, {-16, -16}, {0x2E, 0x76, 0xFE, 0xFF}}},
 	{{{-31, 61, 25}, 0, {-16, -16}, {0x2C, 0x77, 0xFF, 0xFF}}},
@@ -6404,8 +6540,8 @@ Vtx lunkclassic_000_offset_011_mesh_layer_1_vtx_0[23] = {
 	{{{71, 24, 58}, 0, {-16, -16}, {0x1E, 0xD4, 0x73, 0xFF}}},
 };
 
-Gfx lunkclassic_000_offset_011_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_000_offset_011_mesh_layer_1_vtx_0 + 0, 23, 0),
+Gfx boomie_luigi_000_offset_011_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_000_offset_011_mesh_layer_1_vtx_0 + 0, 23, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 5, 3, 0),
 	gsSP2Triangles(4, 6, 5, 0, 6, 7, 5, 0),
@@ -6422,7 +6558,7 @@ Gfx lunkclassic_000_offset_011_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_offset_012_mesh_layer_1_vtx_0[17] = {
+Vtx boomie_luigi_000_offset_012_mesh_layer_1_vtx_0[17] = {
 	{{{105, -2, -42}, 0, {-16, -16}, {0x3D, 0xE6, 0x94, 0xFF}}},
 	{{{126, 10, -9}, 0, {-16, -16}, {0x7F, 0x0A, 0xFF, 0xFF}}},
 	{{{108, -29, -10}, 0, {-16, -16}, {0x45, 0x96, 0xFD, 0xFF}}},
@@ -6442,8 +6578,8 @@ Vtx lunkclassic_000_offset_012_mesh_layer_1_vtx_0[17] = {
 	{{{-15, 1, -7}, 0, {-16, -16}, {0x82, 0xF3, 0x02, 0xFF}}},
 };
 
-Gfx lunkclassic_000_offset_012_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_000_offset_012_mesh_layer_1_vtx_0 + 0, 17, 0),
+Gfx boomie_luigi_000_offset_012_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_000_offset_012_mesh_layer_1_vtx_0 + 0, 17, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 4, 0, 2, 0),
 	gsSP2Triangles(2, 5, 4, 0, 2, 6, 5, 0),
@@ -6462,7 +6598,7 @@ Gfx lunkclassic_000_offset_012_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_offset_013_mesh_layer_1_vtx_0[12] = {
+Vtx boomie_luigi_000_offset_013_mesh_layer_1_vtx_0[12] = {
 	{{{76, -8, 27}, 0, {-16, -16}, {0x39, 0xD8, 0x6A, 0xFF}}},
 	{{{79, 39, 14}, 0, {-16, -16}, {0x40, 0x56, 0x44, 0xFF}}},
 	{{{9, 40, 12}, 0, {-16, -16}, {0xCB, 0x5C, 0x45, 0xFF}}},
@@ -6477,8 +6613,8 @@ Vtx lunkclassic_000_offset_013_mesh_layer_1_vtx_0[12] = {
 	{{{5, -1, -44}, 0, {-16, -16}, {0xC1, 0xE5, 0x95, 0xFF}}},
 };
 
-Gfx lunkclassic_000_offset_013_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_000_offset_013_mesh_layer_1_vtx_0 + 0, 12, 0),
+Gfx boomie_luigi_000_offset_013_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_000_offset_013_mesh_layer_1_vtx_0 + 0, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(0, 6, 5, 0, 2, 6, 0, 0),
@@ -6492,7 +6628,7 @@ Gfx lunkclassic_000_offset_013_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_000_displaylist_005_mesh_layer_1_vtx_0[23] = {
+Vtx boomie_luigi_000_displaylist_005_mesh_layer_1_vtx_0[23] = {
 	{{{68, 25, 37}, 0, {-16, -16}, {0x29, 0x78, 0x00, 0xFF}}},
 	{{{97, 15, 18}, 0, {-16, -16}, {0x2A, 0x78, 0x01, 0xFF}}},
 	{{{98, 15, -35}, 0, {-16, -16}, {0x29, 0x78, 0x00, 0xFF}}},
@@ -6518,8 +6654,8 @@ Vtx lunkclassic_000_displaylist_005_mesh_layer_1_vtx_0[23] = {
 	{{{24, -34, -11}, 0, {-16, -16}, {0xE9, 0x83, 0x06, 0xFF}}},
 };
 
-Gfx lunkclassic_000_displaylist_005_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_000_displaylist_005_mesh_layer_1_vtx_0 + 0, 23, 0),
+Gfx boomie_luigi_000_displaylist_005_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_000_displaylist_005_mesh_layer_1_vtx_0 + 0, 23, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 0, 3, 0, 4, 3, 5, 0),
 	gsSP2Triangles(6, 4, 5, 0, 7, 6, 5, 0),
@@ -6536,7 +6672,7 @@ Gfx lunkclassic_000_displaylist_005_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Torso_mesh_layer_1_vtx_0[57] = {
+Vtx boomie_luigi_Small_Switch_Torso_mesh_layer_1_vtx_0[57] = {
 	{{{50, 81, -38}, 0, {-16, -16}, {0x48, 0x66, 0xE6, 0xFF}}},
 	{{{29, 92, 33}, 0, {-16, -16}, {0x2C, 0x76, 0x10, 0xFF}}},
 	{{{50, 81, 39}, 0, {-16, -16}, {0x48, 0x66, 0x1A, 0xFF}}},
@@ -6596,8 +6732,8 @@ Vtx lunkclassic_Small_Switch_Torso_mesh_layer_1_vtx_0[57] = {
 	{{{-67, -33, -41}, 0, {-16, -16}, {0x8E, 0xD4, 0xDE, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Torso_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Torso_mesh_layer_1_vtx_0 + 0, 57, 0),
+Gfx boomie_luigi_Small_Switch_Torso_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Torso_mesh_layer_1_vtx_0 + 0, 57, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(1, 3, 4, 0, 5, 1, 4, 0),
 	gsSP2Triangles(5, 4, 6, 0, 4, 7, 6, 0),
@@ -6643,7 +6779,7 @@ Gfx lunkclassic_Small_Switch_Torso_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Torso_mesh_layer_1_vtx_1[27] = {
+Vtx boomie_luigi_Small_Switch_Torso_mesh_layer_1_vtx_1[27] = {
 	{{{50, 81, -38}, 0, {-16, -16}, {0x48, 0x66, 0xE6, 0xFF}}},
 	{{{50, 81, 39}, 0, {-16, -16}, {0x48, 0x66, 0x1A, 0xFF}}},
 	{{{89, 39, 30}, 0, {-16, -16}, {0x68, 0x45, 0x15, 0xFF}}},
@@ -6673,8 +6809,8 @@ Vtx lunkclassic_Small_Switch_Torso_mesh_layer_1_vtx_1[27] = {
 	{{{20, -70, -74}, 0, {-16, -16}, {0x09, 0x97, 0xB9, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Torso_mesh_layer_1_tri_1[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Torso_mesh_layer_1_vtx_1 + 0, 27, 0),
+Gfx boomie_luigi_Small_Switch_Torso_mesh_layer_1_tri_1[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Torso_mesh_layer_1_vtx_1 + 0, 27, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 3, 2, 0, 4, 5, 3, 0),
 	gsSP2Triangles(5, 4, 6, 0, 5, 6, 7, 0),
@@ -6691,7 +6827,7 @@ Gfx lunkclassic_Small_Switch_Torso_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Torso_mesh_layer_1_vtx_2[14] = {
+Vtx boomie_luigi_Small_Switch_Torso_mesh_layer_1_vtx_2[14] = {
 	{{{50, 81, -38}, 0, {834, 56}, {0x48, 0x66, 0xE6, 0xFF}}},
 	{{{51, 69, -64}, 0, {296, -16}, {0x46, 0x59, 0xC7, 0xFF}}},
 	{{{34, 66, -81}, 0, {-40, 294}, {0x2A, 0x51, 0xA8, 0xFF}}},
@@ -6708,8 +6844,8 @@ Vtx lunkclassic_Small_Switch_Torso_mesh_layer_1_vtx_2[14] = {
 	{{{51, 69, 65}, 0, {532, -16}, {0x46, 0x5A, 0x38, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Torso_mesh_layer_1_tri_2[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Torso_mesh_layer_1_vtx_2 + 0, 14, 0),
+Gfx boomie_luigi_Small_Switch_Torso_mesh_layer_1_tri_2[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Torso_mesh_layer_1_vtx_2 + 0, 14, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(0, 3, 4, 0, 0, 4, 5, 0),
 	gsSP2Triangles(6, 0, 5, 0, 7, 8, 9, 0),
@@ -6718,7 +6854,354 @@ Gfx lunkclassic_Small_Switch_Torso_mesh_layer_1_tri_2[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0[52] = {
+Vtx boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_vtx_0[82] = {
+	{{{129, 83, 84}, 0, {-16, -16}, {0x29, 0x50, 0x5A, 0xFF}}},
+	{{{141, 82, 70}, 0, {-16, -16}, {0x2A, 0x63, 0x44, 0xFF}}},
+	{{{134, 98, 25}, 0, {-16, -16}, {0x56, 0x32, 0x4F, 0xFF}}},
+	{{{135, 44, 94}, 0, {-16, -16}, {0x0C, 0x29, 0x78, 0xFF}}},
+	{{{79, 39, 98}, 0, {-16, -16}, {0xDD, 0x1C, 0x77, 0xFF}}},
+	{{{185, 77, 67}, 0, {-16, -16}, {0x1E, 0x5C, 0x52, 0xFF}}},
+	{{{195, 27, 95}, 0, {-16, -16}, {0x01, 0x46, 0x6A, 0xFF}}},
+	{{{195, 27, 95}, 0, {6, -84}, {0x01, 0x46, 0x6A, 0xFF}}},
+	{{{135, 44, 94}, 0, {-90, 710}, {0x0C, 0x29, 0x78, 0xFF}}},
+	{{{163, -17, 111}, 0, {906, 106}, {0xEE, 0x1F, 0x7A, 0xFF}}},
+	{{{126, -29, 111}, 0, {1222, 502}, {0x05, 0x5A, 0x59, 0xFF}}},
+	{{{80, -5, 103}, 0, {952, 1176}, {0xC4, 0xF6, 0x70, 0xFF}}},
+	{{{79, 39, 98}, 0, {180, 1350}, {0xDD, 0x1C, 0x77, 0xFF}}},
+	{{{163, -18, -109}, 0, {900, 168}, {0xEE, 0x1F, 0x86, 0xFF}}},
+	{{{135, 44, -93}, 0, {-86, 684}, {0x0C, 0x28, 0x88, 0xFF}}},
+	{{{195, 27, -94}, 0, {74, -74}, {0x00, 0x45, 0x96, 0xFF}}},
+	{{{126, -29, -110}, 0, {1134, 566}, {0x07, 0x5A, 0xA7, 0xFF}}},
+	{{{80, -5, -102}, 0, {826, 1194}, {0xC4, 0xF7, 0x90, 0xFF}}},
+	{{{79, 39, -96}, 0, {102, 1318}, {0xDC, 0x1D, 0x8A, 0xFF}}},
+	{{{185, 77, -66}, 0, {-16, -16}, {0x1E, 0x5C, 0xAE, 0xFF}}},
+	{{{195, 27, -94}, 0, {-16, -16}, {0x00, 0x45, 0x96, 0xFF}}},
+	{{{135, 44, -93}, 0, {-16, -16}, {0x0C, 0x28, 0x88, 0xFF}}},
+	{{{141, 82, -69}, 0, {-16, -16}, {0x2A, 0x63, 0xBC, 0xFF}}},
+	{{{129, 83, -83}, 0, {-16, -16}, {0x28, 0x4F, 0xA6, 0xFF}}},
+	{{{79, 39, -96}, 0, {-16, -16}, {0xDC, 0x1D, 0x8A, 0xFF}}},
+	{{{134, 98, -24}, 0, {-16, -16}, {0x56, 0x32, 0xB1, 0xFF}}},
+	{{{-3, 45, 40}, 0, {-16, -16}, {0x94, 0x1B, 0x3D, 0xFF}}},
+	{{{80, -5, 103}, 0, {-16, -16}, {0xC4, 0xF6, 0x70, 0xFF}}},
+	{{{26, -38, 36}, 0, {-16, -16}, {0x8A, 0xEC, 0x2B, 0xFF}}},
+	{{{-12, 52, 0}, 0, {-16, -16}, {0x87, 0x28, 0x00, 0xFF}}},
+	{{{58, 96, 30}, 0, {-16, -16}, {0xC0, 0x6B, 0x19, 0xFF}}},
+	{{{58, 96, -29}, 0, {-16, -16}, {0xC0, 0x6B, 0xE7, 0xFF}}},
+	{{{71, 105, 0}, 0, {-16, -16}, {0x88, 0x29, 0xFF, 0xFF}}},
+	{{{-3, 45, -39}, 0, {-16, -16}, {0x94, 0x1B, 0xC2, 0xFF}}},
+	{{{26, -38, -35}, 0, {-16, -16}, {0x8A, 0xEC, 0xD5, 0xFF}}},
+	{{{80, -5, -102}, 0, {-16, -16}, {0xC4, 0xF7, 0x90, 0xFF}}},
+	{{{97, -51, -76}, 0, {-16, -16}, {0xD2, 0xC2, 0x9B, 0xFF}}},
+	{{{103, -30, -134}, 0, {-16, -16}, {0xD6, 0x05, 0x88, 0xFF}}},
+	{{{126, -29, -110}, 0, {-16, -16}, {0x07, 0x5A, 0xA7, 0xFF}}},
+	{{{143, -39, -134}, 0, {-16, -16}, {0x30, 0xED, 0x8C, 0xFF}}},
+	{{{163, -18, -109}, 0, {-16, -16}, {0xEE, 0x1F, 0x86, 0xFF}}},
+	{{{134, -60, -85}, 0, {-16, -16}, {0xC7, 0xBF, 0xA3, 0xFF}}},
+	{{{40, -85, 0}, 0, {-16, -16}, {0x9E, 0xAF, 0x01, 0xFF}}},
+	{{{112, 103, 34}, 0, {-16, -16}, {0x15, 0x0E, 0x7C, 0xFF}}},
+	{{{142, 122, 56}, 0, {-16, -16}, {0x4A, 0xCC, 0x59, 0xFF}}},
+	{{{158, 121, 0}, 0, {-16, -16}, {0x79, 0xD8, 0x00, 0xFF}}},
+	{{{145, 100, 0}, 0, {-16, -16}, {0x6C, 0x43, 0xFF, 0xFF}}},
+	{{{142, 122, -55}, 0, {-16, -16}, {0x4A, 0xCC, 0xA7, 0xFF}}},
+	{{{112, 103, -33}, 0, {-16, -16}, {0x15, 0x0E, 0x84, 0xFF}}},
+	{{{110, 124, -62}, 0, {-16, -16}, {0xFD, 0xC8, 0x8E, 0xFF}}},
+	{{{76, 125, -55}, 0, {-16, -16}, {0xB1, 0xD4, 0xA7, 0xFF}}},
+	{{{84, 107, -30}, 0, {-16, -16}, {0xA5, 0x1A, 0xAC, 0xFF}}},
+	{{{57, 127, 0}, 0, {-16, -16}, {0x85, 0xE0, 0xFE, 0xFF}}},
+	{{{84, 107, 31}, 0, {-16, -16}, {0xA4, 0x1A, 0x54, 0xFF}}},
+	{{{76, 125, 56}, 0, {-16, -16}, {0xB2, 0xD3, 0x5A, 0xFF}}},
+	{{{110, 124, 63}, 0, {-16, -16}, {0xFD, 0xC8, 0x72, 0xFF}}},
+	{{{143, 157, 56}, 0, {-16, -16}, {0x4C, 0x3C, 0x53, 0xFF}}},
+	{{{161, 156, 0}, 0, {-16, -16}, {0x77, 0x2B, 0x00, 0xFF}}},
+	{{{143, 157, -55}, 0, {-16, -16}, {0x4B, 0x3C, 0xAD, 0xFF}}},
+	{{{113, 159, -62}, 0, {-16, -16}, {0x04, 0x46, 0x96, 0xFF}}},
+	{{{82, 160, -55}, 0, {-16, -16}, {0xC0, 0x46, 0xAB, 0xFF}}},
+	{{{59, 162, 0}, 0, {-16, -16}, {0x92, 0x3F, 0xFE, 0xFF}}},
+	{{{82, 160, 56}, 0, {-16, -16}, {0xC2, 0x47, 0x55, 0xFF}}},
+	{{{113, 159, 63}, 0, {-16, -16}, {0x04, 0x47, 0x69, 0xFF}}},
+	{{{143, 157, 56}, 0, {-16, -16}, {0x4C, 0x3C, 0x53, 0xFF}}},
+	{{{139, 176, 0}, 0, {-16, -16}, {0x2E, 0x77, 0x00, 0xFF}}},
+	{{{113, 159, 63}, 0, {-16, -16}, {0x04, 0x47, 0x69, 0xFF}}},
+	{{{161, 156, 0}, 0, {-16, -16}, {0x77, 0x2B, 0x00, 0xFF}}},
+	{{{143, 157, -55}, 0, {-16, -16}, {0x4B, 0x3C, 0xAD, 0xFF}}},
+	{{{113, 159, -62}, 0, {-16, -16}, {0x04, 0x46, 0x96, 0xFF}}},
+	{{{90, 178, 0}, 0, {-16, -16}, {0xE8, 0x7D, 0x00, 0xFF}}},
+	{{{82, 160, -55}, 0, {-16, -16}, {0xC0, 0x46, 0xAB, 0xFF}}},
+	{{{59, 162, 0}, 0, {-16, -16}, {0x92, 0x3F, 0xFE, 0xFF}}},
+	{{{82, 160, 56}, 0, {-16, -16}, {0xC2, 0x47, 0x55, 0xFF}}},
+	{{{163, -17, 111}, 0, {-16, -16}, {0xEE, 0x1F, 0x7A, 0xFF}}},
+	{{{126, -29, 111}, 0, {-16, -16}, {0x05, 0x5A, 0x59, 0xFF}}},
+	{{{143, -39, 135}, 0, {-16, -16}, {0x2F, 0xEC, 0x74, 0xFF}}},
+	{{{103, -30, 135}, 0, {-16, -16}, {0xD6, 0x05, 0x78, 0xFF}}},
+	{{{80, -5, 103}, 0, {-16, -16}, {0xC4, 0xF6, 0x70, 0xFF}}},
+	{{{97, -51, 77}, 0, {-16, -16}, {0xD2, 0xC2, 0x65, 0xFF}}},
+	{{{26, -38, 36}, 0, {-16, -16}, {0x8A, 0xEC, 0x2B, 0xFF}}},
+	{{{134, -60, 86}, 0, {-16, -16}, {0xC7, 0xBF, 0x5D, 0xFF}}},
+};
+
+Gfx boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_vtx_0 + 0, 64, 0),
+	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
+	gsSP2Triangles(4, 3, 0, 0, 5, 1, 3, 0),
+	gsSP2Triangles(3, 6, 5, 0, 7, 8, 9, 0),
+	gsSP2Triangles(10, 9, 8, 0, 11, 10, 8, 0),
+	gsSP2Triangles(8, 12, 11, 0, 13, 14, 15, 0),
+	gsSP2Triangles(16, 14, 13, 0, 14, 16, 17, 0),
+	gsSP2Triangles(17, 18, 14, 0, 19, 20, 21, 0),
+	gsSP2Triangles(21, 22, 19, 0, 21, 23, 22, 0),
+	gsSP2Triangles(23, 21, 24, 0, 23, 25, 22, 0),
+	gsSP2Triangles(4, 26, 27, 0, 26, 28, 27, 0),
+	gsSP2Triangles(28, 26, 29, 0, 29, 26, 30, 0),
+	gsSP2Triangles(30, 31, 29, 0, 32, 31, 30, 0),
+	gsSP2Triangles(31, 33, 29, 0, 34, 29, 33, 0),
+	gsSP2Triangles(35, 34, 33, 0, 35, 33, 24, 0),
+	gsSP2Triangles(35, 36, 34, 0, 35, 37, 36, 0),
+	gsSP2Triangles(38, 37, 35, 0, 38, 39, 37, 0),
+	gsSP2Triangles(39, 38, 40, 0, 39, 40, 41, 0),
+	gsSP2Triangles(37, 39, 41, 0, 36, 37, 41, 0),
+	gsSP2Triangles(34, 28, 29, 0, 34, 42, 28, 0),
+	gsSP2Triangles(43, 2, 44, 0, 45, 44, 2, 0),
+	gsSP2Triangles(2, 46, 45, 0, 45, 46, 25, 0),
+	gsSP2Triangles(25, 47, 45, 0, 47, 25, 48, 0),
+	gsSP2Triangles(49, 47, 48, 0, 50, 49, 48, 0),
+	gsSP2Triangles(48, 51, 50, 0, 52, 50, 51, 0),
+	gsSP2Triangles(51, 32, 52, 0, 52, 32, 53, 0),
+	gsSP2Triangles(53, 54, 52, 0, 54, 53, 43, 0),
+	gsSP2Triangles(55, 54, 43, 0, 44, 55, 43, 0),
+	gsSP2Triangles(55, 44, 56, 0, 56, 44, 45, 0),
+	gsSP2Triangles(57, 56, 45, 0, 45, 47, 57, 0),
+	gsSP2Triangles(47, 58, 57, 0, 49, 58, 47, 0),
+	gsSP2Triangles(49, 59, 58, 0, 60, 59, 49, 0),
+	gsSP2Triangles(50, 60, 49, 0, 60, 50, 52, 0),
+	gsSP2Triangles(61, 60, 52, 0, 52, 54, 61, 0),
+	gsSP2Triangles(54, 62, 61, 0, 62, 54, 55, 0),
+	gsSP2Triangles(62, 55, 63, 0, 63, 55, 56, 0),
+	gsSPVertex(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_vtx_0 + 64, 18, 0),
+	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
+	gsSP2Triangles(1, 3, 4, 0, 1, 4, 5, 0),
+	gsSP2Triangles(5, 6, 1, 0, 6, 5, 7, 0),
+	gsSP2Triangles(8, 6, 7, 0, 8, 9, 6, 0),
+	gsSP2Triangles(9, 2, 6, 0, 6, 2, 1, 0),
+	gsSP2Triangles(10, 11, 12, 0, 13, 12, 11, 0),
+	gsSP2Triangles(14, 13, 11, 0, 13, 14, 15, 0),
+	gsSP2Triangles(16, 15, 14, 0, 13, 15, 17, 0),
+	gsSP2Triangles(13, 17, 12, 0, 17, 10, 12, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_vtx_1[12] = {
+	{{{134, 98, 25}, 0, {668, 413}, {0x56, 0x32, 0x4F, 0xFF}}},
+	{{{141, 82, 70}, 0, {1016, 334}, {0x2A, 0x63, 0x44, 0xFF}}},
+	{{{185, 77, 67}, 0, {990, 196}, {0x1E, 0x5C, 0x52, 0xFF}}},
+	{{{217, 85, 39}, 0, {767, -69}, {0xA4, 0x57, 0x0B, 0xFF}}},
+	{{{195, 27, 95}, 0, {1203, 85}, {0x01, 0x46, 0x6A, 0xFF}}},
+	{{{185, 96, 0}, 0, {464, 211}, {0x16, 0x7D, 0x00, 0xFF}}},
+	{{{217, 85, -38}, 0, {150, -54}, {0xA4, 0x57, 0xF5, 0xFF}}},
+	{{{134, 98, -24}, 0, {276, 423}, {0x56, 0x32, 0xB1, 0xFF}}},
+	{{{185, 77, -66}, 0, {-61, 223}, {0x1E, 0x5C, 0xAE, 0xFF}}},
+	{{{195, 27, -94}, 0, {-277, 124}, {0x00, 0x45, 0x96, 0xFF}}},
+	{{{141, 82, -69}, 0, {-73, 362}, {0x2A, 0x63, 0xBC, 0xFF}}},
+	{{{145, 100, 0}, 0, {471, 326}, {0x6C, 0x43, 0xFF, 0xFF}}},
+};
+
+Gfx boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_1[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_vtx_1 + 0, 12, 0),
+	gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
+	gsSP2Triangles(4, 3, 2, 0, 3, 5, 0, 0),
+	gsSP2Triangles(6, 5, 3, 0, 7, 5, 6, 0),
+	gsSP2Triangles(7, 6, 8, 0, 8, 6, 9, 0),
+	gsSP2Triangles(10, 7, 8, 0, 5, 11, 0, 0),
+	gsSP1Triangle(7, 11, 5, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_vtx_2[18] = {
+	{{{112, 103, 34}, 0, {326, 352}, {0x15, 0x0E, 0x7C, 0xFF}}},
+	{{{129, 83, 84}, 0, {882, -34}, {0x29, 0x50, 0x5A, 0xFF}}},
+	{{{134, 98, 25}, 0, {208, 130}, {0x56, 0x32, 0x4F, 0xFF}}},
+	{{{80, 90, 76}, 0, {872, 548}, {0xDE, 0x5B, 0x52, 0xFF}}},
+	{{{84, 107, 31}, 0, {338, 674}, {0xA4, 0x1A, 0x54, 0xFF}}},
+	{{{58, 96, 30}, 0, {426, 966}, {0xC0, 0x6B, 0x19, 0xFF}}},
+	{{{71, 105, 0}, 0, {54, 908}, {0x88, 0x29, 0xFF, 0xFF}}},
+	{{{-3, 45, 40}, 0, {876, 1074}, {0x94, 0x1B, 0x3D, 0xFF}}},
+	{{{79, 39, 98}, 0, {1280, 422}, {0xDD, 0x1C, 0x77, 0xFF}}},
+	{{{71, 105, 0}, 0, {34, 884}, {0x88, 0x29, 0xFF, 0xFF}}},
+	{{{84, 107, -30}, 0, {324, 668}, {0xA5, 0x1A, 0xAC, 0xFF}}},
+	{{{58, 96, -29}, 0, {378, 982}, {0xC0, 0x6B, 0xE7, 0xFF}}},
+	{{{80, 90, -75}, 0, {840, 592}, {0xDE, 0x5A, 0xAE, 0xFF}}},
+	{{{112, 103, -33}, 0, {346, 328}, {0x15, 0x0E, 0x84, 0xFF}}},
+	{{{129, 83, -83}, 0, {906, -20}, {0x28, 0x4F, 0xA6, 0xFF}}},
+	{{{134, 98, -24}, 0, {258, 84}, {0x56, 0x32, 0xB1, 0xFF}}},
+	{{{79, 39, -96}, 0, {1234, 502}, {0xDC, 0x1D, 0x8A, 0xFF}}},
+	{{{-3, 45, -39}, 0, {790, 1146}, {0x94, 0x1B, 0xC2, 0xFF}}},
+};
+
+Gfx boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_2[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_vtx_2 + 0, 18, 0),
+	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
+	gsSP2Triangles(0, 4, 3, 0, 5, 3, 4, 0),
+	gsSP2Triangles(5, 4, 6, 0, 7, 3, 5, 0),
+	gsSP2Triangles(8, 3, 7, 0, 3, 8, 1, 0),
+	gsSP2Triangles(9, 10, 11, 0, 10, 12, 11, 0),
+	gsSP2Triangles(12, 10, 13, 0, 12, 13, 14, 0),
+	gsSP2Triangles(14, 13, 15, 0, 14, 16, 12, 0),
+	gsSP2Triangles(17, 12, 16, 0, 11, 12, 17, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_vtx_3[37] = {
+	{{{237, 87, 32}, 0, {757, 716}, {0x52, 0x52, 0x34, 0xFF}}},
+	{{{195, 27, 95}, 0, {1263, 1050}, {0x01, 0x46, 0x6A, 0xFF}}},
+	{{{294, 56, 70}, 0, {1045, 136}, {0x48, 0x41, 0x52, 0xFF}}},
+	{{{314, 79, 0}, 0, {485, -32}, {0x5E, 0x56, 0x00, 0xFF}}},
+	{{{237, 87, -31}, 0, {245, 720}, {0x52, 0x52, 0xCC, 0xFF}}},
+	{{{294, 56, -69}, 0, {-65, 142}, {0x47, 0x41, 0xAE, 0xFF}}},
+	{{{195, 27, -94}, 0, {-245, 1060}, {0x00, 0x45, 0x96, 0xFF}}},
+	{{{195, 27, 95}, 0, {-16, -16}, {0x01, 0x46, 0x6A, 0xFF}}},
+	{{{215, 126, 66}, 0, {-16, -16}, {0xE9, 0x58, 0x59, 0xFF}}},
+	{{{217, 85, 39}, 0, {-16, -16}, {0xA4, 0x57, 0x0B, 0xFF}}},
+	{{{237, 87, 32}, 0, {-16, -16}, {0x52, 0x52, 0x34, 0xFF}}},
+	{{{224, 149, 0}, 0, {-16, -16}, {0xFD, 0x7F, 0x00, 0xFF}}},
+	{{{237, 87, -31}, 0, {-16, -16}, {0x52, 0x52, 0xCC, 0xFF}}},
+	{{{215, 126, -65}, 0, {-16, -16}, {0xE9, 0x58, 0xA7, 0xFF}}},
+	{{{195, 27, -94}, 0, {-16, -16}, {0x00, 0x45, 0x96, 0xFF}}},
+	{{{217, 85, -38}, 0, {-16, -16}, {0xA4, 0x57, 0xF5, 0xFF}}},
+	{{{229, -12, 134}, 0, {-16, -16}, {0x23, 0x06, 0x7A, 0xFF}}},
+	{{{294, 56, 70}, 0, {-16, -16}, {0x48, 0x41, 0x52, 0xFF}}},
+	{{{313, -6, 42}, 0, {-16, -16}, {0x71, 0xD3, 0x25, 0xFF}}},
+	{{{206, -95, 75}, 0, {-16, -16}, {0x4A, 0xA7, 0x34, 0xFF}}},
+	{{{173, -62, 124}, 0, {-16, -16}, {0xEA, 0xD7, 0x76, 0xFF}}},
+	{{{163, -17, 111}, 0, {-16, -16}, {0xEE, 0x1F, 0x7A, 0xFF}}},
+	{{{134, -60, 86}, 0, {-16, -16}, {0xC7, 0xBF, 0x5D, 0xFF}}},
+	{{{107, -109, 52}, 0, {-16, -16}, {0xC1, 0xAD, 0x48, 0xFF}}},
+	{{{120, -144, 51}, 0, {-16, -16}, {0xBE, 0xA0, 0x32, 0xFF}}},
+	{{{120, -144, -50}, 0, {-16, -16}, {0xBE, 0xA0, 0xCE, 0xFF}}},
+	{{{107, -109, -51}, 0, {-16, -16}, {0xC1, 0xAD, 0xB8, 0xFF}}},
+	{{{173, -62, -123}, 0, {-16, -16}, {0xEA, 0xD7, 0x8A, 0xFF}}},
+	{{{134, -60, -85}, 0, {-16, -16}, {0xC7, 0xBF, 0xA3, 0xFF}}},
+	{{{163, -18, -109}, 0, {-16, -16}, {0xEE, 0x1F, 0x86, 0xFF}}},
+	{{{229, -12, -133}, 0, {-16, -16}, {0x22, 0x06, 0x86, 0xFF}}},
+	{{{294, 56, -69}, 0, {-16, -16}, {0x47, 0x41, 0xAE, 0xFF}}},
+	{{{313, -6, -41}, 0, {-16, -16}, {0x71, 0xD3, 0xDB, 0xFF}}},
+	{{{314, 79, 0}, 0, {-16, -16}, {0x5E, 0x56, 0x00, 0xFF}}},
+	{{{206, -95, -74}, 0, {-16, -16}, {0x4A, 0xA7, 0xCC, 0xFF}}},
+	{{{164, -145, 49}, 0, {-16, -16}, {0x2C, 0x90, 0x29, 0xFF}}},
+	{{{164, -145, -48}, 0, {-16, -16}, {0x2C, 0x90, 0xD7, 0xFF}}},
+};
+
+Gfx boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_3[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_vtx_3 + 0, 37, 0),
+	gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
+	gsSP2Triangles(3, 4, 0, 0, 3, 5, 4, 0),
+	gsSP2Triangles(5, 6, 4, 0, 7, 8, 9, 0),
+	gsSP2Triangles(10, 8, 7, 0, 10, 11, 8, 0),
+	gsSP2Triangles(12, 11, 10, 0, 13, 11, 12, 0),
+	gsSP2Triangles(13, 12, 14, 0, 15, 13, 14, 0),
+	gsSP2Triangles(15, 11, 13, 0, 15, 9, 11, 0),
+	gsSP2Triangles(8, 11, 9, 0, 16, 17, 7, 0),
+	gsSP2Triangles(17, 16, 18, 0, 18, 16, 19, 0),
+	gsSP2Triangles(20, 19, 16, 0, 21, 20, 16, 0),
+	gsSP2Triangles(16, 7, 21, 0, 22, 20, 21, 0),
+	gsSP2Triangles(22, 23, 20, 0, 20, 23, 24, 0),
+	gsSP2Triangles(24, 23, 25, 0, 23, 26, 25, 0),
+	gsSP2Triangles(25, 26, 27, 0, 28, 27, 26, 0),
+	gsSP2Triangles(29, 27, 28, 0, 30, 27, 29, 0),
+	gsSP2Triangles(14, 30, 29, 0, 14, 31, 30, 0),
+	gsSP2Triangles(32, 30, 31, 0, 31, 33, 32, 0),
+	gsSP2Triangles(32, 33, 18, 0, 18, 33, 17, 0),
+	gsSP2Triangles(32, 18, 19, 0, 34, 32, 19, 0),
+	gsSP2Triangles(34, 19, 35, 0, 20, 35, 19, 0),
+	gsSP2Triangles(24, 35, 20, 0, 25, 35, 24, 0),
+	gsSP2Triangles(25, 36, 35, 0, 27, 36, 25, 0),
+	gsSP2Triangles(34, 36, 27, 0, 30, 34, 27, 0),
+	gsSP2Triangles(34, 30, 32, 0, 35, 36, 34, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_vtx_4[19] = {
+	{{{107, -109, 52}, 0, {-16, -16}, {0xC1, 0xAD, 0x48, 0xFF}}},
+	{{{134, -60, 86}, 0, {-16, -16}, {0xC7, 0xBF, 0x5D, 0xFF}}},
+	{{{97, -51, 77}, 0, {-16, -16}, {0xD2, 0xC2, 0x65, 0xFF}}},
+	{{{71, -116, 60}, 0, {-16, -16}, {0x28, 0x97, 0x3A, 0xFF}}},
+	{{{41, -86, 87}, 0, {-16, -16}, {0xDB, 0xFD, 0x79, 0xFF}}},
+	{{{26, -38, 36}, 0, {-16, -16}, {0x8A, 0xEC, 0x2B, 0xFF}}},
+	{{{19, -89, 59}, 0, {-16, -16}, {0x86, 0xE8, 0x19, 0xFF}}},
+	{{{40, -85, 0}, 0, {-16, -16}, {0x9E, 0xAF, 0x01, 0xFF}}},
+	{{{48, -118, 36}, 0, {-16, -16}, {0xE0, 0x91, 0xCB, 0xFF}}},
+	{{{107, -109, -51}, 0, {-16, -16}, {0xC1, 0xAD, 0xB8, 0xFF}}},
+	{{{48, -118, -35}, 0, {-16, -16}, {0xE0, 0x91, 0x36, 0xFF}}},
+	{{{19, -89, -58}, 0, {-16, -16}, {0x86, 0xE8, 0xE7, 0xFF}}},
+	{{{26, -38, -35}, 0, {-16, -16}, {0x8A, 0xEC, 0xD5, 0xFF}}},
+	{{{41, -86, -86}, 0, {-16, -16}, {0xDB, 0xFD, 0x87, 0xFF}}},
+	{{{97, -51, -76}, 0, {-16, -16}, {0xD2, 0xC2, 0x9B, 0xFF}}},
+	{{{71, -116, -59}, 0, {-16, -16}, {0x28, 0x97, 0xC6, 0xFF}}},
+	{{{134, -60, -85}, 0, {-16, -16}, {0xC7, 0xBF, 0xA3, 0xFF}}},
+	{{{47, -122, -67}, 0, {-16, -16}, {0xE6, 0x92, 0xC6, 0xFF}}},
+	{{{47, -122, 68}, 0, {-16, -16}, {0xE6, 0x92, 0x3A, 0xFF}}},
+};
+
+Gfx boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_4[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_vtx_4 + 0, 19, 0),
+	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
+	gsSP2Triangles(2, 4, 3, 0, 4, 2, 5, 0),
+	gsSP2Triangles(5, 6, 4, 0, 6, 5, 7, 0),
+	gsSP2Triangles(7, 8, 6, 0, 7, 0, 8, 0),
+	gsSP2Triangles(7, 9, 0, 0, 7, 10, 9, 0),
+	gsSP2Triangles(11, 10, 7, 0, 7, 12, 11, 0),
+	gsSP2Triangles(13, 11, 12, 0, 12, 14, 13, 0),
+	gsSP2Triangles(15, 13, 14, 0, 14, 9, 15, 0),
+	gsSP2Triangles(14, 16, 9, 0, 10, 15, 9, 0),
+	gsSP2Triangles(10, 17, 15, 0, 11, 17, 10, 0),
+	gsSP2Triangles(13, 17, 11, 0, 17, 13, 15, 0),
+	gsSP2Triangles(3, 8, 0, 0, 3, 18, 8, 0),
+	gsSP2Triangles(4, 18, 3, 0, 6, 18, 4, 0),
+	gsSP1Triangle(8, 18, 6, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_vtx_0[12] = {
+	{{{135, 44, 95}, 0, {-86, 684}, {0x00, 0x1E, 0x7B, 0xFF}}},
+	{{{79, 39, 98}, 0, {102, 1318}, {0x05, 0x11, 0x7E, 0xFF}}},
+	{{{80, -5, 104}, 0, {826, 1194}, {0xFF, 0x19, 0x7D, 0xFF}}},
+	{{{126, -28, 112}, 0, {1134, 566}, {0xF8, 0x1E, 0x7B, 0xFF}}},
+	{{{162, -17, 112}, 0, {900, 168}, {0xFE, 0x21, 0x7B, 0xFF}}},
+	{{{196, 27, 96}, 0, {74, -74}, {0x08, 0x26, 0x79, 0xFF}}},
+	{{{162, -18, -110}, 0, {900, 168}, {0x00, 0x20, 0x85, 0xFF}}},
+	{{{135, 44, -94}, 0, {-86, 684}, {0x01, 0x1D, 0x84, 0xFF}}},
+	{{{196, 27, -95}, 0, {74, -74}, {0x08, 0x23, 0x86, 0xFF}}},
+	{{{126, -28, -111}, 0, {1134, 566}, {0xFA, 0x1E, 0x85, 0xFF}}},
+	{{{80, -5, -103}, 0, {826, 1194}, {0xFF, 0x19, 0x83, 0xFF}}},
+	{{{79, 39, -97}, 0, {102, 1318}, {0x05, 0x11, 0x82, 0xFF}}},
+};
+
+Gfx boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_tri_0[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_vtx_0 + 0, 12, 0),
+	gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
+	gsSP2Triangles(3, 4, 0, 0, 5, 0, 4, 0),
+	gsSP2Triangles(6, 7, 8, 0, 9, 7, 6, 0),
+	gsSP2Triangles(7, 9, 10, 0, 10, 11, 7, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_vtx_1[7] = {
+	{{{237, 88, 32}, 0, {757, 716}, {0x0C, 0x75, 0x30, 0xFF}}},
+	{{{195, 28, 95}, 0, {1263, 1050}, {0xFA, 0x5E, 0x55, 0xFF}}},
+	{{{294, 57, 70}, 0, {1045, 136}, {0x0E, 0x6B, 0x43, 0xFF}}},
+	{{{314, 80, 0}, 0, {485, -32}, {0x1B, 0x7C, 0x00, 0xFF}}},
+	{{{237, 88, -31}, 0, {245, 720}, {0x0C, 0x75, 0xD0, 0xFF}}},
+	{{{294, 57, -69}, 0, {-65, 142}, {0x0E, 0x6B, 0xBD, 0xFF}}},
+	{{{195, 28, -94}, 0, {-245, 1060}, {0xFA, 0x5E, 0xAB, 0xFF}}},
+};
+
+Gfx boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_tri_1[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_vtx_1 + 0, 7, 0),
+	gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
+	gsSP2Triangles(3, 4, 0, 0, 3, 5, 4, 0),
+	gsSP1Triangle(5, 6, 4, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0[52] = {
 	{{{157, 27, 95}, 0, {-16, -16}, {0xF5, 0x34, 0x73, 0xFF}}},
 	{{{124, -17, 111}, 0, {-16, -16}, {0x00, 0x0E, 0x7E, 0xFF}}},
 	{{{181, -9, 116}, 0, {-16, -16}, {0x28, 0x04, 0x78, 0xFF}}},
@@ -6773,8 +7256,8 @@ Vtx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	{{{248, 104, -43}, 0, {-16, -16}, {0x6A, 0x33, 0xD0, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 0, 52, 0),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 0, 52, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(4, 3, 1, 0, 5, 3, 4, 0),
 	gsSP2Triangles(5, 4, 6, 0, 7, 5, 6, 0),
@@ -6822,7 +7305,7 @@ Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1[79] = {
+Vtx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1[79] = {
 	{{{157, 27, 95}, 0, {6, -84}, {0xF5, 0x34, 0x73, 0xFF}}},
 	{{{97, 44, 94}, 0, {-90, 710}, {0x0C, 0x29, 0x78, 0xFF}}},
 	{{{124, -17, 111}, 0, {906, 106}, {0x00, 0x0E, 0x7E, 0xFF}}},
@@ -6904,8 +7387,8 @@ Vtx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	{{{52, 178, 0}, 0, {-16, -16}, {0xE8, 0x7D, 0x00, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1 + 0, 64, 0),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(4, 3, 1, 0, 1, 5, 4, 0),
 	gsSP2Triangles(6, 7, 8, 0, 8, 9, 6, 0),
@@ -6940,7 +7423,7 @@ Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	gsSP2Triangles(61, 49, 50, 0, 62, 61, 50, 0),
 	gsSP2Triangles(50, 52, 62, 0, 52, 63, 62, 0),
 	gsSP1Triangle(54, 63, 52, 0),
-	gsSPVertex(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1 + 64, 15, 0),
+	gsSPVertex(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1 + 64, 15, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 3, 4, 5, 0),
 	gsSP2Triangles(6, 3, 5, 0, 5, 7, 6, 0),
@@ -6954,7 +7437,7 @@ Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2[13] = {
+Vtx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2[13] = {
 	{{{179, 85, -38}, 0, {150, -54}, {0x27, 0x79, 0x00, 0xFF}}},
 	{{{147, 96, 0}, 0, {464, 211}, {0x27, 0x79, 0x00, 0xFF}}},
 	{{{179, 85, 39}, 0, {767, -69}, {0x27, 0x79, 0x00, 0xFF}}},
@@ -6970,8 +7453,8 @@ Vtx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	{{{103, 82, -69}, 0, {-73, 362}, {0x2A, 0x63, 0xBC, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2 + 0, 13, 0),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2 + 0, 13, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
 	gsSP2Triangles(5, 6, 3, 0, 6, 7, 3, 0),
 	gsSP2Triangles(7, 8, 3, 0, 9, 8, 7, 0),
@@ -6980,7 +7463,7 @@ Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_3[18] = {
+Vtx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_3[18] = {
 	{{{73, 103, 34}, 0, {326, 352}, {0x15, 0x0E, 0x7C, 0xFF}}},
 	{{{90, 83, 84}, 0, {882, -34}, {0x29, 0x50, 0x5A, 0xFF}}},
 	{{{95, 98, 25}, 0, {208, 130}, {0x56, 0x32, 0x4F, 0xFF}}},
@@ -7001,8 +7484,8 @@ Vtx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	{{{-41, 45, -39}, 0, {790, 1146}, {0x94, 0x1B, 0xC2, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_3 + 0, 18, 0),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_3 + 0, 18, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(0, 4, 3, 0, 5, 3, 4, 0),
 	gsSP2Triangles(5, 4, 6, 0, 7, 3, 5, 0),
@@ -7014,7 +7497,7 @@ Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_vtx_0[12] = {
+Vtx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_vtx_0[12] = {
 	{{{97, 44, 95}, 0, {-86, 684}, {0x00, 0x1E, 0x7B, 0xFF}}},
 	{{{40, 39, 98}, 0, {102, 1318}, {0x05, 0x11, 0x7E, 0xFF}}},
 	{{{41, -5, 104}, 0, {826, 1194}, {0xFF, 0x19, 0x7D, 0xFF}}},
@@ -7029,8 +7512,8 @@ Vtx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	{{{41, 39, -97}, 0, {102, 1318}, {0x05, 0x11, 0x82, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_vtx_0 + 0, 12, 0),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_vtx_0 + 0, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
 	gsSP2Triangles(3, 4, 0, 0, 5, 0, 4, 0),
 	gsSP2Triangles(6, 7, 8, 0, 9, 7, 6, 0),
@@ -7038,7 +7521,7 @@ Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Left_Arm_Color_mesh_layer_1_vtx_0[20] = {
+Vtx boomie_luigi_Small_Switch_Left_Arm_Color_mesh_layer_1_vtx_0[20] = {
 	{{{5, -42, -5}, 0, {-16, -16}, {0xD8, 0x88, 0xFD, 0xFF}}},
 	{{{-9, -26, -5}, 0, {-16, -16}, {0x8E, 0xC8, 0xFD, 0xFF}}},
 	{{{-8, -9, -27}, 0, {-16, -16}, {0x90, 0xF1, 0xC6, 0xFF}}},
@@ -7061,8 +7544,8 @@ Vtx lunkclassic_Small_Switch_Left_Arm_Color_mesh_layer_1_vtx_0[20] = {
 	{{{68, 12, 9}, 0, {-16, -16}, {0x71, 0x2D, 0x26, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Left_Arm_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Left_Arm_Color_mesh_layer_1_vtx_0 + 0, 20, 0),
+Gfx boomie_luigi_Small_Switch_Left_Arm_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Left_Arm_Color_mesh_layer_1_vtx_0 + 0, 20, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 0, 5, 4, 0),
 	gsSP2Triangles(0, 6, 5, 0, 0, 2, 6, 0),
@@ -7084,7 +7567,7 @@ Gfx lunkclassic_Small_Switch_Left_Arm_Color_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Left_Forearm_mesh_layer_1_vtx_0[16] = {
+Vtx boomie_luigi_Small_Switch_Left_Forearm_mesh_layer_1_vtx_0[16] = {
 	{{{-2, 21, -21}, 0, {-16, -16}, {0xE0, 0x67, 0xBD, 0xFF}}},
 	{{{-14, 13, -15}, 0, {-16, -16}, {0x96, 0x3D, 0xDD, 0xFF}}},
 	{{{-14, 11, 10}, 0, {-16, -16}, {0x96, 0x37, 0x2B, 0xFF}}},
@@ -7103,8 +7586,8 @@ Vtx lunkclassic_Small_Switch_Left_Forearm_mesh_layer_1_vtx_0[16] = {
 	{{{46, -17, 22}, 0, {-16, -16}, {0x40, 0xD8, 0x66, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Left_Forearm_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Left_Forearm_mesh_layer_1_vtx_0 + 0, 16, 0),
+Gfx boomie_luigi_Small_Switch_Left_Forearm_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Left_Forearm_mesh_layer_1_vtx_0 + 0, 16, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 0, 5, 4, 0),
 	gsSP2Triangles(0, 6, 5, 0, 0, 2, 6, 0),
@@ -7122,7 +7605,7 @@ Gfx lunkclassic_Small_Switch_Left_Forearm_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Left_Hand_DL_mesh_layer_1_vtx_0[28] = {
+Vtx boomie_luigi_Small_Switch_Left_Hand_DL_mesh_layer_1_vtx_0[28] = {
 	{{{-14, 28, -40}, 0, {-16, -16}, {0xCC, 0x39, 0x9B, 0xFF}}},
 	{{{-19, -16, -3}, 0, {-16, -16}, {0x8B, 0xCE, 0x03, 0xFF}}},
 	{{{-23, 48, 10}, 0, {-16, -16}, {0x82, 0xF5, 0x0E, 0xFF}}},
@@ -7153,8 +7636,8 @@ Vtx lunkclassic_Small_Switch_Left_Hand_DL_mesh_layer_1_vtx_0[28] = {
 	{{{2, -7, 40}, 0, {-16, -16}, {0x99, 0xD2, 0x3A, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Left_Hand_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Left_Hand_DL_mesh_layer_1_vtx_0 + 0, 28, 0),
+Gfx boomie_luigi_Small_Switch_Left_Hand_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Left_Hand_DL_mesh_layer_1_vtx_0 + 0, 28, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 0, 7, 6, 0),
@@ -7181,7 +7664,7 @@ Gfx lunkclassic_Small_Switch_Left_Hand_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Right_Arm_Color_mesh_layer_1_vtx_0[20] = {
+Vtx boomie_luigi_Small_Switch_Right_Arm_Color_mesh_layer_1_vtx_0[20] = {
 	{{{58, 17, 27}, 0, {-16, -16}, {0x36, 0x59, 0x48, 0xFF}}},
 	{{{67, 10, 21}, 0, {-16, -16}, {0x6F, 0x32, 0x25, 0xFF}}},
 	{{{67, 11, -4}, 0, {-16, -16}, {0x6F, 0x33, 0xDF, 0xFF}}},
@@ -7204,8 +7687,8 @@ Vtx lunkclassic_Small_Switch_Right_Arm_Color_mesh_layer_1_vtx_0[20] = {
 	{{{-9, -13, 30}, 0, {-16, -16}, {0x91, 0xEE, 0x3C, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Right_Arm_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Right_Arm_Color_mesh_layer_1_vtx_0 + 0, 20, 0),
+Gfx boomie_luigi_Small_Switch_Right_Arm_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Right_Arm_Color_mesh_layer_1_vtx_0 + 0, 20, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(0, 6, 5, 0, 0, 7, 6, 0),
@@ -7227,7 +7710,7 @@ Gfx lunkclassic_Small_Switch_Right_Arm_Color_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Right_Forearm_mesh_layer_1_vtx_0[16] = {
+Vtx boomie_luigi_Small_Switch_Right_Forearm_mesh_layer_1_vtx_0[16] = {
 	{{{-2, -18, 38}, 0, {-16, -16}, {0xDC, 0xD6, 0x72, 0xFF}}},
 	{{{-14, -14, 28}, 0, {-16, -16}, {0x93, 0xED, 0x3E, 0xFF}}},
 	{{{-3, -39, 6}, 0, {-16, -16}, {0xD8, 0x88, 0xF9, 0xFF}}},
@@ -7246,8 +7729,8 @@ Vtx lunkclassic_Small_Switch_Right_Forearm_mesh_layer_1_vtx_0[16] = {
 	{{{48, 15, -7}, 0, {-16, -16}, {0x43, 0x5B, 0xC5, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Right_Forearm_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Right_Forearm_mesh_layer_1_vtx_0 + 0, 16, 0),
+Gfx boomie_luigi_Small_Switch_Right_Forearm_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Right_Forearm_mesh_layer_1_vtx_0 + 0, 16, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 5, 4, 0, 0),
 	gsSP2Triangles(6, 5, 0, 0, 6, 0, 2, 0),
@@ -7265,7 +7748,7 @@ Gfx lunkclassic_Small_Switch_Right_Forearm_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Right_Hand_DL_mesh_layer_1_vtx_0[28] = {
+Vtx boomie_luigi_Small_Switch_Right_Hand_DL_mesh_layer_1_vtx_0[28] = {
 	{{{11, -42, 43}, 0, {-16, -16}, {0xFB, 0xB1, 0x63, 0xFF}}},
 	{{{23, -63, -6}, 0, {-16, -16}, {0x75, 0xD3, 0xEC, 0xFF}}},
 	{{{30, -44, -3}, 0, {-16, -16}, {0x3D, 0x9A, 0xD4, 0xFF}}},
@@ -7296,8 +7779,8 @@ Vtx lunkclassic_Small_Switch_Right_Hand_DL_mesh_layer_1_vtx_0[28] = {
 	{{{90, 16, 55}, 0, {-16, -16}, {0x45, 0x2D, 0x61, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Right_Hand_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Right_Hand_DL_mesh_layer_1_vtx_0 + 0, 28, 0),
+Gfx boomie_luigi_Small_Switch_Right_Hand_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Right_Hand_DL_mesh_layer_1_vtx_0 + 0, 28, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 1, 3, 0),
 	gsSP2Triangles(3, 4, 2, 0, 5, 4, 3, 0),
 	gsSP2Triangles(3, 6, 5, 0, 5, 6, 7, 0),
@@ -7324,7 +7807,7 @@ Gfx lunkclassic_Small_Switch_Right_Hand_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Left_Leg_mesh_layer_1_vtx_0[12] = {
+Vtx boomie_luigi_Small_Switch_Left_Leg_mesh_layer_1_vtx_0[12] = {
 	{{{8, 44, 33}, 0, {-16, -16}, {0xC4, 0x5C, 0x40, 0xFF}}},
 	{{{65, -11, 54}, 0, {-16, -16}, {0x39, 0xDB, 0x6B, 0xFF}}},
 	{{{68, 45, 37}, 0, {-16, -16}, {0x40, 0x57, 0x43, 0xFF}}},
@@ -7339,8 +7822,8 @@ Vtx lunkclassic_Small_Switch_Left_Leg_mesh_layer_1_vtx_0[12] = {
 	{{{66, -11, -36}, 0, {-16, -16}, {0x3B, 0xDB, 0x95, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Left_Leg_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Left_Leg_mesh_layer_1_vtx_0 + 0, 12, 0),
+Gfx boomie_luigi_Small_Switch_Left_Leg_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Left_Leg_mesh_layer_1_vtx_0 + 0, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 5, 4, 0, 0),
 	gsSP2Triangles(6, 5, 0, 0, 0, 2, 6, 0),
@@ -7354,34 +7837,34 @@ Gfx lunkclassic_Small_Switch_Left_Leg_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Left_Shoe_mesh_layer_1_vtx_0[23] = {
-	{{{-17, 61, 70}, 0, {-16, -16}, {0x2D, 0x77, 0xFE, 0xFF}}},
-	{{{-50, 73, -2}, 0, {-16, -16}, {0x2E, 0x76, 0xFE, 0xFF}}},
-	{{{-52, 74, 38}, 0, {-16, -16}, {0x2C, 0x77, 0xFF, 0xFF}}},
-	{{{-18, 60, -30}, 0, {-16, -16}, {0x2D, 0x77, 0xFE, 0xFF}}},
-	{{{88, 22, 80}, 0, {-16, -16}, {0x2C, 0x77, 0xFE, 0xFF}}},
-	{{{86, 21, -41}, 0, {-16, -16}, {0x2C, 0x77, 0xFE, 0xFF}}},
-	{{{126, 8, 49}, 0, {-16, -16}, {0x2B, 0x77, 0xFE, 0xFF}}},
-	{{{126, 7, -16}, 0, {-16, -16}, {0x2B, 0x77, 0xFE, 0xFF}}},
-	{{{48, -17, -31}, 0, {-16, -16}, {0xFB, 0xB5, 0x99, 0xFF}}},
-	{{{-18, 60, -30}, 0, {-16, -16}, {0xCF, 0xFE, 0x8B, 0xFF}}},
-	{{{86, 21, -41}, 0, {-16, -16}, {0x13, 0xD0, 0x8C, 0xFF}}},
-	{{{-45, 10, -17}, 0, {-16, -16}, {0xB5, 0xCB, 0xA8, 0xFF}}},
+Vtx boomie_luigi_Small_Switch_Left_Shoe_mesh_layer_1_vtx_0[23] = {
+	{{{-16, 73, 70}, 0, {-16, -16}, {0x2D, 0x77, 0xFE, 0xFF}}},
+	{{{-49, 85, -2}, 0, {-16, -16}, {0x2E, 0x76, 0xFE, 0xFF}}},
+	{{{-51, 86, 38}, 0, {-16, -16}, {0x2C, 0x77, 0xFF, 0xFF}}},
+	{{{-17, 72, -30}, 0, {-16, -16}, {0x2D, 0x77, 0xFE, 0xFF}}},
+	{{{89, 34, 80}, 0, {-16, -16}, {0x2C, 0x77, 0xFE, 0xFF}}},
+	{{{87, 33, -41}, 0, {-16, -16}, {0x2C, 0x77, 0xFE, 0xFF}}},
+	{{{127, 20, 49}, 0, {-16, -16}, {0x2B, 0x77, 0xFE, 0xFF}}},
+	{{{127, 19, -16}, 0, {-16, -16}, {0x2B, 0x77, 0xFE, 0xFF}}},
+	{{{48, -17, -31}, 0, {-16, -16}, {0xFF, 0xB7, 0x98, 0xFF}}},
+	{{{-17, 72, -30}, 0, {-16, -16}, {0xCE, 0x00, 0x8B, 0xFF}}},
+	{{{87, 33, -41}, 0, {-16, -16}, {0x15, 0xD9, 0x89, 0xFF}}},
+	{{{-45, 10, -17}, 0, {-16, -16}, {0xB5, 0xCC, 0xA8, 0xFF}}},
 	{{{28, -44, 21}, 0, {-16, -16}, {0xE4, 0x84, 0xFC, 0xFF}}},
-	{{{90, -39, 16}, 0, {-16, -16}, {0x36, 0x8D, 0xF9, 0xFF}}},
-	{{{126, 7, -16}, 0, {-16, -16}, {0x49, 0xAA, 0xC6, 0xFF}}},
-	{{{126, 8, 49}, 0, {-16, -16}, {0x4E, 0xAC, 0x37, 0xFF}}},
-	{{{47, -24, 71}, 0, {-16, -16}, {0x00, 0xB0, 0x63, 0xFF}}},
-	{{{88, 22, 80}, 0, {-16, -16}, {0x1C, 0xD2, 0x73, 0xFF}}},
-	{{{-17, 61, 70}, 0, {-16, -16}, {0xD1, 0x03, 0x76, 0xFF}}},
+	{{{90, -39, 16}, 0, {-16, -16}, {0x3D, 0x91, 0xF9, 0xFF}}},
+	{{{127, 19, -16}, 0, {-16, -16}, {0x52, 0xB5, 0xC3, 0xFF}}},
+	{{{127, 20, 49}, 0, {-16, -16}, {0x56, 0xB6, 0x39, 0xFF}}},
+	{{{47, -24, 71}, 0, {-16, -16}, {0x03, 0xB1, 0x64, 0xFF}}},
+	{{{89, 34, 80}, 0, {-16, -16}, {0x1D, 0xDA, 0x76, 0xFF}}},
+	{{{-16, 73, 70}, 0, {-16, -16}, {0xCF, 0x04, 0x75, 0xFF}}},
 	{{{-44, 11, 60}, 0, {-16, -16}, {0xB3, 0xCF, 0x58, 0xFF}}},
-	{{{-52, 74, 38}, 0, {-16, -16}, {0x8E, 0x1A, 0x31, 0xFF}}},
+	{{{-51, 86, 38}, 0, {-16, -16}, {0x8D, 0x18, 0x31, 0xFF}}},
 	{{{-68, 15, 17}, 0, {-16, -16}, {0x89, 0xD3, 0xFC, 0xFF}}},
-	{{{-50, 73, -2}, 0, {-16, -16}, {0x91, 0x19, 0xC7, 0xFF}}},
+	{{{-49, 85, -2}, 0, {-16, -16}, {0x91, 0x17, 0xC7, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Left_Shoe_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Left_Shoe_mesh_layer_1_vtx_0 + 0, 23, 0),
+Gfx boomie_luigi_Small_Switch_Left_Shoe_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Left_Shoe_mesh_layer_1_vtx_0 + 0, 23, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 5, 3, 0),
 	gsSP2Triangles(4, 6, 5, 0, 6, 7, 5, 0),
@@ -7398,7 +7881,7 @@ Gfx lunkclassic_Small_Switch_Left_Shoe_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Right_Leg_mesh_layer_1_vtx_0[12] = {
+Vtx boomie_luigi_Small_Switch_Right_Leg_mesh_layer_1_vtx_0[12] = {
 	{{{9, 46, -33}, 0, {-16, -16}, {0xC6, 0x5F, 0xC3, 0xFF}}},
 	{{{-13, 10, -9}, 0, {-16, -16}, {0x81, 0x08, 0x02, 0xFF}}},
 	{{{9, 44, 16}, 0, {-16, -16}, {0xC6, 0x5A, 0x45, 0xFF}}},
@@ -7413,8 +7896,8 @@ Vtx lunkclassic_Small_Switch_Right_Leg_mesh_layer_1_vtx_0[12] = {
 	{{{83, 4, -10}, 0, {-16, -16}, {0x7F, 0xF8, 0x00, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Right_Leg_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Right_Leg_mesh_layer_1_vtx_0 + 0, 12, 0),
+Gfx boomie_luigi_Small_Switch_Right_Leg_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Right_Leg_mesh_layer_1_vtx_0 + 0, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 5, 4, 0, 0),
 	gsSP2Triangles(6, 5, 0, 0, 0, 2, 6, 0),
@@ -7428,34 +7911,34 @@ Gfx lunkclassic_Small_Switch_Right_Leg_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx lunkclassic_Small_Switch_Right_Shoe_DL_mesh_layer_1_vtx_0[23] = {
-	{{{84, 24, 40}, 0, {-16, -16}, {0x2A, 0x78, 0x00, 0xFF}}},
-	{{{125, 10, 16}, 0, {-16, -16}, {0x2B, 0x78, 0x01, 0xFF}}},
-	{{{126, 10, -50}, 0, {-16, -16}, {0x2A, 0x78, 0x00, 0xFF}}},
-	{{{88, 23, -79}, 0, {-16, -16}, {0x2A, 0x78, 0x00, 0xFF}}},
-	{{{-21, 61, 27}, 0, {-16, -16}, {0x2A, 0x78, 0x00, 0xFF}}},
-	{{{-17, 60, -73}, 0, {-16, -16}, {0x2A, 0x78, 0x00, 0xFF}}},
-	{{{-51, 71, -2}, 0, {-16, -16}, {0x2A, 0x78, 0x00, 0xFF}}},
-	{{{-54, 73, -42}, 0, {-16, -16}, {0x2B, 0x77, 0x01, 0xFF}}},
-	{{{125, 10, 16}, 0, {-16, -16}, {0x4A, 0xAD, 0x3D, 0xFF}}},
-	{{{84, 24, 40}, 0, {-16, -16}, {0x12, 0xD4, 0x76, 0xFF}}},
-	{{{48, -16, 30}, 0, {-16, -16}, {0xFD, 0xB7, 0x68, 0xFF}}},
-	{{{-21, 61, 27}, 0, {-16, -16}, {0xCD, 0x00, 0x74, 0xFF}}},
+Vtx boomie_luigi_Small_Switch_Right_Shoe_DL_mesh_layer_1_vtx_0[23] = {
+	{{{86, 36, 40}, 0, {-16, -16}, {0x2A, 0x78, 0x00, 0xFF}}},
+	{{{126, 22, 16}, 0, {-16, -16}, {0x2B, 0x78, 0x01, 0xFF}}},
+	{{{127, 22, -50}, 0, {-16, -16}, {0x2A, 0x78, 0x00, 0xFF}}},
+	{{{89, 35, -79}, 0, {-16, -16}, {0x2A, 0x78, 0x00, 0xFF}}},
+	{{{-19, 73, 27}, 0, {-16, -16}, {0x2A, 0x78, 0x00, 0xFF}}},
+	{{{-16, 72, -73}, 0, {-16, -16}, {0x2A, 0x78, 0x00, 0xFF}}},
+	{{{-50, 84, -2}, 0, {-16, -16}, {0x2A, 0x78, 0x00, 0xFF}}},
+	{{{-52, 85, -42}, 0, {-16, -16}, {0x2B, 0x77, 0x01, 0xFF}}},
+	{{{126, 22, 16}, 0, {-16, -16}, {0x52, 0xB7, 0x40, 0xFF}}},
+	{{{86, 36, 40}, 0, {-16, -16}, {0x13, 0xDD, 0x78, 0xFF}}},
+	{{{48, -16, 30}, 0, {-16, -16}, {0x00, 0xB9, 0x69, 0xFF}}},
+	{{{-19, 73, 27}, 0, {-16, -16}, {0xCC, 0x02, 0x74, 0xFF}}},
 	{{{-47, 10, 15}, 0, {-16, -16}, {0xB4, 0xCD, 0x58, 0xFF}}},
-	{{{-51, 71, -2}, 0, {-16, -16}, {0x91, 0x19, 0x38, 0xFF}}},
-	{{{-68, 14, -19}, 0, {-16, -16}, {0x8A, 0xD2, 0x04, 0xFF}}},
-	{{{-54, 73, -42}, 0, {-16, -16}, {0x8D, 0x17, 0xCE, 0xFF}}},
-	{{{-44, 10, -62}, 0, {-16, -16}, {0xB4, 0xCD, 0xA9, 0xFF}}},
-	{{{-17, 60, -73}, 0, {-16, -16}, {0xD2, 0x00, 0x8A, 0xFF}}},
-	{{{47, -24, -72}, 0, {-16, -16}, {0x02, 0xAF, 0x9E, 0xFF}}},
-	{{{88, 23, -79}, 0, {-16, -16}, {0x1E, 0xD4, 0x8D, 0xFF}}},
-	{{{126, 10, -50}, 0, {-16, -16}, {0x50, 0xAD, 0xCB, 0xFF}}},
-	{{{90, -37, -16}, 0, {-16, -16}, {0x38, 0x8F, 0x09, 0xFF}}},
+	{{{-50, 84, -2}, 0, {-16, -16}, {0x90, 0x17, 0x37, 0xFF}}},
+	{{{-68, 14, -19}, 0, {-16, -16}, {0x8A, 0xD1, 0x04, 0xFF}}},
+	{{{-52, 85, -42}, 0, {-16, -16}, {0x8D, 0x16, 0xCF, 0xFF}}},
+	{{{-44, 10, -62}, 0, {-16, -16}, {0xB4, 0xCD, 0xA8, 0xFF}}},
+	{{{-16, 72, -73}, 0, {-16, -16}, {0xD1, 0x02, 0x8A, 0xFF}}},
+	{{{47, -24, -72}, 0, {-16, -16}, {0x05, 0xB0, 0x9D, 0xFF}}},
+	{{{89, 35, -79}, 0, {-16, -16}, {0x20, 0xDB, 0x8B, 0xFF}}},
+	{{{127, 22, -50}, 0, {-16, -16}, {0x58, 0xB7, 0xC9, 0xFF}}},
+	{{{90, -37, -16}, 0, {-16, -16}, {0x3F, 0x92, 0x09, 0xFF}}},
 	{{{28, -44, -20}, 0, {-16, -16}, {0xE6, 0x84, 0x06, 0xFF}}},
 };
 
-Gfx lunkclassic_Small_Switch_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lunkclassic_Small_Switch_Right_Shoe_DL_mesh_layer_1_vtx_0 + 0, 23, 0),
+Gfx boomie_luigi_Small_Switch_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(boomie_luigi_Small_Switch_Right_Shoe_DL_mesh_layer_1_vtx_0 + 0, 23, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 0, 3, 0, 4, 3, 5, 0),
 	gsSP2Triangles(6, 4, 5, 0, 7, 6, 5, 0),
@@ -7473,13 +7956,13 @@ Gfx lunkclassic_Small_Switch_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
 };
 
 
-Gfx mat_lunkclassic_body_v3[] = {
+Gfx mat_boomie_luigi_body_v3[] = {
 	gsSPCopyLightsPlayerPart(PANTS),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, lunkclassic_mario_button_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, boomie_luigi_mario_button_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -7487,19 +7970,19 @@ Gfx mat_lunkclassic_body_v3[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_body_v3[] = {
+Gfx mat_revert_boomie_luigi_body_v3[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_metal_v3_001[] = {
-	gsSPSetLights1(lunkclassic_metal_v3_001_lights),
+Gfx mat_boomie_luigi_metal_v3_001[] = {
+	gsSPSetLights1(boomie_luigi_metal_v3_001_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, lunkclassic_metal_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, boomie_luigi_metal_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 2047, 128),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
@@ -7507,13 +7990,13 @@ Gfx mat_lunkclassic_metal_v3_001[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_metal_v3_001[] = {
+Gfx mat_revert_boomie_luigi_metal_v3_001[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_shirt_v3[] = {
+Gfx mat_boomie_luigi_shirt_v3[] = {
 	gsSPCopyLightsPlayerPart(SHIRT),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -7522,19 +8005,19 @@ Gfx mat_lunkclassic_shirt_v3[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_shirt_v3[] = {
+Gfx mat_revert_boomie_luigi_shirt_v3[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_face_0___eye_open_v3_001[] = {
+Gfx mat_boomie_luigi_face_0___eye_open_v3_001[] = {
 	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, lunkclassic_mario_face_1_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, boomie_luigi_mario_face_1_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -7542,19 +8025,19 @@ Gfx mat_lunkclassic_face_0___eye_open_v3_001[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_face_0___eye_open_v3_001[] = {
+Gfx mat_revert_boomie_luigi_face_0___eye_open_v3_001[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_mustache_v3_001[] = {
+Gfx mat_boomie_luigi_mustache_v3_001[] = {
 	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, lunkclassic_luigimutache_ia8),
+	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, boomie_luigi_luigimutache_ia8),
 	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 511, 512),
 	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -7562,13 +8045,13 @@ Gfx mat_lunkclassic_mustache_v3_001[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_mustache_v3_001[] = {
+Gfx mat_revert_boomie_luigi_mustache_v3_001[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_hair_v3_001[] = {
+Gfx mat_boomie_luigi_hair_v3_001[] = {
 	gsSPCopyLightsPlayerPart(HAIR),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -7577,23 +8060,23 @@ Gfx mat_lunkclassic_hair_v3_001[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_hair_v3_001[] = {
+Gfx mat_revert_boomie_luigi_hair_v3_001[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_sideburns_v3_001[] = {
+Gfx mat_boomie_luigi_sideburns_v3_001[] = {
 	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsDPSetTextureLUT(G_TT_RGBA16),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, lunkclassic_luigisideubnr_pal_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, boomie_luigi_luigisideubnr_pal_rgba16),
 	gsDPSetTile(0, 0, 0, 256, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadTLUTCmd(5, 33),
-	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 1, lunkclassic_luigisideubnr_ci8),
+	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 1, boomie_luigi_luigisideubnr_ci8),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 511, 512),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -7601,20 +8084,20 @@ Gfx mat_lunkclassic_sideburns_v3_001[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_sideburns_v3_001[] = {
+Gfx mat_revert_boomie_luigi_sideburns_v3_001[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_cap_v3[] = {
+Gfx mat_boomie_luigi_cap_v3[] = {
 	gsSPCopyLightsPlayerPart(CAP),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, lunkclassic_coopemblem_ia8),
+	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, boomie_luigi_coopemblem_ia8),
 	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 511, 512),
 	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -7622,19 +8105,19 @@ Gfx mat_lunkclassic_cap_v3[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_cap_v3[] = {
+Gfx mat_revert_boomie_luigi_cap_v3[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_face_1___eye_half_v3_001[] = {
+Gfx mat_boomie_luigi_face_1___eye_half_v3_001[] = {
 	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, lunkclassic_mario_face_2_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, boomie_luigi_mario_face_2_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -7642,19 +8125,19 @@ Gfx mat_lunkclassic_face_1___eye_half_v3_001[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_face_1___eye_half_v3_001[] = {
+Gfx mat_revert_boomie_luigi_face_1___eye_half_v3_001[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_face_2___eye_closed_v3_001[] = {
+Gfx mat_boomie_luigi_face_2___eye_closed_v3_001[] = {
 	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, lunkclassic_mario_face_3_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, boomie_luigi_mario_face_3_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -7662,19 +8145,19 @@ Gfx mat_lunkclassic_face_2___eye_closed_v3_001[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_face_2___eye_closed_v3_001[] = {
+Gfx mat_revert_boomie_luigi_face_2___eye_closed_v3_001[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_face_7___eye_X_v3_001[] = {
+Gfx mat_boomie_luigi_face_7___eye_X_v3_001[] = {
 	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, lunkclassic_mario_face_4_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, boomie_luigi_mario_face_4_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -7682,13 +8165,13 @@ Gfx mat_lunkclassic_face_7___eye_X_v3_001[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_face_7___eye_X_v3_001[] = {
+Gfx mat_revert_boomie_luigi_face_7___eye_X_v3_001[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_gloves_v3_001[] = {
+Gfx mat_boomie_luigi_gloves_v3_001[] = {
 	gsSPCopyLightsPlayerPart(GLOVES),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -7697,14 +8180,14 @@ Gfx mat_lunkclassic_gloves_v3_001[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_gloves_v3_001[] = {
+Gfx mat_revert_boomie_luigi_gloves_v3_001[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_cap_inside[] = {
-	gsSPSetLights1(lunkclassic_cap_inside_lights),
+Gfx mat_boomie_luigi_cap_inside[] = {
+	gsSPSetLights1(boomie_luigi_cap_inside_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -7712,14 +8195,14 @@ Gfx mat_lunkclassic_cap_inside[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_cap_inside[] = {
+Gfx mat_revert_boomie_luigi_cap_inside[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Wing_Tip[] = {
-	gsSPSetLights1(lunkclassic_Wing_Tip_lights),
+Gfx mat_boomie_luigi_Wing_Tip[] = {
+	gsSPSetLights1(boomie_luigi_Wing_Tip_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -7727,14 +8210,14 @@ Gfx mat_lunkclassic_Wing_Tip[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Wing_Tip[] = {
+Gfx mat_revert_boomie_luigi_Wing_Tip[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Wing_Base[] = {
-	gsSPSetLights1(lunkclassic_Wing_Base_lights),
+Gfx mat_boomie_luigi_Wing_Base[] = {
+	gsSPSetLights1(boomie_luigi_Wing_Base_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -7742,13 +8225,13 @@ Gfx mat_lunkclassic_Wing_Base[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Wing_Base[] = {
+Gfx mat_revert_boomie_luigi_Wing_Base[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_shoes_v3_001[] = {
+Gfx mat_boomie_luigi_shoes_v3_001[] = {
 	gsSPCopyLightsPlayerPart(SHOES),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -7757,14 +8240,14 @@ Gfx mat_lunkclassic_shoes_v3_001[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_shoes_v3_001[] = {
+Gfx mat_revert_boomie_luigi_shoes_v3_001[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Pants__PANTS_[] = {
-	gsSPSetLights1(lunkclassic_Pants__PANTS__lights),
+Gfx mat_boomie_luigi_Pants__PANTS_[] = {
+	gsSPCopyLightsPlayerPart(PANTS),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -7772,14 +8255,14 @@ Gfx mat_lunkclassic_Pants__PANTS_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Pants__PANTS_[] = {
+Gfx mat_revert_boomie_luigi_Pants__PANTS_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Shirt__SHIRT_[] = {
-	gsSPSetLights1(lunkclassic_Shirt__SHIRT__lights),
+Gfx mat_boomie_luigi_Shirt__SHIRT_[] = {
+	gsSPCopyLightsPlayerPart(SHIRT),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -7787,19 +8270,19 @@ Gfx mat_lunkclassic_Shirt__SHIRT_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Shirt__SHIRT_[] = {
+Gfx mat_revert_boomie_luigi_Shirt__SHIRT_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Buttons__PANTS_[] = {
-	gsSPSetLights1(lunkclassic_Buttons__PANTS__lights),
+Gfx mat_boomie_luigi_Buttons__PANTS_[] = {
+	gsSPCopyLightsPlayerPart(PANTS),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, lunkclassic_mario_overalls_button_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, boomie_luigi_mario_overalls_button_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -7807,14 +8290,14 @@ Gfx mat_lunkclassic_Buttons__PANTS_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Buttons__PANTS_[] = {
+Gfx mat_revert_boomie_luigi_Buttons__PANTS_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Hair__HAIR_[] = {
-	gsSPSetLights1(lunkclassic_Hair__HAIR__lights),
+Gfx mat_boomie_luigi_Skin__SKIN_[] = {
+	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -7822,14 +8305,54 @@ Gfx mat_lunkclassic_Hair__HAIR_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Hair__HAIR_[] = {
+Gfx mat_revert_boomie_luigi_Skin__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Skin__SKIN_[] = {
-	gsSPSetLights1(lunkclassic_Skin__SKIN__lights),
+Gfx mat_boomie_luigi_Open_Eyes__SKIN_[] = {
+	gsSPCopyLightsPlayerPart(SKIN),
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsDPSetAlphaDither(G_AD_NOISE),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, boomie_luigi_lil_saul_ia8),
+	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(7, 0, 0, 511, 512),
+	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
+	gsDPSetTileSize(0, 0, 0, 124, 124),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_revert_boomie_luigi_Open_Eyes__SKIN_[] = {
+	gsDPPipeSync(),
+	gsDPSetAlphaDither(G_AD_DISABLE),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_boomie_luigi_Mustache_Vanilla__SKIN_[] = {
+	gsSPCopyLightsPlayerPart(SKIN),
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsDPSetAlphaDither(G_AD_NOISE),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, boomie_luigi_luigimutache_ia8_copy),
+	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(7, 0, 0, 511, 512),
+	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
+	gsDPSetTileSize(0, 0, 0, 124, 124),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_revert_boomie_luigi_Mustache_Vanilla__SKIN_[] = {
+	gsDPPipeSync(),
+	gsDPSetAlphaDither(G_AD_DISABLE),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_boomie_luigi_Cap__CAP_[] = {
+	gsSPCopyLightsPlayerPart(CAP),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -7837,63 +8360,38 @@ Gfx mat_lunkclassic_Skin__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Skin__SKIN_[] = {
+Gfx mat_revert_boomie_luigi_Cap__CAP_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Open_Eyes__SKIN_[] = {
-	gsSPSetLights1(lunkclassic_Open_Eyes__SKIN__lights),
+Gfx mat_boomie_luigi_Hair__HAIR_[] = {
+	gsSPCopyLightsPlayerPart(HAIR),
 	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, lunkclassic_lil_saul_ia8),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 511, 512),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Open_Eyes__SKIN_[] = {
+Gfx mat_revert_boomie_luigi_Hair__HAIR_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Mustache_Vanilla__SKIN_[] = {
-	gsSPSetLights1(lunkclassic_Mustache_Vanilla__SKIN__lights),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsDPSetAlphaDither(G_AD_NOISE),
-	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, lunkclassic_luigimutache_ia8_copy),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 511, 512),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_lunkclassic_Mustache_Vanilla__SKIN_[] = {
-	gsDPPipeSync(),
-	gsDPSetAlphaDither(G_AD_DISABLE),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_lunkclassic_Sideburns__HAIR_[] = {
+Gfx mat_boomie_luigi_Sideburns__HAIR_[] = {
 	gsSPClearGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsDPSetTextureLUT(G_TT_RGBA16),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, lunkclassic_luigisideburn_pal_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, boomie_luigi_luigisideburn_pal_rgba16),
 	gsDPSetTile(0, 0, 0, 256, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadTLUTCmd(5, 29),
-	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 1, lunkclassic_luigisideburn_ci8),
+	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 1, boomie_luigi_luigisideburn_ci8),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 511, 512),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -7901,7 +8399,7 @@ Gfx mat_lunkclassic_Sideburns__HAIR_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Sideburns__HAIR_[] = {
+Gfx mat_revert_boomie_luigi_Sideburns__HAIR_[] = {
 	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
@@ -7909,13 +8407,13 @@ Gfx mat_revert_lunkclassic_Sideburns__HAIR_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Half_Closed_Eyes__SKIN_[] = {
-	gsSPSetLights1(lunkclassic_Half_Closed_Eyes__SKIN__lights),
+Gfx mat_boomie_luigi_Logo__EMBLEM_[] = {
+	gsSPClearGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, lunkclassic_lil_saul_ia8),
+	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, boomie_luigi_garbanzo_ia8),
 	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 511, 512),
 	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -7923,19 +8421,40 @@ Gfx mat_lunkclassic_Half_Closed_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Half_Closed_Eyes__SKIN_[] = {
+Gfx mat_revert_boomie_luigi_Logo__EMBLEM_[] = {
+	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Closed_Eyes__SKIN_[] = {
-	gsSPSetLights1(lunkclassic_Closed_Eyes__SKIN__lights),
+Gfx mat_boomie_luigi_Half_Closed_Eyes__SKIN_[] = {
+	gsSPSetLights1(boomie_luigi_Half_Closed_Eyes__SKIN__lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, lunkclassic_mario_eyes_closed_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, boomie_luigi_lil_saul_ia8),
+	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(7, 0, 0, 511, 512),
+	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
+	gsDPSetTileSize(0, 0, 0, 124, 124),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_revert_boomie_luigi_Half_Closed_Eyes__SKIN_[] = {
+	gsDPPipeSync(),
+	gsDPSetAlphaDither(G_AD_DISABLE),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_boomie_luigi_Closed_Eyes__SKIN_[] = {
+	gsSPSetLights1(boomie_luigi_Closed_Eyes__SKIN__lights),
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsDPSetAlphaDither(G_AD_NOISE),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, boomie_luigi_mario_eyes_closed_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -7943,19 +8462,19 @@ Gfx mat_lunkclassic_Closed_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Closed_Eyes__SKIN_[] = {
+Gfx mat_revert_boomie_luigi_Closed_Eyes__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Left_Eyes__SKIN_[] = {
-	gsSPSetLights1(lunkclassic_Left_Eyes__SKIN__lights),
+Gfx mat_boomie_luigi_Left_Eyes__SKIN_[] = {
+	gsSPSetLights1(boomie_luigi_Left_Eyes__SKIN__lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, lunkclassic_mario_eyes_left_unused_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, boomie_luigi_mario_eyes_left_unused_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -7963,19 +8482,19 @@ Gfx mat_lunkclassic_Left_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Left_Eyes__SKIN_[] = {
+Gfx mat_revert_boomie_luigi_Left_Eyes__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Right_Eyes__SKIN_[] = {
-	gsSPSetLights1(lunkclassic_Right_Eyes__SKIN__lights),
+Gfx mat_boomie_luigi_Right_Eyes__SKIN_[] = {
+	gsSPSetLights1(boomie_luigi_Right_Eyes__SKIN__lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, lunkclassic_mario_eyes_right_unused_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, boomie_luigi_mario_eyes_right_unused_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -7983,19 +8502,19 @@ Gfx mat_lunkclassic_Right_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Right_Eyes__SKIN_[] = {
+Gfx mat_revert_boomie_luigi_Right_Eyes__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Up_Eyes__SKIN_[] = {
-	gsSPSetLights1(lunkclassic_Up_Eyes__SKIN__lights),
+Gfx mat_boomie_luigi_Up_Eyes__SKIN_[] = {
+	gsSPSetLights1(boomie_luigi_Up_Eyes__SKIN__lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, lunkclassic_mario_eyes_up_unused_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, boomie_luigi_mario_eyes_up_unused_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -8003,19 +8522,19 @@ Gfx mat_lunkclassic_Up_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Up_Eyes__SKIN_[] = {
+Gfx mat_revert_boomie_luigi_Up_Eyes__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Down_Eyes__SKIN_[] = {
-	gsSPSetLights1(lunkclassic_Down_Eyes__SKIN__lights),
+Gfx mat_boomie_luigi_Down_Eyes__SKIN_[] = {
+	gsSPSetLights1(boomie_luigi_Down_Eyes__SKIN__lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, lunkclassic_mario_eyes_down_unused_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, boomie_luigi_mario_eyes_down_unused_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -8023,19 +8542,19 @@ Gfx mat_lunkclassic_Down_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Down_Eyes__SKIN_[] = {
+Gfx mat_revert_boomie_luigi_Down_Eyes__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Dead_Eyes__SKIN_[] = {
-	gsSPSetLights1(lunkclassic_Dead_Eyes__SKIN__lights),
+Gfx mat_boomie_luigi_Dead_Eyes__SKIN_[] = {
+	gsSPSetLights1(boomie_luigi_Dead_Eyes__SKIN__lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, lunkclassic_mario_eyes_dead_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, boomie_luigi_mario_eyes_dead_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -8043,14 +8562,14 @@ Gfx mat_lunkclassic_Dead_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Dead_Eyes__SKIN_[] = {
+Gfx mat_revert_boomie_luigi_Dead_Eyes__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Gloves__GLOVES_[] = {
-	gsSPSetLights1(lunkclassic_Gloves__GLOVES__lights),
+Gfx mat_boomie_luigi_Gloves__GLOVES_[] = {
+	gsSPCopyLightsPlayerPart(GLOVES),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -8058,14 +8577,14 @@ Gfx mat_lunkclassic_Gloves__GLOVES_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Gloves__GLOVES_[] = {
+Gfx mat_revert_boomie_luigi_Gloves__GLOVES_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lunkclassic_Shoes__SHOES_[] = {
-	gsSPSetLights1(lunkclassic_Shoes__SHOES__lights),
+Gfx mat_boomie_luigi_Shoes__SHOES_[] = {
+	gsSPCopyLightsPlayerPart(SHOES),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -8073,841 +8592,947 @@ Gfx mat_lunkclassic_Shoes__SHOES_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lunkclassic_Shoes__SHOES_[] = {
+Gfx mat_revert_boomie_luigi_Shoes__SHOES_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_body_v3),
-	gsSPDisplayList(lunkclassic_000_offset_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_body_v3),
-	gsSPEndDisplayList(),
-};
-
-Gfx lunkclassic_000_offset_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_000_offset_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
-	gsSPEndDisplayList(),
-};
-
-Gfx lunkclassic_000_offset_001_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_body_v3),
-	gsSPDisplayList(lunkclassic_000_offset_001_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_body_v3),
-	gsSPDisplayList(mat_lunkclassic_shirt_v3),
-	gsSPDisplayList(lunkclassic_000_offset_001_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_shirt_v3),
-	gsSPEndDisplayList(),
-};
-
-Gfx lunkclassic_000_offset_001_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_000_offset_001_mesh_layer_1_tri_0),
-	gsSPDisplayList(lunkclassic_000_offset_001_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
-	gsSPEndDisplayList(),
-};
-
-Gfx lunkclassic_000_displaylist_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_face_0___eye_open_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_face_0___eye_open_v3_001),
-	gsSPDisplayList(mat_lunkclassic_mustache_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_mustache_v3_001),
-	gsSPDisplayList(mat_lunkclassic_hair_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_hair_v3_001),
-	gsSPDisplayList(mat_lunkclassic_sideburns_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_sideburns_v3_001),
-	gsSPDisplayList(mat_lunkclassic_cap_v3),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_4),
-	gsSPDisplayList(mat_revert_lunkclassic_cap_v3),
-	gsSPEndDisplayList(),
-};
-
-Gfx lunkclassic_000_displaylist_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_0),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_1),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_2),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_3),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_4),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
-	gsSPEndDisplayList(),
-};
-
-Gfx lunkclassic_000_displaylist_mesh_layer_1_mat_override_face_1___eye_half_v3_001_1[] = {
-	gsSPDisplayList(mat_lunkclassic_face_1___eye_half_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_face_1___eye_half_v3_001),
-	gsSPDisplayList(mat_lunkclassic_mustache_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_mustache_v3_001),
-	gsSPDisplayList(mat_lunkclassic_hair_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_hair_v3_001),
-	gsSPDisplayList(mat_lunkclassic_sideburns_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_sideburns_v3_001),
-	gsSPDisplayList(mat_lunkclassic_cap_v3),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_4),
-	gsSPDisplayList(mat_revert_lunkclassic_cap_v3),
-	gsSPEndDisplayList(),
-};
-
-Gfx lunkclassic_000_displaylist_mesh_layer_1_mat_override_face_2___eye_closed_v3_001_2[] = {
-	gsSPDisplayList(mat_lunkclassic_face_2___eye_closed_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_face_2___eye_closed_v3_001),
-	gsSPDisplayList(mat_lunkclassic_mustache_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_mustache_v3_001),
-	gsSPDisplayList(mat_lunkclassic_hair_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_hair_v3_001),
-	gsSPDisplayList(mat_lunkclassic_sideburns_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_sideburns_v3_001),
-	gsSPDisplayList(mat_lunkclassic_cap_v3),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_4),
-	gsSPDisplayList(mat_revert_lunkclassic_cap_v3),
-	gsSPEndDisplayList(),
-};
-
-Gfx lunkclassic_000_displaylist_mesh_layer_1_mat_override_face_7___eye_X_v3_001_3[] = {
-	gsSPDisplayList(mat_lunkclassic_face_7___eye_X_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_face_7___eye_X_v3_001),
-	gsSPDisplayList(mat_lunkclassic_mustache_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_mustache_v3_001),
-	gsSPDisplayList(mat_lunkclassic_hair_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_hair_v3_001),
-	gsSPDisplayList(mat_lunkclassic_sideburns_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_sideburns_v3_001),
-	gsSPDisplayList(mat_lunkclassic_cap_v3),
-	gsSPDisplayList(lunkclassic_000_displaylist_mesh_layer_1_tri_4),
-	gsSPDisplayList(mat_revert_lunkclassic_cap_v3),
-	gsSPEndDisplayList(),
-};
-
-Gfx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_hair_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_hair_v3_001),
-	gsSPDisplayList(mat_lunkclassic_face_0___eye_open_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_face_0___eye_open_v3_001),
-	gsSPDisplayList(mat_lunkclassic_sideburns_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_sideburns_v3_001),
-	gsSPDisplayList(mat_lunkclassic_mustache_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_mustache_v3_001),
+Gfx boomie_luigi_000_offset_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_body_v3),
+	gsSPDisplayList(boomie_luigi_000_offset_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_body_v3),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_000_offset_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_000_offset_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_000_offset_001_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_body_v3),
+	gsSPDisplayList(boomie_luigi_000_offset_001_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_body_v3),
+	gsSPDisplayList(mat_boomie_luigi_shirt_v3),
+	gsSPDisplayList(boomie_luigi_000_offset_001_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_shirt_v3),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_000_offset_001_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_000_offset_001_mesh_layer_1_tri_0),
+	gsSPDisplayList(boomie_luigi_000_offset_001_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_000_displaylist_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_face_0___eye_open_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_face_0___eye_open_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_mustache_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_mustache_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_hair_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_hair_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_sideburns_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_sideburns_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_cap_v3),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_boomie_luigi_cap_v3),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_000_displaylist_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_0),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_1),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_2),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_3),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_000_displaylist_mesh_layer_1_mat_override_face_1___eye_half_v3_001_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_face_1___eye_half_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_face_1___eye_half_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_mustache_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_mustache_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_hair_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_hair_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_sideburns_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_sideburns_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_cap_v3),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_boomie_luigi_cap_v3),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_000_displaylist_mesh_layer_1_mat_override_face_2___eye_closed_v3_001_2[] = {
+	gsSPDisplayList(mat_boomie_luigi_face_2___eye_closed_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_face_2___eye_closed_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_mustache_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_mustache_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_hair_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_hair_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_sideburns_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_sideburns_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_cap_v3),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_boomie_luigi_cap_v3),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_000_displaylist_mesh_layer_1_mat_override_face_7___eye_X_v3_001_3[] = {
+	gsSPDisplayList(mat_boomie_luigi_face_7___eye_X_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_face_7___eye_X_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_mustache_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_mustache_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_hair_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_hair_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_sideburns_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_sideburns_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_cap_v3),
+	gsSPDisplayList(boomie_luigi_000_displaylist_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_boomie_luigi_cap_v3),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_hair_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_hair_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_face_0___eye_open_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_face_0___eye_open_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_sideburns_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_sideburns_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_mustache_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_mustache_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_0),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_1),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_2),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_0),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_1),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_2),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_mat_override_face_1___eye_half_v3_001_1[] = {
-	gsSPDisplayList(mat_lunkclassic_hair_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_hair_v3_001),
-	gsSPDisplayList(mat_lunkclassic_face_1___eye_half_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_face_1___eye_half_v3_001),
-	gsSPDisplayList(mat_lunkclassic_sideburns_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_sideburns_v3_001),
-	gsSPDisplayList(mat_lunkclassic_mustache_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_mustache_v3_001),
+Gfx boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_mat_override_face_1___eye_half_v3_001_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_hair_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_hair_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_face_1___eye_half_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_face_1___eye_half_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_sideburns_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_sideburns_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_mustache_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_mustache_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_mat_override_face_2___eye_closed_v3_001_2[] = {
-	gsSPDisplayList(mat_lunkclassic_hair_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_hair_v3_001),
-	gsSPDisplayList(mat_lunkclassic_face_2___eye_closed_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_face_2___eye_closed_v3_001),
-	gsSPDisplayList(mat_lunkclassic_sideburns_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_sideburns_v3_001),
-	gsSPDisplayList(mat_lunkclassic_mustache_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_mustache_v3_001),
+Gfx boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_mat_override_face_2___eye_closed_v3_001_2[] = {
+	gsSPDisplayList(mat_boomie_luigi_hair_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_hair_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_face_2___eye_closed_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_face_2___eye_closed_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_sideburns_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_sideburns_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_mustache_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_mustache_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_mat_override_face_7___eye_X_v3_001_3[] = {
-	gsSPDisplayList(mat_lunkclassic_hair_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_hair_v3_001),
-	gsSPDisplayList(mat_lunkclassic_face_7___eye_X_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_face_7___eye_X_v3_001),
-	gsSPDisplayList(mat_lunkclassic_sideburns_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_sideburns_v3_001),
-	gsSPDisplayList(mat_lunkclassic_mustache_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_head__no_cap__mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_mustache_v3_001),
+Gfx boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_mat_override_face_7___eye_X_v3_001_3[] = {
+	gsSPDisplayList(mat_boomie_luigi_hair_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_hair_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_face_7___eye_X_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_face_7___eye_X_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_sideburns_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_sideburns_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_mustache_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_head__no_cap__mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_mustache_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_003_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_shirt_v3),
-	gsSPDisplayList(lunkclassic_000_offset_003_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_shirt_v3),
+Gfx boomie_luigi_000_offset_003_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_shirt_v3),
+	gsSPDisplayList(boomie_luigi_000_offset_003_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_shirt_v3),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_003_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_000_offset_003_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_000_offset_003_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_000_offset_003_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_004_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_shirt_v3),
-	gsSPDisplayList(lunkclassic_000_offset_004_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_shirt_v3),
+Gfx boomie_luigi_000_offset_004_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_shirt_v3),
+	gsSPDisplayList(boomie_luigi_000_offset_004_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_shirt_v3),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_004_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_000_offset_004_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_000_offset_004_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_000_offset_004_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_displaylist_003_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_gloves_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_003_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_gloves_v3_001),
+Gfx boomie_luigi_000_displaylist_003_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_gloves_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_003_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_gloves_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_displaylist_003_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_003_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_000_displaylist_003_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_003_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_002_switch_option_right_hand_open_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_gloves_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_right_hand_open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_gloves_v3_001),
+Gfx boomie_luigi_002_switch_option_right_hand_open_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_gloves_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_right_hand_open_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_gloves_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_002_switch_option_right_hand_open_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_right_hand_open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_002_switch_option_right_hand_open_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_right_hand_open_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_006_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_shirt_v3),
-	gsSPDisplayList(lunkclassic_000_offset_006_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_shirt_v3),
+Gfx boomie_luigi_000_offset_006_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_shirt_v3),
+	gsSPDisplayList(boomie_luigi_000_offset_006_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_shirt_v3),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_006_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_000_offset_006_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_000_offset_006_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_000_offset_006_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_007_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_shirt_v3),
-	gsSPDisplayList(lunkclassic_000_offset_007_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_shirt_v3),
+Gfx boomie_luigi_000_offset_007_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_shirt_v3),
+	gsSPDisplayList(boomie_luigi_000_offset_007_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_shirt_v3),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_007_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_000_offset_007_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_000_offset_007_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_000_offset_007_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_displaylist_004_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_gloves_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_004_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_gloves_v3_001),
+Gfx boomie_luigi_000_displaylist_004_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_gloves_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_004_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_gloves_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_displaylist_004_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_004_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_000_displaylist_004_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_004_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_002_switch_option_left_hand_open_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_gloves_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_left_hand_open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_gloves_v3_001),
+Gfx boomie_luigi_002_switch_option_left_hand_open_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_gloves_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_left_hand_open_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_gloves_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_002_switch_option_left_hand_open_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_002_switch_option_left_hand_open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_002_switch_option_left_hand_open_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_002_switch_option_left_hand_open_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_004_switch_option_left_hand_peace_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_gloves_v3_001),
-	gsSPDisplayList(lunkclassic_004_switch_option_left_hand_peace_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_gloves_v3_001),
+Gfx boomie_luigi_004_switch_option_left_hand_peace_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_gloves_v3_001),
+	gsSPDisplayList(boomie_luigi_004_switch_option_left_hand_peace_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_gloves_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_004_switch_option_left_hand_peace_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_004_switch_option_left_hand_peace_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_004_switch_option_left_hand_peace_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_004_switch_option_left_hand_peace_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_cap_v3),
-	gsSPDisplayList(lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_cap_v3),
-	gsSPDisplayList(mat_lunkclassic_cap_inside),
-	gsSPDisplayList(lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_cap_inside),
-	gsSPDisplayList(mat_lunkclassic_gloves_v3_001),
-	gsSPDisplayList(lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_gloves_v3_001),
+Gfx boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_cap_v3),
+	gsSPDisplayList(boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_cap_v3),
+	gsSPDisplayList(mat_boomie_luigi_cap_inside),
+	gsSPDisplayList(boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_cap_inside),
+	gsSPDisplayList(mat_boomie_luigi_gloves_v3_001),
+	gsSPDisplayList(boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_gloves_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_tri_1),
-	gsSPDisplayList(lunkclassic_005_switch_option_left_hand_cap_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1_tri_0),
+	gsSPDisplayList(boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1_tri_1),
+	gsSPDisplayList(boomie_luigi_005_switch_option_left_hand_cap_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_cap_v3),
-	gsSPDisplayList(lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_cap_v3),
-	gsSPDisplayList(mat_lunkclassic_cap_inside),
-	gsSPDisplayList(lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_cap_inside),
-	gsSPDisplayList(mat_lunkclassic_gloves_v3_001),
-	gsSPDisplayList(lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_gloves_v3_001),
+Gfx boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_cap_v3),
+	gsSPDisplayList(boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_cap_v3),
+	gsSPDisplayList(mat_boomie_luigi_cap_inside),
+	gsSPDisplayList(boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_cap_inside),
+	gsSPDisplayList(mat_boomie_luigi_gloves_v3_001),
+	gsSPDisplayList(boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_gloves_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_1),
-	gsSPDisplayList(lunkclassic_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_0),
+	gsSPDisplayList(boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_1),
+	gsSPDisplayList(boomie_luigi_006_switch_option_left_hand_wing_cap_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_Wing_Tip),
-	gsSPDisplayList(lunkclassic_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Wing_Tip),
-	gsSPDisplayList(mat_lunkclassic_Wing_Base),
-	gsSPDisplayList(lunkclassic_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_Wing_Base),
+Gfx boomie_luigi_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Wing_Tip),
+	gsSPDisplayList(boomie_luigi_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Wing_Tip),
+	gsSPDisplayList(mat_boomie_luigi_Wing_Base),
+	gsSPDisplayList(boomie_luigi_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_Wing_Base),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_tri_0),
-	gsSPDisplayList(lunkclassic_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_tri_0),
+	gsSPDisplayList(boomie_luigi_006_switch_option_left_hand_wing_cap_wings_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_009_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_body_v3),
-	gsSPDisplayList(lunkclassic_000_offset_009_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_body_v3),
+Gfx boomie_luigi_000_offset_009_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_body_v3),
+	gsSPDisplayList(boomie_luigi_000_offset_009_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_body_v3),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_009_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_000_offset_009_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_000_offset_009_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_000_offset_009_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_010_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_body_v3),
-	gsSPDisplayList(lunkclassic_000_offset_010_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_body_v3),
+Gfx boomie_luigi_000_offset_010_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_body_v3),
+	gsSPDisplayList(boomie_luigi_000_offset_010_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_body_v3),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_010_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_000_offset_010_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_000_offset_010_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_000_offset_010_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_011_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_shoes_v3_001),
-	gsSPDisplayList(lunkclassic_000_offset_011_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_shoes_v3_001),
+Gfx boomie_luigi_000_offset_011_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_shoes_v3_001),
+	gsSPDisplayList(boomie_luigi_000_offset_011_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_shoes_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_011_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_000_offset_011_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_000_offset_011_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_000_offset_011_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_012_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_body_v3),
-	gsSPDisplayList(lunkclassic_000_offset_012_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_body_v3),
+Gfx boomie_luigi_000_offset_012_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_body_v3),
+	gsSPDisplayList(boomie_luigi_000_offset_012_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_body_v3),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_012_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_000_offset_012_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_000_offset_012_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_000_offset_012_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_013_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_body_v3),
-	gsSPDisplayList(lunkclassic_000_offset_013_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_body_v3),
+Gfx boomie_luigi_000_offset_013_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_body_v3),
+	gsSPDisplayList(boomie_luigi_000_offset_013_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_body_v3),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_offset_013_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_000_offset_013_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_000_offset_013_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_000_offset_013_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_displaylist_005_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_shoes_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_005_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_shoes_v3_001),
+Gfx boomie_luigi_000_displaylist_005_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_shoes_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_005_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_shoes_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_000_displaylist_005_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_000_displaylist_005_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_000_displaylist_005_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_000_displaylist_005_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Torso_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_Pants__PANTS_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Torso_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Pants__PANTS_),
-	gsSPDisplayList(mat_lunkclassic_Shirt__SHIRT_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Torso_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_Shirt__SHIRT_),
-	gsSPDisplayList(mat_lunkclassic_Buttons__PANTS_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Torso_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_Buttons__PANTS_),
+Gfx boomie_luigi_Small_Switch_Torso_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Pants__PANTS_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Torso_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Pants__PANTS_),
+	gsSPDisplayList(mat_boomie_luigi_Shirt__SHIRT_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Torso_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_Shirt__SHIRT_),
+	gsSPDisplayList(mat_boomie_luigi_Buttons__PANTS_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Torso_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_Buttons__PANTS_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Torso_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_Small_Switch_Torso_mesh_layer_1_tri_0),
-	gsSPDisplayList(lunkclassic_Small_Switch_Torso_mesh_layer_1_tri_1),
-	gsSPDisplayList(lunkclassic_Small_Switch_Torso_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_Small_Switch_Torso_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Torso_mesh_layer_1_tri_0),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Torso_mesh_layer_1_tri_1),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Torso_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_Hair__HAIR_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Hair__HAIR_),
-	gsSPDisplayList(mat_lunkclassic_Skin__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_Skin__SKIN_),
-	gsSPDisplayList(mat_lunkclassic_Open_Eyes__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_Open_Eyes__SKIN_),
-	gsSPDisplayList(mat_lunkclassic_Mustache_Vanilla__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_Mustache_Vanilla__SKIN_),
+Gfx boomie_luigi_Small_Switch_Head_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Open_Eyes__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_Open_Eyes__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Mustache_Vanilla__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_Mustache_Vanilla__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Cap__CAP_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_Cap__CAP_),
+	gsSPDisplayList(mat_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_boomie_luigi_Hair__HAIR_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__1[] = {
-	gsSPDisplayList(mat_lunkclassic_Hair__HAIR_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Hair__HAIR_),
-	gsSPDisplayList(mat_lunkclassic_Skin__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_Skin__SKIN_),
-	gsSPDisplayList(mat_lunkclassic_Half_Closed_Eyes__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_Half_Closed_Eyes__SKIN_),
-	gsSPDisplayList(mat_lunkclassic_Mustache_Vanilla__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_Mustache_Vanilla__SKIN_),
+Gfx boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_mat_override_face_2___eye_closed_v3_001_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_face_2___eye_closed_v3_001),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_face_2___eye_closed_v3_001),
+	gsSPDisplayList(mat_boomie_luigi_Mustache_Vanilla__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_Mustache_Vanilla__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Cap__CAP_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_Cap__CAP_),
+	gsSPDisplayList(mat_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_boomie_luigi_Hair__HAIR_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Closed_Eyes__SKIN__2[] = {
-	gsSPDisplayList(mat_lunkclassic_Hair__HAIR_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Hair__HAIR_),
-	gsSPDisplayList(mat_lunkclassic_Skin__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_Skin__SKIN_),
-	gsSPDisplayList(mat_lunkclassic_Closed_Eyes__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_Closed_Eyes__SKIN_),
-	gsSPDisplayList(mat_lunkclassic_Mustache_Vanilla__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_Mustache_Vanilla__SKIN_),
+Gfx boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_mat_override_Open_Eyes__SKIN__2[] = {
+	gsSPDisplayList(mat_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Open_Eyes__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_Open_Eyes__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Mustache_Vanilla__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_Mustache_Vanilla__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Cap__CAP_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_Cap__CAP_),
+	gsSPDisplayList(mat_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_boomie_luigi_Hair__HAIR_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Left_Eyes__SKIN__3[] = {
-	gsSPDisplayList(mat_lunkclassic_Hair__HAIR_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Hair__HAIR_),
-	gsSPDisplayList(mat_lunkclassic_Skin__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_Skin__SKIN_),
-	gsSPDisplayList(mat_lunkclassic_Left_Eyes__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_Left_Eyes__SKIN_),
-	gsSPDisplayList(mat_lunkclassic_Mustache_Vanilla__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_Mustache_Vanilla__SKIN_),
+Gfx boomie_luigi_Small_Switch_Head_DL_mesh_layer_4[] = {
+	gsSPDisplayList(mat_boomie_luigi_Sideburns__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Sideburns__HAIR_),
+	gsSPDisplayList(mat_boomie_luigi_Logo__EMBLEM_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_Logo__EMBLEM_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Right_Eyes__SKIN__4[] = {
-	gsSPDisplayList(mat_lunkclassic_Hair__HAIR_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Hair__HAIR_),
-	gsSPDisplayList(mat_lunkclassic_Skin__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_Skin__SKIN_),
-	gsSPDisplayList(mat_lunkclassic_Right_Eyes__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_Right_Eyes__SKIN_),
-	gsSPDisplayList(mat_lunkclassic_Mustache_Vanilla__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_Mustache_Vanilla__SKIN_),
+Gfx boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_tri_0),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Up_Eyes__SKIN__5[] = {
-	gsSPDisplayList(mat_lunkclassic_Hair__HAIR_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Hair__HAIR_),
-	gsSPDisplayList(mat_lunkclassic_Skin__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_Skin__SKIN_),
-	gsSPDisplayList(mat_lunkclassic_Up_Eyes__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_Up_Eyes__SKIN_),
-	gsSPDisplayList(mat_lunkclassic_Mustache_Vanilla__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_Mustache_Vanilla__SKIN_),
+Gfx boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_mat_override_face_2___eye_closed_v3_001_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Sideburns__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Sideburns__HAIR_),
+	gsSPDisplayList(mat_boomie_luigi_Logo__EMBLEM_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_Logo__EMBLEM_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Down_Eyes__SKIN__6[] = {
-	gsSPDisplayList(mat_lunkclassic_Hair__HAIR_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Hair__HAIR_),
-	gsSPDisplayList(mat_lunkclassic_Skin__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_Skin__SKIN_),
-	gsSPDisplayList(mat_lunkclassic_Down_Eyes__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_Down_Eyes__SKIN_),
-	gsSPDisplayList(mat_lunkclassic_Mustache_Vanilla__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_Mustache_Vanilla__SKIN_),
+Gfx boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_mat_override_Open_Eyes__SKIN__2[] = {
+	gsSPDisplayList(mat_boomie_luigi_Sideburns__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Sideburns__HAIR_),
+	gsSPDisplayList(mat_boomie_luigi_Logo__EMBLEM_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Head_DL_mesh_layer_4_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_Logo__EMBLEM_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Dead_Eyes__SKIN__7[] = {
-	gsSPDisplayList(mat_lunkclassic_Hair__HAIR_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Hair__HAIR_),
-	gsSPDisplayList(mat_lunkclassic_Skin__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lunkclassic_Skin__SKIN_),
-	gsSPDisplayList(mat_lunkclassic_Dead_Eyes__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_lunkclassic_Dead_Eyes__SKIN_),
-	gsSPDisplayList(mat_lunkclassic_Mustache_Vanilla__SKIN_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_lunkclassic_Mustache_Vanilla__SKIN_),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(mat_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Open_Eyes__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_Open_Eyes__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Mustache_Vanilla__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_Mustache_Vanilla__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4[] = {
-	gsSPDisplayList(mat_lunkclassic_Sideburns__HAIR_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Sideburns__HAIR_),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(mat_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Half_Closed_Eyes__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_Half_Closed_Eyes__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Mustache_Vanilla__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_Mustache_Vanilla__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Half_Closed_Eyes__SKIN__1[] = {
-	gsSPDisplayList(mat_lunkclassic_Sideburns__HAIR_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Sideburns__HAIR_),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Closed_Eyes__SKIN__2[] = {
+	gsSPDisplayList(mat_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(mat_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Closed_Eyes__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_Closed_Eyes__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Mustache_Vanilla__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_Mustache_Vanilla__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Closed_Eyes__SKIN__2[] = {
-	gsSPDisplayList(mat_lunkclassic_Sideburns__HAIR_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Sideburns__HAIR_),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Left_Eyes__SKIN__3[] = {
+	gsSPDisplayList(mat_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(mat_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Left_Eyes__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_Left_Eyes__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Mustache_Vanilla__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_Mustache_Vanilla__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Left_Eyes__SKIN__3[] = {
-	gsSPDisplayList(mat_lunkclassic_Sideburns__HAIR_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Sideburns__HAIR_),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Right_Eyes__SKIN__4[] = {
+	gsSPDisplayList(mat_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(mat_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Right_Eyes__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_Right_Eyes__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Mustache_Vanilla__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_Mustache_Vanilla__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Right_Eyes__SKIN__4[] = {
-	gsSPDisplayList(mat_lunkclassic_Sideburns__HAIR_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Sideburns__HAIR_),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Up_Eyes__SKIN__5[] = {
+	gsSPDisplayList(mat_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(mat_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Up_Eyes__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_Up_Eyes__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Mustache_Vanilla__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_Mustache_Vanilla__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Up_Eyes__SKIN__5[] = {
-	gsSPDisplayList(mat_lunkclassic_Sideburns__HAIR_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Sideburns__HAIR_),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Down_Eyes__SKIN__6[] = {
+	gsSPDisplayList(mat_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(mat_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Down_Eyes__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_Down_Eyes__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Mustache_Vanilla__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_Mustache_Vanilla__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Down_Eyes__SKIN__6[] = {
-	gsSPDisplayList(mat_lunkclassic_Sideburns__HAIR_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Sideburns__HAIR_),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Dead_Eyes__SKIN__7[] = {
+	gsSPDisplayList(mat_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Hair__HAIR_),
+	gsSPDisplayList(mat_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_boomie_luigi_Skin__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Dead_Eyes__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_boomie_luigi_Dead_Eyes__SKIN_),
+	gsSPDisplayList(mat_boomie_luigi_Mustache_Vanilla__SKIN_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_boomie_luigi_Mustache_Vanilla__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Dead_Eyes__SKIN__7[] = {
-	gsSPDisplayList(mat_lunkclassic_Sideburns__HAIR_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Sideburns__HAIR_),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4[] = {
+	gsSPDisplayList(mat_boomie_luigi_Sideburns__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Sideburns__HAIR_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Left_Arm_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_Shirt__SHIRT_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Left_Arm_Color_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Shirt__SHIRT_),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Left_Arm_Color_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_Small_Switch_Left_Arm_Color_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Half_Closed_Eyes__SKIN__1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Sideburns__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Sideburns__HAIR_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Left_Forearm_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_Shirt__SHIRT_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Left_Forearm_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Shirt__SHIRT_),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Closed_Eyes__SKIN__2[] = {
+	gsSPDisplayList(mat_boomie_luigi_Sideburns__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Sideburns__HAIR_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Left_Forearm_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_Small_Switch_Left_Forearm_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Left_Eyes__SKIN__3[] = {
+	gsSPDisplayList(mat_boomie_luigi_Sideburns__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Sideburns__HAIR_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Left_Hand_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_Gloves__GLOVES_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Left_Hand_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Gloves__GLOVES_),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Right_Eyes__SKIN__4[] = {
+	gsSPDisplayList(mat_boomie_luigi_Sideburns__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Sideburns__HAIR_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Left_Hand_DL_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_Small_Switch_Left_Hand_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Up_Eyes__SKIN__5[] = {
+	gsSPDisplayList(mat_boomie_luigi_Sideburns__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Sideburns__HAIR_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Right_Arm_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_Shirt__SHIRT_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Right_Arm_Color_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Shirt__SHIRT_),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Down_Eyes__SKIN__6[] = {
+	gsSPDisplayList(mat_boomie_luigi_Sideburns__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Sideburns__HAIR_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Right_Arm_Color_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_Small_Switch_Right_Arm_Color_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Dead_Eyes__SKIN__7[] = {
+	gsSPDisplayList(mat_boomie_luigi_Sideburns__HAIR_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Sideburns__HAIR_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Right_Forearm_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_Shirt__SHIRT_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Right_Forearm_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Shirt__SHIRT_),
+Gfx boomie_luigi_Small_Switch_Left_Arm_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Shirt__SHIRT_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Left_Arm_Color_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Shirt__SHIRT_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Right_Forearm_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_Small_Switch_Right_Forearm_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_Small_Switch_Left_Arm_Color_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Left_Arm_Color_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Right_Hand_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_Gloves__GLOVES_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Right_Hand_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Gloves__GLOVES_),
+Gfx boomie_luigi_Small_Switch_Left_Forearm_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Shirt__SHIRT_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Left_Forearm_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Shirt__SHIRT_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Right_Hand_DL_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_Small_Switch_Right_Hand_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_Small_Switch_Left_Forearm_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Left_Forearm_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Left_Leg_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_Pants__PANTS_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Left_Leg_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Pants__PANTS_),
+Gfx boomie_luigi_Small_Switch_Left_Hand_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Gloves__GLOVES_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Left_Hand_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Gloves__GLOVES_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Left_Leg_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_Small_Switch_Left_Leg_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_Small_Switch_Left_Hand_DL_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Left_Hand_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Left_Shoe_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_Shoes__SHOES_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Left_Shoe_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Shoes__SHOES_),
+Gfx boomie_luigi_Small_Switch_Right_Arm_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Shirt__SHIRT_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Right_Arm_Color_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Shirt__SHIRT_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Left_Shoe_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_Small_Switch_Left_Shoe_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_Small_Switch_Right_Arm_Color_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Right_Arm_Color_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Right_Leg_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_Pants__PANTS_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Right_Leg_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Pants__PANTS_),
+Gfx boomie_luigi_Small_Switch_Right_Forearm_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Shirt__SHIRT_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Right_Forearm_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Shirt__SHIRT_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Right_Leg_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_Small_Switch_Right_Leg_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_Small_Switch_Right_Forearm_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Right_Forearm_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Right_Shoe_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lunkclassic_Shoes__SHOES_),
-	gsSPDisplayList(lunkclassic_Small_Switch_Right_Shoe_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_Shoes__SHOES_),
+Gfx boomie_luigi_Small_Switch_Right_Hand_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Gloves__GLOVES_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Right_Hand_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Gloves__GLOVES_),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_Small_Switch_Right_Shoe_DL_mesh_layer_1_mat_override_metal_v3_001_0[] = {
-	gsSPDisplayList(mat_lunkclassic_metal_v3_001),
-	gsSPDisplayList(lunkclassic_Small_Switch_Right_Shoe_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lunkclassic_metal_v3_001),
+Gfx boomie_luigi_Small_Switch_Right_Hand_DL_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Right_Hand_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
 	gsSPEndDisplayList(),
 };
 
-Gfx lunkclassic_material_revert_render_settings[] = {
+Gfx boomie_luigi_Small_Switch_Left_Leg_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Pants__PANTS_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Left_Leg_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Pants__PANTS_),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_Small_Switch_Left_Leg_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Left_Leg_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_Small_Switch_Left_Shoe_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Shoes__SHOES_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Left_Shoe_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Shoes__SHOES_),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_Small_Switch_Left_Shoe_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Left_Shoe_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_Small_Switch_Right_Leg_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Pants__PANTS_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Right_Leg_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Pants__PANTS_),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_Small_Switch_Right_Leg_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Right_Leg_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_Small_Switch_Right_Shoe_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_boomie_luigi_Shoes__SHOES_),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Right_Shoe_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_Shoes__SHOES_),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_Small_Switch_Right_Shoe_DL_mesh_layer_1_mat_override_metal_v3_001_0[] = {
+	gsSPDisplayList(mat_boomie_luigi_metal_v3_001),
+	gsSPDisplayList(boomie_luigi_Small_Switch_Right_Shoe_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_boomie_luigi_metal_v3_001),
+	gsSPEndDisplayList(),
+};
+
+Gfx boomie_luigi_material_revert_render_settings[] = {
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),
