@@ -71,7 +71,7 @@ function act_lunky_projectile_shoot(m)
     local s = gPlayerSyncTable[m.playerIndex]
 
     local handPos = gVec3fZero{}
-    set_character_animation(m, CHAR_ANIM_FIRST_PUNCH)
+    set_character_animation(m, CHAR_ANIM_GROUND_THROW)
 
     if m.actionArg == 0 then
         m.vel.x = 0
@@ -106,7 +106,7 @@ function act_lunky_projectile_shoot(m)
         else
             m.forwardVel = m.forwardVel * 0.5
         end
-    elseif m.actionTimer == 4 and m.playerIndex == 0 and e.fireballs <= 3 then
+    elseif m.actionTimer == 4 and m.playerIndex == 0 and e.fireballs <= 7 then
         spawn_sync_object(id_bhvLunkyGreenball, E_MODEL_NONE, m.pos.x, m.pos.y + 50, m.pos.z, 
         function(proj)
             proj.globalPlayerIndex = m.marioObj.globalPlayerIndex
