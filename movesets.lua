@@ -80,7 +80,7 @@ function act_lunky_projectile_shoot(m)
         perform_ground_step(m)
         if m.actionTimer >= 20 then
             return set_mario_action(m, ACT_IDLE, 0)
-        elseif m.actionTimer >= 7 and m.input & INPUT_B_PRESSED ~= 0 then
+        elseif m.actionTimer >= 5 and m.input & INPUT_B_PRESSED ~= 0 then
             m.actionState = 0
         end
     elseif m.actionArg > 0 then
@@ -91,12 +91,15 @@ function act_lunky_projectile_shoot(m)
         end
     end
 
+    if m.actionTimer == 5 then
+        audio_sample_play(LUNKY_FIREBALL, gMarioStates[0].pos, 1)
+    end
+
     if m.actionState == 0 then
         m.actionTimer = -1
         m.actionState = 1
     end
     if m.actionTimer == 0 then
-        audio_sample_play(LUNKY_FIREBALL, gMarioStates[0].pos, 1)
         set_anim_to_frame(m, 0)
         if m.actionArg > 0 then
             m.vel.y = 23
@@ -729,7 +732,7 @@ local function lunky_interact(m, o, type)
     
     local e = gStateExtras[m.playerIndex]
 
-    if type == INTERACT_CAP then
+    if _G.charSelect.character_get_current_number() == CT_LUNKY and type == INTERACT_CAP then
         play_character_sound(m, CHAR_SOUND_SNORING2)
     end
 end
@@ -759,3 +762,13 @@ function geo_switch_lunkySmall(node)
 		asSwitchNode.selectedCase = 0
 	end
 end
+
+function no_swimming(m)
+
+    if _G.charSelect.character_get_current_number() == CT_LUNKY then
+        return false
+    end
+
+end
+
+hook_event(HOOK_ALLOW_FORCE_WATER_ACTION, no_swimming)
