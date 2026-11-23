@@ -508,7 +508,7 @@ function act_fire_lunky_charge(m)
         queue_rumble_data_mario(m, 5, 0)
 	end
 
-    if m.actionTimer % 4 == 0 and m.actionTimer >= 16 then
+    if m.actionTimer % 4 == 0 and m.actionTimer >= 9 then
         smlua_anim_util_set_animation(m.marioObj, "charge")
         if m.actionTimer == 4 then
             set_anim_to_frame(m, 0)
