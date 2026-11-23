@@ -171,75 +171,6 @@ end
 
 hook_mario_action(ACT_WALL_STICK, act_wall_stick)
 
-ACT_FLAMING_ASCENT = allocate_mario_action(ACT_FLAG_MOVING | ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
-
-function act_flaming_ascent(m)
-    smlua_anim_util_set_animation(m.marioObj, "Temp Ascent Animation")
-    m.marioObj.header.gfx.animInfo.animAccel = 32768 * 2
-    m.marioBodyState.handState = MARIO_HAND_OPEN
-
-    if m.actionTimer == 0 then
-        m.faceAngle.y = m.intendedYaw
-        if m.input & INPUT_NONZERO_ANALOG ~= 0 then
-            m.forwardVel = 5
-        end
-    if m.actionTimer == 1 then
-                m.pos.y = m.pos.y + 10
-    end
-    elseif m.actionTimer < 35 then
-        m.faceAngle.y = approach_s16_symmetric(m.faceAngle.y, m.intendedYaw, 0x200)
-
-        if m.actionTimer <= 20 then
-            if (m.actionTimer % 3) == 0 then
-                play_sound(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject)
-            end
-        elseif m.actionTimer == 27 then
-            play_sound_with_freq_scale(SOUND_ACTION_TWIRL, m.marioObj.header.gfx.cameraToObject, 0.8)
-        end
-
-        if m.actionTimer < 20 then
-            if m.actionTimer > -1 then
-                m.particleFlags = m.particleFlags | PARTICLE_FIRE
-                m.vel.y = 18 - (m.actionTimer * (m.forwardVel/25))
-            end
-        else
-            m.vel.y = m.vel.y + 3
-        end
-    end
-
-    --[[if m.actionTimer < 40 then
-        set_anim_to_frame(m, 54)
-        m.marioObj.header.gfx.animInfo.animAccel = 32768 * -3
-    end]]
-
-    if (m.input & INPUT_NONZERO_ANALOG) ~= 0 then
-        mario_set_forward_vel(m, math.abs(m.forwardVel))
-    end
-
-    stepResult = perform_air_step(m, 0)
-
-    if (stepResult == AIR_STEP_LANDED) then
-        set_mario_action(m, ACT_TRIPLE_JUMP_LAND, 0)
-    end
-
-    if (stepResult == AIR_STEP_HIT_WALL) then
-        set_mario_action(m, ACT_WALL_STICK, 0)
-    end
-
-    m.actionTimer = m.actionTimer + 1
-
-    if m.controller.buttonPressed & Z_TRIG ~= 0 then
-        m.marioObj.header.gfx.angle.x = 0x0000
-        m.marioObj.header.gfx.pos.x = m.pos.x
-        m.marioObj.header.gfx.pos.z = m.pos.z
-        set_mario_action(m, ACT_GROUND_POUND, 1)
-    end
-
-    return 0
-end
-
-hook_mario_action(ACT_FLAMING_ASCENT, act_flaming_ascent)
-
 ACT_LUNKY_CYCLONE = allocate_mario_action(ACT_FLAG_MOVING | ACT_FLAG_ATTACKING)
 
 function act_lunky_cyclone(m)
@@ -557,10 +488,13 @@ function act_fire_lunky_charge(m)
     local e = gStateExtras[m.playerIndex]
     if m.actionState == 0 then
         --audio_sample_play(LUNKY_MISSILE_CHARGE, gMarioStates[0].pos, 0.32)
-        m.actionState = 1
         play_character_sound(m, CHAR_SOUND_TRANSFORM_START)
         queue_rumble_data_mario(m, 0, 60)
+        smlua_anim_util_set_animation(m.marioObj, "charge-start")
+        set_anim_to_frame(m, 0)
+        m.actionState = 1
     end
+    m.marioObj.header.gfx.animInfo.animAccel = 32768 * 2
 
     m.particleFlags = m.particleFlags | PARTICLE_WAVE_TRAIL
 
@@ -570,21 +504,31 @@ function act_fire_lunky_charge(m)
 
     if m.actionTimer % 2 == 0 then
 	    m.particleFlags = m.particleFlags | PARTICLE_FIRE
+        if (m.playerIndex == 0) then set_camera_shake_from_hit(SHAKE_SHOCK) end
         queue_rumble_data_mario(m, 5, 0)
 	end
+
+    if m.actionTimer % 4 == 0 and m.actionTimer >= 16 then
+        smlua_anim_util_set_animation(m.marioObj, "charge")
+        if m.actionTimer == 4 then
+            set_anim_to_frame(m, 0)
+        end
+    end
 
     if m.actionTimer >= 94 and e.fireform ~= 1 then
         audio_sample_stop(LUNKY_TRANSFORMATION_CHARGE)
         play_character_sound(m, CHAR_SOUND_TRANSFORM_START)
         queue_rumble_data_mario(m, 0, 60)
 	    set_mario_action(m, ACT_FIRE_LUNKY_TRANSFORM, m.actionArg)
+        smlua_anim_util_set_animation(m.marioObj, "charge-exit")
+        set_anim_to_frame(m, 0)
     elseif m.actionTimer >= 24 and ((m.controller.buttonDown & X_BUTTON) == 0) then
         audio_sample_stop(LUNKY_TRANSFORMATION_CHARGE)
         set_mario_action(m, ACT_FREEFALL_LAND, 0)
         play_character_sound(m, CHAR_SOUND_TRANSFORM_CANCEL)
+        smlua_anim_util_set_animation(m.marioObj, "charge-exit")
+        set_anim_to_frame(m, 0)
 	end
-
-	smlua_anim_util_set_animation(m.marioObj, "lunky_missile_charge")
 
     m.faceAngle.y = m.intendedYaw - approach_s32(convert_s16(m.intendedYaw - m.faceAngle.y), 0, 0x400, 0x400)
 
@@ -603,11 +547,18 @@ function act_fire_lunky_transform(m)
 
     local e = gStateExtras[m.playerIndex]
 
-    e.fireform = 1
-    audio_sample_play(LUNKY_GROWING_SOUND, gMarioStates[0].pos, 1)
-    m.particleFlags = m.particleFlags | PARTICLE_FIRE
-    set_mario_action(m, ACT_TRIPLE_JUMP_LAND_STOP, 0)
+    if m.actionState == 0 then
+        e.fireform = 1
+        audio_sample_play(LUNKY_GROWING_SOUND, gMarioStates[0].pos, 1)
+        m.particleFlags = m.particleFlags | PARTICLE_FIRE
+        m.actionState = 1
+    end
 
+    if m.actionTimer == 18 then
+        set_mario_action(m, ACT_IDLE, 0)
+    end
+
+    m.actionTimer = m.actionTimer + 1
     return 0
 end
 
@@ -717,9 +668,6 @@ function lunky_update(m)
         set_mario_action(m, ACT_DIVE, 0)
     end
 
-    if m.action == ACT_GROUND_POUND and m.input & INPUT_A_PRESSED ~= 0 then
-        set_mario_action(m, ACT_FLAMING_ASCENT, 0)
-    end
 end
 
 function lunky_on_set_action(m)
