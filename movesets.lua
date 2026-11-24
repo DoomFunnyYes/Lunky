@@ -1,14 +1,10 @@
 LUNKY_FIREBALL = audio_sample_load("lunky_attack.ogg")
 LUNKY_SHRINKING_SOUND = audio_sample_load("lunky_hurt.ogg")
 LUNKY_GROWING_SOUND = audio_sample_load("lunky_grow.ogg")
-LUNKY_MISSILE_WEAK = audio_sample_load("lunky_missile_weak.ogg")
-LUNKY_MISSILE_MEDIUM = audio_sample_load("lunky_missile_medium.ogg")
 LUNKY_MISSILE_STRONG = audio_sample_load("lunky_missile_strong.ogg")
 LUNKY_MISSILE_MAXIMUM = audio_sample_load("lunky_missile_maximum.ogg")
-LUNKY_MISSILE_CHARGE = audio_sample_load("lunky_green_missile_charge.ogg")
-LUNKY_CYCLONE = audio_sample_load("lunky_cyclone.ogg")
-LUNKY_CYCLONE_END = audio_sample_load("lunky_cyclone_end.ogg")
 LUNKY_TRANSFORMATION_CHARGE = audio_sample_load("lunky_transform_holding.ogg")
+LUNKY_TRANSFORM_ARM_WHIP = audio_sample_load("lunky_transform_arm.ogg")
 
 function limit_angle(a)
 	return (a + 0x8000) % 0x10000 - 0x8000
@@ -180,11 +176,11 @@ function act_lunky_cyclone(m)
 
     smlua_anim_util_set_animation(m.marioObj, "lunky_cyclone")
     if m.actionTimer == 1 then
-        audio_sample_play(LUNKY_CYCLONE, gMarioStates[0].pos, 0.32);
+        play_character_sound(m, LUNKY_CYCLONE)
     end
 
     if m.actionTimer == 20 then
-        audio_sample_play(LUNKY_CYCLONE_END, gMarioStates[0].pos, 0.32);
+        play_character_sound(m, LUNKY_CYCLONE_END)
     end
 
 	-- Animation
@@ -259,7 +255,9 @@ function act_lunky_missile_full(m)
         else
             mario_set_forward_vel(m, 36 + e.forca)
         end
-		audio_sample_play(LUNKY_MISSILE_MAXIMUM, m.pos, 0.32);
+        play_character_sound(m, CHAR_SOUND_DYING)
+        audio_sample_play(LUNKY_MISSILE_MAXIMUM, gMarioStates[0].pos, 1)
+
 		set_camera_shake_from_point(SHAKE_POS_MEDIUM, m.pos.x, m.pos.y, m.pos.z)
 	    m.squishTimer = 1.33
 		m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
@@ -343,11 +341,12 @@ function act_lunky_missile(m)
             mario_set_forward_vel(m, 36 + e.forca)
         end
         if e.forca < 20 then
-		    audio_sample_play(LUNKY_MISSILE_WEAK, m.pos, 0.32);
+            play_character_sound(m, LUNKY_MISSILE_WEAK)
         elseif e.forca < 30 then
-            audio_sample_play(LUNKY_MISSILE_MEDIUM, m.pos, 0.32);
+            play_character_sound(m, LUNKY_MISSILE_MEDIUM)
         elseif e.forca > 29 then
-            audio_sample_play(LUNKY_MISSILE_STRONG, m.pos, 0.32);
+            play_character_sound(m, CHAR_SOUND_DYING)
+            audio_sample_play(LUNKY_MISSILE_STRONG, gMarioStates[0].pos, 1)
         end
 	else
         if arg == 2 then
@@ -419,9 +418,7 @@ function act_lunky_missile_charge(m)
           e.timer = 0
 	end
     if m.actionTimer % 100 == 0 and m.actionTimer < 36 then
-        audio_sample_play(LUNKY_MISSILE_CHARGE, gMarioStates[0].pos, 0.32)
-    elseif m.actionTimer >= 53 then
-        audio_sample_stop(LUNKY_MISSILE_CHARGE)
+        play_character_sound(m, LUNKY_MISSILE_CHARGE)
     end
 
 	if m.actionTimer == 0 then
@@ -442,10 +439,8 @@ function act_lunky_missile_charge(m)
 
     if (m.controller.buttonDown & A_BUTTON) == 0 then
 	    if m.actionTimer < 42 then
-            audio_sample_stop(LUNKY_MISSILE_CHARGE)
 	        set_mario_action(m, ACT_LUNKY_MISSILE, m.actionArg)
 		elseif m.actionTimer >= 42 then
-            audio_sample_stop(LUNKY_MISSILE_CHARGE)
 		    set_mario_action(m, ACT_LUNKY_MISSILE_FULL, m.actionArg)
 		end
 	end
@@ -487,8 +482,6 @@ function act_fire_lunky_charge(m)
     
     local e = gStateExtras[m.playerIndex]
     if m.actionState == 0 then
-        --audio_sample_play(LUNKY_MISSILE_CHARGE, gMarioStates[0].pos, 0.32)
-        play_character_sound(m, CHAR_SOUND_TRANSFORM_START)
         queue_rumble_data_mario(m, 0, 60)
         smlua_anim_util_set_animation(m.marioObj, "charge-start")
         set_anim_to_frame(m, 0)
@@ -496,16 +489,26 @@ function act_fire_lunky_charge(m)
     end
     m.marioObj.header.gfx.animInfo.animAccel = 32768 * 2
 
+    if m.actionTimer == 0 then
+        audio_sample_play(LUNKY_TRANSFORM_ARM_WHIP, gMarioStates[0].pos, 0.82)
+    end
+
     m.particleFlags = m.particleFlags | PARTICLE_WAVE_TRAIL
 
-	if m.actionTimer % 85 == 0 then
+    if m.actionTimer == 7 then
+        play_character_sound(m, CHAR_SOUND_TRANSFORM_START)
+    end
+
+    if m.actionTimer == 9 then
         audio_sample_play(LUNKY_TRANSFORMATION_CHARGE, gMarioStates[0].pos, 0.32)
 	end
 
     if m.actionTimer % 2 == 0 then
-	    m.particleFlags = m.particleFlags | PARTICLE_FIRE
-        if (m.playerIndex == 0) then set_camera_shake_from_hit(SHAKE_SHOCK) end
-        queue_rumble_data_mario(m, 5, 0)
+        if m.actionTimer >= 7 then
+            if (m.playerIndex == 0) then set_camera_shake_from_hit(SHAKE_SHOCK) end
+            queue_rumble_data_mario(m, 5, 0)
+            m.particleFlags = m.particleFlags | PARTICLE_FIRE
+        end
 	end
 
     if m.actionTimer % 4 == 0 and m.actionTimer >= 9 then

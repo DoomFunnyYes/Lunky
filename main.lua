@@ -94,6 +94,13 @@ SMALL_LUNKY_LONG_JUMP = audio_sample_load("small_lunky_long_jump.ogg")
 CHAR_SOUND_TRANSFORM_SCREAM = CHAR_SOUND_MAX + 1
 CHAR_SOUND_TRANSFORM_START = CHAR_SOUND_TRANSFORM_SCREAM + 1
 CHAR_SOUND_TRANSFORM_CANCEL = CHAR_SOUND_TRANSFORM_START + 1
+LUNKY_MISSILE_WEAK = CHAR_SOUND_TRANSFORM_CANCEL + 1
+LUNKY_MISSILE_MEDIUM = LUNKY_MISSILE_WEAK + 1
+LUNKY_MISSILE_STRONG = LUNKY_MISSILE_MEDIUM + 1
+LUNKY_MISSILE_MAXIMUM = LUNKY_MISSILE_STRONG + 1
+LUNKY_MISSILE_CHARGE = LUNKY_MISSILE_MAXIMUM + 1
+LUNKY_CYCLONE = LUNKY_MISSILE_CHARGE + 1
+LUNKY_CYCLONE_END = LUNKY_CYCLONE + 1
 
 local VOICETABLE_LUNKY = {
     [CHAR_SOUND_ATTACKED] = 'lunky_real_hurt.ogg',
@@ -175,6 +182,13 @@ local VOICETABLE_LUNKY = {
     [CHAR_SOUND_TRANSFORM_SCREAM] = 'lunky_transform.ogg',
     [CHAR_SOUND_TRANSFORM_START] = 'lunky_transform_start.ogg',
     [CHAR_SOUND_TRANSFORM_CANCEL] = 'lunky_transform_cancel.ogg',
+    [LUNKY_MISSILE_WEAK] = 'lunky_missile_weak.ogg',
+    [LUNKY_MISSILE_MEDIUM] = 'lunky_missile_medium.ogg',
+    [LUNKY_MISSILE_STRONG] = 'lunky_missile_strong.ogg',
+    [LUNKY_MISSILE_MAXIMUM] = 'lunky_missile_maximum.ogg',
+    [LUNKY_MISSILE_CHARGE] = 'lunky_green_missile_charge.ogg',
+    [LUNKY_CYCLONE] = 'lunky_cyclone.ogg',
+    [LUNKY_CYCLONE_END] = 'lunky_cyclone_end.ogg',
 }
 
 local PALETTE_LUNKY = {
@@ -363,7 +377,9 @@ function lunky_before_set_action(m, inc, arg) --m is the mariostate input, inc i
     if ((inc == ACT_PUNCHING and arg ~= 9) or (inc == ACT_MOVE_PUNCHING)) and (e.fireform ~= 0) then
       return set_mario_action(m, ACT_LUNKY_PROJECTILE_SHOOT, 0)
     end
-    if m.prevAction == ACT_FLAMING_ASCENT and m.action == ACT_GROUND_POUND and m.input & INPUT_A_PRESSED ~= 0 then
+    if (inc == ACT_FORWARD_ROLLOUT) and m.input & INPUT_B_PRESSED ~= 0 then
+      m.vel.y = 30
+      m.forwardVel = 30
       return ACT_DIVE
     end
 end
