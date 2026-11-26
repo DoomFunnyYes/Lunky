@@ -478,6 +478,8 @@ hook_mario_action(ACT_LUNKY_MISSILE_CHARGE, act_lunky_missile_charge)
 
 ACT_FIRE_LUNKY_CHARGE = allocate_mario_action(ACT_FLAG_STATIONARY)
 
+local E_MODEL_AURA = smlua_model_util_get_id("lunkyAura_geo")
+
 function act_fire_lunky_charge(m)
     
     local e = gStateExtras[m.playerIndex]
@@ -485,6 +487,12 @@ function act_fire_lunky_charge(m)
         queue_rumble_data_mario(m, 0, 60)
         smlua_anim_util_set_animation(m.marioObj, "charge-start")
         set_anim_to_frame(m, 0)
+		
+		spawn_non_sync_object(id_bhvLunkyAura, E_MODEL_AURA, m.pos.x, m.pos.y, m.pos.z, 
+        function(obj)
+            obj.globalPlayerIndex = m.marioObj.globalPlayerIndex
+        end)
+		
         m.actionState = 1
     end
     m.marioObj.header.gfx.animInfo.animAccel = 32768 * 2
@@ -507,7 +515,7 @@ function act_fire_lunky_charge(m)
         if m.actionTimer >= 7 then
             if (m.playerIndex == 0) then set_camera_shake_from_hit(SHAKE_SHOCK) end
             queue_rumble_data_mario(m, 5, 0)
-            m.particleFlags = m.particleFlags | PARTICLE_FIRE
+            --m.particleFlags = m.particleFlags | PARTICLE_FIRE
         end
 	end
 

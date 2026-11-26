@@ -132,6 +132,31 @@ local function bhv_projectile_loop(o)
 end
 id_bhvLunkyGreenball = hook_behavior(nil, OBJ_LIST_GENACTOR, true, bhv_projectile_init, bhv_projectile_loop, "bhvLunkyGreenball")
 
+
+local function bhv_lunkyAura_init(o)
+    o.oFlags = OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE
+	smlua_anim_util_set_animation(o, "lunky_aura")
+	obj_scale(o, 0)
+end
+local function bhv_lunkyAura_loop(o)
+	local m = gMarioStates[network_local_index_from_global(o.globalPlayerIndex)]
+	--local scale = math.min(1,o.oTimer*0.1)
+	obj_scale_xyz(o, 1,0.1,1)
+	if o.oTimer > 10 then
+		obj_scale_xyz(o,1,1,1)
+	end
+	if m and m.action == ACT_FIRE_LUNKY_CHARGE then
+		o.oPosX = m.pos.x
+		o.oPosY = m.pos.y
+		o.oPosZ = m.pos.z
+		o.oFaceAngleYaw = 0
+		o.oFaceAnglePitch = 0
+	else
+		obj_mark_for_deletion(o)
+	end
+end
+id_bhvLunkyAura = hook_behavior(nil, OBJ_LIST_UNIMPORTANT, false, bhv_lunkyAura_init, bhv_lunkyAura_loop, 'bhvLunkyAura')
+
 -- Uncomment this to take a look at the models
 --[[
 local function on_level_init()
